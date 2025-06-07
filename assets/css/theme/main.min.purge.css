@@ -954,9 +954,11 @@ hr.border {
 svg {
   color: currentColor;
 }
+/*
 svg :not([fill="none"]) {
   fill: currentColor;
 }
+ */
 .uc-offcanvas-bar .uc-link:hover,
 .uc-offcanvas-bar a:hover {
   transition: color 0.2s ease;
