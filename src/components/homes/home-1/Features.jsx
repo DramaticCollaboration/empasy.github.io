@@ -16,12 +16,12 @@ export default function Features() {
           >
             <div className="panel vstack items-center gap-2 xl:gap-3 mb-4 sm:mb-8 xl:mb-9 sm:max-w-600px xl:max-w-700px mx-auto text-center">
               <h2 className="h3 lg:h2 xl:h1 m-0">
-                Smart features for your business
+                엠파시는
               </h2>
               <p className="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">
-                We focus on helping you to make useful content more accessible
-                with an utlimate goal for a good sharing profit as a content
-                creator.
+                '변화에 최적화된 솔루션'을 핵심 가치로 삼아, Sync Series(APIM, Boot, CMS, ETA) 플랫폼을 제공합니다.
+                이를 통해 고객의 소프트웨어 개발부터 테스트까지 전 과정의 속도와 유연성을 극대화하여 빠르게 변화하는 시장에 민첩하게 대응하고 경쟁력을 강화할 수 있도록 지원합니다.
+                더불어 운영 효율성 향상, 비용 절감, 안정성 확보 등 다양한 가치를 제공합니다
               </p>
             </div>
             <div className="panel vstack gap-4 xl:gap-6">
@@ -36,14 +36,14 @@ export default function Features() {
                     onClick={() => setActiveTab(1)}
                     role="presentation"
                   >
-                    <a className="h6 lg:h5 text-nowrap m-0">Audit Trial</a>
+                    <a className="h6 lg:h5 text-nowrap m-0">SyncCMS</a>
                   </li>
                   <li
                     onClick={() => setActiveTab(2)}
                     className={`${activeTab == 2 ? "uc-active" : ""}`}
                     role="presentation"
                   >
-                    <a className="h6 lg:h5 text-nowrap m-0">Tool Workflow</a>
+                    <a className="h6 lg:h5 text-nowrap m-0">SyncBoot</a>
                   </li>
                   <li
                     className={`${activeTab == 3 ? "uc-active" : ""}`}
@@ -51,7 +51,7 @@ export default function Features() {
                     role="presentation"
                   >
                     <a className="h6 lg:h5 text-nowrap m-0">
-                      Control your Apps
+                      SyncApim
                     </a>
                   </li>
                   <li
@@ -59,7 +59,7 @@ export default function Features() {
                     onClick={() => setActiveTab(4)}
                     role="presentation"
                   >
-                    <a className="h6 lg:h5 text-nowrap m-0">Approvals</a>
+                    <a className="h6 lg:h5 text-nowrap m-0">SyncEta</a>
                   </li>
                 </ul>
               </div>
@@ -89,21 +89,17 @@ export default function Features() {
                               <div>
                                 <div className="panel vstack gap-2">
                                   <h3 className="h4 sm:h3 lg:h2 m-0">
-                                    Share tools quickly and confidently in
-                                    minutes
+                                    콘텐츠 관리의 효율성
                                   </h3>
                                   <p className="fs-6 lg:fs-5 opacity-70 dark:opacity-80">
-                                    This powerfull tool eliminates the need to
-                                    leave Salesforce to get things done as I can
-                                    create a custom proposal with dynamic
-                                    pricing tables. You can also customize your
-                                    own dynamic versions.
+                                    웹 콘텐츠를 비전문가도 쉽고 효율적으로 관리하고, 모듈형 구조로 비즈니스 변화에 유연하게 대응 가능한 콘텐츠 관리 시스템입니다.
+                                    콘텐츠 관리의 효율성을 높이고, 변화에 빠르게 대응하는 비즈니스 민첩성을 확보하세요
                                   </p>
                                   <Link
                                     to="/page-features"
                                     className="uc-link fw-bold hstack gap-narrow mt-2 sm:mt-1 lg:mt-2"
                                   >
-                                    <span>Let's find out</span>
+                                    <span>자세히</span>
                                     <i className="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px" />
                                   </Link>
                                 </div>
@@ -136,18 +132,16 @@ export default function Features() {
                               <div>
                                 <div className="panel vstack gap-2">
                                   <h3 className="h4 sm:h3 lg:h2 m-0">
-                                    Connect every part of your entire business
+                                    기업용 애플리케이션 개발의 효율성과 신속성 지원
                                   </h3>
                                   <p className="fs-6 lg:fs-5 opacity-70 dark:opacity-80">
-                                    Keep data consistent, with native CRM
-                                    integrations that streamline your entire
-                                    Tool workflow.
+                                    비즈니스 민첩성을 위한 빠른 개발 플랫폼입니다. 마이크로서비스 기반으로 개발 속도를 높여 변화에 신속하게 대응하도록 지원합니다
                                   </p>
                                   <a
                                     href="#"
                                     className="uc-link fw-bold hstack gap-narrow mt-2 sm:mt-1 lg:mt-2"
                                   >
-                                    <span>See all integrations</span>
+                                    <span>자세히</span>
                                     <i className="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px" />
                                   </a>
                                 </div>
@@ -180,20 +174,16 @@ export default function Features() {
                               <div>
                                 <div className="panel vstack gap-2">
                                   <h3 className="h4 sm:h3 lg:h2 m-0">
-                                    Maintain compliance and control your apps
+                                    API 관리 플랫폼
                                   </h3>
                                   <p className="fs-6 lg:fs-5 opacity-70 dark:opacity-80">
-                                    Improve security and trust with built-in
-                                    legally binding e-Signatures. Create
-                                    pre-approved templates, content blocks and
-                                    lock all legal information to prevent costly
-                                    mistakes.
+                                    비즈니스 민첩성을 위한 API 관리 플랫폼입니다. 종합적인 API 관리로 서비스 개발 및 통합을 가속화하여 디지털 혁신과 경쟁력 강화를 지원
                                   </p>
                                   <Link
                                     to="/page-features"
                                     className="uc-link fw-bold hstack gap-narrow mt-2 sm:mt-1 lg:mt-2"
                                   >
-                                    <span>Let's find out</span>
+                                    <span>자세히</span>
                                     <i className="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px" />
                                   </Link>
                                 </div>
@@ -226,19 +216,16 @@ export default function Features() {
                               <div>
                                 <div className="panel vstack gap-2">
                                   <h3 className="h4 sm:h3 lg:h2 m-0">
-                                    Review quickly and confidently
+                                    테스트 자동화를 통한 개발 및 배포 주기 단축
                                   </h3>
                                   <p className="fs-6 lg:fs-5 opacity-70 dark:opacity-80">
-                                    Get real-time access to approvals, comments
-                                    and version tracking. Smart features like
-                                    variables and conditional logic help you
-                                    eliminate Tool errors.
+                                    웹/API 테스트 자동화 플랫폼입니다. 코딩 없이 쉽고 빠르게 테스트를 자동화하여 개발/배포 속도와 품질을 높이고, 변화에 민첩하게 대응하도록 지원합니다. CI/CD 연동으로 안정적인 배포 환경을 구축
                                   </p>
                                   <Link
                                     to="/page-features"
                                     className="uc-link fw-bold hstack gap-narrow mt-2 sm:mt-1 lg:mt-2"
                                   >
-                                    <span>Let's find out</span>
+                                    <span>자세히</span>
                                     <i className="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px" />
                                   </Link>
                                 </div>

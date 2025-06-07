@@ -166,44 +166,10 @@ export default function Hero() {
                     data-anime="targets: >*; translateY: [24, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
                   >
                     <h1 className="h2 sm:h1 lg:display-6 xl:display-4 mt-4 sm:mt-0">
-                      Boon to business by agility.{" "}
+                      살아 있는 소프트웨어는
                       <br className="d-none sm:d-block" />
-                      Test Platform with Customization in its DNA
+                      엠파시가 만듭니다
                     </h1>
-                    <Link
-                      to={`/page-pricing`}
-                      className="btn btn-md lg:btn-lg btn-primary text-white min-w-150px sm:mt-1 lg:mt-2"
-                    >
-                      Try it out
-                    </Link>
-                    <div className="hstack justify-center gap-2 mt-1 sm:mt-2">
-                      <div className="hstack justify-center gap-0">
-                        <img
-                          className="w-40px rounded-circle ltr:ms-n2 rtl:me-n2 border border-2 border-gray-900"
-                          alt="Avatar image"
-                          src="/assets/images/avatars/03.png"
-                          width="150"
-                          height="150"
-                        />
-                        <img
-                          className="w-40px rounded-circle ltr:ms-n2 rtl:me-n2 border border-2 border-gray-900"
-                          alt="Avatar image"
-                          src="/assets/images/avatars/02.png"
-                          width="150"
-                          height="150"
-                        />
-                        <img
-                          className="w-40px rounded-circle ltr:ms-n2 rtl:me-n2 border border-2 border-gray-900"
-                          alt="Avatar image"
-                          src="/assets/images/avatars/08.png"
-                          width="150"
-                          height="150"
-                        />
-                      </div>
-                      <span className="fs-7 sm:fs-6 fw-medium opacity-60">
-                        4.6k Hardworking Members
-                      </span>
-                    </div>
                   </div>
                 </div>
                 <div
@@ -215,7 +181,7 @@ export default function Hero() {
                     <img
                       className="media-cover image"
                       alt="엠파시"
-                      src="/assets/images/template/home-01-hero-cover.webp"
+                      src="/assets/images/두 진행자 같이.png"
                       width="1280"
                       height="719"
                     />
@@ -223,7 +189,7 @@ export default function Hero() {
                   <a
                     className="cstack text-none position-absolute top-50 start-50 translate-middle bg-white text-primary w-64px h-64px sm:w-80px sm:h-80px rounded-circle shadow-md"
                     onClick={() => setOpen(true)}
-                    data-caption="Boon to business by agility. <br>Test Platform with Customization in its DNA"
+                    data-caption="Boon to business by agility.1"
                     data-attrs="width: 640; height: 480;"
                   >
                     <i className="icon icon-2 sm:icon-3 unicon-play-filled-alt" />
@@ -248,7 +214,7 @@ export default function Hero() {
       <ModalVideo
         channel="custom"
         isOpen={isOpen}
-        url="/assets/images/media/엠파시_vid.webm"
+        url="/assets/video/엠파시 소개.mp4"
         onClose={() => setOpen(false)}
       />
     </>

@@ -56,7 +56,7 @@ export default function Signup() {
                     <img
                       className="w-32px lg:w-40px"
                       alt=""
-                      src="/assets/images/common/logo-mark.svg"
+                      src="/assets/images/common/logo-mark.png"
                       width="34"
                       height="34"
                     />

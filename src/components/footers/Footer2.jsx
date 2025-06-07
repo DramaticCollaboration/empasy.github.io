@@ -19,7 +19,7 @@ export default function Footer2() {
                         <img
                           className="w-32px text-primary"
                           alt="엠파시"
-                          src="/assets/images/common/logo-mark.svg"
+                          src="/assets/images/common/logo-mark.png"
                           width="34"
                           height="34"
                         />

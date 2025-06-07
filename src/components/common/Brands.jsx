@@ -30,7 +30,7 @@ export default function Brands() {
             width={165}
             height={48}
             alt={brand.alt}
-          />
+          /> <span className="ml-2">{brand.alt}</span>
         </SwiperSlide>
       ))}
     </Swiper>
