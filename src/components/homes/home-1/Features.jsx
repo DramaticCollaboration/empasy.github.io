@@ -75,9 +75,10 @@ export default function Features() {
                         <div className="col-12 sm:col-6">
                           <figure className="featured-image m-0 rounded ratio ratio-1x1 rounded-2 overflow-hidden">
                             <img
+                              style={{ objectFit: 'fill' }}
                               className="media-cover image"
                               alt="Share tools quickly and confidently in minutes"
-                              src="/assets/images/template/feature-image-02.jpg"
+                              src="/assets/images/product/synccms.png"
                               width="1200"
                               height="1200"
                             />
@@ -118,9 +119,10 @@ export default function Features() {
                         <div className="col-12 sm:col-6">
                           <figure className="featured-image m-0 rounded ratio ratio-1x1 rounded-2 overflow-hidden">
                             <img
+                              style={{ objectFit: 'fill' }}
                               className="media-cover image"
                               alt="Connect every part of your entire business"
-                              src="/assets/images/template/feature-image-03.jpg"
+                              src="/assets/images/product/syncboot.png"
                               width="1200"
                               height="1200"
                             />
@@ -160,9 +162,10 @@ export default function Features() {
                         <div className="col-12 sm:col-6">
                           <figure className="featured-image m-0 rounded ratio ratio-1x1 rounded-2 overflow-hidden">
                             <img
+                              style={{ objectFit: 'fill' }}
                               className="media-cover image"
                               alt="Maintain compliance and control your apps"
-                              src="/assets/images/template/feature-image-01.jpg"
+                              src="/assets/images/product/syncapim.png"
                               width="1200"
                               height="1200"
                             />
@@ -202,9 +205,10 @@ export default function Features() {
                         <div className="col-12 sm:col-6">
                           <figure className="featured-image m-0 rounded ratio ratio-1x1 rounded-2 overflow-hidden">
                             <img
+                              style={{ objectFit: 'fill' }}
                               className="media-cover image"
                               alt="Review quickly and confidently"
-                              src="/assets/images/template/feature-image-04.jpg"
+                              src="/assets/images/product/synceta.png"
                               width="1200"
                               height="1200"
                             />
