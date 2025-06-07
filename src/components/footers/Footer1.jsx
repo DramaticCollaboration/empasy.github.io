@@ -1,10 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import LanguageSelect from "../common/LanguageSelect";
-import { footerLinks, socialLinks } from "@/data/footer";
+import { footerLinks } from "@/data/footer";
+
+import {
+  EmailIcon,
+  EmailShareButton,
+  FacebookIcon,
+  FacebookShareButton,
+  InstapaperIcon,
+  InstapaperShareButton,
+  LineIcon,
+  LineShareButton,
+  LinkedinIcon,
+  LinkedinShareButton,
+  TelegramIcon,
+  TelegramShareButton, ThreadsIcon, ThreadsShareButton,
+  TwitterShareButton,
+  XIcon,
+} from "react-share";
 
 export default function Footer1() {
+  const shareUrl = window.location.href;
+  const title = document.title;
   return (
     <footer id="uc-footer" className="uc-footer panel overflow-hidden">
       <div className="footer-outer py-4 lg:py-6 xl:py-9 dark:bg-gray-900 dark:text-white">
@@ -25,32 +43,8 @@ export default function Footer1() {
                         />
                       </Link>
                       <p>
-                        This powerfull tool eliminates the need to leave
-                        Salesforce to get things done as I can create a custom
-                        proposal with dynamic pricing tables.
+                        Sync Series 플랫폼으로 소프트웨어 개발 및 변경의 속도와 유연성을 극대화하여, 고객의 비즈니스 민첩성 확보와 경쟁력 강화를 지원하는 변화에 최적화된 솔루션 기업입니다
                       </p>
-                    </div>
-                    <div className="hstack items-start gap-1">
-                      <a href="#">
-                        <img
-                          className="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150"
-                          alt="Google Play Store"
-                          data-uc-svg=""
-                          src="/assets/images/common/playstore.svg"
-                          width="135"
-                          height="40"
-                        />
-                      </a>
-                      <a href="#">
-                        <img
-                          className="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150"
-                          alt="Apple Store"
-                          data-uc-svg=""
-                          src="/assets/images/common/appstore.svg"
-                          width="134"
-                          height="40"
-                        />
-                      </a>
                     </div>
                   </div>
                 </div>
@@ -70,32 +64,57 @@ export default function Footer1() {
             <div className="uc-footer-bottom panel vstack lg:hstack gap-4 justify-center lg:justify-between pt-4 lg:pt-6 border-top dark:text-white">
               <div className="vstack sm:hstack justify-center lg:justify-start items-center lg:items-start gap-1 lg:gap-2">
                 <p className="opacity-60">
-                  엠파시 © 2024, All rights reserved.
+                  엠파시 © 2025, All rights reserved.
                 </p>
-                <ul className="nav-x gap-2 fw-medium">
-                  <li>
-                    <a href="#">Privacy notice</a>
-                  </li>
-                  <li>
-                    <a href="#">Legal</a>
-                  </li>
-                  <li>
-                    <a href="#">Cookie settings</a>
-                  </li>
-                </ul>
+
               </div>
               <div className="hstack justify-center lg:justify-end gap-2 lg:gap-3">
-                <ul className="nav-x gap-2">
-                  {socialLinks.map((link, index) => (
-                    <li key={index}>
-                      <a href={link.href}>
-                        <i className={`icon icon-2 ${link.iconClass}`} />
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-                <div className="vr" />
-                <LanguageSelect />
+                  <FacebookShareButton url={shareUrl} className="Demo__some-network__share-button">
+                    <FacebookIcon size={32} round fill='none'/>
+                  </FacebookShareButton>
+                  <TwitterShareButton
+                      url={shareUrl}
+                      title={title}
+                      className="Demo__some-network__share-button"
+                  >
+                    <XIcon size={32} round />
+                  </TwitterShareButton>
+
+                  <TelegramShareButton
+                      url={shareUrl}
+                      title={title}
+                      className="Demo__some-network__share-button"
+                  >
+                    <TelegramIcon size={32} round />
+                  </TelegramShareButton>
+                <LinkedinShareButton url={shareUrl} className="Demo__some-network__share-button">
+                  <LinkedinIcon size={32} round />
+                </LinkedinShareButton>
+                <EmailShareButton
+                    url={shareUrl}
+                    subject={title}
+                    body="body"
+                    className="Demo__some-network__share-button"
+                >
+                  <EmailIcon size={32} round />
+                </EmailShareButton>
+                <LineShareButton url={shareUrl} title={title} className="Demo__some-network__share-button">
+                  <LineIcon size={32} round />
+                </LineShareButton>
+                <InstapaperShareButton
+                      url={shareUrl}
+                      title={title}
+                      className="Demo__some-network__share-button"
+                  >
+                    <InstapaperIcon size={32} round />
+                  </InstapaperShareButton>
+                  <ThreadsShareButton
+                      url={shareUrl}
+                      title={title}
+                      className="Demo__some-network__share-button"
+                  >
+                    <ThreadsIcon size={32} round />
+                  </ThreadsShareButton>
               </div>
             </div>
           </div>

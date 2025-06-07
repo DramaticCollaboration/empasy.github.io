@@ -139,6 +139,16 @@ export const brands = [
     src: "/assets/images/brands/typescript.svg",
     alt: "Typescript",
   },
+  {
+    id: 29,
+    src: "/assets/images/brands/jira.svg",
+    alt: "Jira",
+  },
+  {
+    id: 30,
+    src: "/assets/images/brands/discord.svg",
+    alt: "Discord",
+  },
 ];
 
 export const reviewLogos = [

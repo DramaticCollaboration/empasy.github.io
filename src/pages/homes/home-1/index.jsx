@@ -1,15 +1,10 @@
 import Header1 from "@/components/headers/Header1";
 import Features from "@/components/homes/home-1/Features";
 import Hero from "@/components/homes/home-1/Hero";
-import Integretion from "@/components/homes/home-1/Integretion";
-import Facts from "@/components/homes/home-1/Facts";
-import Pricing from "@/components/homes/home-1/Pricing";
-import Feedback from "@/components/homes/home-1/Feedback";
-import Timeline from "@/components/homes/home-1/Timeline";
-import Team from "@/components/homes/home-1/Team";
-import Cta from "@/components/homes/home-1/Cta";
 import Footer1 from "@/components/footers/Footer1";
 import MetaComponent from "@/components/common/MetaComponent";
+import Contact2 from "@/components/innerpages/Contact2.jsx";
+import ContactLinks2 from "@/components/innerpages/ContactLinks2.jsx";
 const metadata = {
   title:
     "엠파시 - 살아 있는 소프트웨어를 만듭니다.",
@@ -25,13 +20,8 @@ export default function HomePage1() {
         <div id="wrapper" className="wrap">
           <Hero />
           <Features />
-          <Integretion />
-          <Facts />
-          <Pricing />
-          <Feedback />
-          <Timeline />
-          <Team />
-          <Cta />
+          <Contact2 />
+          <ContactLinks2 />
         </div>
         <Footer1 />
       </div>

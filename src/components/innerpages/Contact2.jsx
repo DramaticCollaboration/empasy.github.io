@@ -44,8 +44,7 @@ export default function Contact2() {
                 Contact us
               </h1>
               <p className="fs-6 sm:fs-5 text-dark dark:text-white text-opacity-70">
-                Feel free to reach out to us using the options below, and our
-                dedicated team will respond to your inquiries promptly.
+                아래의 옵션을 통해 언제든지 문의해 주세요. 전담 팀이 신속하게 응답해 드리겠습니다.
               </p>
             </div>
             <div className="panel max-w-750px mx-auto">
@@ -54,15 +53,14 @@ export default function Contact2() {
                 className="vstack gap-2 p-3 sm:p-6 xl:p-8 rounded-2 border bg-white dark:bg-gray-900 border-secondary dark:border-gray-300 dark:border-opacity-20"
               >
                 <p className="fs-6 text-dark dark:text-white text-opacity-70 mb-2">
-                  Have a question or feedback? Fill out the form below, and
-                  we'll get back to you as soon as possible.
+                  질문이나 의견이 있으신가요? 아래 양식을 작성해 주시면 가능한 한 빠르게 답변드리겠습니다.
                 </p>
                 <div className="row child-cols-12 md:child-cols-6 g-2">
                   <div>
                     <input
                       className="form-control h-48px w-full bg-white dark:border-white dark:bg-opacity-0 dark:border-opacity-15 dark:text-white"
                       type="text"
-                      placeholder="Full name"
+                      placeholder="이름"
                       required
                     />
                   </div>
@@ -70,7 +68,7 @@ export default function Contact2() {
                     <input
                       className="form-control h-48px w-full bg-white dark:border-white dark:bg-opacity-0 dark:border-opacity-15 dark:text-white"
                       type="email"
-                      placeholder="Your email"
+                      placeholder="이메일"
                       required
                     />
                   </div>
@@ -78,11 +76,11 @@ export default function Contact2() {
                 <input
                   className="form-control h-48px w-full bg-white dark:border-white dark:bg-opacity-0 dark:border-opacity-15 dark:text-white"
                   type="text"
-                  placeholder="Subject"
+                  placeholder="제목"
                 />
                 <textarea
                   className="form-control min-h-150px w-full bg-white dark:border-white dark:bg-opacity-0 dark:border-opacity-15 dark:text-white"
-                  placeholder="Your message.."
+                  placeholder="내용.."
                   required
                   defaultValue={""}
                 />
@@ -90,14 +88,14 @@ export default function Contact2() {
                   className="btn btn-primary btn-md text-white mt-2"
                   type="submit"
                 >
-                  Send message
+                  보내기
                 </button>
                 <p className="text-center">
-                  Or drop us a message via
-                  <a className="uc-link" href="mailto:hello@엠파시.co">
-                    email
+                  혹은
+                  <a className="uc-link" href="mailto:poh@empasy.com">
+                    이메일
                   </a>
-                  .
+                  로 보내주세요.
                 </p>
               </form>
             </div>
