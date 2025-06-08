@@ -12,7 +12,7 @@ export default function ContactLinks() {
                 className="h4 sm:h3 lg:h2 m-0 text-center"
                 data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 100;"
               >
-                Other ways to reach us
+                기타 문의 방법
               </h2>
               <div
                 className="row child-cols-12 sm:child-cols-6 lg:child-cols-3 g-2 xl:g-3 justify-between col-match"
@@ -42,8 +42,13 @@ export default function ContactLinks() {
                         {panel.description}
                       </p>
                       <a
-                        href={panel.linkUrl}
+                        {... panel.linkUrl && { href: panel.linkUrl }}
+                        {...panel.onclick && { onClick: (e) => {
+                            e.preventDefault();
+                            panel.onclick();
+                          }}}
                         className="uc-link fw-bold hstack gap-narrow justify-center"
+                        {... panel.target && { target: panel.target }}
                       >
                         <span>{panel.linkText}</span>
                         <i className="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px" />

@@ -44,10 +44,10 @@ export default function ContactLinks2() {
                         </p>
                       </div>
                       <a
-                        href={panel.linkUrl}
+                          {... panel.linkUrl && { href: panel.linkUrl }}
                         {...panel.onclick && { onClick: (e) => {
                             e.preventDefault();
-                            new Function(panel.onclick)();
+                            panel.onclick();
                           }}}
                         className="uc-link fw-bold hstack gap-narrow"
                         {... panel.target && { target: panel.target }}

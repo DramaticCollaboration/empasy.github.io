@@ -1,4 +1,57 @@
+import {useState} from "react";
+
 export default function Contact1() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    content: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://7f4wwc40if.execute-api.ap-northeast-2.amazonaws.com/dev/email-contact-us-template-dev-sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) {
+        throw new Error('전송에 실패했습니다.');
+      }
+
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        content: ''
+      });
+    } catch (error) {
+      console.error('Error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+
   return (
     <div id="hero_header" className="hero-header section panel overflow-hidden">
       <div
@@ -89,51 +142,76 @@ export default function Contact1() {
                     className="vstack gap-2 p-3 sm:p-6 xl:p-8"
                   >
                     <p className="fs-6 text-dark dark:text-white text-opacity-70 mb-2">
-                      Have a question or feedback? Fill out the form below, and
-                      we'll get back to you as soon as possible.
+                      질문이나 의견이 있으신가요? 아래 양식을 작성해 주시면 가능한 한 빠르게 답변드리겠습니다.
                     </p>
                     <div className="row child-cols-12 sm:child-cols-6 g-2">
                       <div>
                         <input
                           className="form-control h-48px w-full bg-white dark:border-white dark:bg-opacity-10 dark:border-opacity-0 dark:text-white"
                           type="text"
-                          placeholder="Full name"
+                          placeholder="이름"
                           required
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
                         />
                       </div>
                       <div>
                         <input
                           className="form-control h-48px w-full bg-white dark:border-white dark:bg-opacity-10 dark:border-opacity-0 dark:text-white"
                           type="email"
-                          placeholder="Your email"
+                          placeholder="이메일"
                           required
+                          id="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
                         />
                       </div>
                     </div>
                     <input
                       className="form-control h-48px w-full bg-white dark:border-white dark:bg-opacity-10 dark:border-opacity-0 dark:text-white"
                       type="text"
-                      placeholder="Subject"
+                      placeholder="제목"
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
                     />
                     <textarea
                       className="form-control min-h-150px w-full bg-white dark:border-white dark:bg-opacity-10 dark:border-opacity-0 dark:text-white"
-                      placeholder="Your message.."
+                      placeholder="내용.."
                       required
-                      defaultValue={""}
+                      id="content"
+                      name="content"
+                      value={formData.content}
+                      onChange={handleChange}
                     />
                     <button
                       className="btn btn-primary btn-md text-white mt-2"
-                      type="submit"
+                      disabled={isSubmitting}
+                      onClick={handleSubmit }
                     >
-                      Send message
+                      {isSubmitting ? '전송 중...' : '보내기'}
                     </button>
-                    <p className="text-center">
-                      Or drop us a message via
-                      <a className="uc-link" href="mailto:hello@엠파시.co">
-                        email
-                      </a>
-                      .
-                    </p>
+                    {submitStatus === 'success' && (
+                        <div className="alert alert-success">
+                          메시지가 성공적으로 전송되었습니다.
+                        </div>
+                    )}
+                    {submitStatus === 'error' && (
+                        <div className="alert alert-danger">
+                          메시지 전송에 실패했습니다. 다시 시도해주세요.
+                        </div>
+                    )}
+                    <button
+                        className="btn btn-secondary btn-md text-primary mt-2"
+                        type="button"
+                        onClick={() => {window.location = "mailto:poh@empasy.com";}}
+                    >
+                      이메일
+                    </button>
                   </form>
                 </div>
               </div>
