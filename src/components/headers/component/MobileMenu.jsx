@@ -4,7 +4,23 @@ import { closeMobileMenu } from "@/utlis/toggleMobileMenu";
 
 import { Link, useLocation } from "react-router-dom";
 
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import {
+  EmailIcon,
+  EmailShareButton,
+  FacebookIcon,
+  FacebookShareButton,
+  InstapaperIcon,
+  InstapaperShareButton,
+  LineIcon,
+  LineShareButton,
+  LinkedinIcon,
+  LinkedinShareButton,
+  TelegramIcon,
+  TelegramShareButton, ThreadsIcon, ThreadsShareButton,
+  TwitterShareButton,
+  XIcon,
+} from "react-share";
 
 export default function MobileMenu() {
   const { isChecked, handleToggle } = useContextElement();
@@ -64,6 +80,9 @@ export default function MobileMenu() {
     }
     return isActive;
   };
+
+  const shareUrl = window.location.href;
+  const title = document.title;
   return (
     <div
       ref={containerRef}
@@ -125,129 +144,74 @@ export default function MobileMenu() {
             hidden=""
           />
           <ul className="nav-y gap-narrow fw-medium fs-6 uc-nav" data-uc-nav="">
-            {menuItems.map((item, index) => (
-              <li
-                key={index}
-                className={`${item.subItems ? "uc-parent" : ""} ${
-                  activeParent1 == index ? "active" : ""
-                }`}
-              >
-                {item.href ? (
-                  <Link
-                    className={isMenuActive(item) ? "menuActive" : ""}
-                    to={item.href}
-                  >
-                    {item.label}
-                  </Link>
-                ) : (
-                  <>
-                    <a
-                      className={isMenuActive(item) ? "menuActive" : ""}
-                      onClick={() =>
-                        setActiveParent1((pre) => (pre == index ? -1 : index))
-                      }
-                    >
-                      {item.label}
-                    </a>
-                    {item.subItems && (
-                      <ul
-                        className={`uc-nav-sub ${
-                          activeParent1 == index ? "active" : ""
-                        }`}
-                      >
-                        {item.subItems.map((subItem, index2) => (
-                          <li
-                            key={index2}
-                            className={`${!subItem.href ? "uc-parent" : ""}  ${
-                              activeParent2 == index2 ? "active" : ""
-                            }`}
-                            role="presentation"
-                          >
-                            {subItem.href ? (
-                              <Link
-                                className={
-                                  isMenuActive(subItem) ? "menuActive" : ""
-                                }
-                                to={subItem.href}
-                              >
-                                {subItem.label}
-                              </Link>
-                            ) : (
-                              <>
-                                <a
-                                  className={
-                                    isMenuActive(subItem) ? "menuActive" : ""
-                                  }
-                                  onClick={() =>
-                                    setActiveParent2((pre) =>
-                                      pre == index2 ? -1 : index2
-                                    )
-                                  }
-                                >
-                                  {subItem.label}
-                                </a>
-                                {subItem.subItems && (
-                                  <ul
-                                    className={`uc-nav-sub ${
-                                      activeParent2 == index2 ? "active" : ""
-                                    }`}
-                                  >
-                                    {subItem.subItems.map((subItem, index3) => (
-                                      <li
-                                        key={index3}
-                                        className={
-                                          !subItem.href ? "uc-parent" : ""
-                                        }
-                                        role="presentation"
-                                      >
-                                        {subItem.href ? (
-                                          <Link
-                                            className={
-                                              isMenuActive(subItem)
-                                                ? "menuActive"
-                                                : ""
-                                            }
-                                            to={subItem.href}
-                                          >
-                                            {subItem.label}
-                                          </Link>
-                                        ) : (
-                                          <></>
-                                        )}
-                                      </li>
-                                    ))}
-                                  </ul>
-                                )}
-                              </>
-                            )}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </>
-                )}
-              </li>
-            ))}
-            <li className="hr opacity-10 my-1" />
             <li>
-              <Link to={`/sign-up`}>Create an account</Link>
+              <Link to={`/page-about`}>엠파시는</Link>
             </li>
             <li>
-              <Link to={`/sign-in`}>Log in</Link>
+              <Link to={`/page-features`}>SyncCMS</Link>
             </li>
             <li>
-              <a href="https://themeforest.net/user/ib-themes/portfolio">
-                Buy Template
-              </a>
+              <Link to={`/page-features`}>SyncBoot</Link>
+            </li>
+            <li>
+              <Link to={`/page-features`}>SyncApim</Link>
+            </li>
+            <li>
+              <Link to={`/page-features`}>SyncEta</Link>
+            </li>
+            <li>
+              <Link to={`/page-contact`}>문의하기</Link>
+            </li>
+            <li>
+              <Link to={`/page-team`}>엠파시 사람들</Link>
+            </li>
+            <li>
+              <Link to={`/page-career`}>인재 모집</Link>
             </li>
           </ul>
           <ul className="social-icons nav-x mt-4">
             <li>
-              {icons.map((icon, index) => (
-                <a key={index} href={icon.href}>
-                  <i className={icon.iconClass} />
-                </a>
-              ))}
+              <FacebookShareButton url={shareUrl}>
+                <FacebookIcon size={32} round fill='none'/>
+              </FacebookShareButton>
+              <TwitterShareButton
+                  url={shareUrl}
+                  title={title}
+              >
+                <XIcon size={32} round />
+              </TwitterShareButton>
+
+              <TelegramShareButton
+                  url={shareUrl}
+                  title={title}
+              >
+                <TelegramIcon size={32} round />
+              </TelegramShareButton>
+              <LinkedinShareButton url={shareUrl}>
+                <LinkedinIcon size={32} round />
+              </LinkedinShareButton>
+              <EmailShareButton
+                  url={shareUrl}
+                  subject={title}
+                  body="body"
+              >
+                <EmailIcon size={32} round />
+              </EmailShareButton>
+              <LineShareButton url={shareUrl} title={title}>
+                <LineIcon size={32} round />
+              </LineShareButton>
+              <InstapaperShareButton
+                  url={shareUrl}
+                  title={title}
+              >
+                <InstapaperIcon size={32} round />
+              </InstapaperShareButton>
+              <ThreadsShareButton
+                  url={shareUrl}
+                  title={title}
+              >
+                <ThreadsIcon size={32} round />
+              </ThreadsShareButton>
             </li>
           </ul>
           <div
@@ -255,7 +219,7 @@ export default function MobileMenu() {
             data-uc-sticky="position: bottom"
           >
             <div className="vstack gap-1">
-              <span className="fs-7 opacity-60">Select theme:</span>
+              <span className="fs-7 opacity-60">테마:</span>
               <div className="darkmode-trigger" data-darkmode-switch="">
                 <label className="switch">
                   <input
