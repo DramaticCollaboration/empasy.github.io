@@ -57,7 +57,7 @@ export default function CareerHero() {
                 <img
                   className="media-cover image uc-transition-scale-up uc-transition-opaque"
                   alt="Career"
-                  src="/assets/images/common/empasy.png"
+                  src="/assets/images/common/career.jpg"
                   width="1500"
                   height="1000"
                   style={{objectFit: "fill"}}
