@@ -59,7 +59,7 @@ export default function Header2() {
                     <img
                       className="dark:d-none"
                       alt="엠파시"
-                      src="/assets/images/common/logo-light.svg"
+                      src="/assets/images/common/logo-dark.png"
                       width="117"
                       height="40"
                     />
@@ -77,28 +77,6 @@ export default function Header2() {
                 </ul>
               </div>
               <div className="uc-navbar-right">
-                <div className="d-none xl:d-block">
-                  <a
-                    className="text-none fw-medium"
-                    onClick={openContactModal}
-                    data-uc-toggle=""
-                    role="button"
-                  >
-                    <span>Request a demo</span>
-                  </a>
-                </div>
-                <div className="d-none lg:d-block">
-                  <Link className="text-none fw-medium" to={`/sign-in`}>
-                    <span>Log in</span>
-                  </Link>
-                </div>
-                <Link
-                  className="btn btn-sm btn-primary text-white text-none d-none lg:d-inline-flex"
-                  to={`/page-pricing`}
-                >
-                  Start free trial
-                </Link>
-                <LanguageSelect2 />
                 <a
                   className="d-block lg:d-none uc-icon uc-navbar-toggle-icon"
                   onClick={openMobileMenu}
@@ -121,10 +99,6 @@ export default function Header2() {
           </div>
         </nav>
       </header>{" "}
-      {/* <div
-        className="uc-sticky-placeholder"
-        style={{ height: 0, width: "100% !important", margin: 0 }}
-      />{" "} */}
     </>
   );
 }

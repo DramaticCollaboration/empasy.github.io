@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import { openMobileMenu } from "@/utlis/toggleMobileMenu";
 import { openContactModal } from "@/utlis/toggleContactModal";
-import LanguageSelect2 from "../common/LanguageSelect2";
 
 export default function Header1() {
   return (
@@ -32,7 +31,7 @@ export default function Header1() {
                   <img
                     className="dark:d-none"
                     alt="엠파시"
-                    src="/assets/images/common/logo-light.svg"
+                    src="/assets/images/common/logo-dark.png"
                     width="117"
                     height="40"
                   />
@@ -50,28 +49,6 @@ export default function Header1() {
               </ul>
             </div>
             <div className="uc-navbar-right">
-              <div className="d-none xl:d-block">
-                <a
-                  className="text-none fw-medium"
-                  onClick={openContactModal}
-                  data-uc-toggle=""
-                  role="button"
-                >
-                  <span>Request a demo</span>
-                </a>
-              </div>
-              <div className="d-none lg:d-block">
-                <Link className="text-none fw-medium" to={`/sign-in`}>
-                  <span>Log in</span>
-                </Link>
-              </div>
-              <Link
-                className="btn btn-sm btn-primary text-white text-none d-none lg:d-inline-flex"
-                to={`/page-pricing`}
-              >
-                Start free trial
-              </Link>
-              <LanguageSelect2 />
               <a
                 className="d-block lg:d-none uc-icon uc-navbar-toggle-icon"
                 onClick={openMobileMenu}

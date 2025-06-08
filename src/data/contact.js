@@ -82,7 +82,7 @@ export const horizontalPanels = [
     altText: "전화",
     title: "전화",
     description: "0507-1360-8169",
-    linkText: "0507-1360-8169",
+    linkText: "전화 걸기",
     linkUrl: "tel:050713608169",
   },
 ];
