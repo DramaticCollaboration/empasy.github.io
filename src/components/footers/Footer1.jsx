@@ -30,35 +30,35 @@ export default function Footer1() {
           <div className="footer-inner vstack gap-4 lg:gap-6 xl:gap-8">
             <div className="uc-footer-widgets panel">
               <div className="row child-cols-6 md:child-cols col-match g-4">
-                <div className="col-12 lg:col-4">
+                <div className="col-12 lg:col-7">
                   <div className="panel vstack items-start gap-4 ltr:md:pe-8 rtl:md:ps-8">
-                    <div className="vstack gap-2">
+                    <div className="hstack gap-3 align-items-center">
                       <Link to={`/`}>
                         <img
-                          className="w-32px text-primary"
+                          className="text-primary"
                           alt="엠파시"
-                          src="/assets/images/common/logo-mark.png"
-                          width="34"
-                          height="34"
+                          src="/assets/images/common/logo-dark.png"
                         />
                       </Link>
-                      <p>
+                      <p className="m-0">
                         Sync Series 플랫폼으로 소프트웨어 개발 및 변경의 속도와 유연성을 극대화하여, 고객의 비즈니스 민첩성 확보와 경쟁력 강화를 지원하는 변화에 최적화된 솔루션 기업입니다
                       </p>
                     </div>
                   </div>
                 </div>
-                {footerLinks.map((section, index) => (
-                  <div key={index}>
-                    <ul className="nav-y gap-1 fw-medium">
-                      {section.links.map((link, i) => (
-                        <li key={i}>
-                          <Link to={link.href}>{link.label}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+                <div className="col-12 lg:col-12">
+                  {footerLinks.map((section, index) => (
+                      <div key={index}>
+                        <ul className="nav-x gap-3 fw-medium text-end d-flex justify-end">
+                          {section.links.map((link, i) => (
+                              <li key={i}>
+                                <Link to={link.href}>{link.label}</Link> {i < section.links.length - 1 && ' | '}
+                              </li>
+                          ))}
+                        </ul>
+                      </div>
+                  ))}
+                </div>
               </div>
             </div>
             <div className="uc-footer-bottom panel vstack lg:hstack gap-4 justify-center lg:justify-between pt-4 lg:pt-6 border-top dark:text-white">
@@ -69,13 +69,12 @@ export default function Footer1() {
 
               </div>
               <div className="hstack justify-center lg:justify-end gap-2 lg:gap-3">
-                  <FacebookShareButton url={shareUrl} className="Demo__some-network__share-button">
+                  <FacebookShareButton url={shareUrl}>
                     <FacebookIcon size={32} round fill='none'/>
                   </FacebookShareButton>
                   <TwitterShareButton
                       url={shareUrl}
                       title={title}
-                      className="Demo__some-network__share-button"
                   >
                     <XIcon size={32} round />
                   </TwitterShareButton>
@@ -83,35 +82,31 @@ export default function Footer1() {
                   <TelegramShareButton
                       url={shareUrl}
                       title={title}
-                      className="Demo__some-network__share-button"
                   >
                     <TelegramIcon size={32} round />
                   </TelegramShareButton>
-                <LinkedinShareButton url={shareUrl} className="Demo__some-network__share-button">
+                <LinkedinShareButton url={shareUrl}>
                   <LinkedinIcon size={32} round />
                 </LinkedinShareButton>
                 <EmailShareButton
                     url={shareUrl}
                     subject={title}
                     body="body"
-                    className="Demo__some-network__share-button"
                 >
                   <EmailIcon size={32} round />
                 </EmailShareButton>
-                <LineShareButton url={shareUrl} title={title} className="Demo__some-network__share-button">
+                <LineShareButton url={shareUrl} title={title}>
                   <LineIcon size={32} round />
                 </LineShareButton>
                 <InstapaperShareButton
                       url={shareUrl}
                       title={title}
-                      className="Demo__some-network__share-button"
                   >
                     <InstapaperIcon size={32} round />
                   </InstapaperShareButton>
                   <ThreadsShareButton
                       url={shareUrl}
                       title={title}
-                      className="Demo__some-network__share-button"
                   >
                     <ThreadsIcon size={32} round />
                   </ThreadsShareButton>
