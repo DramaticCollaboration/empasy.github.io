@@ -45,7 +45,12 @@ export default function ContactLinks2() {
                       </div>
                       <a
                         href={panel.linkUrl}
+                        {...panel.onclick && { onClick: (e) => {
+                            e.preventDefault();
+                            new Function(panel.onclick)();
+                          }}}
                         className="uc-link fw-bold hstack gap-narrow"
+                        {... panel.target && { target: panel.target }}
                       >
                         <span>{panel.linkText}</span>
                         <i className="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px" />

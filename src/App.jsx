@@ -63,7 +63,7 @@ import SigninPage2 from "./pages/othersPages/sign-in-2";
 import SignupPage2 from "./pages/othersPages/sign-up-2";
 import ResetPasswordPage2 from "./pages/othersPages/reset-password-2";
 import ShopSidebarPage from "./pages/shop/shop-sidebar";
-
+import { TawkLiveChat } from 'tawk-react'
 function App() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -248,6 +248,7 @@ function App() {
         <Cart />
         <BacktoTop />
         <ScrollTopBehaviour />
+        <TawkLiveChat propertyId="6844d9b8bac035190e0e94a2" widgetId="1it6f4u58" />
       </Context>
     </>
   );

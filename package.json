@@ -27,6 +27,7 @@
     "sass": "^1.77.8",
     "swiper": "^11.1.9",
     "react-share": "^5.2.2",
+    "tawk-react": "^0.0.2",
     "gh-pages": "^6.3.0"
   },
   "devDependencies": {
