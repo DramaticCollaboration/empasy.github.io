@@ -33,7 +33,7 @@ export default function ContactPage() {
                 className="h6 sm:h5 text-center mb-4 sm:mb-6 xl:mb-8"
                 data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 200;"
               >
-                Trusted by well-known brands.
+                엠파시의 혁신을 이끄는 핵심 기술들.
               </h5>
               <div
                 className="block-panel panel"

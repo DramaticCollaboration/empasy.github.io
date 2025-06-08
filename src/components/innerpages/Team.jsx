@@ -17,16 +17,18 @@ export default function Team() {
                   Our team
                 </span>
                 <h2 className="title h3 lg:h2 xl:h1 m-0">
-                  People you’ll be working with
+                  당신과 함께할 멋진 사람들
                 </h2>
                 <p className="fs-6 xl:fs-5 text-opacity-70">
-                  We’re a 100% remote team spread all across the world. Join us!
+                  <b>엠파시팀</b>은 이름에 담긴 '공감 시너지'의 가치를 믿어요.<br/>
+                  서로와 고객을 깊이 이해하고 함께 협력하며 최고의 결과를 만들어내죠.<br/>
+                  앞선 기술력과 효율적인 협업으로 변화에 민첩하게 대응하는 <b>'살아있는 소프트웨어'</b>를 만들고, 고객의 지속 가능한 성장을 돕는 든든한 동반자가 되어드립니다.
                 </p>
                 <Link
                   to={`/page-about`}
                   className="btn btn-md btn-primary rounded-default mt-1 lg:mt-2 d-none sm:d-block"
                 >
-                  About us
+                  엠파시, 그리고 우리의 생각
                 </Link>
               </div>
               <div className="content panel">

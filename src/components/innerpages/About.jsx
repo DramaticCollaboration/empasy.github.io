@@ -42,15 +42,15 @@ export default function About() {
           >
             <div className="vstack items-center gap-4 mb-4 sm:mb-6 lg:mb-8 max-w-850px mx-auto text-center">
               <h1 className="h2 sm:h1 lg:display-6 xl:display-5 m-0">
-                About 엠파시.
+                엠파시, 그리고 우리의 생각
               </h1>
               <p className="fs-6 md:fs-5 text-dark dark:text-white text-opacity-70">
-                In 2014, Steven Smith have gotten so much of our time back that
-                we're now able to put towards things that are actually helping
-                our company as opposed to just throwing content out there. and
-                the idea of 엠파시 was born. Today, 엠파시 empowers teams to
-                easily communicate with customers through personalized documents
-                that can be created in minutes, build meaningful relationships.
+                <b>변화에 최적화된 솔루션으로 비즈니스 민첩성을 선도합니다.</b><br/>
+                빠르게 바뀌는 시장 환경 속에서도 귀사의 소프트웨어가 민첩하게 대응하고, 경쟁 우위를 확보하도록 돕습니다.<br/>
+                Sync Series는 개발, 운영, 테스트, 콘텐츠 관리 전반에서 속도와 효율성, 유연성을 극대화합니다.<br/>
+                'Boon to business by agility' 정신 아래, 엠파시는 'Empathic Synergy(공감을 통한 시너지)'를 통해 고객과 깊이 공감하고 협력하여 혁신을 만들어갑니다.<br/>
+                <b>'살아있는 소프트웨어'</b>로 귀사의 지속 가능한 성장을 지원합니다.
+                <br/>지금 엠파시와 함께 변화를 기회로 만드세요.
               </p>
             </div>
             <div className="panel row child-cols-12 col-match g-1 sm:g-2">

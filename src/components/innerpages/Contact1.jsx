@@ -93,11 +93,11 @@ export default function Contact1() {
           >
             <div className="vstack items-center gap-2 lg:gap-4 mb-4 sm:mb-6 lg:mb-8 max-w-750px mx-auto text-center">
               <h1 className="h2 sm:h1 lg:display-6 xl:display-5 m-0">
-                Let's get in touch.
+                편하게 연락 주세요
               </h1>
               <p className="fs-6 sm:fs-5 text-dark dark:text-white text-opacity-70">
-                Feel free to reach out to us using the options below, and our
-                dedicated team will respond to your inquiries promptly.
+                언제든지 아래 방법으로 편하게 연락 주세요.
+                엠파시 팀이 빠르고 정성껏 답변드릴게요.
               </p>
             </div>
             <div className="panel rounded-3 overflow-hidden bg-secondary dark:bg-gray-800">
@@ -119,13 +119,11 @@ export default function Contact1() {
                       <div className="panel z-1">
                         <div className="vstack gap-3">
                           <p className="fs-5 xl:fs-4 fw-medium">
-                            “This software simplifies the website building
-                            process, making it a breeze to manage our online
-                            presence.”
+                            귀사의 비즈니스 목표 달성을 위한 최적의 Sync Series 활용 방안을 엠파시 전문가와 상의하십시오
                           </p>
                           <div className="vstack gap-0">
                             <p className="fs-6 lg:fs-5 fw-medium">
-                              David Larry
+                              PyungMoon Oh
                             </p>
                             <span className="fs-7 opacity-80">
                               Founder &amp; CEO

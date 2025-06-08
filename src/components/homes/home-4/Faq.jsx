@@ -15,7 +15,7 @@ export default function Faq() {
               style={{ transform: "translateY(0px)", opacity: 1 }}
             >
               <h2 className="h4 sm:h3 lg:h2 m-0 text-center">
-                Frequenlty asked questions:
+                자주 묻는 질문들:
               </h2>
               <div className="panel">
                 <ul
