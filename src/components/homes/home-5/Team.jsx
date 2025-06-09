@@ -58,16 +58,17 @@ export default function Team() {
                 className="vstack items-center gap-2 lg:gap-3 max-w-450px mx-auto text-center lg:mt-4"
                 data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
               >
-                <h2 className="h4 sm:h3 m-0">We’re hiring</h2>
+                <h2 className="h4 sm:h3 m-0">우리는 항상 함께할 동료를 기다리고 있어요</h2>
                 <p className="fs-6 sm:fs-5 lg:fs-4 text-dark dark:text-white text-opacity-70">
-                  We are looking for people that share our vision. Are you
-                  adaptable, driven, and friendly?&nbsp;
+                  저희와 같은 비전을 나누는 분을 찾고 있습니다.<br/>
+                  변화에 유연하고, 열정 가득하며, 따뜻한 마음을 가진 분이라면<br/>
+                  꼭 함께하고 싶어요!
                 </p>
                 <Link
                   className="btn btn-md rounded-default bg-white dark:bg-gray-700 dark:text-white border-gray-900 dark:border-white border-opacity-20 hover:border-opacity-40 shadow-xs mt-1"
                   to={`/page-career`}
                 >
-                  <span>Submit application</span>
+                  <span>지금 지원서 보내기</span>
                 </Link>
               </div>
             </div>

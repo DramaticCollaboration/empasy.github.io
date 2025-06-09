@@ -50,22 +50,21 @@ export const factItems = [
 
 export const panelsData = [
   {
-    value: 2014,
-    text: "엠파시 founded.",
+    value: 2024,
+    text: "엠파시 설립",
     animationData:
       "onview: -100; textContent: 2014; round: 1; easing: linear; duration: 1200;",
   },
   {
-    value: 50,
-    text: "Hardworking group.",
+    value: 4,
+    text: "주력 솔루션",
     animationData:
       "onview: -100; textContent: [0, 50]; round: 1; easing: linear; duration: 1200;",
   },
   {
-    value: 100,
-    text: "Document workflows.",
+    value: 4,
+    text: "주요 사업 분야",
     animationData:
       "onview: -100; textContent: [0, 100]; round: 1; easing: linear; duration: 1200;",
-    suffix: "k",
   },
 ];

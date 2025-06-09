@@ -16,11 +16,10 @@ export default function CareerBenefits() {
               data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
             >
               <p className="fs-5 xl:fs-3 text-dark dark:text-white text-opacity-70">
-                We love our people and want to ensure that they are supported at
-                work and at home. That’s what helps us maintain our coveted best
-                work-life balance award. <br />
-                Here are just some of the perks you can expect to receive while
-                working for us:
+                우리는 우리 팀을 정말 소중하게 생각합니다.<br/>
+                일터에서는 물론, 집에서도 든든히 응원받을 수 있도록 항상 노력하고 있어요.<br/>
+                그 덕분에 자랑스러운 ‘일과 삶의 균형’ 문화를 지켜가고 있답니다.<br/>
+                엠파시와 함께하면 누릴 수 있는 몇 가지 특별한 혜택, 지금 소개할게요
               </p>
               <div className="panel mt-4 xl:mt-6">
                 <div className="row child-cols-6 lg:child-cols-4 col-match g-3">

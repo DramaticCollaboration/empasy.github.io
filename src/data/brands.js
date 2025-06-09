@@ -149,6 +149,93 @@ export const brands = [
     src: "/assets/images/brands/discord.svg",
     alt: "Discord",
   },
+  {
+    id: 31,
+    src: "/assets/images/brands/kubernetes.svg",
+    alt: "Kubernetes",
+  },
+  {
+    id: 32,
+    src: "/assets/images/brands/docker.svg",
+    alt: "Docker Swarm",
+  },
+  {
+    id: 33,
+    src: "/assets/images/brands/confluence.svg",
+    alt: "Confluence",
+  },
+  {
+    id: 34,
+    src: "/assets/images/brands/maven.svg",
+    alt: "Maven",
+  },
+  {
+    id: 35,
+    src: "/assets/images/brands/gradle.svg",
+    alt: "Gradle",
+  },
+  {
+    id: 36,
+    src: "/assets/images/brands/quasar.svg",
+    alt: "Quasar Framework",
+  },
+  {
+    id: 37,
+    src: "/assets/images/brands/junit.svg",
+    alt: "JUnit",
+  },
+  {
+    id: 38,
+    src: "/assets/images/brands/grafana.svg",
+    alt: "Grafana",
+  },
+  {
+    id: 39,
+    src: "/assets/images/brands/gitlab.svg",
+    alt: "Gitlab",
+  },
+  {
+    id: 40,
+    src: "/assets/images/brands/sonatype.svg",
+    alt: "Nexus",
+  },
+  {
+    id: 41,
+    src: "/assets/images/brands/nodejs.svg",
+    alt: "NodeJS",
+  },
+  {
+    id: 42,
+    src: "/assets/images/brands/npm.svg",
+    alt: "NPM",
+  },
+  {
+    id: 43,
+    src: "/assets/images/brands/travis.svg",
+    alt: "Travis",
+  },
+  {
+    id: 44,
+    src: "/assets/images/brands/apachejmeter.svg",
+    alt: "Apache Jmeter",
+  },
+  {
+    id: 45,
+    src: "/assets/images/brands/ngrinder.png",
+    alt: "Naver NGrinder",
+  },
+  {
+    id: 46,
+    src: "/assets/images/brands/ngrinder.png",
+    alt: "Naver NGrinder",
+  },
+  {
+    id: 47,
+    src: "/assets/images/brands/egov.png",
+    alt: "전자정부 프레임워크",
+  },
+
+
 ];
 
 export const reviewLogos = [

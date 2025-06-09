@@ -43,13 +43,13 @@ export default function CareerHero() {
           >
             <div className="vstack items-center gap-2 lg:gap-4 mb-4 sm:mb-6 lg:mb-8 max-w-850px mx-auto text-center">
               <h1 className="h2 sm:h1 lg:display-6 xl:display-5 m-0">
-                Careers.
+                당신의 다음, 엠파시에서
               </h1>
               <p className="fs-6 sm:fs-5 text-dark dark:text-white text-opacity-70">
-                We are looking for people that share our vision. Are you
-                adaptable, driven, and friendly? Do you thrive in a fast-paced
-                work environment where collaboration is the norm? If the answer
-                is yes, then you’re a what we looking for.
+                우리는 우리의 비전에 공감하는 멋진 분들을 기다리고 있어요.<br/>
+                변화에 유연하고, 열정 넘치며, 함께하는 일을 좋아하시나요?<br/>
+                빠르게 움직이는 팀워크 중심의 환경이 즐겁게 느껴진다면,<br/>
+                바로 당신이 저희가 찾고 있는 분이에요!
               </p>
             </div>
             <div className="panel">
@@ -57,7 +57,7 @@ export default function CareerHero() {
                 <img
                   className="media-cover image uc-transition-scale-up uc-transition-opaque"
                   alt="Career"
-                  src="/assets/images/common/career.jpg"
+                  src="/assets/images/career/career.jpg"
                   width="1500"
                   height="1000"
                   style={{objectFit: "fill"}}

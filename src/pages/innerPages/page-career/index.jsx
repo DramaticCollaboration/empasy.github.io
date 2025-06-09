@@ -4,13 +4,11 @@ import Footer2 from "@/components/footers/Footer2";
 import CareerHero from "@/components/innerpages/CareerHero";
 import CareerBenefits from "@/components/innerpages/CareerBenefits";
 import CareerOpenings from "@/components/innerpages/CareerOpenings";
-import Feedback from "@/components/homes/home-2/Feedback";
 import Brands from "@/components/innerpages/Brands";
-import Blogs from "@/components/homes/home-2/Blogs";
 import MetaComponent from "@/components/common/MetaComponent";
 const metadata = {
   title:
-    "Career || 살아 있는 소프트웨어를 만듭니다.",
+    "당신의 다음, 엠파시에서 || 살아 있는 소프트웨어를 만듭니다.",
   description:
     "살아 있는 소프트웨어를 만듭니다.",
 };
@@ -24,9 +22,7 @@ export default function CareerPage() {
           <CareerHero />
           <CareerBenefits />
           <CareerOpenings />
-          <Feedback />
           <Brands />
-          <Blogs />
         </div>
         <Footer2 />
       </div>

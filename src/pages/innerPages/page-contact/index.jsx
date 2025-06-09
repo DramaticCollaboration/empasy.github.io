@@ -45,7 +45,6 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-          <Blogs />
         </div>
         <Footer2 />
       </div>

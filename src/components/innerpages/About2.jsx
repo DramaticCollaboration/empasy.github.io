@@ -17,7 +17,7 @@ export default function About2() {
             <img
               className="w-150px xl:w-250px d-block dark:d-none"
               alt="walking"
-              src="/assets/images/template/walking.svg"
+              src="/assets/images/about/walking.svg"
               width="224"
               height="226"
             />

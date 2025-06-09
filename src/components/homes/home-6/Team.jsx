@@ -80,7 +80,7 @@ export default function Team() {
                         <i className="icon icon-narrow md:icon-1 unicon-arrow-up-right fw-bold rtl:-rotate-90" />
                       </Link>
                       <span className="fs-7 md:fs-6 fw-medium">
-                        We’re hiring
+                        우리는 항상 함께할 동료를 기다리고 있어요
                       </span>
                     </div>
                   </div>

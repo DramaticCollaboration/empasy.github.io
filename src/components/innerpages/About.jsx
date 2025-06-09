@@ -59,7 +59,7 @@ export default function About() {
                   <img
                     className="media-cover image uc-transition-scale-up uc-transition-opaque"
                     alt="About image"
-                    src="/assets/images/template/hero-about-01.jpg"
+                    src="/assets/images/about/agile_board_ticket.jpg"
                     width="1000"
                     height="1500"
                   />
@@ -88,7 +88,7 @@ export default function About() {
                     <img
                       className="media-cover image"
                       alt="About image"
-                      src="/assets/images/template/hero-about-02.jpg"
+                      src="/assets/images/about/agile_meeting.jpg"
                       width="1000"
                       height="667"
                     />

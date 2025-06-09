@@ -59,7 +59,7 @@ export default function Team() {
                 to={`/page-career`}
                 className="uc-link dark:text-secondary fw-bold d-inline-flex items-center gap-narrow mx-auto"
               >
-                <span>We’re hiring</span>
+                <span>우리는 항상 함께할 동료를 기다리고 있어요</span>
                 <i className="icon icon-1 unicon-arrow-right rtl:rotate-180" />
               </Link>
             </div>

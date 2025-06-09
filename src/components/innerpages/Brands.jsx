@@ -1,4 +1,4 @@
-import { brands3 } from "@/data/brands";
+import {brands, brands3} from "@/data/brands";
 import React from "react";
 
 export default function Brands() {
@@ -13,7 +13,7 @@ export default function Brands() {
             >
               <div className="panel">
                 <div className="brands hstack gap-4 justify-between max-w-950px mx-auto">
-                  {brands3.map((image, index) => (
+                  {brands.map((image, index) => (
                     <div key={index}>
                       <img
                         src={image.src}

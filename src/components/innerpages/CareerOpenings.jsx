@@ -16,7 +16,7 @@ export default function CareerOpenings() {
                 className="h4 sm:h2 m-0 text-center"
                 data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 100;"
               >
-                Current openings
+                함께할 수 있는 기회들
               </h2>
               <div className="panel">
                 <div
@@ -37,7 +37,7 @@ export default function CareerOpenings() {
                           to={`/page-career-detail/${job.id}`}
                           className="uc-link fs-7 fw-bold d-inline-flex items-center gap-narrow border-bottom pb-narrow"
                         >
-                          <span>Apply now</span>
+                          <span>지원하기</span>
                           <i className="icon icon-narrow unicon-arrow-up-right fw-bold rtl:-rotate-90" />
                         </Link>
                       </div>
