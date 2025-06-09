@@ -49,8 +49,7 @@ export default function Team() {
                         />
                         <div className="panel vstack items-start gap-narrow">
                           <h6 className="h6 xl:h5 m-0">{member.name}</h6>
-                          <span className="fs-6 xl:fs-5 text-primary dark:text-white dark:text-opacity-70">
-                            {member.position}
+                          <span className="fs-6 xl:fs-5 text-primary dark:text-white dark:text-opacity-70" dangerouslySetInnerHTML={{ __html: member.position }}>
                           </span>
                         </div>
                       </div>
