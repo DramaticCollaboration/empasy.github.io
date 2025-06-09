@@ -216,9 +216,9 @@ export const teamMembers4 = [
 export const teamMembers5 = [
   {
     id: 30,
-    imageSrc: "/assets/images/team/01.jpg",
-    altText: "Amélie Laurent",
-    name: "Amélie Laurent",
+    imageSrc: "/assets/images/team/poh.png",
+    altText: "오병문",
+    name: "오병문",
     position: "Founder & CEO",
   },
   {

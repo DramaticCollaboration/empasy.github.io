@@ -2,10 +2,10 @@ export const footerLinks = [
   {
     links: [
       { href: "/page-about", label: "엠파시는" },
-      { href: "/page-features", label: "SyncCMS" },
-      { href: "/page-features", label: "SyncBoot" },
-      { href: "/page-features", label: "SyncApim" },
-      { href: "/page-features", label: "SyncEta" },
+      { href: "/page-synccms", label: "SyncCMS" },
+      { href: "/page-syncboot", label: "SyncBoot" },
+      { href: "/page-syncapim", label: "SyncApim" },
+      { href: "/page-synceta", label: "SyncEta" },
       { href: "/page-contact", label: "문의하기" },
       { href: "/page-team", label: "엠파시 사람들" },
       { href: "/page-career", label: "인재 모집" },

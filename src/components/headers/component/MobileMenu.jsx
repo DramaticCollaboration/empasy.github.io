@@ -148,16 +148,16 @@ export default function MobileMenu() {
               <Link to={`/page-about`}>엠파시는</Link>
             </li>
             <li>
-              <Link to={`/page-features`}>SyncCMS</Link>
+              <Link to={`/page-synccms`}>SyncCMS</Link>
             </li>
             <li>
-              <Link to={`/page-features`}>SyncBoot</Link>
+              <Link to={`/page-syncboot`}>SyncBoot</Link>
             </li>
             <li>
-              <Link to={`/page-features`}>SyncApim</Link>
+              <Link to={`/page-syncapim`}>SyncApim</Link>
             </li>
             <li>
-              <Link to={`/page-features`}>SyncEta</Link>
+              <Link to={`/page-eta`}>SyncEta</Link>
             </li>
             <li>
               <Link to={`/page-contact`}>문의하기</Link>

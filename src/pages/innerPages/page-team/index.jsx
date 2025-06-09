@@ -6,7 +6,7 @@ import Team from "@/components/innerpages/Team";
 import MetaComponent from "@/components/common/MetaComponent";
 const metadata = {
   title:
-    "Team || 살아 있는 소프트웨어를 만듭니다.",
+    "함께하는 사람들 || 살아 있는 소프트웨어를 만듭니다.",
   description:
     "살아 있는 소프트웨어를 만듭니다.",
 };

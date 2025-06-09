@@ -23,6 +23,10 @@ import HomePage5 from "./pages/homes/home-5";
 import HomePage6 from "./pages/homes/home-6";
 import HomePageRtl from "./pages/homes/rtl";
 import FeaturesPage from "./pages/innerPages/page-features";
+import SyncCmsPage from "./pages/innerPages/page-synccms";
+import SyncBootPage from "./pages/innerPages/page-syncboot";
+import SyncApimPage from "./pages/innerPages/page-syncapim";
+import SyncEtaPage from "./pages/innerPages/page-synceta";
 import PricingPage from "./pages/innerPages/page-pricing";
 import AboutPage from "./pages/innerPages/page-about";
 import CareerPage from "./pages/innerPages/page-career";
@@ -162,6 +166,12 @@ function App() {
               <Route path="rtl" element={<HomePageRtl />} />
 
               <Route path="page-features" element={<FeaturesPage />} />
+
+              <Route path="page-synccms" element={<SyncCmsPage />} />
+              <Route path="page-syncboot" element={<SyncBootPage />} />
+              <Route path="page-syncapim" element={<SyncApimPage />} />
+              <Route path="page-synceta" element={<SyncEtaPage />} />
+
               <Route path="page-pricing" element={<PricingPage />} />
               <Route path="page-about" element={<AboutPage />} />
               <Route path="page-career" element={<CareerPage />} />

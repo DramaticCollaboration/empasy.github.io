@@ -14,7 +14,7 @@ export default function Team() {
                 data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
               >
                 <span className="fw-bold text-primary dark:text-secondary">
-                  Our team
+                  함께하는 사람들
                 </span>
                 <h2 className="title h3 lg:h2 xl:h1 m-0">
                   당신과 함께할 멋진 사람들
@@ -38,13 +38,14 @@ export default function Team() {
                 >
                   {teamMembers5.map((member) => (
                     <div key={member.id}>
-                      <div className="panel vstack gap-2 xl:gap-3">
+                      <div className="panel vstack gap-2 xl:gap-3" style={{width: 200, height: 300, overflow: 'hidden'}}>
                         <img
                           className="w-100 rounded-1 sm:rounded-1-5"
                           src={member.imageSrc}
                           width={560}
                           height={592}
                           alt={member.altText}
+                          style={{height: '300px'}}
                         />
                         <div className="panel vstack items-start gap-narrow">
                           <h6 className="h6 xl:h5 m-0">{member.name}</h6>
