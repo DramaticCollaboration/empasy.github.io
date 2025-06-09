@@ -157,7 +157,7 @@ export default function MobileMenu() {
               <Link to={`/page-syncapim`}>SyncApim</Link>
             </li>
             <li>
-              <Link to={`/page-eta`}>SyncEta</Link>
+              <Link to={`/page-synceta`}>SyncEta</Link>
             </li>
             <li>
               <Link to={`/page-contact`}>문의하기</Link>

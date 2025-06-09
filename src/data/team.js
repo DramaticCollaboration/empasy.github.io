@@ -242,32 +242,4 @@ export const teamMembers5 = [
     name: "전표찬",
     position: "혁신을 꿈꾸며, 코드로 세상을 바꾸는 개발자입니다.<br/> 기술의 무한한 가능성을 탐구하며, 창의적인 해결책을 통해 더 나은 미래를 만들어갑니다.<br/> 언제나 새로운 도전을 즐기고, 고객의 요구를 뛰어넘는 결과물을 추구합니다.",
   },
-  {
-    id: 34,
-    imageSrc: "/assets/images/team/05.jpg",
-    altText: "김재은",
-    name: "김재은",
-    position: "Backend Developer",
-  },
-  {
-    id: 35,
-    imageSrc: "/assets/images/team/06.jpg",
-    altText: "장지용",
-    name: "장지용",
-    position: "Product Designer",
-  },
-  {
-    id: 36,
-    imageSrc: "/assets/images/team/07.jpg",
-    altText: "김대영",
-    name: "김대영",
-    position: "UX Researcher",
-  },
-  {
-    id: 37,
-    imageSrc: "/assets/images/team/08.jpg",
-    altText: "김태흥",
-    name: "김태흥",
-    position: "Customer Success",
-  },
 ];

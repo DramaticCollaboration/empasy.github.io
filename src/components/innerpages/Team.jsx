@@ -38,16 +38,16 @@ export default function Team() {
                 >
                   {teamMembers5.map((member) => (
                     <div key={member.id}>
-                      <div className="panel vstack gap-2 xl:gap-3" style={{width: 200, height: 300, overflow: 'hidden'}}>
+                      <div className="panel vstack gap-2 xl:gap-3">
                         <img
                           className="w-100 rounded-1 sm:rounded-1-5"
                           src={member.imageSrc}
                           width={560}
-                          height={592}
+                          style={{height: '60%'}}
                           alt={member.altText}
-                          style={{height: '300px'}}
+
                         />
-                        <div className="panel vstack items-start gap-narrow">
+                        <div className="panel vstack items-start gap-narrow" style={{height: '40%'}}>
                           <h6 className="h6 xl:h5 m-0">{member.name}</h6>
                           <span className="fs-6 xl:fs-5 text-primary dark:text-white dark:text-opacity-70" dangerouslySetInnerHTML={{ __html: member.position }}>
                           </span>
