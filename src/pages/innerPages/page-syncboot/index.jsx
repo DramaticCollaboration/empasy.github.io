@@ -1,16 +1,16 @@
 import Header2 from "@/components/headers/Header2";
 
 import Footer2 from "@/components/footers/Footer2";
-import Hero from "@/components/innerpages/features/Hero";
-import KeyFeatures from "@/components/innerpages/features/KeyFeatures";
+import Hero from "@/components/innerpages/syncboot/Hero";
+import KeyFeatures from "@/components/innerpages/syncboot/KeyFeatures";
 import Faq from "@/components/homes/home-2/Faq";
 import Testimonials from "@/components/homes/home-3/Testimonials";
-import Cta from "@/components/innerpages/features/Cta";
+import Cta from "@/components/innerpages/syncboot/Cta";
 import Brands2 from "@/components/common/Brands2";
 import MetaComponent from "@/components/common/MetaComponent";
 const metadata = {
   title:
-    "Features || 살아 있는 소프트웨어를 만듭니다.",
+    "SyncBoot || 살아 있는 소프트웨어를 만듭니다.",
   description:
     "살아 있는 소프트웨어를 만듭니다.",
 };
@@ -22,10 +22,8 @@ export default function FeaturesPage() {
         <Header2 />
         <div id="wrapper" className="wrap">
           <Hero />
-          <KeyFeatures />
           <div className="pt-6 xl:pt-9"></div>
           <Faq />
-          <Testimonials />
           <div
             id="clients_brands"
             className="clients-brands section panel overflow-hidden"
@@ -47,7 +45,6 @@ export default function FeaturesPage() {
               </div>
             </div>
           </div>
-          <Cta />
         </div>
         <Footer2 />
       </div>

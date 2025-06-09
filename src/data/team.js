@@ -223,10 +223,10 @@ export const teamMembers5 = [
   },
   {
     id: 31,
-    imageSrc: "/assets/images/team/02.jpg",
-    altText: "Nikolas Gibbons",
-    name: "Nikolas Gibbons",
-    position: "Engineering Manager",
+    imageSrc: "/assets/images/team/jade.png",
+    altText: "이옥수",
+    name: "이옥수",
+    position: "세상에 존재하는 모든 문제는 코드로 해결할 수 있다고 믿습니다. 프론트부터 백엔드, 인프라까지 끝까지 책임지는 개발자입니다. 기술로 세상을 바꾸는 그날까지, 저는 오늘도 코드를 씁니다.",
   },
   {
     id: 32,
