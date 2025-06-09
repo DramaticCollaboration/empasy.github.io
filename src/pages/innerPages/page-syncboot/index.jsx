@@ -45,6 +45,7 @@ export default function FeaturesPage() {
               </div>
             </div>
           </div>
+          <Cta />
         </div>
         <Footer2 />
       </div>

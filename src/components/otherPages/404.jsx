@@ -9,23 +9,16 @@ export default function Notfound() {
           <h2 className="display-5 sm:display-2 fw-normal text-gray-200">
             404
           </h2>
-          <h1 className="h3 sm:h1 m-0">Page not found</h1>
+          <h1 className="h3 sm:h1 m-0">페이지를 찾을 수 없어요</h1>
           <p className="fs-6">
-            Sorry, the page you seems looking for, <br />
-            has been moved, redirected or removed permanently.
+            찾으시는 페이지가 사라졌거나 이동했어요!
           </p>
           <Link
             to={`/`}
             className="btn btn-sm sm:btn-md btn-primary text-white my-2 sm:my-0"
           >
-            Go back home
+            홈으로 돌아가기
           </Link>
-          <p>
-            Why Not try to search again?
-            <a className="uc-link" onClick={openSearchModal} data-uc-toggle>
-              Search now
-            </a>
-          </p>
         </div>
       </div>
     </div>

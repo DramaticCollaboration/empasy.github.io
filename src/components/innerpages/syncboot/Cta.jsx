@@ -10,19 +10,14 @@ export default function Cta() {
           <div className="section-inner panel p-4 sm:p-6 xl:p-8 rounded-2 bg-secondary dark:bg-gray-800 overflow-hidden">
             <div className="vstack gap-2 max-w-550px items-center lg:items-start m-auto lg:m-0 text-center lg:text-start rtl:lg:text-end">
               <h2 className="h3 sm:h1 m-0">
-                Create stunning websites that fits your needs.
+                SyncBoot 제품 소개서
               </h2>
               <div className="vstack sm:hstack justify-center lg:justify-start gap-1 lg:gap-2 mt-1 lg:mt-2">
-                <Link
-                  to={`/page-pricing`}
-                  className="btn btn-md lg:btn-lg btn-primary text-white"
-                >
-                  Try 엠파시 today
-                </Link>
+                <a href='/assets/images/product/SyncBoot_제품소개_V1.2.0.pdf'
+                  className="btn btn-md lg:btn-lg btn-primary text-white" target='_blank'>
+                  다운로드
+                </a>
               </div>
-              <p className="fs-7 text-dark dark:text-white text-opacity-70">
-                14-day trial, no credit card required.
-              </p>
             </div>
             <div className="position-absolute top-50 ltr:end-0 rtl:start-0 translate-middle-y z-1 ltr:me-8 rtl:ms-8 d-none lg:d-block">
               <img

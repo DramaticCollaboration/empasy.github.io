@@ -6,6 +6,7 @@ import KeyFeatures from "@/components/innerpages/syncapim/KeyFeatures";
 import Faq from "@/components/homes/home-2/Faq";
 import Brands2 from "@/components/common/Brands2";
 import MetaComponent from "@/components/common/MetaComponent";
+import Cta from "@/components/innerpages/syncboot/Cta.jsx";
 const metadata = {
   title:
     "SyncApim || 살아 있는 소프트웨어를 만듭니다.",
@@ -43,6 +44,7 @@ export default function FeaturesPage() {
               </div>
             </div>
           </div>
+          <Cta />
         </div>
         <Footer2 />
       </div>
