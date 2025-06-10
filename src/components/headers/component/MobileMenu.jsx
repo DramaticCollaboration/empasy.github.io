@@ -168,6 +168,13 @@ export default function MobileMenu() {
             <li>
               <Link to={`/page-career`}>인재 모집</Link>
             </li>
+            <li>
+              <a href="https://doc.empasy.com" target="_blank">
+                <span>문서 보러 가기</span>
+                <i className="icon icon-narrow unicon-arrow-right fw-bold rtl:rotate-180" />
+              </a>
+            </li>
+
           </ul>
           <ul className="social-icons nav-x mt-4">
             <li>
