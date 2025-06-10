@@ -230,13 +230,20 @@ export const teamMembers5 = [
   },
   {
     id: 32,
+    imageSrc: "/assets/images/team/Kyle.png",
+    altText: "김재은",
+    name: "김재은",
+    position: "변화와 실패를 두려워하지 않고 도전하며 성장하는 개발자입니다.<br/>새로운 기술과 트렌드에 적극적으로 뛰어들어 경험을 쌓고, 실패하더라도 포기하지 않고 반드시 해결책을 찾아냅니다.<br/>매일 더 나은 개발자로 거듭나기 위해 노력합니다.",
+  },
+  {
+    id: 33,
     imageSrc: "/assets/images/team/han.png",
     altText: "한상욱",
     name: "한상욱",
     position: "협업과 소통을 통해 더 나은 코드를 만들고, 변화에 민첩하게 대응하는 살아있는 소프트웨어를 추구합니다.<br/> 기술로 세상을 더 나은 방향으로 이끄는 엠파시팀의 가치에 공감하며, 함께 시너지를 만들어가고 싶습니다",
   },
   {
-    id: 33,
+    id: 34,
     imageSrc: "/assets/images/team/charlie.jpg",
     altText: "전표찬",
     name: "전표찬",
