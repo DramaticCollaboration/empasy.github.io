@@ -165,7 +165,12 @@ export default function Hero() {
                     className="vstack items-center gap-2 text-white"
                     data-anime="targets: >*; translateY: [24, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
                   >
-                    <h1 className="h2 sm:h1 lg:display-6 xl:display-4 mt-4 sm:mt-0">
+                    <h1
+                      className="h2 sm:h1 lg:display-6 xl:display-4 mt-4 sm:mt-0"
+                      ref={(node) => {
+                        node.style.setProperty('line-height', '1.2', 'important');
+                      }}
+                    >
                       살아 있는 소프트웨어는
                       <br className="d-none sm:d-block" />
                       엠파시가 만듭니다
