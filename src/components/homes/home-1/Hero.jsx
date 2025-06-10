@@ -168,7 +168,7 @@ export default function Hero() {
                     <h1
                       className="h2 sm:h1 lg:display-6 xl:display-4 mt-4 sm:mt-0"
                       ref={(node) => {
-                        try{ node.style.setProperty('line-height', '1.2', 'important');}catch(e){console.log(e)}
+                        try{ node.style.setProperty('line-height', '1.2', 'important');}catch(e){}
                       }}
                     >
                       살아 있는 소프트웨어는
