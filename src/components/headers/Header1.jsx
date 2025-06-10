@@ -67,7 +67,7 @@ export default function Header1() {
                   <rect className="line-4" y={15} width={20} height={2}/>
                 </svg>
               </a>
-              <a href="http://doc.empasy.com" className="d-none lg:d-flex btn btn-sm btn-primary px-2 mt-2" target="_blank">
+              <a href="http://doc.empasy.com" className="d-none lg:d-flex btn btn-sm btn-primary px-2" target="_blank">
                 <span>문서 보러 가기</span>
                 <i className="icon icon-narrow unicon-arrow-right fw-bold rtl:rotate-180" />
               </a>
