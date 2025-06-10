@@ -9,7 +9,7 @@ import Blogs from "@/components/homes/home-2/Blogs";
 import MetaComponent from "@/components/common/MetaComponent";
 const metadata = {
   title:
-    "Contact 1 || 살아 있는 소프트웨어를 만듭니다.",
+    "연락하기 || 살아 있는 소프트웨어를 만듭니다.",
   description:
     "살아 있는 소프트웨어를 만듭니다.",
 };
