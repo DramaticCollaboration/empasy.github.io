@@ -68,7 +68,7 @@ export const horizontalPanels = [
     title: "챗팅",
     description: "즉시 답변 받기.",
     linkText: "챗팅 시작",
-    linkUrl: "javascript:void(0)",
+    linkUrl: null,
     onclick: startChat,
   },
   {
