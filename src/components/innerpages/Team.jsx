@@ -43,9 +43,8 @@ export default function Team() {
                           className="w-100 rounded-1 sm:rounded-1-5"
                           src={member.imageSrc}
                           width={560}
-                          style={{height: '55%'}}
+                          style={{height: '55%', objectFit: 'cover', flexShrink: 0}}
                           alt={member.altText}
-
                         />
                         <div className="panel vstack items-start gap-narrow" style={{height: '45%'}}>
                           <h6 className="h6 xl:h5 m-0">{member.name}</h6>
