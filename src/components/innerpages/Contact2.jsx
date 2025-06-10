@@ -94,7 +94,7 @@ export default function Contact2() {
           >
             <div className="vstack items-center gap-2 lg:gap-4 mb-4 sm:mb-6 lg:mb-8 max-w-750px mx-auto text-center">
               <h1 className="h2 sm:h1 lg:display-6 xl:display-5 m-0">
-                Contact us
+                문의는 언제나 환영이에요
               </h1>
               <p className="fs-6 sm:fs-5 text-dark dark:text-white text-opacity-70">
                 아래에 언제든지 문의해 주세요. 전담 팀이 신속하게 응답해 드리겠습니다.
