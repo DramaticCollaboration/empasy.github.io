@@ -213,7 +213,7 @@ export const teamMembers4 = [
   },
 ];
 
-export const teamMembers5 = [
+  export const teamMembers5 = [
   {
     id: 30,
     imageSrc: "/assets/images/team/poh.png",
@@ -230,7 +230,7 @@ export const teamMembers5 = [
   },
   {
     id: 32,
-    imageSrc: "/assets/images/team/Kyle.png",
+    imageSrc: "/assets/images/team/Kyle.webp",
     altText: "김재은",
     name: "김재은",
     position: "변화와 실패를 두려워하지 않고 도전하며 성장하는 개발자입니다.<br/>새로운 기술과 트렌드에 적극적으로 뛰어들어 경험을 쌓고, 실패하더라도 포기하지 않고 반드시 해결책을 찾아냅니다.<br/>매일 더 나은 개발자로 거듭나기 위해 노력합니다.",
