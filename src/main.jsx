@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import TagManager from '@sooro-io/react-gtm-module'
 const tagManagerArgs = {
-    gtmId: 'G-4QQGMW5P45', // replace with your GTM container ID
+    gtmId: 'GTM-M5BB63X5', // replace with your GTM container ID
 }
 TagManager.initialize(tagManagerArgs)
 
