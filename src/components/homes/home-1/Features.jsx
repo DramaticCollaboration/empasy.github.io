@@ -19,9 +19,10 @@ export default function Features() {
                 엠파시는
               </h2>
               <p className="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">
-                '변화에 최적화된 솔루션'을 핵심 가치로 삼아, Sync Series(APIM, Boot, CMS, ETA) 플랫폼을 제공합니다.
-                이를 통해 고객의 소프트웨어 개발부터 테스트까지 전 과정의 속도와 유연성을 극대화하여 빠르게 변화하는 시장에 민첩하게 대응하고 경쟁력을 강화할 수 있도록 지원합니다.
-                더불어 운영 효율성 향상, 비용 절감, 안정성 확보 등 다양한 가치를 제공합니다
+                Sync Series는 '변화에 최적화된 솔루션'을 핵심 가치로 삼아 APIM, Boot, CMS, ETA로 구성된 플랫폼을 제공합니다.<br/>
+                우리는 AI 기술을 적극적으로 활용하여 제품을 개발하고 있으며, 특히 SyncEta는 화면 검증과 LLM(Large Language Model)을 활용해 자연어로 테스트를 자동 생성하는 등 테스트 자동화의 새로운 기준을 제시합니다.<br/>
+                이를 통해 고객의 소프트웨어 개발부터 테스트까지 전 과정의 속도와 유연성을 극대화하고,<br/>
+                운영 효율 향상, 비용 절감, 안정성 확보 등 실질적인 가치를 제공합니다.
               </p>
             </div>
             <div className="panel vstack gap-4 xl:gap-6">
