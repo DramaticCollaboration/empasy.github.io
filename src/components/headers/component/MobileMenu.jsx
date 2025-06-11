@@ -169,6 +169,9 @@ export default function MobileMenu() {
               <Link to={`/page-career`}>인재 모집</Link>
             </li>
             <li>
+              <Link to={`/blog`}>블로그</Link>
+            </li>
+            <li>
               <a href="https://doc.empasy.com" target="_blank">
                 <span>문서 보러 가기</span>
                 <i className="icon icon-narrow unicon-arrow-right fw-bold rtl:rotate-180" />

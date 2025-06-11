@@ -1,10 +1,27 @@
 import { blogsPosts4 } from "@/data/blogs";
 import React from "react";
-import { Link } from "react-router-dom";
+import {Link, useNavigate, useParams, useSearchParams} from "react-router-dom";
 
 import Pagination from "../common/Pagination";
 
 export default function Blogs1() {
+  // 쿼리 파라미터 사용
+  const [searchParams, setSearchParams] = useSearchParams();
+  const page = searchParams.get('page') ? parseInt(searchParams.get('page')) : 1;
+
+
+  const itemsPerPage = 6; // 페이지당 보여줄 항목 수
+  const pageGroupSize = 5; // 한 번에 보여줄 페이지 번호 개수
+
+  const currentPagePosts = blogsPosts4.slice(
+      (page - 1) * itemsPerPage,     // 시작 인덱스
+      (page - 1) * itemsPerPage + itemsPerPage  // 끝 인덱스
+  );
+
+  const setActivePage = (newPage) => {
+    setSearchParams({ ...Object.fromEntries(searchParams), page: newPage });
+  };
+
   return (
     <div className="section panel overflow-hidden">
       <div className="section-outer panel py-6 lg:py-9">
@@ -126,7 +143,7 @@ export default function Blogs1() {
                   </article>
                 </div>
               ))}
-              {blogsPosts4.slice(1, 7).map((elm, i) => (
+              {currentPagePosts.map((elm, i) => (
                 <div key={i}>
                   <article className="post type-post panel vstack gap-3 rounded-3 p-2 pb-3 bg-secondary dark:bg-gray-800">
                     <Link
@@ -194,7 +211,13 @@ export default function Blogs1() {
                 className="nav-x uc-pagination hstack gap-1 justify-center ft-secondary"
                 data-uc-margin=""
               >
-                <Pagination />
+                <Pagination activePage={page}
+                            onPageChange={(page) => setActivePage(page)}
+                            articleList={blogsPosts4}
+
+                            itemsPerPage={itemsPerPage}
+                            pageGroupSize={pageGroupSize}
+                  />
               </ul>
             </div>
           </div>

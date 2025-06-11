@@ -1,67 +1,70 @@
 import React, { useState } from "react";
 
-export default function Pagination() {
-  const [activePage, setActivePage] = useState(2); // Default active page
+export default function Pagination({ activePage, articleList, itemsPerPage, pageGroupSize, onPageChange }) {
 
-  const handleClick = (page) => {
-    setActivePage(page);
+    // 현재 페이지에 해당하는 항목들만 필터링
+    const getCurrentPageItems = () => {
+        const startIndex = (activePage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        return articleList.slice(startIndex, endIndex);
+    };
+
+    // 전체 페이지 수 계산
+    const totalPages = Math.ceil(articleList.length / itemsPerPage);
+
+    // 페이지 그룹 계산
+    const getPageGroup = () => {
+        const currentGroup = Math.ceil(activePage / pageGroupSize);
+        const start = (currentGroup - 1) * pageGroupSize + 1;
+        const end = Math.min(currentGroup * pageGroupSize, totalPages);
+
+        return Array.from({length: end - start + 1}, (_, i) => ({
+            pageNumber: start + i,
+            isActive: start + i === activePage
+        }));
+    };
+
+
+    // 현재 페이지 항목들
+    const currentItems = getCurrentPageItems();
+    // 현재 페이지 그룹
+    const pageList = getPageGroup();
+
+    const handlePageChange = (page) => {
+      onPageChange(page);
   };
 
   return (
     <ul>
-      <li>
-        <a onClick={() => setActivePage((pre) => (pre == 1 ? 1 : pre - 1))}>
-          <span className="icon icon-1 unicon-chevron-left rtl:rotate-180" />
-        </a>
-      </li>
-      {[1, 2].map((page) => (
-        <li key={page}>
-          <a
-            className={activePage === page ? "uc-active" : ""}
-            onClick={() => handleClick(page)}
-          >
-            {page}
-          </a>
-        </li>
-      ))}
-      {activePage > 3 && activePage < 7 && (
-        <li className="uc-disabled">
-          <span>…</span>
-        </li>
-      )}
-      {activePage === 3 && (
-        <li>
-          <a className={"uc-active"}>3</a>
-        </li>
-      )}
-      {activePage > 3 && activePage < 7 && (
-        <li>
-          <a className={"uc-active"}>{activePage}</a>
-        </li>
-      )}
-      <li className="uc-disabled">
-        <span>…</span>
-      </li>
-      {activePage === 7 && (
-        <li>
-          <a className={"uc-active"}>7</a>
-        </li>
-      )}
-      {[8, 9].map((page) => (
-        <li key={page}>
-          <a
-            className={activePage === page ? "uc-active" : ""}
-            onClick={() => handleClick(page)}
-          >
-            {page}
-          </a>
-        </li>
-      ))}
-      <li>
-        <a onClick={() => setActivePage((pre) => (pre >= 9 ? 9 : pre + 1))}>
-          <span className="icon icon-1 unicon-chevron-right rtl:rotate-180" />
-        </a>
-      </li>
+        {/* 이전 페이지 */}
+        {activePage > 1 && (
+            <li>
+                <a onClick={() => handlePageChange((pre) => (pre == 1 ? 1 : pre - 1))}>
+                    <span className="icon icon-1 unicon-chevron-left rtl:rotate-180" />
+                </a>
+            </li>
+        )}
+
+        {/* 페이지 번호 목록 */}
+        {pageList.map(({pageNumber, isActive}) => (
+            <li key={pageNumber}>
+                <a
+                    className={isActive ? "uc-active" : ""}
+                    onClick={() => handlePageChange(pageNumber)}
+                >
+                    {pageNumber}
+                </a>
+            </li>
+        ))}
+
+        {/* 다음 페이지 */}
+        {activePage < totalPages && (
+            <li>
+                <a onClick={() => handlePageChange((pre) => (pre >= 9 ? 9 : pre + 1))}>
+                    <span className="icon icon-1 unicon-chevron-right rtl:rotate-180" />
+                </a>
+            </li>
+        )}
     </ul>
   );
 }

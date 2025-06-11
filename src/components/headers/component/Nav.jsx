@@ -148,6 +148,9 @@ export default function Nav() {
               <Link to={`/page-team`}>엠파시 사람들</Link>
           </li>
           <li>
+              <Link to={`/blog`}>블로그</Link>
+          </li>
+          <li>
               <Link to={`/page-career`}>인재 모집</Link>
           </li>
       </>
