@@ -67,20 +67,6 @@ export default function Nav() {
                               <li>
                                   <Link
                                       className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
-                                      to={`/page-syncapim`}
-                                  >
-                                      <i className="icon-1 unicon-cloud fw-bold text-primary dark:text-secondary"/>
-                                      <span className="vstack gap-narrow mt-nnarrow">
-                                          <b className="fw-bold dark:text-white">SyncApim</b>
-                                          <span className="fw-normal">
-                                            API 관리부터 생태계까지, 민첩성 확보
-                                          </span>
-                                        </span>
-                                  </Link>
-                              </li>
-                              <li>
-                                  <Link
-                                      className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
                                       to={`/page-syncadmin`}
                                   >
                                       <i className="icon-1 unicon-chart-stacked fw-bold text-primary dark:text-secondary"/>
@@ -90,6 +76,20 @@ export default function Nav() {
                                         최신 기술로 빠르고 유연한 관리 시스템
                                       </span>
                                     </span>
+                                  </Link>
+                              </li>
+                              <li>
+                                  <Link
+                                      className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
+                                      to={`/page-syncapim`}
+                                  >
+                                      <i className="icon-1 unicon-cloud fw-bold text-primary dark:text-secondary"/>
+                                      <span className="vstack gap-narrow mt-nnarrow">
+                                          <b className="fw-bold dark:text-white">SyncApim</b>
+                                          <span className="fw-normal">
+                                            API 관리부터 생태계까지, 민첩성 확보
+                                          </span>
+                                        </span>
                                   </Link>
                               </li>
                               <li>

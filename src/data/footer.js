@@ -4,6 +4,7 @@ export const footerLinks = [
       { href: "/page-about", label: "엠파시는" },
       { href: "/page-synccms", label: "SyncCMS" },
       { href: "/page-syncboot", label: "SyncBoot" },
+      { href: "/page-syncadmin", label: "SyncAdmin" },
       { href: "/page-syncapim", label: "SyncApim" },
       { href: "/page-synceta", label: "SyncEta" },
       { href: "/page-contact", label: "문의하기" },

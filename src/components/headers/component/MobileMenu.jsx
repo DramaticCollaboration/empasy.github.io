@@ -154,6 +154,9 @@ export default function MobileMenu() {
               <Link to={`/page-syncboot`}>SyncBoot</Link>
             </li>
             <li>
+              <Link to={`/page-syncadmin`}>SyncAdmin</Link>
+            </li>
+            <li>
               <Link to={`/page-syncapim`}>SyncApim</Link>
             </li>
             <li>
