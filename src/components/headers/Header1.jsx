@@ -32,14 +32,14 @@ export default function Header1() {
                   <img
                     className="dark:d-none"
                     alt="엠파시"
-                    src="/assets/images/common/logo-dark.png"
+                    src="/assets/images/common/empasy-logo.svg"
                     width="117"
                     height="40"
                   />
                   <img
                     className="d-none dark:d-block"
                     alt="엠파시"
-                    src="/assets/images/common/logo-light.png"
+                    src="/assets/images/common/empasy-logo_white.svg"
                     width="117"
                     height="40"
                   />

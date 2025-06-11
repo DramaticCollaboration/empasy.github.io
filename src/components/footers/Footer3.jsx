@@ -27,14 +27,14 @@ export default function Footer3() {
                     <img
                       className="dark:d-none"
                       alt=""
-                      src="/assets/images/common/logo-light.svg"
+                      src="/assets/images/common/empasy-logo_white.svg"
                       width="117"
                       height="40"
                     />
                     <img
                       className="d-none dark:d-block"
                       alt=""
-                      src="/assets/images/common/logo-light.png"
+                      src="/assets/images/common/empasy-logo_white.svg"
                       width="117"
                       height="40"
                     />

@@ -20,7 +20,7 @@ export default function Footer5() {
                           <img
                             className="text-primary"
                             alt="엠파시"
-                            src="/assets/images/common/logo-light.png"
+                            src="/assets/images/common/empasy-logo_white.svg"
                             width="117"
                             height="40"
                           />

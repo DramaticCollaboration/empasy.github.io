@@ -56,20 +56,20 @@ export default function Header2() {
                     to={`/`}
                     style={{ width: 140 }}
                   >
-                    <img
-                      className="dark:d-none"
-                      alt="엠파시"
-                      src="/assets/images/common/logo-dark.png"
-                      width="117"
-                      height="40"
-                    />
-                    <img
-                      className="d-none dark:d-block"
-                      alt="엠파시"
-                      src="/assets/images/common/logo-light.png"
-                      width="117"
-                      height="40"
-                    />
+                  <img
+                    className="dark:d-none"
+                    alt="엠파시"
+                    src="/assets/images/common/empasy-logo.svg"
+                    width="117"
+                    height="40"
+                  />
+                  <img
+                    className="d-none dark:d-block"
+                    alt="엠파시"
+                    src="/assets/images/common/empasy-logo_white.svg"
+                    width="117"
+                    height="40"
+                  />
                   </Link>
                 </div>
                 <ul className="uc-navbar-nav gap-3 xl:gap-4 d-none lg:d-flex fw-medium ms-2">

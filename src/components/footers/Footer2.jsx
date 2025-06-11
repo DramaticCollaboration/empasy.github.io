@@ -37,7 +37,8 @@ export default function Footer2() {
                         <img
                           className="text-primary"
                           alt="엠파시"
-                          src="/assets/images/common/logo-light.png"
+                          src="/assets/images/common/empasy-logo_white.svg"
+                          style={{width: '100%', height: 'auto'}}
                         />
                       </Link>
                       <p className="m-0">

@@ -37,7 +37,8 @@ export default function Footer1() {
                         <img
                           className="text-primary"
                           alt="엠파시"
-                          src="/assets/images/common/logo-dark.png"
+                          src="/assets/images/common/empasy-logo.svg"
+                          style={{width: '100%', height: 'auto'}}
                         />
                       </Link>
                       <p className="m-0">
