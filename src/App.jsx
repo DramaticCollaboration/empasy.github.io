@@ -27,6 +27,7 @@ import SyncCmsPage from "./pages/innerPages/page-synccms";
 import SyncBootPage from "./pages/innerPages/page-syncboot";
 import SyncApimPage from "./pages/innerPages/page-syncapim";
 import SyncEtaPage from "./pages/innerPages/page-synceta";
+import SyncAdminPage from "./pages/innerPages/page-syncadmin";
 import PricingPage from "./pages/innerPages/page-pricing";
 import AboutPage from "./pages/innerPages/page-about";
 import CareerPage from "./pages/innerPages/page-career";
@@ -170,6 +171,7 @@ function App() {
               <Route path="page-synccms" element={<SyncCmsPage />} />
               <Route path="page-syncboot" element={<SyncBootPage />} />
               <Route path="page-syncapim" element={<SyncApimPage />} />
+              <Route path="page-syncadmin" element={<SyncAdminPage />} />
               <Route path="page-synceta" element={<SyncEtaPage />} />
 
               <Route path="page-pricing" element={<PricingPage />} />

@@ -483,7 +483,7 @@ export default function BlogDetails2({ blogItem }) {
               </div>
             </div>
             <div className="post-related panel border-top pt-2 mt-8 xl:mt-9">
-              <h4 className="h5 xl:h4 mb-5 xl:mb-6">Related to this topic:</h4>
+              <h4 className="h5 xl:h4 mb-5 xl:mb-6">이 주제와 관련된 글:</h4>
               <div className="row child-cols-6 md:child-cols-4 gx-2 gy-4 sm:gx-3 sm:gy-6">
                 <RelatedBlogs />
               </div>

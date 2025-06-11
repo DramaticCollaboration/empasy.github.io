@@ -86,7 +86,7 @@ export default function Blogs2() {
                             className="btn btn-text text-primary border-bottom d-inline-flex fs-7 md:fs-6 my-1 md:my-2 d-none md:d-block"
                             to={`/blog-details/${elm.id}`}
                           >
-                            Continue reading
+                            글 계속 읽기
                           </Link>
                         </div>
                       </div>

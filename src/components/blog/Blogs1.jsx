@@ -46,11 +46,11 @@ export default function Blogs1() {
           >
             <header className="page-header vstack justify-center items-center gap-2 md:gap-4 text-center max-w-650px mx-auto">
               <h1 className="h2 sm:h1 lg:display-6 xl:display-5 m-0">
-                Insights
+                Sync 블로그
               </h1>
             </header>
             <div className="row child-cols-12 sm:child-cols-4 col-match gy-4 sm:gy-6 xl:gy-8 gx-2 xl:gx-4">
-              {blogsPosts4.slice(0, 1).map((elm, i) => (
+              {blogsPosts4.slice(-1).map((elm, i) => (
                 <div key={i} className="col-12">
                   <article className="post type-post panel rounded-3 p-3 bg-secondary dark:bg-gray-800">
                     <div className="panel row child-cols-12 md:child-cols-6 items-center g-3">
@@ -118,7 +118,7 @@ export default function Blogs1() {
                             className="btn btn-text text-primary border-bottom d-inline-flex fs-7 lg:fs-6 sm:mt-2"
                             to={`/blog-details/${elm.id}`}
                           >
-                            Continue reading
+                            글 계속 읽기
                           </Link>
                         </div>
                       </div>

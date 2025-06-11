@@ -6,7 +6,7 @@ import Blogs1 from "@/components/blog/Blogs1";
 import MetaComponent from "@/components/common/MetaComponent";
 const metadata = {
   title:
-    "Blog 1 || 살아 있는 소프트웨어를 만듭니다.",
+    "블로그 || 살아 있는 소프트웨어를 만듭니다.",
   description:
     "살아 있는 소프트웨어를 만듭니다.",
 };
@@ -18,7 +18,6 @@ export default function BlogPage1() {
         <Header2 />
         <div id="wrapper" className="wrap">
           <Blogs1 />
-          <Newsletter />
         </div>
         <Footer2 />
       </div>
