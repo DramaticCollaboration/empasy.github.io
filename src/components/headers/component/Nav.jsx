@@ -43,7 +43,7 @@ export default function Nav() {
                                   >
                                       <i className="icon-1 unicon-view fw-bold text-primary dark:text-secondary"/>
                                       <span className="vstack gap-narrow mt-nnarrow">
-                                          <b className="fw-bold dark:text-white">SyncCMs</b>
+                                          <b className="fw-bold dark:text-white">SyncCMS</b>
                                           <span className="fw-normal">
                                             비전문가도 변화에 쉽게 대응하는 웹 콘텐츠 관리
                                           </span>
