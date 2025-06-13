@@ -32,14 +32,21 @@ export default function Pagination({ activePage, articleList, itemsPerPage, page
 
     const handlePageChange = (page) => {
       onPageChange(page);
-  };
+    };
 
+    const handleFirstPage = () => {
+        onPageChange(activePage <= 1 ? 1 : activePage - 1);
+    };
+
+    const handleLastPage = () => {
+        onPageChange(activePage >= articleList.length ? articleList.length - 1 : activePage + 1);
+    };
   return (
     <ul>
         {/* 이전 페이지 */}
         {activePage > 1 && (
             <li>
-                <a onClick={() => handlePageChange(() => (activePage <= 1 ? 1 : activePage - 1))}>
+                <a onClick={() => handleFirstPage()}>
                     <span className="icon icon-1 unicon-chevron-left rtl:rotate-180" />
                 </a>
             </li>
@@ -60,7 +67,7 @@ export default function Pagination({ activePage, articleList, itemsPerPage, page
         {/* 다음 페이지 */}
         {activePage < totalPages && (
             <li>
-                <a onClick={() => handlePageChange(() => (activePage >= articleList.length ? articleList.length - 1 : activePage + 1))}>
+                <a onClick={() => handleLastPage()}>
                     <span className="icon icon-1 unicon-chevron-right rtl:rotate-180" />
                 </a>
             </li>
