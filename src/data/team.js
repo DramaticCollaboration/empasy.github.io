@@ -267,7 +267,7 @@ export const teamMembers5 = [
     },
     {
         id: 37,
-        imageSrc: "/assets/images/team/bruce.png",
+        imageSrc: "/assets/images/team/bruce.webp",
         altText: "김대영",
         name: "김대영 Bruce",
         position: "우리의 심장을 뛰게 하는 순간은 바로 모든 아이디어가 생생한 코드로 구현될 때입니다. 엠파시는 이 열정으로 SI 산업의 고질적인 문제들을 정면 돌파하고자 합니다. 우리는 단순한 개발자가 아닌, 엠파시의 개발자라는 뜨거운 자부심을 가지고 있습니다. 멈추지 않는 혁신과 기여로, 고객에게 최고의 IT 서비스를 제공하겠습니다!",
