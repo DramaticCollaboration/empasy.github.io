@@ -39,7 +39,7 @@ export default function Pagination({ activePage, articleList, itemsPerPage, page
         {/* 이전 페이지 */}
         {activePage > 1 && (
             <li>
-                <a onClick={() => handlePageChange((pre) => (pre == 1 ? 1 : pre - 1))}>
+                <a onClick={() => handlePageChange(() => (activePage <= 1 ? 1 : activePage - 1))}>
                     <span className="icon icon-1 unicon-chevron-left rtl:rotate-180" />
                 </a>
             </li>
@@ -60,7 +60,7 @@ export default function Pagination({ activePage, articleList, itemsPerPage, page
         {/* 다음 페이지 */}
         {activePage < totalPages && (
             <li>
-                <a onClick={() => handlePageChange((pre) => (pre >= 9 ? 9 : pre + 1))}>
+                <a onClick={() => handlePageChange(() => (activePage >= articleList.length ? articleList.length - 1 : activePage + 1))}>
                     <span className="icon icon-1 unicon-chevron-right rtl:rotate-180" />
                 </a>
             </li>
