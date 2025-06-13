@@ -216,14 +216,14 @@ export const teamMembers4 = [
   export const teamMembers5 = [
   {
     id: 30,
-    imageSrc: "/assets/images/team/poh.png",
+    imageSrc: "/assets/images/team/poh.webp",
     altText: "오병문",
     name: "오병문 POH",
     position: "Founder & CEO",
   },
   {
     id: 31,
-    imageSrc: "/assets/images/team/jade.png",
+    imageSrc: "/assets/images/team/jade.webp",
     altText: "이옥수",
     name: "이옥수 Jade",
     position: "세상에 존재하는 모든 문제는 코드로 해결할 수 있다고 믿습니다.<br/> 프론트부터 백엔드, 인프라까지 끝까지 책임지는 개발자입니다.<br/> 기술로 세상을 바꾸는 그날까지, 저는 오늘도 코드를 씁니다.",
@@ -237,7 +237,7 @@ export const teamMembers4 = [
   },
   {
     id: 33,
-    imageSrc: "/assets/images/team/han.png",
+    imageSrc: "/assets/images/team/han.webp",
     altText: "한상욱",
     name: "한상욱 Han",
     position: "협업과 소통을 통해 더 나은 코드를 만들고, 변화에 민첩하게 대응하는 살아있는 소프트웨어를 추구합니다.<br/> 기술로 세상을 더 나은 방향으로 이끄는 엠파시팀의 가치에 공감하며, 함께 시너지를 만들어가고 싶습니다",
@@ -258,7 +258,7 @@ export const teamMembers4 = [
   },
     {
       id: 36,
-      imageSrc: "/assets/images/team/ryan.png",
+      imageSrc: "/assets/images/team/ryan.webp",
       altText: "장지용",
       name: "장지용 Ryan",
       position: "효율적인 커뮤니케이션 및 개발문화를 선호합니다\n" +
