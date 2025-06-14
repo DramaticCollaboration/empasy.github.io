@@ -8,6 +8,8 @@ import Testimonials from "@/components/homes/home-3/Testimonials";
 import Cta from "@/components/innerpages/synceta/Cta";
 import Brands2 from "@/components/common/Brands2";
 import MetaComponent from "@/components/common/MetaComponent";
+import SyncEtaIntro from "@/components/product/SyncEtaIntro";
+
 const metadata = {
   title:
     "SyncEta || 살아 있는 소프트웨어를 만듭니다.",
@@ -21,7 +23,9 @@ export default function FeaturesPage() {
       <div className="page-wrapper uni-body panel bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200 overflow-x-hidden bp-xs bp-sm bp-md bp-lg bp-xl bp-xxl dom-ready">
         <Header2 />
         <div id="wrapper" className="wrap">
+
           <Hero />
+          <SyncEtaIntro/>
           <div className="pt-6 xl:pt-9"></div>
           <Faq />
           <div

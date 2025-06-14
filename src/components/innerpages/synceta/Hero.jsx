@@ -1,4 +1,4 @@
-import { features6 } from "@/data/synceta";
+import { features } from "@/data/synceta";
 import React from "react";
 
 export default function Hero() {
@@ -46,14 +46,14 @@ export default function Hero() {
               data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
             >
               <h1 className="h2 sm:h1 lg:display-6 xl:display-5 m-0">
-                코딩 없이 쉬운 테스트 자동화
+                AI로 쉽고 빠른 자동 웹 테스트
               </h1>
               <p className="fs-6 sm:fs-5 text-dark dark:text-white text-opacity-70">
-                "Customization in Its DNA"를 표방하며, 고객의 비즈니스 환경과 요구에 맞춰 최적화된 테스트 자동화 솔루션을 제공하는 데 중점을 둡니다
+                AI가 자동으로 테스트를 만들고 실행하여, 누구나 쉽게 웹 자동화를 경험하세요.
               </p>
             </div>
             <div className="sticky-scene panel vstack gap-4 sm:gap-6 xl:gap-8">
-              {features6.map((feature) => (
+              {features.map((feature) => (
                 <div
                   key={feature.id}
                   className="feature-item panel px-3 lg:px-4 py-4 rounded-2 bg-secondary dark:bg-gray-800"

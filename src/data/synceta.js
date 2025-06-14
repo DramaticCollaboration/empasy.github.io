@@ -1,334 +1,5 @@
-export const panelData = [
-  {
-    id: 1,
-    lightIcon: "/assets/images/template/icon-diamond.svg",
-    darkIcon: "/assets/images/template/icon-diamond-dark.svg",
-    altText: "impact-icon",
-    title: "Make an impact",
-    description:
-      "We’re building something big. Something that has the power to change the trajectory of any sized business for the better.",
-  },
-  {
-    id: 2,
-    lightIcon: "/assets/images/template/icon-trophy.svg",
-    darkIcon: "/assets/images/template/icon-trophy-dark.svg",
-    altText: "crown-icon",
-    title: "Learn",
-    description:
-      "Teams are masters of their craft though we’re all experts in our respective fields, we always make time to expand our minds.",
-  },
-  {
-    id: 3,
-    lightIcon: "/assets/images/template/icon-crown.svg",
-    darkIcon: "/assets/images/template/icon-crown-dark.svg",
-    altText: "empathy-icon",
-    title: "Empathy",
-    description:
-      "We strive to be empathetic to every customer and colleague and by doing so we provide a better experience for all.",
-  },
-];
 
 export const features = [
-  {
-    id: 4,
-    imgSrc: "/assets/images/template/feature-01.svg",
-    imgAlt: "Share tools quickly and confidently in minutes",
-    title: "Share tools quickly and confidently in minutes",
-    description:
-      "This powerful tool eliminates the need to leave Salesforce to get things done as I can create a custom proposal with dynamic pricing tables. You can also customize your own dynamic versions.",
-  },
-  {
-    id: 5,
-    imgSrc: "/assets/images/template/feature-02.svg",
-    imgAlt: "Connect every part of your entire business",
-    title: "Connect every part of your entire business",
-    description:
-      "Keep data consistent, with native CRM integrations that streamline your entire Tool workflow.",
-    linkText: "See all integrations",
-    linkHref: "#",
-  },
-  {
-    id: 6,
-    imgSrc: "/assets/images/template/feature-03.svg",
-    imgAlt: "Maintain compliance and control your apps",
-    title: "Maintain compliance and control your apps",
-    description:
-      "Improve security and trust with built-in legally binding e-Signatures. Create pre-approved templates, content blocks and lock all legal information to prevent costly mistakes.",
-  },
-];
-
-export const features2 = [
-  {
-    icon: "unicon-document",
-    title: "Proposals",
-    description:
-      "Share Tools in minutes with pre-built, customizable templates.",
-    backgroundColor: "bg-white dark:bg-gray-800",
-  },
-  {
-    icon: "unicon-model",
-    title: "Quotes",
-    description:
-      "Find out in real time when they’re opened, viewed and signed.",
-    backgroundColor: "bg-primary text-white",
-  },
-  {
-    icon: "unicon-task-approved",
-    title: "Contracts",
-    description:
-      "Use our native CRM integrations to pull customer data into your Tools fast.",
-    backgroundColor: "bg-white dark:bg-gray-800",
-  },
-  {
-    icon: "unicon-touch-interaction",
-    title: "eSignatures",
-    description:
-      "Keep your data secure with our legally-binding e-Signature software.",
-    backgroundColor: "bg-white dark:bg-gray-800",
-  },
-];
-
-export const features3 = [
-  {
-    id: 1,
-    imgSrc: "/assets/images/template/feature-01.svg",
-    altText: "Share tools quickly and confidently in minutes",
-    step: "01.",
-    title: "Share tools quickly and confidently in minutes",
-    description: `This powerful tool eliminates the need to leave Salesforce to get things done as I can create a custom proposal with dynamic pricing tables. You can also customize your own dynamic versions.`,
-    testimonial: {
-      quote: `“Most of our time used to be taken up by administrative work whereas now we can focus on building out programs to help our employees.”`,
-      imgSrc: "/assets/images/avatars/01.png",
-      name: "Mark Zellers",
-      role: "Director of Human Resources.",
-    },
-  },
-  {
-    id: 2,
-    imgSrc: "/assets/images/template/feature-02.svg",
-    altText: "Connect every part of your entire business",
-    step: "02.",
-    title: "Connect every part of your entire business",
-    description: `Keep data consistent, with native CRM integrations that streamline your entire Tool workflow.`,
-    link: {
-      href: "#",
-      text: "See all integrations",
-    },
-    testimonial: {
-      quote: `“I can create a custom proposal with dynamic pricing tables, and get approval from my boss all within 36 minutes.”`,
-      imgSrc: "/assets/images/avatars/02.png",
-      name: "Matt Henderson",
-      role: "Client Success Manager",
-    },
-  },
-  {
-    id: 3,
-    imgSrc: "/assets/images/template/feature-03.svg",
-    altText: "Maintain compliance and control your apps",
-    step: "03.",
-    title: "Maintain compliance and control your apps",
-    description: `Improve security and trust with built-in legally binding e-Signatures. Create pre-approved templates, content blocks and lock all legal information to prevent costly mistakes.`,
-    testimonial: {
-      quote: `“This powerful tool eliminates the need to leave Salesforce to get things done.”`,
-      imgSrc: "/assets/images/avatars/04.png",
-      name: "Natalia Larsson",
-      role: "Director of Sales Operations",
-    },
-  },
-  {
-    id: 4,
-    imgSrc: "/assets/images/template/feature-04.svg",
-    altText: "Review quickly and confidently",
-    step: "04.",
-    title: "Review quickly and confidently",
-    description: `Get real-time access to approvals, comments and version tracking. Smart features like variables and conditional logic help you eliminate Tool errors.`,
-    testimonial: {
-      quote: `“We are based in Europe and the latest Data Protection Regulation forces us to look for service suppliers than comply with this regulation.”`,
-      imgSrc: "/assets/images/avatars/03.png",
-      name: "Sarah Edrissi",
-      role: "Lead Marketing",
-    },
-  },
-];
-
-export const features4 = [
-  {
-    icon: "unicon-document",
-    title: "Proposals",
-    description:
-      "Share Tools in minutes with pre-built, customizable templates.",
-  },
-  {
-    icon: "unicon-model",
-    title: "Quotes",
-    description:
-      "Find out in real time when they’re opened, viewed and signed.",
-  },
-  {
-    icon: "unicon-task-approved",
-    title: "Contracts",
-    description:
-      "Use our native CRM integrations to pull customer data into your Tools fast.",
-  },
-  {
-    icon: "unicon-touch-interaction",
-    title: "eSignatures",
-    description:
-      "Keep your data secure with our legally-binding e-Signature software.",
-  },
-  {
-    icon: "unicon-sub-volume",
-    title: "Forms",
-    description:
-      "Share via direct link or by embedding them on your website, no coding necessary.",
-  },
-  {
-    icon: "unicon-currency",
-    title: "Payments",
-    description:
-      "Collect them instantly right from your contract, while increasing your close rate by 36%.",
-  },
-];
-
-export const featureItems = [
-  {
-    imageSrc: "/assets/images/template/home-four-feature-01.png",
-    altText: "Ensuring timely delivery and maximum efficiency",
-    title: "Ensuring timely delivery and maximum efficiency",
-    description:
-      "We offers advanced project management features such as Gantt charts, task dependencies, and resource allocation",
-    linkText: "Let's find out",
-    icon: "unicon-cloud-download",
-    reverseOrder: false,
-  },
-  {
-    imageSrc: "/assets/images/template/home-four-feature-02.png",
-    altText: "No more digging endless reports and spreadsheets",
-    title: "No more digging endless reports and spreadsheets",
-    description:
-      "An all-in-one customer service platform that helps you balance everything your customers need to be happy.",
-    linkText: "See all spreadsheets",
-    icon: "unicon-course",
-    reverseOrder: true,
-  },
-  {
-    imageSrc: "/assets/images/template/home-four-feature-03.png",
-    altText: "Share files, and communicate with your team in real-time",
-    title: "Share files, and communicate with your team in real-time",
-    description:
-      "You can easily assign tasks, share files, and communicate with your team in real-time, no matter where they are located.",
-    linkText: "See apps & integrations",
-    icon: "unicon-volume-block-storage",
-    reverseOrder: false,
-  },
-  {
-    imageSrc: "/assets/images/template/home-four-feature-04.png",
-    altText: "Collaboration is made seamless with 엠파시",
-    title: "Collaboration is made seamless with 엠파시",
-    description:
-      "Get real-time access to approvals, comments and version tracking. Smart features like variables and conditional logic help you eliminate Tool errors.",
-    linkText: "Let's find out",
-    icon: "unicon-model",
-    reverseOrder: true,
-  },
-];
-
-export const featureItems2 = [
-  {
-    order: "order-1 lg:order-0",
-    iconSrc: "/assets/images/common/icons/zap.svg",
-    alt: "feature-icon",
-    title: "Fast and Reliable",
-    description:
-      "Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.",
-  },
-  {
-    order: "order-0",
-    iconSrc: "/assets/images/common/icons/database.svg",
-    alt: "feature-icon",
-    title: "Discover Data Everywhere",
-    description:
-      "Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.",
-    bgClass:
-      "bg-gradient-45 from-secondary to-transparent dark:from-gray-700 sm:rounded-bottom-end-0 lg:rounded-bottom-0",
-  },
-  {
-    order: "order-2 sm:order-1 lg:order-0",
-    iconSrc: "/assets/images/common/icons/puzzle.svg",
-    alt: "feature-icon",
-    title: "Enrich Data with Context",
-    description:
-      "Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.",
-  },
-  {
-    order: "order-1 lg:order-0",
-    iconSrc: "/assets/images/common/icons/target.svg",
-    alt: "feature-icon",
-    title: "Risk Management",
-    description:
-      "Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.",
-    bgClass:
-      "bg-gradient-45 from-secondary to-transparent dark:from-gray-700 sm:rounded-start-0 lg:rounded-top-end-0 lg:rounded-start-1-5",
-  },
-  {
-    order: "order-3 lg:order-0",
-    iconSrc: "/assets/images/common/icons/line-chart.svg",
-    alt: "feature-icon",
-    title: "Privacy Compliance",
-    description:
-      "Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.",
-  },
-  {
-    order: "order-2 lg:order-0",
-    iconSrc: "/assets/images/common/icons/settings.svg",
-    alt: "feature-icon",
-    title: "Third-Party Management",
-    description:
-      "Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.",
-    bgClass:
-      "bg-gradient-45 from-secondary to-transparent dark:from-gray-700 sm:rounded-top-end-0 lg:rounded-top-start-0 lg:rounded-top-end-1-5",
-  },
-];
-
-export const features5 = [
-  {
-    iconSrc: "/assets/images/common/icons/zap.svg",
-    alt: "feature-icon",
-    title: "Drag-and-Drop Interface",
-  },
-  {
-    iconSrc: "/assets/images/common/icons/database.svg",
-    alt: "feature-icon",
-    title: "Pre-Designed Templates",
-  },
-  {
-    iconSrc: "/assets/images/common/icons/puzzle.svg",
-    alt: "feature-icon",
-    title: "Fully Responsive Design",
-  },
-  {
-    iconSrc: "/assets/images/common/icons/target.svg",
-    alt: "feature-icon",
-    title: "Website Customization",
-  },
-  {
-    iconSrc: "/assets/images/common/icons/line-chart.svg",
-    alt: "feature-icon",
-    title: "UI Elements Library",
-  },
-  {
-    iconSrc: "/assets/images/common/icons/settings.svg",
-    alt: "feature-icon",
-    title: "Global & Local Styles",
-  },
-  {
-    iconSrc: "/assets/images/common/icons/puzzle.svg",
-    alt: "feature-icon",
-    title: "Third-Party Integrations",
-  },
-];
-
-export const features6 = [
   {
     id: 1,
     imgSrc: "/assets/images/product/synceta/custom.png",
@@ -360,5 +31,36 @@ export const features6 = [
     title: "다양한 환경 및 조건에 대한 유연한 테스트 실행",
     description: "웹, API 등 다양한 환경의 테스트를 지원하며, 크로스 브라우징, 반응형 테스트가 가능하고, 조건부, 병렬 실행, 동적 체이닝 등 고급 설정 및 실행 옵션을 제공하여 고객의 복잡하고 다양한 테스트 시나리오 요구사항을 충족시킵니다",
     link: null,
+  },
+];
+
+
+export const whatDeveloperSay = [
+  {
+    quote: `안녕하세요, 저는 SyncEta의 AI 자동화 담당자입니다.
+     저희 AI는 말 한마디로 테스트 케이스를 뚝딱 만들어줘요.
+      복잡한 시나리오도 AI가 알아서 설계하고 추천해주니, 누구나 쉽게 테스트 자동화를 시작할 수 있습니다.
+       덕분에 테스트 준비 시간이 획기적으로 줄어들고, 더욱 중요한 업무에 집중할 수 있게 되죠!`,
+    name: "김재은",
+    position: "AI가 테스트 케이스를 뚝딱 만들어줘요!",
+    imgSrc: "/assets/images/team/Kyle.webp",
+  },
+  {
+    quote: `저는 SyncEta의 UI 자동화 엔지니어입니다.
+     웹사이트 디자인이나 기능이 바뀌면 기존 테스트는 매번 고쳐야 했죠.
+      하지만 SyncEta의 AI는 UI/UX 변화에도 놀랍도록 유연하게 대처합니다.
+       덕분에 테스트 스크립트를 일일이 수정할 필요 없이, 언제나 안정적으로 테스트를 수행하며 번거로운 수작업을 확 줄여줘요.`,
+    name: "이강형",
+    position: "UI가 바뀌어도 걱정 없어요!",
+    imgSrc: "/assets/images/team/kenny.png",
+  },
+  {
+    quote: `안녕하세요, QA 데이터 전문가입니다. 테스트할 때 필요한 다양한 데이터, 일일이 만드는 거 힘드셨죠?
+     SyncEta의 AI는 설정된 값만으로도 필요한 테스트 데이터를 자동으로 뚝딱 만들어줘요.
+      덕분에 수많은 케이스를 클릭 몇 번으로 쉽게 시뮬레이션할 수 있고, 더 빠르게 원하는 결과를 얻을 수 있습니다.
+       이제 데이터 준비 부담 없이 핵심 테스트에 집중하세요!`,
+    name: "한상욱",
+    position: "테스트 데이터, AI가 알아서 채워줘요!",
+    imgSrc: "/assets/images/team/han.webp",
   },
 ];
