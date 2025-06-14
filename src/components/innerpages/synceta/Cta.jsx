@@ -13,7 +13,7 @@ export default function Cta() {
                   SyncEta 제품 소개서
                 </h2>
                 <div className="vstack sm:hstack justify-center lg:justify-start gap-1 lg:gap-2 mt-1 lg:mt-2">
-                  <a href='/assets/images/product/SyncETA_제품소개_V0.1_20250510.pdf'
+                  <a href='/assets/product/SyncETA_제품소개_V0.1_20250510.pdf'
                       className="btn btn-md lg:btn-lg btn-primary text-white" target='_blank'>
                     다운로드
                   </a>
