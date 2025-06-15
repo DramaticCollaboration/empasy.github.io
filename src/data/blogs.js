@@ -245,7 +245,7 @@ export const blogsPosts4 = [
     imgAlt: "불확실한 시대, 비즈니스 민첩성을 확보하는 길",
     imgCaption: "불확실한 시대, 비즈니스 민첩성을 확보하는 길",
     title: "불확실한 시대, 비즈니스 민첩성을 확보하는 길",
-    authorImg: "/assets/images/avatars/02.png",
+    authorImg: "/assets/images/team/poh.webp",
     authorAlt: "엠파시",
     desc: "오늘날 비즈니스 환경은 예측하기 어려울 정도로 빠르게 변화하고 있습니다. 이러한 불확실성 속에서 기업이 생존하고 성장하기 위해서는 변화에 신속하게 대응할 수 있는 능력, 즉 '비즈니스 민첩성'을 확보하는 것이 필수적입니다.",
     content: "        <div class=\"blog-detail-content\">\n" +
@@ -347,7 +347,7 @@ export const blogsPosts4 = [
     imgAlt: "AI가 테스트를 배우고 실행하는 차세대 QA 솔루션",
     imgCaption: "AI가 테스트를 배우고 실행하는 차세대 QA 솔루션",
     title: "AI가 테스트를 배우고 실행하는 차세대 QA 솔루션",
-    authorImg: "/assets/images/avatars/01.png",
+    authorImg: "/assets/images/team/poh.webp",
     authorAlt: "엠파시",
     desc: "오늘날 비즈니스 환경은 그 어느 때보다 빠르게 변화하고 있습니다. 새로운 서비스와 기능을 시장에 신속하게 출시하는 것이 경쟁 우위를 결정짓는 핵심 요소가 되었죠. 하지만 '빨리빨리'만 외치다 보면 품질 문제가 발생할 위험이 커집니다.",
     content: "        <main class=\"blog-detail-content\">\n" +
@@ -435,7 +435,7 @@ export const blogsPosts4 = [
     imgAlt: "코딩 없이 AI로 완성하는 테스트 자동화",
     imgCaption: "코딩 없이 AI로 완성하는 테스트 자동화",
     title: "코딩 없이 AI로 완성하는 테스트 자동화",
-    authorImg: "/assets/images/avatars/04.png",
+    authorImg: "/assets/images/team/poh.webp",
     authorAlt: "엠파시",
     desc: "급변하는 비즈니스 환경 속에서 소프트웨어 개발 및 배포 속도를 높이는 것은 기업 경쟁력의 핵심이 되었습니다. 하지만 속도만을 추구하다 보면 품질 문제가 발생할 위험이 커지며, 이는 결국 사용자 경험 저하와 비즈니스 손실로 이어질 수 있습니다.",
     content: "        <main class=\"blog-detail-content\">\n" +
@@ -565,7 +565,7 @@ export const blogsPosts4 = [
     imgAlt: "Java 개발자라면 주목! 빠르고 안정적인 MSA 구축 플랫폼",
     imgCaption: "Java 개발자라면 주목! 빠르고 안정적인 MSA 구축 플랫폼",
     title: "Java 개발자라면 주목! 빠르고 안정적인 MSA 구축 플랫폼",
-    authorImg: "/assets/images/avatars/04.png",
+    authorImg: "/assets/images/team/poh.webp",
     authorAlt: "엠파시",
     desc: "빠르게 변화하는 비즈니스 환경에 민첩하게 대응하는 것은 기업 경쟁력의 핵심이 되었습니다. 현대 소프트웨어는 모든 업무의 중심에 있으며, 변화하는 비즈니스 환경에 빠르게 대응하기 위해서는 신속한 소프트웨어 변경이 필수적입니다. ",
     content: "  <div class=\"blog-detail-content\">\n" +
@@ -722,7 +722,7 @@ export const blogsPosts4 = [
     imgAlt: "AI를 통한 테스트 데이터 혁신",
     imgCaption: "AI를 통한 테스트 데이터 혁신",
     title: "AI를 통한 테스트 데이터 혁신",
-    authorImg: "/assets/images/avatars/02.png",
+    authorImg: "/assets/images/team/poh.webp",
     authorAlt: "엠파시",
     desc: "소프트웨어 개발에서 빠른 변화에 민첩하게 대응하는 것은 비즈니스 경쟁력의 핵심이 되었습니다. 엠파시(Empasy)는 이러한 시대적 요구에 맞춰 **\"변화에 최적화된 솔루션\"**이라는 가치 아래 Sync Series를 개발했으며. Sync Series는 개발부터 테스트까지 소프트웨어 라이프사이클 전반의 속도와 유연성을 극대화하는 것을 목표로 합니다.",
     content: " <div class=\"blog-detail-content\">\n" +
@@ -805,7 +805,7 @@ export const blogsPosts4 = [
     imgAlt: "SyncAPIM으로 비즈니스 생태계를 구축하는 방법",
     imgCaption: "SyncAPIM으로 비즈니스 생태계를 구축하는 방법",
     title: "SyncAPIM으로 비즈니스 생태계를 구축하는 방법",
-    authorImg: "/assets/images/avatars/04.png",
+    authorImg: "/assets/images/team/poh.webp",
     authorAlt: "엠파시",
     desc: "오늘날 기업들은 빠르게 변화하는 비즈니스 환경에 민첩하게 대응하는 것이 생존의 핵심임을 잘 알고 있습니다. 엠파시(Empasy)의 Sync Series는 이러한 '변화에 최적화된 솔루션'이라는 가치 아래, 개발부터 테스트까지 소프트웨어 라이프사이클 전반의 속도와 유연성 극대화를 목표로 합니다. ",
     content: "        <article class=\"blog-detail-content\">\n" +
@@ -922,7 +922,7 @@ export const blogsPosts4 = [
     imgAlt: "비전문가도 쉽게, SyncCMS로 웹사이트 콘텐츠 관리 고민 끝!",
     imgCaption: "비전문가도 쉽게, SyncCMS로 웹사이트 콘텐츠 관리 고민 끝!",
     title: "비전문가도 쉽게, SyncCMS로 웹사이트 콘텐츠 관리 고민 끝!",
-    authorImg: "/assets/images/avatars/01.png",
+    authorImg: "/assets/images/team/poh.webp",
     authorAlt: "엠파시",
     desc: "웹사이트는 기업의 얼굴이자 고객과의 핵심 소통 채널입니다. 빠르게 변화하는 시장과 고객의 니즈에 맞춰 웹사이트 콘텐츠를 신속하게 업데이트하고 관리하는 능력은 비즈니스 민첩성 확보에 매우 중요합니다.",
     content: " <div class=\"blog-detail-content\">\n" +
@@ -1018,7 +1018,7 @@ export const blogsPosts4 = [
     imgAlt: "개발-테스트-배포를 하나로! Sync Series와 CI/CD 연동의 시너지",
     imgCaption: "개발-테스트-배포를 하나로! Sync Series와 CI/CD 연동의 시너지",
     title: "개발-테스트-배포를 하나로! Sync Series와 CI/CD 연동의 시너지",
-    authorImg: "/assets/images/avatars/07.png",
+    authorImg: "/assets/images/team/poh.webp",
     authorAlt: "엠파시",
     desc: "오늘날 비즈니스 환경은 예측 불가능할 정도로 빠르게 변화하고 있습니다. 이러한 변화에 신속하게 대응하기 위해서는 소프트웨어 또한 민첩하게 바뀌고 적용될 수 있어야 합니다.",
     content: "\n" +
@@ -1144,7 +1144,7 @@ export const blogsPosts4 = [
     imgAlt: "엠파시의 '공감 시너지(Empathic Synergy)' 철학: 고객과 함께 성장하는 이야기",
     imgCaption: "엠파시의 '공감 시너지(Empathic Synergy)' 철학: 고객과 함께 성장하는 이야기",
     title: "엠파시의 '공감 시너지(Empathic Synergy)' 철학: 고객과 함께 성장하는 이야기",
-    authorImg: "/assets/images/avatars/07.png",
+    authorImg: "/assets/images/team/poh.webp",
     authorAlt: "엠파시",
     desc: "빠르게 변화하는 오늘날의 비즈니스 환경에서 기업은 민첩하게 대응하고 혁신을 지속해야 합니다. 이러한 여정에서 강력한 파트너와의 동행은 필수적입니다. 엠파시는 단순히 솔루션을 제공하는 것을 넘어, 고객과의 깊은 **'공감'**과 이를 통한 '시너지' 창출을 핵심 철학으로 삼고 있습니다. 바로 **\"Empathic Synergy\"**입니다.",
     content: "        <div class=\"blog-detail-content\">\n" +
@@ -1204,7 +1204,7 @@ export const blogsPosts4 = [
     imgAlt: "엠파시 Sync Series: 민첩한 비즈니스 변화를 이끄는 핵심 솔루션",
     imgCaption: "엠파시 Sync Series: 민첩한 비즈니스 변화를 이끄는 핵심 솔루션",
     title: "엠파시 Sync Series: 민첩한 비즈니스 변화를 이끄는 핵심 솔루션",
-    authorImg: "/assets/images/avatars/06.png",
+    authorImg: "/assets/images/team/poh.webp",
     authorAlt: "엠파시",
     desc: "오늘날 비즈니스 환경은 예측 불가능할 정도로 빠르게 변화하고 있습니다. 이러한 환경에서 기업의 경쟁력은 변화에 얼마나 민첩하게 대응하느냐에 달려 있습니다. ",
     content: "        <article class=\"blog-detail-content\">\n" +
@@ -1302,7 +1302,7 @@ export const blogsPosts4 = [
     imgAlt: "엠파시의 약속: 변화에 공감하고 민첩성으로 함께 성장하는 여정",
     imgCaption: "엠파시의 약속: 변화에 공감하고 민첩성으로 함께 성장하는 여정",
     title: "엠파시의 약속: 변화에 공감하고 민첩성으로 함께 성장하는 여정",
-    authorImg: "/assets/images/avatars/03.png",
+    authorImg: "/assets/images/team/poh.webp",
     authorAlt: "엠파시",
     desc: "오늘날 기업 환경은 끊임없이 변화하며 불확실성이 증대되고 있습니다. 이러한 시대에 기업의 생존과 성장은 변화에 얼마나 빠르고 유연하게 대응하느냐에 달려 있습니다.",
     content: "        <div class=\"blog-detail-content\">\n" +
@@ -1406,7 +1406,7 @@ export const blogsPosts4 = [
     imgAlt: "Excel에서 바로 브라우저 테스트 실행으로 테스트 자동화 혁신",
     imgCaption: "Excel에서 바로 브라우저 테스트 실행으로 테스트 자동화 혁신",
     title: "Excel에서 바로 브라우저 테스트 실행으로 테스트 자동화 혁신",
-    authorImg: "/assets/images/avatars/03.png",
+    authorImg: "/assets/images/team/poh.webp",
     authorAlt: "엠파시",
     desc: "SyncEta는 기존 수동 또는 스크립트 기반 테스트의 한계를 넘어, 인공지능을 활용해 테스트 생성, 실행, 분석 과정을 지능적으로 수행합니다",
     content: "\n" +
