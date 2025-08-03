@@ -1,14 +1,14 @@
 {
-  "name": "empasy-eta-homepage",
+  "name": "empasy-homepage",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://eta.empasy.com",
+  "homepage": "https://www.empasy.com",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
-    "build": "vite build && cpy CNAME dist/ && cp dist/index.html dist/404.html",
+    "build": "vite build && cpy CNAME dist/ && cp dist/index.html dist/404.html && cp dist/index.html dist/page-synccms.html",
     "lint": "eslint .",
     "preview": "vite preview"
   },

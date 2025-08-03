@@ -22,9 +22,8 @@ export default function PricingPage() {
         <Header2 />
         <div id="wrapper" className="wrap">
           <Pricing />
-          {/* <div className="pt-6 xl:pt-9"></div> */}
           <Faq />
-          <Testimonials />
+
           <div
             id="clients_brands"
             className="clients-brands section panel overflow-hidden"
@@ -46,7 +45,7 @@ export default function PricingPage() {
               </div>
             </div>
           </div>
-          <Cta />
+
         </div>
         <Footer2 />
       </div>

@@ -71,13 +71,13 @@ export default function Pricing() {
                         <div className="panel">
                           <div className="panel vstack gap-2">
                             <span className="fs-6 fw-bold dark:text-white">
-                              {tier.title === "Essentials"
-                                ? "Key features:"
-                                : `Everything in ${
-                                    tier.title === "Business"
-                                      ? "Essentials"
-                                      : "Business"
-                                  }, plus:`}
+                              {tier.title === "무료"
+                                ? "주요 기능:"
+                                : `${
+                                    tier.title === "베이직"
+                                      ? "무료"
+                                      : "베이직"
+                                  } 기능:`}
                             </span>
                             {tier.features.map((feature, idx) => (
                               <div key={idx} className="hstack gap-1 fs-7">
@@ -92,12 +92,6 @@ export default function Pricing() {
                   ))}
                 </div>
               </div>
-              <p
-                className="text-center text-gray-900 dark:text-white text-opacity-70"
-                data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 200;"
-              >
-                Prices exclude any applicable taxes.
-              </p>
             </div>
           </div>
         </div>

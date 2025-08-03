@@ -46,10 +46,10 @@ export default function Pricing() {
               data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
             >
               <h1 className="h2 sm:h1 lg:display-6 xl:display-5 m-0">
-                Simple, scalable pricing.
+                SyncETA 요금제
               </h1>
               <p className="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">
-                No extra charges. No hidden fees.
+                비즈니스 성장에 맞춰 유연하게
               </p>
               <ul
                 className="uc-switcher-nav nav-x gap-0 p-narrow border rounded-2 fs-7 fw-medium"
@@ -60,7 +60,7 @@ export default function Pricing() {
                     onClick={() => setIsYearly(false)}
                     className="text-none w-128px cstack p-1"
                   >
-                    Monthly
+                    매월
                   </a>
                 </li>
                 <li className={isYearly ? "uc-active" : ""}>
@@ -68,7 +68,7 @@ export default function Pricing() {
                     onClick={() => setIsYearly(true)}
                     className="text-none w-128px cstack p-1"
                   >
-                    Yearly
+                    매년
                   </a>
                 </li>
               </ul>
@@ -123,13 +123,13 @@ export default function Pricing() {
                         <div className="panel">
                           <div className="panel vstack gap-2">
                             <span className="fs-6 fw-bold dark:text-white">
-                              {tier.title === "Essentials"
-                                ? "Key features:"
-                                : `Everything in ${
-                                    tier.title === "Business"
-                                      ? "Essentials"
-                                      : "Business"
-                                  }, plus:`}
+                              {tier.title === "무료"
+                                ? "주요 기능:"
+                                : `${
+                                    tier.title === "베이직"
+                                      ? "무료"
+                                      : "베이직"
+                                  }의 모든 기능 :`}
                             </span>
                             {tier.features.map((feature, idx) => (
                               <div key={idx} className="hstack gap-1 fs-7">
@@ -145,12 +145,6 @@ export default function Pricing() {
                 </div>
               </div>
             </div>
-            <p
-              className="text-center text-gray-900 dark:text-white text-opacity-70 mt-4 sm:mt-6 xl:mt-8"
-              data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 0;"
-            >
-              Prices exclude any applicable taxes.
-            </p>
           </div>
         </div>
       </div>
