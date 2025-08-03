@@ -9,10 +9,9 @@ import Cta from "@/components/innerpages/syncboot/Cta";
 import Brands2 from "@/components/common/Brands2";
 import MetaComponent from "@/components/common/MetaComponent";
 const metadata = {
-  title:
-    "SyncBoot || 살아 있는 소프트웨어를 만듭니다.",
-  description:
-    "살아 있는 소프트웨어를 만듭니다.",
+  title: "SyncBoot: Java 기반 MSA 빠른 개발 플랫폼 | 엔터프라이즈 솔루션",
+  description: "SyncBoot는 Java 기반 오픈소스 마이크로서비스 아키텍처(MSA) 빠른 개발 플랫폼입니다. 기업용 애플리케이션의 신속한 개발, 배포, 안정적인 운영을 위한 E2E 솔루션을 제공하며, CI/CD, 모니터링, API 관리, 강력한 보안을 통해 비즈니스 민첩성과 효율성을 극대화합니다.",
+  keywords: "SyncBoot, Java 기반, 마이크로서비스 (MSA), 빠른 개발, 오픈소스, 기업용 애플리케이션, 개발 플랫폼, Spring Boot, Spring Cloud, CI/CD, DevOps, 컨테이너, API 관리, 모니터링, E2E 솔루션, 확장성, ERP 시스템, CRM 시스템, 백오피스, 데이터 시각화, 클라우드 네이티브, 보안, 시스템 통합, 플러그인 구조, 낮은 학습 곡선"
 };
 export default function FeaturesPage() {
   return (
