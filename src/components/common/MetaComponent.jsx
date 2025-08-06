@@ -9,7 +9,7 @@ export default function MetaComponent({ meta }) {
             <meta name="keywords" content={meta?.keywords}/>
             <meta property="og:title" content={meta?.title}/>
             <meta property="og:description" content={meta?.description}/>
-            <meta property="og:image" content="https://doc.empasy.com/images/empasy-logo.svg"/>
+            <meta property="og:image" content="https://www.empasy.com/favicon.png"/>
         </Helmet>
     </HelmetProvider>
   );
