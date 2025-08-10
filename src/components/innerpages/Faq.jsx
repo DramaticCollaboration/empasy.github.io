@@ -25,7 +25,7 @@ export default function Faq() {
                     <br className="d-none lg:d-block xl:d-none" />
                     <Link
                       className="uc-link border-bottom border-gray-300 dark:text-white text-none"
-                      to={`/page-contact`}
+                      to={`/contact`}
                       style={{ paddingBottom: 2 }}
                     >문의</Link>해 주세요!{" "}
                   </p>

@@ -136,14 +136,37 @@ function App() {
               <Route path="page-career" element={<CareerPage />} />
               <Route path="page-contact" element={<ContactPage />} />
               <Route path="page-team" element={<TeamPage />} />
-              <Route
-                path="page-career-detail/:id"
-                element={<CareerDetailsPage />}
-              />
+                <Route
+                    path="page-career-detail/:id"
+                    element={<CareerDetailsPage />}
+                />
+
               <Route path="page-contact-2" element={<ContactPage2 />} />
               <Route path="blog" element={<BlogPage1 />} />
               <Route path="blog-details/:id" element={<BlogDetailsPage1 />} />
               <Route path="page-not-found" element={<NotFoundPage />} />
+
+
+
+            <Route path="synccms" element={<SyncCmsPage />} />
+            <Route path="syncboot" element={<SyncBootPage />} />
+            <Route path="syncapim" element={<SyncApimPage />} />
+            <Route path="syncadmin" element={<SyncAdminPage />} />
+            <Route path="synceta" element={<SyncEtaPage />} />
+
+            <Route path="about" element={<AboutPage />} />
+            <Route path="career" element={<CareerPage />} />
+            <Route path="contact" element={<ContactPage />} />
+            <Route path="contact-2" element={<ContactPage2 />} />
+            <Route path="team" element={<TeamPage />} />
+
+            <Route
+                path="career-detail/:id"
+                element={<CareerDetailsPage />}
+            />
+
+              <Route path="page-not-found" element={<NotFoundPage />} />
+
               <Route path="*" element={<NotFoundPage />} />
             </Route>
           </Routes>

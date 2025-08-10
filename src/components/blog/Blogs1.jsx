@@ -114,7 +114,7 @@ export default function Blogs1() {
                                   className="w-24px h-24px rounded-circle me-narrow"
                                 />
                                 <Link
-                                  to={`/page-team`}
+                                  to={`/team`}
                                   className="text-none fw-bold text-dark dark:text-white"
                                 >
                                   {elm.authorName}
@@ -187,7 +187,7 @@ export default function Blogs1() {
                               className="w-24px h-24px rounded-circle me-narrow"
                             />
                             <Link
-                              to={`/page-team`}
+                              to={`/team`}
                               className="text-none fw-bold text-dark dark:text-white"
                             >
                               {elm.authorName}

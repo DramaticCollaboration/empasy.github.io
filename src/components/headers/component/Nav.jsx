@@ -7,7 +7,7 @@ export default function Nav() {
   return (
       <>
           <li>
-              <Link to={`/page-about`}>엠파시는</Link>
+              <Link to={`/about`}>엠파시는</Link>
           </li>
           <li className="has-dd-menu" style={{position: "relative"}}>
               <a href="#" role="button" aria-haspopup="true">
@@ -39,7 +39,7 @@ export default function Nav() {
                               <li>
                                   <Link
                                       className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
-                                      to={`/page-synccms`}
+                                      to={`/synccms`}
                                   >
                                       <i className="icon-1 unicon-view fw-bold text-primary dark:text-secondary"/>
                                       <span className="vstack gap-narrow mt-nnarrow">
@@ -53,7 +53,7 @@ export default function Nav() {
                               <li>
                                   <Link
                                       className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
-                                      to={`/page-syncboot`}
+                                      to={`/syncboot`}
                                   >
                                       <i className="icon-1 unicon-tools-alt fw-bold text-primary dark:text-secondary"/>
                                       <span className="vstack gap-narrow mt-nnarrow">
@@ -67,7 +67,7 @@ export default function Nav() {
                               <li>
                                   <Link
                                       className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
-                                      to={`/page-syncadmin`}
+                                      to={`/syncadmin`}
                                   >
                                       <i className="icon-1 unicon-chart-stacked fw-bold text-primary dark:text-secondary"/>
                                       <span className="vstack gap-narrow mt-nnarrow">
@@ -81,7 +81,7 @@ export default function Nav() {
                               <li>
                                   <Link
                                       className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
-                                      to={`/page-syncapim`}
+                                      to={`/syncapim`}
                                   >
                                       <i className="icon-1 unicon-cloud fw-bold text-primary dark:text-secondary"/>
                                       <span className="vstack gap-narrow mt-nnarrow">
@@ -95,7 +95,7 @@ export default function Nav() {
                               <li>
                                   <Link
                                       className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
-                                      to={`/page-synceta`}
+                                      to={`/synceta`}
                                   >
                                       <i className="icon-1 unicon-awake fw-bold text-primary dark:text-secondary"/>
                                       <span className="vstack gap-narrow mt-nnarrow">
@@ -142,16 +142,16 @@ export default function Nav() {
           </li>
 
           <li>
-              <Link to={`/page-contact`}>문의하기</Link>
+              <Link to={`/contact`}>문의하기</Link>
           </li>
           <li>
-              <Link to={`/page-team`}>엠파시 사람들</Link>
+              <Link to={`/team`}>엠파시 사람들</Link>
           </li>
           <li>
               <Link to={`/blog`}>블로그</Link>
           </li>
           <li>
-              <Link to={`/page-career`}>인재 모집</Link>
+              <Link to={`/career`}>인재 모집</Link>
           </li>
       </>
   );

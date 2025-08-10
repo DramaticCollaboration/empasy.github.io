@@ -74,7 +74,7 @@ export default function Team() {
                   <div>
                     <div className="cstack gap-2 flex-column">
                       <Link
-                        to={`/page-career`}
+                        to={`/career`}
                         className="uc-link cstack w-40px md:w-48px lg:w-80px h-40px md:h-48px lg:h-80px rounded-circle bg-white dark:bg-gray-700 text-primary dark:text-secondary duration-150 transition-all"
                       >
                         <i className="icon icon-narrow md:icon-1 unicon-arrow-up-right fw-bold rtl:-rotate-90" />

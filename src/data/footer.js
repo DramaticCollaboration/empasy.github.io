@@ -1,15 +1,15 @@
 export const footerLinks = [
   {
     links: [
-      { href: "/page-about", label: "엠파시는" },
-      { href: "/page-synccms", label: "SyncCMS" },
-      { href: "/page-syncboot", label: "SyncBoot" },
-      { href: "/page-syncadmin", label: "SyncAdmin" },
-      { href: "/page-syncapim", label: "SyncApim" },
-      { href: "/page-synceta", label: "SyncEta" },
-      { href: "/page-contact", label: "문의하기" },
-      { href: "/page-team", label: "엠파시 사람들" },
-      { href: "/page-career", label: "인재 모집" },
+      { href: "/about", label: "엠파시는" },
+      { href: "/synccms", label: "SyncCMS" },
+      { href: "/syncboot", label: "SyncBoot" },
+      { href: "/syncadmin", label: "SyncAdmin" },
+      { href: "/syncapim", label: "SyncApim" },
+      { href: "/synceta", label: "SyncEta" },
+      { href: "/contact", label: "문의하기" },
+      { href: "/team", label: "엠파시 사람들" },
+      { href: "/career", label: "인재 모집" },
     ],
   },
 ];
@@ -20,10 +20,10 @@ export const footerLinks2 = [
     links: [
       { href: "/page-features", label: "Features" },
       { href: "/page-pricing", label: "Pricing" },
-      { href: "/page-about", label: "About" },
-      { href: "/page-career", label: "Career" },
-      { href: "/page-contact", label: "Contact" },
-      { href: "/page-contact-2", label: "Contact v2" },
+      { href: "/about", label: "About" },
+      { href: "/career", label: "Career" },
+      { href: "/contact", label: "Contact" },
+      { href: "/contact-2", label: "Contact v2" },
     ],
   },
   {
@@ -76,13 +76,13 @@ export const footerLinks3 = [
   {
     title: "Product",
     links: [
-      { href: "/page-about", label: "Product" },
+      { href: "/about", label: "Product" },
       { href: "/page-pricing", label: "Overview" },
       { href: "/page-features", label: "Features" },
       { href: "/page-integrations", label: "Solutions" },
-      { href: "/page-career", label: "Tutorials" },
-      { href: "/page-contact", label: "Pricing" },
-      { href: "/page-contact-2", label: "Releases" },
+      { href: "/career", label: "Tutorials" },
+      { href: "/contact", label: "Pricing" },
+      { href: "/contact-2", label: "Releases" },
     ],
   },
   {
@@ -151,8 +151,8 @@ export const footerLinks4 = [
   {
     title: "Company",
     links: [
-      { text: "About us", href: "/page-about", isLink: true },
-      { text: "Careers", href: "/page-career", isLink: true },
+      { text: "About us", href: "/about", isLink: true },
+      { text: "Careers", href: "/career", isLink: true },
       { text: "Press", href: "#" },
       { text: "News", href: "/blog", isLink: true },
       { text: "Media kit", href: "#" },

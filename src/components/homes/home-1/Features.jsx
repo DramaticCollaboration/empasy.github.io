@@ -98,7 +98,7 @@ export default function Features() {
                                     콘텐츠 관리의 효율성을 높이고, 변화에 빠르게 대응하는 비즈니스 민첩성을 확보하세요
                                   </p>
                                   <Link
-                                    to="/page-synccms"
+                                    to="/synccms"
                                     className="uc-link fw-bold hstack gap-narrow mt-2 sm:mt-1 lg:mt-2"
                                   >
                                     <span>자세히</span>
@@ -141,7 +141,7 @@ export default function Features() {
                                     비즈니스 민첩성을 위한 빠른 개발 플랫폼입니다. 마이크로서비스 기반으로 개발 속도를 높여 변화에 신속하게 대응하도록 지원합니다
                                   </p>
                                   <Link
-                                      to="/page-syncboot"
+                                      to="/syncboot"
                                       className="uc-link fw-bold hstack gap-narrow mt-2 sm:mt-1 lg:mt-2"
                                   >
                                     <span>자세히</span>
@@ -184,7 +184,7 @@ export default function Features() {
                                     비즈니스 민첩성을 위한 API 관리 플랫폼입니다. 종합적인 API 관리로 서비스 개발 및 통합을 가속화하여 디지털 혁신과 경쟁력 강화를 지원
                                   </p>
                                   <Link
-                                    to="/page-syncapim"
+                                    to="/syncapim"
                                     className="uc-link fw-bold hstack gap-narrow mt-2 sm:mt-1 lg:mt-2"
                                   >
                                     <span>자세히</span>
@@ -227,7 +227,7 @@ export default function Features() {
                                     웹/API 테스트 자동화 플랫폼입니다. 코딩 없이 쉽고 빠르게 테스트를 자동화하여 개발/배포 속도와 품질을 높이고, 변화에 민첩하게 대응하도록 지원합니다. CI/CD 연동으로 안정적인 배포 환경을 구축
                                   </p>
                                   <Link
-                                    to="/page-synceta"
+                                    to="/synceta"
                                     className="uc-link fw-bold hstack gap-narrow mt-2 sm:mt-1 lg:mt-2"
                                   >
                                     <span>자세히</span>

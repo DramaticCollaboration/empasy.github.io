@@ -25,7 +25,7 @@ export default function Team() {
                   앞선 기술력과 효율적인 협업으로 변화에 민첩하게 대응하는 <b>'살아있는 소프트웨어'</b>를 만들고, 고객의 지속 가능한 성장을 돕는 든든한 동반자가 되어드립니다.
                 </p>
                 <Link
-                  to={`/page-about`}
+                  to={`/about`}
                   className="btn btn-md btn-primary rounded-default mt-1 lg:mt-2 d-none sm:d-block"
                 >
                   엠파시, 그리고 우리의 생각
@@ -58,7 +58,7 @@ export default function Team() {
               </div>
               <div className="sm:d-none">
                 <Link
-                  to={`/page-about`}
+                  to={`/about`}
                   className="btn btn-md btn-primary rounded-default mt-1 lg:mt-2"
                 >
                   About us

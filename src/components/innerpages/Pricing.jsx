@@ -105,7 +105,7 @@ export default function Pricing() {
                             </span>
                             <div className="vstack gap-1 justify-center text-center mt-3">
                               <Link
-                                to="/page-contact"
+                                to="/contact"
                                 className={`btn btn-md sm:btn-sm lg:btn-md ${
                                   tier.title === "Enterprise"
                                     ? "btn-dark"

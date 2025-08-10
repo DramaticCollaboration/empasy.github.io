@@ -45,17 +45,17 @@ export const menuItems = [
   },
   {
     id: 4,
-    href: "/page-about",
+    href: "/about",
     label: "About",
   },
   {
     id: 5,
-    href: "/page-career",
+    href: "/career",
     label: "Career",
   },
   {
     id: 6,
-    href: "/page-contact",
+    href: "/contact",
     label: "Contact",
   },
   {
@@ -273,18 +273,18 @@ export const mainPages = [
     title: "Integrations",
   },
   {
-    href: "/page-about",
+    href: "/about",
     alt: "About",
-    src: "/assets/images/demos/screenshots/page-about.jpg",
+    src: "/assets/images/demos/screenshots/about.jpg",
     title: "About",
   },
 ];
 
 export const othermenuItems = [
-  { href: "/page-career", icon: "unicon-wikis", title: "Career" },
-  { href: "/page-career-detail/2", icon: "unicon-wikis", title: "Job details" },
-  { href: "/page-contact", icon: "unicon-wikis", title: "Contact" },
-  { href: "/page-contact-2", icon: "unicon-wikis", title: "Contact v2" },
+  { href: "/career", icon: "unicon-wikis", title: "Career" },
+  { href: "/career-detail/2", icon: "unicon-wikis", title: "Job details" },
+  { href: "/contact", icon: "unicon-wikis", title: "Contact" },
+  { href: "/contact-2", icon: "unicon-wikis", title: "Contact v2" },
   { href: "/blog", icon: "unicon-course", title: "Blog" },
   { href: "/blog-details/1", icon: "unicon-course", title: "Blog details" },
   {
@@ -398,7 +398,7 @@ export const homeLinks = [
 export const links = [
   {
     id: 1,
-    href: "/page-career",
+    href: "/career",
     label: "Hire an Expert",
     isInternal: true,
   },
@@ -422,19 +422,19 @@ export const links = [
   },
   {
     id: 5,
-    href: "/page-career",
+    href: "/career",
     label: "Career",
     isInternal: true,
   },
   {
     id: 6,
-    href: "/page-team",
+    href: "/team",
     label: "Team",
     isInternal: true,
   },
   {
     id: 7,
-    href: "/page-contact",
+    href: "/contact",
     label: "Get in touch",
     isInternal: true,
   },

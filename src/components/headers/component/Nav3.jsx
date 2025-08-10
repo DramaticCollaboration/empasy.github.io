@@ -309,7 +309,7 @@ export default function Nav3() {
                 <li>
                   <Link
                     className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
-                    to={`/page-career`}
+                    to={`/career`}
                   >
                     <i className="icon-1 unicon-star fw-bold text-primary dark:text-secondary" />
                     <span className="vstack gap-narrow mt-nnarrow">
@@ -324,7 +324,7 @@ export default function Nav3() {
                 <li>
                   <Link
                     className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
-                    to={`/page-contact`}
+                    to={`/contact`}
                   >
                     <i className="icon-1 unicon-headset fw-bold text-primary dark:text-secondary" />
                     <span className="vstack gap-narrow mt-nnarrow">

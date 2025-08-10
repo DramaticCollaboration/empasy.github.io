@@ -18,7 +18,7 @@ export default function Cta2() {
                 꼭 함께하고 싶어요!
               </p>
               <Link
-                to={`/page-career`}
+                to={`/career`}
                 className="btn btn-md rounded-default bg-white dark:bg-gray-700 dark:text-white border-gray-900 dark:border-white border-opacity-20 hover:border-opacity-40 shadow-xs mt-1"
               >
                 <span>지금 지원서 보내기</span>

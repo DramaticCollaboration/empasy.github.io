@@ -145,31 +145,31 @@ export default function MobileMenu() {
           />
           <ul className="nav-y gap-narrow fw-medium fs-6 uc-nav" data-uc-nav="">
             <li>
-              <Link to={`/page-about`}>엠파시는</Link>
+              <Link to={`/about`}>엠파시는</Link>
             </li>
             <li>
-              <Link to={`/page-synccms`}>SyncCMS</Link>
+              <Link to={`/synccms`}>SyncCMS</Link>
             </li>
             <li>
-              <Link to={`/page-syncboot`}>SyncBoot</Link>
+              <Link to={`/syncboot`}>SyncBoot</Link>
             </li>
             <li>
-              <Link to={`/page-syncadmin`}>SyncAdmin</Link>
+              <Link to={`/syncadmin`}>SyncAdmin</Link>
             </li>
             <li>
-              <Link to={`/page-syncapim`}>SyncApim</Link>
+              <Link to={`/syncapim`}>SyncApim</Link>
             </li>
             <li>
-              <Link to={`/page-synceta`}>SyncEta</Link>
+              <Link to={`/synceta`}>SyncEta</Link>
             </li>
             <li>
-              <Link to={`/page-contact`}>문의하기</Link>
+              <Link to={`/contact`}>문의하기</Link>
             </li>
             <li>
-              <Link to={`/page-team`}>엠파시 사람들</Link>
+              <Link to={`/team`}>엠파시 사람들</Link>
             </li>
             <li>
-              <Link to={`/page-career`}>인재 모집</Link>
+              <Link to={`/career`}>인재 모집</Link>
             </li>
             <li>
               <Link to={`/blog`}>블로그</Link>

@@ -56,7 +56,7 @@ export default function Team() {
                 </div>
               </div>
               <Link
-                to={`/page-career`}
+                to={`/career`}
                 className="uc-link dark:text-secondary fw-bold d-inline-flex items-center gap-narrow mx-auto"
               >
                 <span>우리는 항상 함께할 동료를 기다리고 있어요</span>

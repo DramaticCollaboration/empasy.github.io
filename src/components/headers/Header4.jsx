@@ -54,7 +54,7 @@ export default function Header4() {
                       <Link to={`/page-terms`}>Terms and conditions</Link>
                     </li>
                     <li>
-                      <Link to={`/page-contact`}>
+                      <Link to={`/contact`}>
                         <span>Hire an Expert</span>
                         <i className="fs-8 unicon-arrow-up-right fw-bold ms-narrow rtl:-rotate-90" />
                       </Link>
@@ -118,7 +118,7 @@ export default function Header4() {
                 </ul>
                 <Link
                   className="btn btn-md btn-primary rounded-default lg:px-3 text-none shadow-xs d-none lg:d-inline-flex"
-                  to={`/page-contact`}
+                  to={`/contact`}
                 >
                   Send inquiry
                 </Link>
