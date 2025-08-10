@@ -106,7 +106,7 @@ function injectMetadata(htmlFile, metadata) {
         if (metadata.author) {
             metaTags.push(`<meta name="author" content="${metadata.author}">`);
         }
-        metaTags.push(`<meta property="og:image" content="https://www.empasy.com/assets/images/common/logo-dark.png">`);
+        metaTags.push(`<meta property="og:image" content="https://www.empasy.com/favicon.png">`);
 
         // Insert meta tags after <head>
         htmlContent = htmlContent.replace(
