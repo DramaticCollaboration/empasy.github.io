@@ -94,11 +94,11 @@ function injectMetadata(htmlFile, metadata) {
         if (metadata.title) {
             metaTags.push(`<title>${metadata.title}</title>`);
             metaTags.push(`<meta name="title" content="${metadata.title}">`);
-            metaTags.push(`<meta name="og:title" content="${metadata.title}">`);
+            metaTags.push(`<meta property="og:title" content="${metadata.title}">`);
         }
         if (metadata.description) {
             metaTags.push(`<meta name="description" content="${metadata.description}">`);
-            metaTags.push(`<meta name="og:description" content="${metadata.description}">`);
+            metaTags.push(`<meta property="og:description" content="${metadata.description}">`);
         }
         if (metadata.keywords) {
             metaTags.push(`<meta name="keywords" content="${metadata.keywords}">`);
@@ -106,7 +106,7 @@ function injectMetadata(htmlFile, metadata) {
         if (metadata.author) {
             metaTags.push(`<meta name="author" content="${metadata.author}">`);
         }
-        metaTags.push(`<meta name="og:image" content="https://www.empasy.com/assets/images/common/logo-dark.png">`);
+        metaTags.push(`<meta property="og:image" content="https://www.empasy.com/assets/images/common/logo-dark.png">`);
 
         // Insert meta tags after <head>
         htmlContent = htmlContent.replace(
