@@ -6,9 +6,9 @@ import Blogs1 from "@/components/blog/Blogs1";
 import MetaComponent from "@/components/common/MetaComponent";
 const metadata = {
   title:
-    "블로그 || 살아 있는 소프트웨어를 만듭니다.",
+    "블로그 || 여러분의 비즈니스를 더 빠르고 스마트하게 만드는 소식들을 만나보세요!",
   description:
-    "살아 있는 소프트웨어를 만듭니다.",
+    " 변화에 강한 Sync Series가 여러분의 비즈니스를 더욱 민첩하고 혁신적으로 이끄는 이야기들을 들려드릴게요!",
 };
 export default function BlogPage1() {
   return (
