@@ -100,8 +100,10 @@ export default function Pricing() {
                         </div>
                         <div className="panel">
                           <div className="panel vstack gap-narrow">
-                            <h5 className="title h3 sm:h2 m-0 dark:text-white">
-                              {isYearly ? tier.yearlyPrice : tier.price}
+                            <h5 className="title h3 sm:h2 m-0 dark:text-white"  dangerouslySetInnerHTML={{
+                                __html: isYearly ? tier.yearlyPrice : tier.price
+                            }}
+                            >
                             </h5>
                             <span className="fs-7 opacity-70">
                               {tier.priceDetails}
