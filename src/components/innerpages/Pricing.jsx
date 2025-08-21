@@ -1,5 +1,5 @@
 import { tiers3 } from "@/data/pricing";
-import { useState } from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -51,7 +51,7 @@ export default function Pricing() {
               <p className="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">
                 비즈니스 성장에 맞춰 유연하게
               </p>
-              <ul
+                    <ul
                 className="uc-switcher-nav nav-x gap-0 p-narrow border rounded-2 fs-7 fw-medium"
                 data-uc-switcher="connect: .pricing-switcher;"
               >

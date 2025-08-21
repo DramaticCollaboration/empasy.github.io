@@ -33,6 +33,8 @@ import BlogDetailsPage1 from "./pages/blogs/blog-details";
 import NotFoundPage from "./pages/not-found";
 import TeamPage from "./pages/innerPages/page-team";
 import SyncEtaPricePage from "./pages/innerPages/page-pricing";
+import SyncEtaDownloadPage from "./pages/innerPages/page-download";
+
 
 import CareerDetailsPage from "./pages/innerPages/page-career-detail";
 import ContactPage2 from "./pages/innerPages/page-contact-2";
@@ -163,6 +165,7 @@ function App() {
             <Route path="contact-2" element={<ContactPage2 />} />
             <Route path="team" element={<TeamPage />} />
             <Route path="synceta-price" element={<SyncEtaPricePage />} />
+            <Route path="synceta-download" element={<SyncEtaDownloadPage />} />
 
             <Route
                 path="career-detail/:id"

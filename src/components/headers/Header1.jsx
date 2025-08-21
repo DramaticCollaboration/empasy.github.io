@@ -6,6 +6,7 @@ import { openContactModal } from "@/utlis/toggleContactModal";
 import React from "react";
 
 export default function Header1() {
+    const showDownload = location.pathname === '/synceta-price';
   return (
     <header
       style={{ "--uc-nav-height": "80px" }}
@@ -67,6 +68,13 @@ export default function Header1() {
                   <rect className="line-4" y={15} width={20} height={2}/>
                 </svg>
               </a>
+                {showDownload && (
+
+                    <a href="/synceta-download" className="d-none lg:d-flex btn btn-sm btn-primary px-2">
+                        <span>SyncEta 다운로드</span>
+                        <i className="icon icon-narrow unicon-download fw-bold rtl:rotate-180" />
+                    </a>
+                )}
               <a href="http://doc.empasy.com" className="d-none lg:d-flex btn btn-sm btn-primary px-2" target="_blank">
                 <span>문서 보러 가기</span>
                 <i className="icon icon-narrow unicon-arrow-right fw-bold rtl:rotate-180" />
