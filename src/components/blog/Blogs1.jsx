@@ -81,7 +81,7 @@ export default function Blogs1() {
                             alt="Maximizing your reach with marketing strategies"
                           />
                           <Link
-                            to={`/blog-details/${elm.id}`}
+                            to={`/blog-details?id=${elm.id}`}
                             className="position-cover"
                             data-caption="Maximizing your reach with marketing strategies"
                           ></Link>
@@ -98,7 +98,7 @@ export default function Blogs1() {
                           <h3 className="h4 xl:h2 m-0 text-center m-0 lg:w-500px lg:m-auto">
                             <Link
                               className="text-none"
-                              to={`/blog-details/${elm.id}`}
+                              to={`/blog-details?id=${elm.id}`}
                             >
                               {elm.title}
                             </Link>
@@ -133,7 +133,7 @@ export default function Blogs1() {
                           </p>
                           <Link
                             className="btn btn-text text-primary border-bottom d-inline-flex fs-7 lg:fs-6 sm:mt-2"
-                            to={`/blog-details/${elm.id}`}
+                            to={`/blog-details?id=${elm.id}`}
                           >
                             글 계속 읽기
                           </Link>
@@ -162,7 +162,7 @@ export default function Blogs1() {
                         alt="Top 5 reasons to invest in marketing"
                       />
                       <Link
-                        to={`/blog-details/${elm.id}`}
+                        to={`/blog-details?id=${elm.id}`}
                         className="position-cover"
                         data-caption="Top 5 reasons to invest in marketing"
                       ></Link>
@@ -171,7 +171,7 @@ export default function Blogs1() {
                       <h3 className="h5 xl:h4 m-0 text-center m-0">
                         <Link
                           className="text-none"
-                          to={`/blog-details/${elm.id}`}
+                          to={`/blog-details?id=${elm.id}`}
                         >
                           {elm.title}
                         </Link>

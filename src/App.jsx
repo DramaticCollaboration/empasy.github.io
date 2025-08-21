@@ -146,6 +146,7 @@ function App() {
               <Route path="page-contact-2" element={<ContactPage2 />} />
               <Route path="blog" element={<BlogPage1 />} />
               <Route path="blog-details/:id" element={<BlogDetailsPage1 />} />
+              <Route path="blog-details" element={<BlogDetailsPage1 />} />
               <Route path="page-not-found" element={<NotFoundPage />} />
 
 
