@@ -81,10 +81,13 @@ export default function Pricing() {
                 >
                   {tiers3.map((tier, index) => (
                     <div key={index} className="tier-wrapper">
-                      <div className="tier panel vstack gap-2 xl:gap-4 px-3 py-4 sm:p-4 lg:p-6 rounded lg:rounded-2 bg-secondary dark:bg-gray-800">
+                      <div  className={`tier panel vstack gap-2 xl:gap-4 px-3 py-4 sm:p-4 lg:p-6 rounded lg:rounded-2 bg-secondary dark:bg-gray-800 ${
+                          tier.disabled ? 'opacity-40 pointer-events-none' : ''
+                      }`}
+                      >
                         {tier.isPopular && (
                           <span className="position-absolute top-0 ltr:end-0 rtl:start-0 m-2 d-inline-flex py-narrow px-1 bg-primary rounded-1 text-white fs-7 fw-medium">
-                            Popular
+                            인기
                           </span>
                         )}
                         <div className="panel">
@@ -104,18 +107,23 @@ export default function Pricing() {
                               {tier.priceDetails}
                             </span>
                             <div className="vstack gap-1 justify-center text-center mt-3">
-                              <Link
-                                to="/contact"
-                                className={`btn btn-md sm:btn-sm lg:btn-md ${
-                                  tier.title === "Enterprise"
-                                    ? "btn-dark"
-                                    : "btn-primary"
-                                } text-white`}
-                              >
-                                {tier.linkText}
-                              </Link>
+                                {tier.disabled ? (
+                                    <span className="fs-6 fw-medium text-muted">준비 중입니다</span>
+                                ) : (
+
+                                    <Link
+                                    to="/contact"
+                                    className={`btn btn-md sm:btn-sm lg:btn-md ${
+                                      tier.title === "설치형"
+                                        ? "btn-dark"
+                                        : "btn-primary"
+                                    } text-white`}
+                                  >
+                                    {tier.linkText}
+                                  </Link>
+                                )}
                               <span className="fs-7 opacity-70 min-h-24px">
-                                {tier.linkSubtext}
+                                {!tier.disabled && tier.linkSubtext}
                               </span>
                             </div>
                           </div>
