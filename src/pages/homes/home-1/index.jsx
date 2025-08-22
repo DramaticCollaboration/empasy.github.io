@@ -5,12 +5,15 @@ import Footer1 from "@/components/footers/Footer1";
 import MetaComponent from "@/components/common/MetaComponent";
 import Contact2 from "@/components/innerpages/Contact2.jsx";
 import ContactLinks2 from "@/components/innerpages/ContactLinks2.jsx";
-const metadata = {
-  title:
-    "엠파시 - 살아 있는 소프트웨어를 만듭니다.",
-  description:
-    "살아 있는 소프트웨어를 만듭니다.",
+
+import { searchMetadata }  from "@/utlis/searchMeta";
+
+const metadata = {...searchMetadata, ...{
+        title: "엠파시 || 살아 있는 소프트웨어를 만듭니다."
+    }
 };
+
+
 export default function HomePage1() {
   return (
     <>
