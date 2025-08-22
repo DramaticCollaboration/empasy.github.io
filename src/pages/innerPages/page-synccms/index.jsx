@@ -8,12 +8,18 @@ import Testimonials from "@/components/homes/home-3/Testimonials";
 import Cta from "@/components/innerpages/synccms/Cta";
 import Brands2 from "@/components/common/Brands2";
 import MetaComponent from "@/components/common/MetaComponent";
+
+import { searchMetadata }  from "@/utlis/searchMeta";
+
 const metadata = {
-  title: "SyncCMS || 웹사이트 및 콘텐츠 관리 시스템",
-  description: "SyncCMS는 최신 Java 기술 기반으로 설계되어 높은 안정성과 확장성을 제공하며, SEO 친화적인 구조를 통해 웹사이트의 검색 노출을 효과적으로 향상시킵니다",
-  keywords: "SyncCMS, CMS, 콘텐츠 관리 시스템, SEO 최적화,  웹사이트 구축, Java 기반, 오픈소스, 템플릿, 다국어 지원, 사용자 친화적 UI, 확장성, 헤드리스,  클라우드 기반 CMS, 모바일 CMS, Headless CMS, Headful CMS, 모듈화 콘텐츠 시스템, 사용자 친화적 인터페이스, 템플릿 지원, 다중 사이트 및 다국어 지원, 개인화",
-  author: "엠파시"
+    ...searchMetadata,
+    ...{
+        title: "SyncCMS || 웹사이트 및 콘텐츠 관리 시스템",
+        description: "SyncCMS는 최신 Java 기술 기반으로 설계되어 높은 안정성과 확장성을 제공하며, SEO 친화적인 구조를 통해 웹사이트의 검색 노출을 효과적으로 향상시킵니다",
+        keywords: "SyncCMS, CMS, 콘텐츠 관리 시스템, SEO 최적화,  웹사이트 구축, Java 기반, 오픈소스, 템플릿, 다국어 지원, 사용자 친화적 UI, 확장성, 헤드리스,  클라우드 기반 CMS, 모바일 CMS, Headless CMS, Headful CMS, 모듈화 콘텐츠 시스템, 사용자 친화적 인터페이스, 템플릿 지원, 다중 사이트 및 다국어 지원, 개인화",
+    },
 };
+
 export default function FeaturesPage() {
   return (
     <>

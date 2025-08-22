@@ -5,6 +5,8 @@ import Newsletter from "@/components/blog/Newsletter";
 import BreadCumb from "@/components/blog/BreadCumb";
 import Blogs5 from "@/components/blog/Blogs5";
 import MetaComponent from "@/components/common/MetaComponent";
+import { searchMetadata }  from "@/utlis/searchMeta";
+
 const metadata = {
   title:
     "Blog 4 Cols || 살아 있는 소프트웨어를 만듭니다.",

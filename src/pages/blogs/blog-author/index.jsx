@@ -7,6 +7,8 @@ import Blogs4 from "@/components/blog/Blogs4";
 import { useParams } from "react-router-dom";
 
 import MetaComponent from "@/components/common/MetaComponent";
+import { searchMetadata }  from "@/utlis/searchMeta";
+
 const metadata = {
   title:
     "Blog Author || 살아 있는 소프트웨어를 만듭니다.",
