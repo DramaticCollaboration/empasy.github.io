@@ -207529,3 +207529,16 @@ textarea.form-control.is-invalid {
     --uc-gradient-stops: var(--uc-gradient-from),#0b2d33,var(--uc-gradient-to) !important
   }
 }
+
+
+.flex-container {
+  display: flex;
+  gap: 10px; /* 요소 사이 간격 */
+  padding: 20px;
+}
+
+.flex-item {
+  padding: 20px;
+  text-align: center;
+  flex: 1; /* 모든 항목이 동일한 너비를 갖도록 */
+}

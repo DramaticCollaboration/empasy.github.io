@@ -7,22 +7,22 @@ export default function Download() {
     const downloads = [
         {
             os: "Windows",
-            version: "3.2.7",
-            downloadUrl: "#",
+            version: "3.2.82",
+            downloadUrl: "https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA+Setup+3.2.82.exe",
             icon: "/assets/images/os/windows.svg",
             disabled: false,
         },
         {
             os: "macOS",
-            version: "3.2.7",
+            version: "3.2.82",
             downloadUrl: "#",
             icon: "/assets/images/os/mac.svg",
             disabled: true,
         },
         {
             os: "Linux",
-            version: "3.2.7",
-            downloadUrl: "#",
+            version: "3.2.82",
+            downloadUrl: "https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA-3.2.82.AppImage",
             icon: "/assets/images/os/linux.svg",
             disabled: true,
         },
@@ -74,11 +74,11 @@ export default function Download() {
                         </h1>
 
                         <div className="flex justify-center items-center mt-8">
-                            <div className="download-options flex flex-row gap-4">
+                            <div className="download-options flex flex-row gap-4 flex-container">
                                 {downloads.map((download) => (
                                     <div
                                         key={download.os}
-                                        className={`download-item p-6 border rounded-lg ${
+                                        className={`download-item flex-item p-6 border rounded-lg ${
                                             download.disabled ? 'opacity-50 cursor-not-allowed' : 'hover:shadow-lg transition-shadow'
                                         }`}
                                         style={{ width: '280px' }}
