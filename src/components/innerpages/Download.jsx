@@ -15,16 +15,16 @@ export default function Download() {
         {
             os: "macOS",
             version: "3.2.82",
-            downloadUrl: "#",
+            downloadUrl: "https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA-3.2.82-arm64.dmg",
             icon: "/assets/images/os/mac.svg",
-            disabled: true,
+            disabled: false,
         },
         {
             os: "Linux",
             version: "3.2.82",
             downloadUrl: "https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA-3.2.82.AppImage",
             icon: "/assets/images/os/linux.svg",
-            disabled: true,
+            disabled: false,
         },
     ];
 
