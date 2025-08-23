@@ -7402,3 +7402,15 @@ textarea.form-control-lg {
 :where(.uc-dark) .dark\:to-gray-900 {
   --uc-gradient-to: #0e0e0f;
 }
+
+.flex-container {
+    display: flex;
+    gap: 10px; /* 요소 사이 간격 */
+    padding: 20px;
+}
+
+.flex-item {
+    padding: 20px;
+    text-align: center;
+    flex: 1; /* 모든 항목이 동일한 너비를 갖도록 */
+}
