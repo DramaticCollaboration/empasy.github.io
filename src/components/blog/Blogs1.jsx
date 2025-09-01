@@ -89,12 +89,11 @@ export default function Blogs1() {
                       </div>
                       <div>
                         <div className="vstack items-center gap-2 lg:gap-3">
-                          <Link
+                          <span
                             className="post-category text-primary fw-normal text-none fw-bold fs-7 bg-primary text-white py-narrow px-1 rounded"
-                            to={`/blog-category/${elm.category}`}
                           >
                             {elm.category}
-                          </Link>
+                          </span>
                           <h3 className="h4 xl:h2 m-0 text-center m-0 lg:w-500px lg:m-auto">
                             <Link
                               className="text-none"
