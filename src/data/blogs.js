@@ -1512,6 +1512,20 @@ export const blogsPosts4 = [
         authorName: "엠파시",
         date: "2025, 08, 24",
     },
+    {
+        id: 40,
+        category: "아이브",
+        imgSrc: "/assets/images/blog/엠파시 앨범1.jpg",
+        imgAlt: "🤦‍♀️ '엠파시' 검색했더니 '아이브 엠파시'? Sync Series (SyncEta, SyncBoot)로 비즈니스 민첩성 극대화!\"",
+        imgCaption: "🤦‍♀️ '엠파시' 검색했더니 '아이브 엠파시'? Sync Series (SyncEta, SyncBoot)로 비즈니스 민첩성 극대화!\"",
+        title: "‍♀️ '엠파시' 검색했는데 '아이브'가 먼저 뜨는 이 난감한 상황! 결국 앨범 샀습니다! 😅",
+        authorImg: "/assets/images/team/poh.webp",
+        authorAlt: "엠파시",
+        desc: "‍♀️ '저희 엠파시를 검색했는데 아이브 '엠파시' 앨범이 먼저 뜨는 바람에, 결국 비즈니스 민첩성 대신 안유진님 앨범을 샀습니다! 🤣",
+        content: "<section>\n        <p>안녕하세요, 여러분!</p>\n\n        <p>저희 엠파시가 회사 홍보를 위해 나름 SEO도 적용하고, 서치 콘솔에 사이트맵까지 꼼꼼히 등록하면서 검색 노출에 힘쓰고 있거든요. 그런데 말입니다… <strong>'엠파시'</strong>라고 검색하면 가장 먼저 뜨는 것은 바로 <strong>아이브의 앨범 '아이브 엠파시'</strong>라는 사실! 🤦‍♀️</p>\n\n        <!-- 검색 결과 이미지 삽입 위치 -->\n        <figure>\n            <img src=\"/public/assets/images/blog/search_empasy.png\" alt=\"엠파시 검색 결과에서 아이브 앨범이 상위에 노출된 모습\" width=\"800\" height=\"400\" border=\"1\">\n            <figcaption>구글에서 '엠파시'를 검색한 결과 - 아이브 앨범이 최상단에 나타남</figcaption>\n        </figure>\n\n        <p>아니, 이게 무슨 일인가요! 저희 엠파시는 <strong>소프트웨어 솔루션 개발 회사</strong>이고, <strong>\"변화에 최적화된 솔루션\"</strong>을 최고 가치로 삼으며, <strong>민첩한 비즈니스 대응</strong>을 돕는 다양한 Sync Series 제품군(SyncAdmin, SyncBoot, SyncCMS, SyncEta)을 개발하고 있는 곳인데 말이죠. 회사 이름 'EmpaSy'도 <strong>\"Empathic Synergy\"</strong>, 즉 <strong>깊은 공감과 협업을 통해 뛰어난 결과를 만들어낸다</strong>는 의미를 담고 있답니다.</p>\n\n        <p>그런데 현실은... 아이브 엠파시! ㅋㅋㅋㅋㅋ\n            음악의 '감성'과 '공감'을 스토리텔링에 담아 대중을 사로잡는 그 아이브... 하긴, 이름이 같은데 어쩌겠어요! 🤔</p>\n\n        <!-- 앨범 이미지 삽입 위치 -->\n        <figure>\n            <img src=\"/public/assets/images/blog/엠파시 앨범1.jpg\" alt=\"아이브 엠파시 앨범\" width=\"600\" height=\"600\">\n            <img src=\"/public/assets/images/blog/엠파시 앨범2.jpg\" alt=\"아이브 엠파시 앨범\" width=\"600\" height=\"600\">\n            <img src=\"/public/assets/images/blog/엠파시 앨범3.jpg\" alt=\"아이브 엠파시 앨범\" width=\"600\" height=\"600\">\n            <figcaption>아이브(IVE) - EMPATHY 앨범</figcaption>\n        </figure>\n\n        <p>그래서 결국… 샀습니다! <strong>아이브의 세 번째 한국 EP 앨범 '아이브 엠파시(IVE EMPATHY)'!</strong> 🤣🤣 이 앨범은 <strong>2025년 2월 3일</strong>에 발매되었고, 총 6곡이 수록되어 있으며, <strong>5연속 밀리언셀러를 기록한 대단한 앨범</strong>이죠.</p>\n\n        <p>사실 저는 원래 안유진님 팬인데, 이참에 회사 이름과 앨범 이름이 같아서 겸사겸사 구매해봤어요. 어쩌면 이게 바로 SEO의 새로운 전략이 아닐까요? (아니겠죠?😅)</p>\n\n        <p>어쨌든, 아이브의 '엠파시' 앨범이 많은 분께 사랑받는 만큼, 저희 <strong>엠파시(Empasy)</strong>도 <strong>\"변화에 최적화된 솔루션\"</strong>으로 더 많은 분께 '공감'받고 사랑받는 회사가 되도록 더욱 노력하겠습니다!\n            (물론 검색 결과 최적화도 포기하지 않을 겁니다...!) 💪</p>\n    </section>",
+        authorName: "엠파시(Oak)",
+        date: "2025, 09, 02",
+    },
 ];
 
 export const blogPosts5 = [
