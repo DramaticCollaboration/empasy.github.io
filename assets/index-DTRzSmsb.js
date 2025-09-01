@@ -1232,14 +1232,14 @@ Error generating stack: `+s.message+`
     <p>현재 SyncETA는 웹 테스트, API 테스트, 스토리 기반 테스트, 크로스 브라우징, 병렬 실행 등 다양한 기능을 제공하는 올인원 테스트 플랫폼으로 발전했습니다.      또한, Docker 기반 설치형(On-premise) 또는 클라우드 SaaS 형태로 배포가 가능하며, 보안 요건에 따라 LLM 모델을 온프레미스에서 실행할 수도 있습니다.</p>
     <p>저희는 여기서 멈추지 않을 것입니다. 현재도 AI 기능(예: 목업 데이터 자동 생성, 화면 캡쳐 후 AI를 통한 데이터 추가 검증 등을 일부 제공하고 있지만, 이제는 <b>QA 피드백 루프에 AI를 더욱 적극적으로 도입하여 시스템의 지속적인 개선을 이룰 수 있는 진정한 TestOps를 실현하고자 합니다.</b></p>
     <p>SyncETA는 QA 엔지니어가 생성된 엑셀 테스트케이스를 직접 리뷰, 수정, 평가할 수 있으며, 이 수정된 데이터는 SyncETA 시스템에 업로드되어 LLM의 재학습(Fine-tuning or RAG)에 반영됩니다.      이 과정을 통해 테스트케이스 생성 품질을 지속적으로 향상시키고, 더 정확하고 신뢰할 수 있는 테스트 자동화 환경을 제공하며, 궁극적으로 <b>소프트웨어 품질과 개발 효율성을 동시에 향상시켜 비즈니스 경쟁력 강화에 기여할 것</b>입니다.</p>
-    <p>SyncETA의 끊임없는 도전에 많은 관심과 성원 부탁드립니다. 감사합니다!</p>`,authorName:"엠파시",date:"2025, 08, 24"},{id:40,category:"아이브",imgSrc:"/assets/images/blog/엠파시 앨범1.jpg",imgAlt:`🤦‍♀️ '엠파시' 검색했더니 '아이브 엠파시'? Sync Series (SyncEta, SyncBoot)로 비즈니스 민첩성 극대화!"`,imgCaption:`🤦‍♀️ '엠파시' 검색했더니 '아이브 엠파시'? Sync Series (SyncEta, SyncBoot)로 비즈니스 민첩성 극대화!"`,title:"‍♀️ '엠파시' 검색했는데 '아이브'가 먼저 뜨는 이 난감한 상황! 결국 앨범 샀습니다! 😅",authorImg:"/assets/images/team/jade.webp",authorAlt:"엠파시",desc:"‍♀️ '저희 엠파시를 검색했는데 아이브 '엠파시' 앨범이 먼저 뜨는 바람에, 결국 비즈니스 민첩성 대신 안유진님 앨범을 샀습니다! 🤣",content:`<section>
+    <p>SyncETA의 끊임없는 도전에 많은 관심과 성원 부탁드립니다. 감사합니다!</p>`,authorName:"엠파시",date:"2025, 08, 24"},{id:40,category:"아이브",imgSrc:"/assets/images/blog/엠파시 앨범1.jpg",imgAlt:`'엠파시' 검색했더니 '아이브 엠파시'? Sync Series (SyncEta, SyncBoot)로 비즈니스 민첩성 극대화!"`,imgCaption:`🤦‍♀️ '엠파시' 검색했더니 '아이브 엠파시'? Sync Series (SyncEta, SyncBoot)로 비즈니스 민첩성 극대화!"`,title:"‍♀️ '엠파시' 검색했는데 '아이브'가 먼저 뜨는 이 난감한 상황! 결국 앨범 샀습니다! 🤣",authorImg:"/assets/images/team/jade.webp",authorAlt:"엠파시",desc:"저희 엠파시를 검색했는데 아이브 '엠파시' 앨범이 먼저 뜨는 바람에, 결국 비즈니스 민첩성 대신 안유진님 앨범을 샀습니다! 🤣",content:`<section>
         <p>안녕하세요, 여러분!</p>
 
         <p>저희 엠파시가 회사 홍보를 위해 나름 SEO도 적용하고, 서치 콘솔에 사이트맵까지 꼼꼼히 등록하면서 검색 노출에 힘쓰고 있거든요. 그런데 말입니다… <strong>'엠파시'</strong>라고 검색하면 가장 먼저 뜨는 것은 바로 <strong>아이브의 앨범 '아이브 엠파시'</strong>라는 사실! 🤦‍♀️</p>
 
         <!-- 검색 결과 이미지 삽입 위치 -->
         <figure>
-            <img src="/public/assets/images/blog/search_empasy.png" alt="엠파시 검색 결과에서 아이브 앨범이 상위에 노출된 모습" width="800" height="400" border="1">
+            <img src="/assets/images/blog/search_empasy.png" alt="엠파시 검색 결과에서 아이브 앨범이 상위에 노출된 모습" width="800" height="400" border="1">
             <figcaption>구글에서 '엠파시'를 검색한 결과 - 아이브 앨범이 최상단에 나타남</figcaption>
         </figure>
 
@@ -1250,9 +1250,9 @@ Error generating stack: `+s.message+`
 
         <!-- 앨범 이미지 삽입 위치 -->
         <figure>
-            <img src="/public/assets/images/blog/엠파시 앨범1.jpg" alt="아이브 엠파시 앨범" width="600" height="600">
-            <img src="/public/assets/images/blog/엠파시 앨범2.jpg" alt="아이브 엠파시 앨범" width="600" height="600">
-            <img src="/public/assets/images/blog/엠파시 앨범3.jpg" alt="아이브 엠파시 앨범" width="600" height="600">
+            <img src="/assets/images/blog/엠파시 앨범1.jpg" alt="아이브 엠파시 앨범" width="600" height="600">
+            <img src="/assets/images/blog/엠파시 앨범2.jpg" alt="아이브 엠파시 앨범" width="600" height="600">
+            <img src="/assets/images/blog/엠파시 앨범3.jpg" alt="아이브 엠파시 앨범" width="600" height="600">
             <figcaption>아이브(IVE) - EMPATHY 앨범</figcaption>
         </figure>
 
