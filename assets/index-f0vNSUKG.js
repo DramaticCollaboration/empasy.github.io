@@ -1262,7 +1262,7 @@ Error generating stack: `+s.message+`
 
         <p>어쨌든, 아이브의 '엠파시' 앨범이 많은 분께 사랑받는 만큼, 저희 <strong>엠파시(Empasy)</strong>도 <strong>"변화에 최적화된 솔루션"</strong>으로 더 많은 분께 '공감'받고 사랑받는 회사가 되도록 더욱 노력하겠습니다!
             (물론 검색 결과 최적화도 포기하지 않을 겁니다...!) 💪</p>
-    </section>`,authorName:"엠파시(Oak)",date:"2025, 09, 02"},{id:41,category:"AI",imgSrc:"/assets/images/blog/ai_and_developer.jpg",imgAlt:"AI 시대 개발자 역할: XP, Scrum, Kanban 통합 가이드 | 애자일 방법론 비교",imgCaption:"AI 시대 개발자 역할: XP, Scrum, Kanban 통합 가이드 | 애자일 방법론 비교",title:"AI 시대 개발자 역할: XP, Scrum, Kanban 통합 가이드 | 애자일 방법론 비교",authorImg:"/assets/images/team/poh.webp",authorAlt:"엠파시",desc:"AI가 코드를 빠르게 생성하는 시대에도 개발자는 여전히 중요합니다. ChatGPT와 같은 AI 도구의 한계, 실무 적용 사례, XP·Scrum·Kanban 활용법을 통해 AI 시대 개발자의 역할과 가치 창출 방법을 자세히 알아보세요.",content:`<main>
+    </section>`,authorName:"엠파시(Oak)",date:"2025, 09, 02"},{id:41,category:"AI",imgSrc:"/assets/images/blog/ai_and_developer.jpg",imgAlt:"AI 시대, 개발자는 여전히 필요한가?",imgCaption:"AI 시대, 개발자는 여전히 필요한가?",title:"AI 시대, 개발자는 여전히 필요한가?",authorImg:"/assets/images/team/poh.webp",authorAlt:"엠파시",desc:"AI가 코드를 빠르게 생성하는 시대에도 개발자는 여전히 중요합니다. ChatGPT와 같은 AI 도구의 한계, 실무 적용 사례, XP·Scrum·Kanban 활용법을 통해 AI 시대 개발자의 역할과 가치 창출 방법을 자세히 알아보세요.",content:`<main>
   <style>
     :root { color-scheme: light dark; }
     body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Apple SD Gothic Neo, Pretendard, 'Malgun Gothic', 'Noto Sans KR', Arial, sans-serif; line-height: 1.65; margin: 0; padding: 0; }
