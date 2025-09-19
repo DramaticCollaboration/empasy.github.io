@@ -79,6 +79,42 @@
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
     </url>
+    <url>
+        <loc>https://www.empasy.com/career-detail/1</loc>
+        <lastmod>2025-09-19</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.empasy.com/career-detail/2</loc>
+        <lastmod>2025-09-19</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.empasy.com/career-detail/3</loc>
+        <lastmod>2025-09-19</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.empasy.com/career-detail/4</loc>
+        <lastmod>2025-09-19</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.empasy.com/career-detail/5</loc>
+        <lastmod>2025-09-19</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.empasy.com/career-detail/6</loc>
+        <lastmod>2025-09-19</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+    </url>
 
     <url>
         <loc>https://www.empasy.com/blog-details?id=26</loc>
