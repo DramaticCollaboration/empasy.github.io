@@ -282,7 +282,7 @@ export const mainPages = [
 
 export const othermenuItems = [
   { href: "/career", icon: "unicon-wikis", title: "Career" },
-  { href: "/career-detail/2", icon: "unicon-wikis", title: "Job details" },
+  { href: "/career-detail?id=2", icon: "unicon-wikis", title: "Job details" },
   { href: "/contact", icon: "unicon-wikis", title: "Contact" },
   { href: "/contact-2", icon: "unicon-wikis", title: "Contact v2" },
   { href: "/blog", icon: "unicon-course", title: "Blog" },

@@ -34,7 +34,7 @@ export default function CareerOpenings() {
                           </span>
                         </div>
                         <Link
-                          to={`/career-detail/${job.id}`}
+                          to={`/career-detail?id=${job.id}`}
                           className="uc-link fs-7 fw-bold d-inline-flex items-center gap-narrow border-bottom pb-narrow"
                         >
                           <span>지원하기</span>
