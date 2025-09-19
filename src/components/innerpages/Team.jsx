@@ -5,7 +5,35 @@ import { Link } from "react-router-dom";
 export default function Team() {
   return (
     <div id="team" className="team section panel overflow-hidden border-bottom">
-      <div className="section-outer panel py-4 md:py-6 xl:py-9 rounded-1-5 lg:rounded-2">
+        <style>
+            {`
+          .team-member-img {
+            height: 55%;
+            object-fit: cover;
+            flex-shrink: 0;
+          }
+
+          @media (max-width: 768px) {
+            .team-member-img {
+              height: 30%;
+            }
+          }
+          
+          .team-member-desc {
+            height: 45%;
+            object-fit: cover;
+            flex-shrink: 0;
+          }
+
+          @media (max-width: 768px) {
+            .team-member-desc {
+              height: 70%;
+            }
+          }
+        `}
+        </style>
+
+        <div className="section-outer panel py-4 md:py-6 xl:py-9 rounded-1-5 lg:rounded-2">
         <div className="container sm:max-w-lg xl:max-w-xl">
           <div className="section-inner panel">
             <div className="panel vstack items-center gap-4 sm:gap-6 xl:gap-8">
@@ -40,13 +68,12 @@ export default function Team() {
                     <div key={member.id}>
                       <div className="panel vstack gap-2 xl:gap-3">
                         <img
-                          className="w-100 rounded-1 sm:rounded-1-5"
+                          className="team-member-img w-100 rounded-1 sm:rounded-1-5"
                           src={member.imageSrc}
                           width={560}
-                          style={{height: '55%', objectFit: 'cover', flexShrink: 0}}
                           alt={member.altText}
                         />
-                        <div className="panel vstack items-start gap-narrow" style={{height: '45%'}}>
+                        <div className="team-member-desc panel vstack items-start gap-narrow">
                           <h6 className="h6 xl:h5 m-0">{member.name}</h6>
                           <span className="fs-6 xl:fs-5 text-primary dark:text-white dark:text-opacity-70" dangerouslySetInnerHTML={{ __html: member.position }}>
                           </span>
