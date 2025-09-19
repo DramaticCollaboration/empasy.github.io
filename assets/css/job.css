@@ -1,0 +1,80 @@
+.empathy-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+    line-height: 1.7;
+    color: #333;
+}
+
+.intro {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 5px solid #4b6cb7;
+}
+
+.section {
+    margin-bottom: 35px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.section-title {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eaeaea;
+}
+
+.product-list, .culture-list, .looking-for-list {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.product-list li, .culture-list li, .looking-for-list li {
+    margin-bottom: 12px;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.culture-item {
+    margin-bottom: 25px;
+}
+
+.culture-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #4b6cb7;
+}
+
+.apply-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.apply-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.conclusion {
+    text-align: center;
+    padding: 30px;
+    background-color: #f0f4f8;
+    border-radius: 10px;
+}
