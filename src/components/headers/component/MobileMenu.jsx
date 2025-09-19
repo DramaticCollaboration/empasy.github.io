@@ -123,26 +123,6 @@ export default function MobileMenu() {
           </button>
         </header>
         <div className="panel">
-          <form
-            onSubmit={(e) => e.preventDefault()}
-            id="search-panel"
-            className="form-icon-group vstack gap-1 mb-2 uc-sticky"
-            data-uc-sticky=""
-          >
-            <input
-              type="email"
-              className="form-control form-control-sm fs-7 rounded-default"
-              placeholder="Search.."
-            />
-            <span className="form-icon text-gray">
-              <i className="unicon-search icon-1" />
-            </span>
-          </form>
-          <div
-            className="uc-sticky-placeholder"
-            style={{ height: 40, width: 290, margin: "0px 0px 16px" }}
-            hidden=""
-          />
           <ul className="nav-y gap-narrow fw-medium fs-6 uc-nav" data-uc-nav="">
             <li>
               <Link to={`/about`}>엠파시는</Link>

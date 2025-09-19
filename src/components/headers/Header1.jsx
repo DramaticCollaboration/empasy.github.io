@@ -3,9 +3,23 @@ import { Link } from "react-router-dom";
 
 import { openMobileMenu } from "@/utlis/toggleMobileMenu";
 import { openContactModal } from "@/utlis/toggleContactModal";
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 export default function Header1() {
+    const [isWide, setIsWide] = useState(
+        typeof window !== "undefined" ? window.innerWidth >= 1087 : false
+    );
+
+    // 1076px 이상일 때만 표시
+    useEffect(() => {
+        const onResize = () => setIsWide(window.innerWidth >= 1087);
+        window.addEventListener("resize", onResize);
+        // 초기 1회 보정
+        onResize();
+        return () => window.removeEventListener("resize", onResize);
+    }, []);
+
+
     const showDownload = location.pathname === '/synceta-price';
   return (
     <header
@@ -80,10 +94,12 @@ export default function Header1() {
                         </a>
                 }
 
-              <a href="http://doc.empasy.com" className="d-none lg:d-flex btn btn-sm btn-primary px-2" target="_blank">
-                <span>문서 보러 가기</span>
-                <i className="icon icon-narrow unicon-arrow-right fw-bold rtl:rotate-180" />
-              </a>
+                {isWide && (
+                    <a href="http://doc.empasy.com" className="d-none lg:d-flex btn btn-sm btn-primary px-2" target="_blank">
+                        <span>문서 보러 가기</span>
+                        <i className="icon icon-narrow unicon-arrow-right fw-bold rtl:rotate-180" />
+                    </a>
+                )}
             </div>
           </div>
         </div>

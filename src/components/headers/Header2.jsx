@@ -10,6 +10,9 @@ import LanguageSelect2 from "../common/LanguageSelect2";
 export default function Header2() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [scrollingUp, setScrollingUp] = useState(false);
+    const [isWide, setIsWide] = useState(
+        typeof window !== "undefined" ? window.innerWidth >= 1087 : false
+    );
 
   useEffect(() => {
     setPrevScrollPos(window.pageYOffset);
@@ -27,6 +30,16 @@ export default function Header2() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollPos]);
+
+    // 1097px 이상일 때만 표시
+    useEffect(() => {
+        const onResize = () => setIsWide(window.innerWidth >= 1087  );
+        window.addEventListener("resize", onResize);
+        // 초기 1회 보정
+        onResize();
+        return () => window.removeEventListener("resize", onResize);
+    }, []);
+
 
     const showDownload = location.pathname === '/synceta-price';
 
@@ -98,7 +111,7 @@ export default function Header2() {
                 </a>
                   {
                       showDownload
-                          ? <a href="/synceta-download" className="d-none lg:d-flex btn btn-sm btn-primary px-2">
+                          ? <a href="/synceta-download" className="d-none  lg:d-flex btn btn-sm btn-primary px-2">
                               <span>SyncEta 다운로드</span>
                               <i className="icon icon-narrow unicon-download fw-bold rtl:rotate-180" />
                           </a>
@@ -107,10 +120,12 @@ export default function Header2() {
                               <i className="icon icon-narrow unicon-awake fw-bold rtl:rotate-180" />
                           </a>
                   }
-                <a href="http://doc.empasy.com" className="d-none lg:d-flex btn btn-sm btn-primary px-2" target="_blank">
-                  <span>문서 보러 가기</span>
-                  <i className="icon icon-narrow unicon-arrow-right fw-bold rtl:rotate-180" />
-                </a>
+                  {isWide && (
+                      <a href="http://doc.empasy.com" className="d-none lg:d-flex btn btn-sm btn-primary px-2" target="_blank">
+                          <span>문서 보러 가기</span>
+                          <i className="icon icon-narrow unicon-arrow-right fw-bold rtl:rotate-180" />
+                      </a>
+                  )}
               </div>
             </div>
           </div>
