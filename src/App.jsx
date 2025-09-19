@@ -168,7 +168,7 @@ function App() {
             <Route path="synceta-download" element={<SyncEtaDownloadPage />} />
 
             <Route
-                path="career-detail/:id"
+                path="career-detail"
                 element={<CareerDetailsPage />}
             />
 
