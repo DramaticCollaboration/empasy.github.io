@@ -39,11 +39,7 @@ export default function CareerDetailsPage() {
                       이런 분을 상시 기다리고 있어요
                     </span>
                     <h1 className="h2 sm:h1 lg:display-6 xl:display-5 max-w-600px my-0 mx-auto">
-                      웹개발자<br/>
-                      퍼블리셔<br/>
-                      디자이너<br/>
-                      기획자<br/>
-                      프로젝트 매니저
+                        공감과 협업으로 변화를 주도하는 인재
                     </h1>
                   </div>
                 </div>
