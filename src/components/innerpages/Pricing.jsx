@@ -49,7 +49,7 @@ export default function Pricing() {
                 SyncETA 요금제
               </h1>
               <p className="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">
-                비즈니스 성장에 맞춰 유연하게
+                  비즈니스 성장에 맞춰 똑똑하게! 우리 팀에 꼭 맞는 플랜을 선택하세요.
               </p>
                     <ul
                 className="uc-switcher-nav nav-x gap-0 p-narrow border rounded-2 fs-7 fw-medium"
@@ -114,7 +114,7 @@ export default function Pricing() {
                                 ) : (
 
                                     <Link
-                                    to="/contact"
+                                    to="/synceta-download"
                                     className={`btn btn-md sm:btn-sm lg:btn-md ${
                                       tier.title === "설치형"
                                         ? "btn-dark"
@@ -124,8 +124,7 @@ export default function Pricing() {
                                     {tier.linkText}
                                   </Link>
                                 )}
-                              <span className="fs-7 opacity-70 min-h-24px">
-                                {!tier.disabled && tier.linkSubtext}
+                              <span className="fs-7 opacity-70 min-h-24px" dangerouslySetInnerHTML={{ __html: tier.linkSubtext }}>
                               </span>
                             </div>
                           </div>

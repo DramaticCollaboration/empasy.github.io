@@ -49,6 +49,18 @@ export const factItems = [
 ];
 
 export const panelsData = [
+    {
+        value: 2020,
+        text: "SyncCMS 출시",
+        animationData:
+            "onview: -100; textContent: 2014; round: 1; easing: linear; duration: 1200;",
+    },
+    {
+        value: 2023,
+        text: "SyncBoot 출시",
+        animationData:
+            "onview: -100; textContent: 2014; round: 1; easing: linear; duration: 1200;",
+    },
   {
     value: 2024,
     text: "엠파시 설립",
@@ -56,14 +68,8 @@ export const panelsData = [
       "onview: -100; textContent: 2014; round: 1; easing: linear; duration: 1200;",
   },
   {
-    value: 4,
-    text: "주력 솔루션",
-    animationData:
-      "onview: -100; textContent: [0, 50]; round: 1; easing: linear; duration: 1200;",
-  },
-  {
-    value: 4,
-    text: "주요 사업 분야",
+    value: 2025,
+    text: "syncEta 출시",
     animationData:
       "onview: -100; textContent: [0, 100]; round: 1; easing: linear; duration: 1200;",
   },

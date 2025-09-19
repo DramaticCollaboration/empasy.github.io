@@ -79,8 +79,7 @@ export default function Hero() {
                               {feature.id.toString().padStart(2, "0")}.
                             </span>
                             <h3 className="h4 lg:h2 m-0">{feature.title}</h3>
-                            <p className="fs-6 lg:fs-5 opacity-70 dark:opacity-80">
-                              {feature.description}
+                            <p className="fs-6 lg:fs-5 opacity-70 dark:opacity-80" dangerouslySetInnerHTML={ { __html: feature.description }}>
                             </p>
                             {feature.link && (
                               <a

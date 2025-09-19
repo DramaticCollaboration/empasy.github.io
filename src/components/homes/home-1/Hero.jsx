@@ -1,7 +1,5 @@
 import Brands from "@/components/common/Brands";
-import { Link } from "react-router-dom";
 
-import ModalVideo from "react-modal-video";
 import { useState } from "react";
 
 export default function Hero() {
@@ -186,19 +184,11 @@ export default function Hero() {
                     <img
                       className="media-cover image"
                       alt="엠파시"
-                      src="/assets/images/두 진행자 같이.png"
+                      src="/assets/images/empasy_main.jpg"
                       width="1280"
                       height="719"
                     />
                   </figure>
-                  <a
-                    className="cstack text-none position-absolute top-50 start-50 translate-middle bg-white text-primary w-64px h-64px sm:w-80px sm:h-80px rounded-circle shadow-md"
-                    onClick={() => setOpen(true)}
-                    data-caption="Boon to business by agility.1"
-                    data-attrs="width: 640; height: 480;"
-                  >
-                    <i className="icon icon-2 sm:icon-3 unicon-play-filled-alt" />
-                  </a>
                 </div>
               </div>
               <div className="brands panel overflow-hidden mt-4 sm:mt-6 xl:mt-8 opacity-50">
@@ -215,13 +205,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      <ModalVideo
-        channel="custom"
-        isOpen={isOpen}
-        url="/assets/video/엠파시 소개.mp4"
-        onClose={() => setOpen(false)}
-      />
     </>
   );
 }

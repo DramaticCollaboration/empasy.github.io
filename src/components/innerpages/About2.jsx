@@ -37,22 +37,25 @@ export default function About2() {
               data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
             >
               <h2 className="h3 lg:h2 mb-4">엠파시는 어떻게 고객을 돕나요?</h2>
-              <p className="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">
-                엠파시는 <b>"변화에 최적화된 솔루션"</b>과 <b>"비즈니스 민첩성"</b> 확보를 통해 고객을 돕습니다.<br/>
-                핵심 제품인 Sync Series(Admin, Boot, CMS, ETA, APIM)는 개발, 운영, 테스트, 콘텐츠 및 API 관리 등 소프트웨어 라이프사이클 전반에서 <b>속도, 효율성, 유연성을 극대화</b>합니다.<br/>
-                이를 통해 고객은 빠르게 변하는 시장 환경에 민첩하게 대응하고, 경쟁 우위를 확보하며, <b>'살아있는 소프트웨어'</b>로 지속 가능한 성장을 이룰 수 있습니다.<br/>
-                또한, SI/ITO, 모바일 사업, 기술 지원 및 컨설팅 등 다양한 사업 및 서비스를 통해 고객의 시스템 구축/운영 효율화와 디지털 혁신을 지원합니다.<br/>
-                <b>"공감을 통한 시너지"</b>를 바탕으로 고객과 깊이 협력하여 최상의 결과를 만들어냅니다
-              </p>
-              <p className="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">
-                <b>변화에 최적화된 솔루션으로 비즈니스 민첩성을 선도합니다.</b><br/>
-                빠르게 바뀌는 시장 환경 속에서도 귀사의 소프트웨어가 민첩하게 대응하고, 경쟁 우위를 확보하도록 돕습니다.<br/>
-                Sync Series는 개발, 운영, 테스트, 콘텐츠 관리 전반에서 속도와 효율성, 유연성을 극대화합니다.<br/>
-                'Boon to business by agility' 정신 아래, 엠파시는 'Empathic Synergy(공감을 통한 시너지)'를 통해 고객과 깊이 공감하고 협력하여 혁신을 만들어갑니다.<br/>
-                <b>'살아있는 소프트웨어'</b>로 귀사의 지속 가능한 성장을 지원합니다.<br/>
-                지금 엠파시와 함께 변화를 기회로 만드세요.
-              </p>
-              <div className="panel mt-6">
+                <p className="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">
+                    빠르게 변하는 시장, 따라가기 벅찬 시스템... 많이 힘드셨죠?<br/>
+                    엠파시는 바로 그 어려움에 깊이 공감합니다.<br/>
+                    저희는 예측 불가능한 변화에 민첩하게 대응하는 <b>'살아있는 소프트웨어'</b>를 만듭니다.<br/>
+                    '변화에 최적화된 솔루션'으로 고객의 비즈니스 민첩성을 극대화하는 것이 저희의 목표입니다.<br/><br/>
+
+                    어떻게 돕냐고요? 저희는 <b>'Sync Series'</b>로 개발부터 운영까지 전 과정을 혁신합니다.
+                </p>
+                <p className="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">
+                   <b>SyncBoot와 SyncAdmin</b>을 통해 개발자들은 반복적인 인프라 구축 대신 핵심 비즈니스 로직에만 집중할 수 있어 개발 속도가 획기적으로 빨라집니다.<br/>
+                   <b>SyncCMS</b>는 코딩을 모르는 마케터나 운영자도 직접 웹 콘텐츠를 쉽게 관리하게 해주고,<br/>
+                   <b>SyncETA</b>는 AI가 지루한 반복 테스트를 대신해줘서 품질 걱정 없이 더 빠른 출시를 가능하게 하죠.
+                </p>
+                <p className="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">
+                    단순한 도구 제공을 넘어, 저희는 <b>‘DNA에 각인된 맞춤화(Customization in its DNA)’</b> 정신으로 고객의 비즈니스 환경에 꼭 맞는 솔루션을 함께 만듭니다.<br/>
+                    결국, 고객이 시장 변화를 기회로 만들고 새로운 비즈니스를 창출하도록 돕는 것, 그것이 엠파시가 일하는 방식입니다.
+                </p>
+
+                <div className="panel mt-6">
                 <div className="row child-cols-6 lg:child-cols-4 justify-center g-3 col-match">
                   {panelsData.map((panel, index) => (
                     <div key={index}>

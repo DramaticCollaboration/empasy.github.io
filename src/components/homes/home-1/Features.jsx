@@ -79,7 +79,7 @@ export default function Features() {
                               style={{ objectFit: 'fill' }}
                               className="media-cover image"
                               alt="Share tools quickly and confidently in minutes"
-                              src="/assets/images/product/synccms.png"
+                              src="/assets/images/product/synccms/SyncCms.jpg"
                               width="1200"
                               height="1200"
                             />
@@ -91,11 +91,15 @@ export default function Features() {
                               <div>
                                 <div className="panel vstack gap-2">
                                   <h3 className="h4 sm:h3 lg:h2 m-0">
-                                    콘텐츠 관리의 효율성
+                                    누구나 웹 전문가! SyncCMS로 쉽고 빠르게
                                   </h3>
                                   <p className="fs-6 lg:fs-5 opacity-70 dark:opacity-80">
-                                    웹 콘텐츠를 비전문가도 쉽고 효율적으로 관리하고, 모듈형 구조로 비즈니스 변화에 유연하게 대응 가능한 콘텐츠 관리 시스템입니다.
-                                    콘텐츠 관리의 효율성을 높이고, 변화에 빠르게 대응하는 비즈니스 민첩성을 확보하세요
+                                      웹사이트 문구 하나, 이미지 하나 바꾸는 일, 아직도 개발자에게 부탁하시나요?<br/>
+                                      <b>SyncCMS는 코딩을 모르는 마케터나 운영자도 직접 웹사이트 콘텐츠를 쉽고 빠르게 관리할 수 있는 Java 기반 콘텐츠 관리 시스템(CMS)입니다</b>.<br/><br/>
+
+                                      <b>모듈 구조</b>로 필요한 기능만 쏙쏙 골라 쓰고, 비즈니스 성장에 맞춰 유연하게 확장할 수 있어요.<br/>
+                                      사용자 친화적인 UI는 기본, 강력한 **SEO 최적화 기능**까지 내장되어 있어 사이트 홍보 효과도 톡톡히 볼 수 있죠.<br/>
+                                      SyncCMS로 똑똑하고 유연한 웹사이트 운영을 경험해보세요!
                                   </p>
                                   <Link
                                     to="/synccms"
@@ -123,7 +127,7 @@ export default function Features() {
                               style={{ objectFit: 'fill' }}
                               className="media-cover image"
                               alt="Connect every part of your entire business"
-                              src="/assets/images/product/syncboot.png"
+                              src="/assets/images/product/syncboot/SyncBoot.jpg"
                               width="1200"
                               height="1200"
                             />
@@ -135,10 +139,14 @@ export default function Features() {
                               <div>
                                 <div className="panel vstack gap-2">
                                   <h3 className="h4 sm:h3 lg:h2 m-0">
-                                    기업용 애플리케이션 개발의 효율성과 신속성 지원
+                                      MSA 개발, 헤매지 말고 SyncBoot!
                                   </h3>
                                   <p className="fs-6 lg:fs-5 opacity-70 dark:opacity-80">
-                                    비즈니스 민첩성을 위한 빠른 개발 플랫폼입니다. 마이크로서비스 기반으로 개발 속도를 높여 변화에 신속하게 대응하도록 지원합니다
+                                      복잡한 마이크로서비스(MSA) 개발, 더 이상 고민하지 마세요! <b>SyncBoot는 MSA 구축에 필요한 모든 것을 담은 Java 기반 오픈소스 빠른 개발 플랫폼</b>입니다.
+                                      <br/><br/>
+                                      인증/권한 관리부터 CI/CD, 강력한 모니터링까지, 검증된 기업용 기능들이 <b>E2E(End-to-End) 솔루션</b>으로 모두 준비되어 있어요.<br/>
+                                      개발자는 반복적인 인프라 구축 대신 <b>핵심 비즈니스 로직에만 집중</b>할 수 있죠.<br/>
+                                      특정 업체에 종속되지 않는 유연함과 다수의 구축사례로 검증된 안정성으로 여러분의 비즈니스 민첩성을 극대화해 보세요!<br/>
                                   </p>
                                   <Link
                                       to="/syncboot"
@@ -166,7 +174,7 @@ export default function Features() {
                               style={{ objectFit: 'fill' }}
                               className="media-cover image"
                               alt="Maintain compliance and control your apps"
-                              src="/assets/images/product/syncapim.png"
+                              src="/assets/images/product/syncapim/SyncApim.jpg"
                               width="1200"
                               height="1200"
                             />
@@ -178,12 +186,18 @@ export default function Features() {
                               <div>
                                 <div className="panel vstack gap-2">
                                   <h3 className="h4 sm:h3 lg:h2 m-0">
-                                    API 관리 플랫폼
+                                     API 개발부터 운영까지, 복잡한 관리는 이제 그만!
                                   </h3>
-                                  <p className="fs-6 lg:fs-5 opacity-70 dark:opacity-80">
-                                    비즈니스 민첩성을 위한 API 관리 플랫폼입니다. 종합적인 API 관리로 서비스 개발 및 통합을 가속화하여 디지털 혁신과 경쟁력 강화를 지원
-                                  </p>
-                                  <Link
+                                    <p className="fs-6 lg:fs-5 opacity-70 dark:opacity-80">
+                                        SyncAPIM은 API의 생성, 배포, 보안, 모니터링, 분석까지 모든 생명주기를 **하나의 플랫폼에서 해결**하는 통합 API 관리
+                                        솔루션입니다.<br/>
+                                        직관적인 개발자 포털과 API 수명 주기 자동화 기능으로 **개발 효율을 극대화**하고, 개발자는 핵심 비즈니스 로직에만
+                                        집중할 수 있어요.<br/><br/>
+
+                                        강력한 보안과 안정적인 운영 환경은 기본! <b>‘DNA에 각인된 맞춤화(Customization in its DNA)’</b> 정신으로 고객의
+                                        비즈니스 환경에 꼭 맞는 유연한 솔루션을 제공해 새로운 비즈니스 기회를 함께 만들어갑니다.
+                                    </p>
+                                    <Link
                                     to="/syncapim"
                                     className="uc-link fw-bold hstack gap-narrow mt-2 sm:mt-1 lg:mt-2"
                                   >
@@ -209,7 +223,7 @@ export default function Features() {
                               style={{ objectFit: 'fill' }}
                               className="media-cover image"
                               alt="Review quickly and confidently"
-                              src="/assets/images/product/synceta.png"
+                              src="/assets/images/product/synceta/SycnEta.jpg"
                               width="1200"
                               height="1200"
                             />
@@ -221,12 +235,19 @@ export default function Features() {
                               <div>
                                 <div className="panel vstack gap-2">
                                   <h3 className="h4 sm:h3 lg:h2 m-0">
-                                    테스트 자동화를 통한 개발 및 배포 주기 단축
+                                      AI가 알아서 해주는 테스트 자동화
                                   </h3>
-                                  <p className="fs-6 lg:fs-5 opacity-70 dark:opacity-80">
-                                    웹/API 테스트 자동화 플랫폼입니다. 코딩 없이 쉽고 빠르게 테스트를 자동화하여 개발/배포 속도와 품질을 높이고, 변화에 민첩하게 대응하도록 지원합니다. CI/CD 연동으로 안정적인 배포 환경을 구축
-                                  </p>
-                                  <Link
+                                    <p className="fs-6 lg:fs-5 opacity-70 dark:opacity-80">
+                                        <b>반복적인 웹 테스트, 이제부턴 AI에게 맡겨주세요.</b><br/>
+                                        SyncETA는 여러분의 마우스 클릭과 키보드 입력을 그대로 녹화하고, 똑똑한 AI가 사람이 읽기 쉬운 엑셀 테스트케이스로 알아서 만들어
+                                        드립니다.<br/><br/>
+
+                                        <b>코딩 지식이요? 전혀 필요 없어요!</b><br/>
+                                        이 과정만으로 테스트케이스 작성 시간을 <b>최대 80%까지</b> 줄일 수 있죠.<br/>
+                                        더 놀라운 건, QA의 피드백을 먹고 자라나는 AI가 쓸수록 더 정확하고 믿음직한 테스트를 보장한다는 점입니다.<br/>
+                                        이제 지루한 반복 작업에서 벗어나 더 중요한 일에 집중하세요!<br/>
+                                    </p>
+                                    <Link
                                     to="/synceta"
                                     className="uc-link fw-bold hstack gap-narrow mt-2 sm:mt-1 lg:mt-2"
                                   >

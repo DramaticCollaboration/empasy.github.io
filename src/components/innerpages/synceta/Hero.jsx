@@ -46,10 +46,12 @@ export default function Hero() {
               data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
             >
               <h1 className="h2 sm:h1 lg:display-6 xl:display-5 m-0">
-                AI로 쉽고 빠른 자동 웹 테스트
+                  AI로 시간/비용 절감, 테스트 품질 및 신뢰도 향상
               </h1>
               <p className="fs-6 sm:fs-5 text-dark dark:text-white text-opacity-70">
-                AI가 자동으로 테스트를 만들고 실행하여, 누구나 쉽게 웹 자동화를 경험하세요.
+                  테스트케이스 작성 시간을 80% 단축하고 QA 리소스를 대폭 절감합니다.
+                  반복적인 테스트 자동화로 인적 실수를 방지하고, AI 피드백 루프로 품질과 신뢰성을 향상시킵니다.
+                  이를 통해 개발 주기를 단축하고 빠른 시장 출시를 지원합니다.
               </p>
             </div>
             <div className="sticky-scene panel vstack gap-4 sm:gap-6 xl:gap-8">

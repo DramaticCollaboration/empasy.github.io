@@ -7,6 +7,7 @@ import Contact2 from "@/components/innerpages/Contact2.jsx";
 import ContactLinks2 from "@/components/innerpages/ContactLinks2.jsx";
 
 import { searchMetadata }  from "@/utlis/searchMeta";
+import Pricing from "@/components/innerpages/Pricing.jsx";
 
 const metadata = {...searchMetadata, ...{
         title: "엠파시 || 살아 있는 소프트웨어를 만듭니다."
@@ -23,6 +24,7 @@ export default function HomePage1() {
         <div id="wrapper" className="wrap">
           <Hero />
           <Features />
+          <Pricing></Pricing>
           <Contact2 />
           <ContactLinks2 />
         </div>
