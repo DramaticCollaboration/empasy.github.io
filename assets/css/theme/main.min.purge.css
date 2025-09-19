@@ -5133,7 +5133,7 @@ textarea.form-control-lg {
   max-width: 640px !important;
 }
 .max-w-md {
-  max-width: 720px !important;
+  max-width: 80% !important;
 }
 .max-w-lg {
   max-width: 1040px !important;
