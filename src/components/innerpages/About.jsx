@@ -1,5 +1,4 @@
 import React from "react";
-
 export default function About() {
   return (
     <div id="hero_header" className="hero-header section panel overflow-hidden">
@@ -41,86 +40,75 @@ export default function About() {
             data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
           >
             <div className="vstack items-center gap-4 mb-4 sm:mb-6 lg:mb-8 max-w-850px mx-auto text-center">
-              <h1 className="h2 sm:h1 lg:display-6 xl:display-5 m-0">
-                엠파시, 그리고 우리의 생각
-              </h1>
-                <p className="fs-6 md:fs-5 text-dark dark:text-white text-opacity-70">
-                    저희의 모든 생각은 '엠파시(Empathy)', 즉 깊은 공감에서 시작됩니다.<br/>
-                    회사 이름 'EmpaSy'는 고객과 팀원 서로를 깊이 이해하고 협업할 때 최고의 결과가 나온다는 의미의 '**Empathic Synergy(공감 시너지)**'를 담고
-                    있습니다.<br/><br/>
+            <article className="fs-6 md:fs-5 text-dark dark:text-white text-opacity-70">
+                <hr className="my-6 border-gray-200" />
 
-                    저희는 급변하는 비즈니스 환경 속에서 기업이 겪는 어려움에 먼저 공감합니다.<br/>
-                    기존의 거대하고 경직된 시스템으로는 시장의 속도를 따라잡기 어렵다는 것을 잘 알기 때문이죠.<br/>
-                    그래서 저희는 예측 불가능한 변화에 민첩하게 대응하는 '<b>살아있는 소프트웨어</b>'를 만듭니다.<br/>
-                    '변화에 최적화된 솔루션'이라는 저희의 약속은 바로 이 지점에서 출발합니다.<br/><br/>
+                <h1 className="text-2xl font-bold text-gray-900 mb-6">
+                    빠르게 변하는 세상, 소프트웨어도 살아 움직여야 합니다.
+                </h1>
 
-                    이러한 공감의 문화는 저희 팀 안에서도 가장 중요한 원칙입니다.<br/>
-                    저희는 <b>애자일(Agile)한 협업 문화</b>를 통해 투명하게 소통하고 함께 성장합니다.<br/>
-                    동시에 누구도 눈치 보지 않는 <b>건강한 워라밸</b>을 최우선으로 존중합니다.<br/>
-                    잘 쉬고, 잘 협업하는 팀만이 고객의 문제를 진정으로 해결할 수 있는 '공감 시너지'를 만들어낼 수 있다고 믿기 때문입니다.<br/><br/>
-
-                    기술로 고객의 비즈니스를 돕고, 마음으로 고객과 함께 성장하는 것. 그것이 바로 저희가 꿈꾸는 엠파시의 모습입니다.
+                <p className="mb-4">
+                    <strong>엠파시(Empasy)</strong>는 'Empathic Synergy(공감 시너지)'라는 이름처럼,
+                    깊은 공감과 협업을 통해 비즈니스 변화에 최적화된{" "}
+                    <strong>‘살아있는 소프트웨어’</strong>를 만듭니다.
+                    소프트웨어를 얼마나 빨리 바꾸고 적용할 수 있느냐가
+                    결국 비즈니스 민첩성의 핵심이니까요.
                 </p>
+
+                <p className="mb-6">
+                    이를 위해 소프트웨어 개발부터 테스트까지, 전 과정을 아우르는{" "}
+                    <strong>‘Sync Series’</strong> 솔루션 제품군을 개발했습니다.
+                </p>
+
+                <ul className="space-y-8">
+                    <li className="border-l-4 border-blue-500 pl-4">
+                        <h3 className="text-lg font-semibold mb-2">SyncBoot (백엔드)</h3>
+                        <p>
+                            Java 기반의 빠른 개발 플랫폼으로, MSA(마이크로서비스 아키텍처) 구현의 핵심입니다.
+                            권한 관리, 보안 같은 복잡한 기업용 기능들을 미리 갖추고 있어,
+                            개발자들은 비즈니스의 핵심 로직에만 집중할 수 있습니다.
+                        </p>
+                    </li>
+                    <li className="border-l-4 border-blue-500 pl-4">
+                        <h3 className="text-lg font-semibold mb-2">SyncAdmin (프론트엔드)</h3>
+                        <p>
+                            최신 기술(Vue 3, Vite)을 활용한 관리 시스템 템플릿입니다.
+                            마치 레고를 조립하듯 재사용 가능한 컴포넌트로 복잡한 관리 화면을
+                            빠르고 유연하게 만들어, 변화하는 요구사항에 신속히 대응할 수 있습니다.
+                        </p>
+                    </li>
+                    <li className="border-l-4 border-blue-500 pl-4">
+                        <h3 className="text-lg font-semibold mb-2">SyncCMS (콘텐츠 관리)</h3>
+                        <p>
+                            개발자가 아니어도 마케터나 운영 담당자가 웹사이트 콘텐츠를 쉽게 관리할 수 있는 CMS입니다.
+                            덕분에 시장 변화에 맞춰 직접 콘텐츠를 수정하고 웹사이트를 계속 발전시킬 수 있죠.
+                        </p>
+                    </li>
+                    <li className="border-l-4 border-blue-500 pl-4">
+                        <h3 className="text-lg font-semibold mb-2">SyncEta (테스트 자동화)</h3>
+                        <p>
+                            AI 기반의 차세대 테스트 자동화 플랫폼입니다.
+                            코딩 지식이 없어도 사용자의 행동을 기록해 테스트를 자동화하고,
+                            AI가 테스트 케이스 생성부터 실패 원인 분석까지 도와
+                            품질은 높이고 출시 속도는 앞당깁니다.
+                        </p>
+                    </li>
+                </ul>
+
+                <p className="mt-8">
+                    엠파시의 <strong>Sync Series</strong>는 각자의 영역에서 속도와 유연성을 극대화하여,
+                    기업이 예측 불가능한 시장 변화 속에서도 경쟁력을 유지하도록 돕는 최고의 파트너가 될 것입니다.{" "}
+                    <strong>복잡한 기술은 엠파시에게 맡기고, 비즈니스의 성장에만 집중하세요.</strong>
+                </p>
+            </article>
             </div>
-            <div className="panel row child-cols-12 col-match g-1 sm:g-2">
-              <div className="col-4">
-                <figure className="featured-image m-0 rounded ratio ratio-2x3 sm:rounded-2 uc-transition-toggle overflow-hidden">
-                  <img
-                    className="media-cover image uc-transition-scale-up uc-transition-opaque"
-                    alt="About image"
-                    src="/assets/images/about/agile_board_ticket.jpg"
-                    width="1000"
-                    height="1500"
-                  />
-                </figure>
-                <div className="position-absolute top-0 start-0 z-1 ms-n8 mt-n8 d-none lg:d-block">
-                  <img
-                    className="w-200px xl:w-250px d-block dark:d-none"
-                    alt="hand-pencil"
-                    src="/assets/images/template/hand-pencil.svg"
-                    width="154"
-                    height="309"
-                  />
-                  <img
-                    className="w-200px xl:w-250px d-none dark:d-block"
-                    alt="hand-pencil-dark"
-                    src="/assets/images/template/hand-pencil-dark.svg"
-                    width="154"
-                    height="309"
-                  />
-                </div>
+              <div className="panel row child-cols-12 col-match g-1 sm:g-2">
+                  <div className="col-12">
+                      <video controls autoPlay="" name="media">
+                          <source src="/assets/video/엠파시_소개_v2.mp4" type="video/mp4"/>
+                      </video>
+                  </div>
               </div>
-              <div className="col-8">
-                <div className="h-100">
-                  <figure className="panel h-100 m-0 rounded sm:rounded-2 overflow-hidden">
-                    <canvas className="h-100 w-100" />
-                    <img
-                      className="media-cover image"
-                      alt="About image"
-                      src="/assets/images/about/agile_meeting.jpg"
-                      width="1000"
-                      height="667"
-                    />
-                  </figure>
-                </div>
-                <div className="position-absolute bottom-0 end-0 z-1 me-n8 mb-n8 d-none lg:d-block">
-                  <img
-                    className="w-200px xl:w-250px d-block dark:d-none"
-                    alt="empathing"
-                    src="/assets/images/template/empathing.svg"
-                    width="278"
-                    height="229"
-                  />
-                  <img
-                    className="w-200px xl:w-250px d-none dark:d-block"
-                    alt="empathing-dark"
-                    src="/assets/images/template/empathing-dark.svg"
-                    width="278"
-                    height="229"
-                  />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

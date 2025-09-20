@@ -36,44 +36,50 @@ export default function About2() {
               className="panel vstack text-center"
               data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
             >
-              <h2 className="h3 lg:h2 mb-4">엠파시는 어떻게 고객을 돕나요?</h2>
-                <p className="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">
-                    빠르게 변하는 시장, 따라가기 벅찬 시스템... 많이 힘드셨죠?<br/>
-                    엠파시는 바로 그 어려움에 깊이 공감합니다.<br/>
-                    저희는 예측 불가능한 변화에 민첩하게 대응하는 <b>'살아있는 소프트웨어'</b>를 만듭니다.<br/>
-                    '변화에 최적화된 솔루션'으로 고객의 비즈니스 민첩성을 극대화하는 것이 저희의 목표입니다.<br/><br/>
+                    <article className="py-12 px-4 flex justify-center">
+                        {/* 헤더 */}
+                        <h1 className="text-3xl font-bold text-gray-900 mb-6 leading-snug">
+                            엠파시, 우리는 이렇게 일해요!
+                        </h1>
 
-                    어떻게 돕냐고요? 저희는 <b>'Sync Series'</b>로 개발부터 운영까지 전 과정을 혁신합니다.
-                </p>
-                <p className="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">
-                   <b>SyncBoot와 SyncAdmin</b>을 통해 개발자들은 반복적인 인프라 구축 대신 핵심 비즈니스 로직에만 집중할 수 있어 개발 속도가 획기적으로 빨라집니다.<br/>
-                   <b>SyncCMS</b>는 코딩을 모르는 마케터나 운영자도 직접 웹 콘텐츠를 쉽게 관리하게 해주고,<br/>
-                   <b>SyncETA</b>는 AI가 지루한 반복 테스트를 대신해줘서 품질 걱정 없이 더 빠른 출시를 가능하게 하죠.
-                </p>
-                <p className="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">
-                    단순한 도구 제공을 넘어, 저희는 <b>‘DNA에 각인된 맞춤화(Customization in its DNA)’</b> 정신으로 고객의 비즈니스 환경에 꼭 맞는 솔루션을 함께 만듭니다.<br/>
-                    결국, 고객이 시장 변화를 기회로 만들고 새로운 비즈니스를 창출하도록 돕는 것, 그것이 엠파시가 일하는 방식입니다.
-                </p>
+                        {/* 본문 */}
+                        <div className="prose prose-lg max-w-none text-gray-700">
+                            <p>안녕하세요! 엠파시(Empasy) 팀이 일하는 방식을 소개해 드릴게요.</p>
 
-                <div className="panel mt-6">
-                <div className="row child-cols-6 lg:child-cols-4 justify-center g-3 col-match">
-                  {panelsData.map((panel, index) => (
-                    <div key={index}>
-                      <div className="panel vstack gap-1">
-                        <h4 className="h2 xl:h1 m-0">
-                          <span data-anime={panel.animationData}>
-                            {panel.value}
-                          </span>
-                          {panel.suffix && panel.suffix}
-                        </h4>
-                        <p className="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70 text-nowrap">
-                          {panel.text}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+                            <p>
+                                저희 이름은 <strong>'공감 시너지(Empathic Synergy)'</strong>에서 왔어요.
+                                동료, 고객, 파트너와 깊이 공감하고 협력할 때 가장 멋진 결과가 나온다고 믿기 때문이죠.
+                                이 믿음은 저희가 일하는 모든 방식에 녹아있습니다.
+                            </p>
+
+                            <p>
+                                오늘날 비즈니스 환경은 정말 빠르게 변하잖아요. 그래서 저희는{" "}
+                                <strong>"변화에 최적화된 솔루션"</strong>을 만드는 것을 최고의 가치로 삼고 있어요.
+                                엠파시의 소프트웨어는 한번 만들고 끝이 아니라, 비즈니스와 함께 계속 진화하는{" "}
+                                <strong>'살아있는 소프트웨어'</strong>랍니다.
+                            </p>
+
+                            <p>
+                                이런 목표를 위해 저희는 <strong>애자일(Agile) 문화</strong> 속에서 일합니다.
+                                투명하게 업무를 공유하고, <strong>협업과 빠른 피드백</strong>을 통해 실험과 학습을 두려워하지 않죠.
+                                최신 기술을 끊임없이 탐구하고 적용하는 것은 물론이고요.
+                                저희의 Sync Series 솔루션들이 바로 이런 문화의 결과물입니다.
+                            </p>
+
+                            <p>
+                                하지만 저희가 가장 중요하게 생각하는 건 '사람'이에요.
+                                엠파시는 혁신적인 기술만큼 <strong>건강한 워라밸</strong>을 핵심 가치로 여깁니다.{" "}
+                                <strong>주말, 휴가, 업무 외 시간은 온전히 당신의 것</strong>이어야 해요.
+                                실제로 저희는 업무 외 시간에 메시지에 답하지 않아도 전혀 문제가 되지 않는 문화를 실천하고 있습니다.
+                                이러한 존중과 신뢰가 모여 더 큰 시너지를 만든다고 믿거든요.
+                            </p>
+
+                            <p>
+                                엠파시는 기술에 공감을 더해, 고객의 비즈니스가 변화 속에서 민첩하게 성장하도록 돕는
+                                든든한 파트너가 되겠습니다. 저희와 함께 변화를 즐길 준비, 되셨나요?
+                            </p>
+                        </div>
+                    </article>
             </div>
           </div>
         </div>
