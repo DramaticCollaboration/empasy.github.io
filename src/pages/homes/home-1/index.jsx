@@ -5,6 +5,7 @@ import Footer1 from "@/components/footers/Footer1";
 import MetaComponent from "@/components/common/MetaComponent";
 import Contact2 from "@/components/innerpages/Contact2.jsx";
 import ContactLinks2 from "@/components/innerpages/ContactLinks2.jsx";
+import Search from "./Search.jsx";
 
 import { searchMetadata }  from "@/utlis/searchMeta";
 import Pricing from "@/components/innerpages/Pricing.jsx";
@@ -25,6 +26,7 @@ export default function HomePage1() {
           <Hero />
           <Features />
           <Pricing></Pricing>
+          <Search />
           <Contact2 />
           <ContactLinks2 />
         </div>
