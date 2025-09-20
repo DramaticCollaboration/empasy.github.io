@@ -74,6 +74,12 @@
         <changefreq>weekly</changefreq>
     </url>
     <url>
+        <loc>https://www.empasy.com/search</loc>
+        <lastmod>2025-09-19</lastmod>
+        <priority>0.5</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
         <loc>https://www.empasy.com/career</loc>
         <lastmod>2025-09-19</lastmod>
         <priority>0.5</priority>
