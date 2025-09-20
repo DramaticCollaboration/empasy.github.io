@@ -8,6 +8,7 @@ import Brands2 from "@/components/common/Brands2";
 import MetaComponent from "@/components/common/MetaComponent";
 import Cta from "@/components/innerpages/syncapim/Cta.jsx";
 import { searchMetadata }  from "@/utlis/searchMeta";
+import Search from "@/pages/homes/home-1/Search.jsx";
 
 const metadata = {
     ...searchMetadata,
@@ -51,6 +52,7 @@ export default function FeaturesPage() {
             </div>
           </div>
           <Cta />
+          <Search  searchWord="SyncApim"/>
         </div>
         <Footer2 />
       </div>

@@ -12,6 +12,7 @@ import SyncEtaIntro from "@/components/product/SyncEtaIntro";
 
 import { searchMetadata }  from "@/utlis/searchMeta";
 import Pricing from "@/components/innerpages/Pricing.jsx";
+import Search from "@/pages/homes/home-1/Search.jsx";
 
 const metadata = {
     ...searchMetadata,
@@ -58,6 +59,7 @@ export default function FeaturesPage() {
             </div>
           </div>
           <Cta />
+            <Search  searchWord="SyncEta" />
         </div>
         <Footer2 />
       </div>

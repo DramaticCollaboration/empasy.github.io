@@ -9,6 +9,7 @@ import Brands from "@/components/common/Brands2";
 import MetaComponent from "@/components/common/MetaComponent";
 
 import {searchMetadata} from "@/utlis/searchMeta.js";
+import Search from "@/pages/homes/home-1/Search.jsx";
 const metadata = {
     ...searchMetadata,
     ...{
@@ -27,6 +28,7 @@ export default function ContactPage() {
           <Contact1 />
 
           <ContactLinks />
+          <Search />
           <Faq />
           <div
             id="clients_brands"

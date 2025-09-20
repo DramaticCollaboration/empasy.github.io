@@ -6,6 +6,7 @@ import Blogs1 from "@/components/blog/Blogs1";
 import MetaComponent from "@/components/common/MetaComponent";
 
 import {searchMetadata} from "@/utlis/searchMeta.js";
+import Search from "@/pages/homes/home-1/Search.jsx";
 const metadata = {
     ...searchMetadata,
     ...{
@@ -23,6 +24,7 @@ export default function BlogPage1() {
         <div id="wrapper" className="wrap">
           <Blogs1 />
         </div>
+         <Search />
         <Footer2 />
       </div>
     </>

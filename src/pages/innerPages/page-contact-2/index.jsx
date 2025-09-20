@@ -7,6 +7,7 @@ import Blogs from "@/components/homes/home-2/Blogs";
 import Contact2 from "@/components/innerpages/Contact2";
 import ContactLinks2 from "@/components/innerpages/ContactLinks2";
 import MetaComponent from "@/components/common/MetaComponent";
+import Search from "@/pages/homes/home-1/Search.jsx";
 const metadata = {
   title:
       "언제든 연락 주세요 || 살아 있는 소프트웨어를 만듭니다.",
@@ -25,6 +26,7 @@ export default function ContactPage2() {
           <Contact2 />
 
           <ContactLinks2 />
+          <Search />
           <Faq />
           <div
             id="clients_brands"

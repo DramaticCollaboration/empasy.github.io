@@ -7,6 +7,7 @@ import About2 from "@/components/innerpages/About2";
 import MetaComponent from "@/components/common/MetaComponent";
 
 import { searchMetadata }  from "@/utlis/searchMeta";
+import Search from "@/pages/homes/home-1/Search.jsx";
 
 const metadata = {
     ...{
@@ -44,6 +45,7 @@ const metadata = {
             </div>
           </div>
           <About2 />
+            <Search />
         </div>
         <Footer2 />
       </div>

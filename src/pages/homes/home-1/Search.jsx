@@ -1,9 +1,9 @@
 import {useNavigate} from "react-router-dom";
 import {useState} from "react";
 
-export default function Search() {
+export default function Search( { searchWord }) {
     const navigate = useNavigate();
-    const [q, setQ] = useState('');
+    const [q, setQ] = useState(searchWord);
 
     const handleSearch = () => {
         if (q) {
@@ -13,7 +13,7 @@ export default function Search() {
 
   return (
     <div id="hero_header" className="hero-header section panel overflow-hidden">
-      <div className="section-outer panel pt-9 lg:pt-10 pb-6 sm:pb-8 lg:pb-9">
+      <div className="section-outer panel ">
         <div className="container max-w-xl">
           <div
             className="section-inner panel mt-2 sm:mt-4 lg:mt-0"
