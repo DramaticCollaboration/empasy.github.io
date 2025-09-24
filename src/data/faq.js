@@ -1,7 +1,7 @@
 export const accordionItems = [
   {
     id: 1,
-    question: "회사 이름 '엠파시(Empathy)'는 무슨 뜻인가요?",
+    question: "회사 이름 '엠파시(Empasy)'는 무슨 뜻인가요?",
     answer:
       "'엠파시(EmpaSy)'는 <b>'공감 시너지(Empathic Synergy)'</b>의 줄임말이에요. <br>" +
         "고객 및 팀원들과 깊이 공감하고 협업하여 뛰어난 결과를 만들어낸다는 가치를 담고 있습니다",

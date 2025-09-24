@@ -7,7 +7,7 @@ export default function JobDetails() {
           <div className="empathy-container">
               <div className="intro">
                   <p>안녕하세요! <span className="highlight">'공감 시너지(Empathic Synergy)'</span>를 통해 최고의 결과물을 만들어내는
-                      엠파시(Empathy)입니다.</p>
+                      엠파시(Empasy)입니다.</p>
                   <p>빠르게 변하는 세상 속에서, 저희는 <span className="highlight">'변화에 최적화된 솔루션'</span>을 만드는 것을 최고의 가치로 생각합니다.</p>
                   <p>예측 불가능한 시장 변화에 민첩하게 대응하고, 비즈니스에 민첩성을 더하는 멋진 일(Boon to business by agility)을 함께하고 있습니다.</p>
               </div>
