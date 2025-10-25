@@ -1567,7 +1567,7 @@ export const blogsPosts4 = [
   {
     id: 42,
     category: "Strategy",
-    imgSrc: "/assets/images/blog/ai_and_developer.jpg",
+    imgSrc: "/assets/images/blog/empasy_future.png",
     imgAlt: "2026 새로운 도전: AI 기반 민첩성으로 글로벌 시장을 선도하다",
     imgCaption: "2026 새로운 도전: AI 기반 민첩성으로 글로벌 시장을 선도하다",
     title: "2026 새로운 도전: AI 기반 민첩성으로 글로벌 시장을 선도하다",
@@ -1581,7 +1581,7 @@ export const blogsPosts4 = [
       "  <h2>1. AI 기반 테스트 혁신, 글로벌 시장으로의 도약</h2>\n" +
       "  <p><strong>SyncEta</strong>는 AI를 활용하여 테스트 생성, 실행, 분석 과정을 지능적으로 수행하는 차세대 QA 솔루션입니다.</p>\n" +
       "  <ul>\n" +
-      "    <li><strong>자연어 테스트 케이스 자동화 및 품질 향상:</strong> Selenium 기반의 웹 브라우저 동작 레코딩 모듈(SyncEta Recorder)로 캡처된 시나리오를 <strong>Mistral LLM 기반 생성 모듈</strong>로 분석하여 Step, Input, Expected Result를 포함하는 자연어 기반 엑셀 테스트케이스를 자동 생성합니다. 수작업 대비 테스트케이스 작성 시간을 <strong>80% 절감</strong>, QA 리소스를 <strong>30% 이상 절감</strong>하는 것을 목표로 합니다.</li>\n" +
+      "    <li><strong>자연어 테스트 케이스 자동화 및 품질 향상:</strong> 브라우저 자동화 도구 기반의 웹 브라우저 동작 레코딩 모듈(SyncEta Recorder)로 캡처된 시나리오를 <strong>LLM 기반 생성 모듈</strong>로 분석하여 Step, Input, Expected Result를 포함하는 자연어 기반 엑셀 테스트케이스를 자동 생성합니다. 수작업 대비 테스트케이스 작성 시간을 <strong>80% 절감</strong>, QA 리소스를 <strong>30% 이상 절감</strong>하는 것을 목표로 합니다.</li>\n" +
       "    <li><strong>지속적 품질 개선 루프:</strong> QA가 검증·수정한 엑셀 테스트케이스는 시스템에 업로드되어 LLM의 재학습(Fine-tuning 또는 RAG)에 반영됩니다. <strong>3개월 내 90%+</strong> 생성 정확도 달성을 목표로 신뢰성을 확보합니다.</li>\n" +
       "    <li><strong>Playwright MCP 연동:</strong> 자동 테스트 실행 모듈은 <strong>Playwright MCP</strong>를 통해 실행 스크립트를 생성하고 멀티 브라우저 병렬 실행을 지원합니다. MCP 서버는 LLM이 웹 페이지와 구조화된 접근성 스냅샷으로 상호작용하도록 돕는 핵심 도구입니다.</li>\n" +
       "    <li><strong>미국 시장 진출:</strong> 자연어 테스트케이스 생성 기능이 완성되면 <strong>미국 시장 진출</strong>을 추진합니다.</li>\n" +
