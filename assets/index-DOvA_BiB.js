@@ -1365,14 +1365,14 @@ Error generating stack: `+r.message+`
   <p>결국 AI 시대에도 개발자의 역할은 <strong>더 중요</strong>하며, 단순 코딩을 넘어 <strong>비판적 사고, 창의적 문제 해결, 복잡한 시스템 설계, 소통과 협업</strong>까지 포함됩니다.</p>
   <p>AI는 훌륭한 동반자지만, 최종 책임과 가치 창출의 주체는 여전히 <strong>사람</strong>입니다.</p>
 </main>
-`,authorName:"엠파시(Poh)",date:"2025, 09, 14"},{id:42,category:"Strategy",imgSrc:"/assets/images/blog/ai_and_developer.jpg",imgAlt:"2026 새로운 도전: AI 기반 민첩성으로 글로벌 시장을 선도하다",imgCaption:"2026 새로운 도전: AI 기반 민첩성으로 글로벌 시장을 선도하다",title:"2026 새로운 도전: AI 기반 민첩성으로 글로벌 시장을 선도하다",authorImg:"/assets/images/team/poh.webp",authorAlt:"엠파시",desc:"엠파시는 2026년 Sync Series와 AI를 결합해 비즈니스 민첩성을 극대화하고 글로벌 시장으로 도약합니다. SyncEta의 AI 기반 테스트 자동화, 온프레미스 AI 인사이트 플랫폼 SyncInsight, 통합 오케스트레이션 SyncVerse로 변화에 최적화된 솔루션을 제공합니다.",content:`<section>
+`,authorName:"엠파시(Poh)",date:"2025, 09, 14"},{id:42,category:"Strategy",imgSrc:"/assets/images/blog/empasy_future.png",imgAlt:"2026 새로운 도전: AI 기반 민첩성으로 글로벌 시장을 선도하다",imgCaption:"2026 새로운 도전: AI 기반 민첩성으로 글로벌 시장을 선도하다",title:"2026 새로운 도전: AI 기반 민첩성으로 글로벌 시장을 선도하다",authorImg:"/assets/images/team/poh.webp",authorAlt:"엠파시",desc:"엠파시는 2026년 Sync Series와 AI를 결합해 비즈니스 민첩성을 극대화하고 글로벌 시장으로 도약합니다. SyncEta의 AI 기반 테스트 자동화, 온프레미스 AI 인사이트 플랫폼 SyncInsight, 통합 오케스트레이션 SyncVerse로 변화에 최적화된 솔루션을 제공합니다.",content:`<section>
   <p>안녕하세요, 엠파시(Empasy)입니다.</p>
   <p>엠파시의 최고 가치는 <strong>"변화에 최적화된 솔루션"</strong>이며, 저희는 <strong>"비즈니스 민첩성(Agility)을 위한 혜택"</strong>을 제공하고자 합니다 (Boon to business by agility). 빠르게 변화하는 비즈니스 환경에 신속하게 대응하기 위해서는 소프트웨어의 신속한 변경이 필수적이며, 2026년은 Sync Series를 통해 이러한 민첩성을 극대화하고 새로운 영역으로 확장하는 도전의 한 해가 될 것입니다.</p>
   <p>Sync Series는 SyncBoot (MSA 플랫폼), SyncAdmin (관리 시스템 템플릿), SyncCMS (콘텐츠 관리 시스템), 그리고 SyncEta (AI 테스트 자동화 플랫폼)로 구성되어 있으며, 각 영역에서 속도, 효율성, 유연성을 높여 변화에 최적화라는 궁극적인 목표를 이룹니다.</p>
   <h2>1. AI 기반 테스트 혁신, 글로벌 시장으로의 도약</h2>
   <p><strong>SyncEta</strong>는 AI를 활용하여 테스트 생성, 실행, 분석 과정을 지능적으로 수행하는 차세대 QA 솔루션입니다.</p>
   <ul>
-    <li><strong>자연어 테스트 케이스 자동화 및 품질 향상:</strong> Selenium 기반의 웹 브라우저 동작 레코딩 모듈(SyncEta Recorder)로 캡처된 시나리오를 <strong>Mistral LLM 기반 생성 모듈</strong>로 분석하여 Step, Input, Expected Result를 포함하는 자연어 기반 엑셀 테스트케이스를 자동 생성합니다. 수작업 대비 테스트케이스 작성 시간을 <strong>80% 절감</strong>, QA 리소스를 <strong>30% 이상 절감</strong>하는 것을 목표로 합니다.</li>
+    <li><strong>자연어 테스트 케이스 자동화 및 품질 향상:</strong> 브라우저 자동화 도구 기반의 웹 브라우저 동작 레코딩 모듈(SyncEta Recorder)로 캡처된 시나리오를 <strong>LLM 기반 생성 모듈</strong>로 분석하여 Step, Input, Expected Result를 포함하는 자연어 기반 엑셀 테스트케이스를 자동 생성합니다. 수작업 대비 테스트케이스 작성 시간을 <strong>80% 절감</strong>, QA 리소스를 <strong>30% 이상 절감</strong>하는 것을 목표로 합니다.</li>
     <li><strong>지속적 품질 개선 루프:</strong> QA가 검증·수정한 엑셀 테스트케이스는 시스템에 업로드되어 LLM의 재학습(Fine-tuning 또는 RAG)에 반영됩니다. <strong>3개월 내 90%+</strong> 생성 정확도 달성을 목표로 신뢰성을 확보합니다.</li>
     <li><strong>Playwright MCP 연동:</strong> 자동 테스트 실행 모듈은 <strong>Playwright MCP</strong>를 통해 실행 스크립트를 생성하고 멀티 브라우저 병렬 실행을 지원합니다. MCP 서버는 LLM이 웹 페이지와 구조화된 접근성 스냅샷으로 상호작용하도록 돕는 핵심 도구입니다.</li>
     <li><strong>미국 시장 진출:</strong> 자연어 테스트케이스 생성 기능이 완성되면 <strong>미국 시장 진출</strong>을 추진합니다.</li>
