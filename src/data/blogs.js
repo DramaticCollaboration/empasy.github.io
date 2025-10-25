@@ -1564,6 +1564,45 @@ export const blogsPosts4 = [
         authorName: "엠파시(Poh)",
         date: "2025, 09, 14",
     },
+  {
+    id: 42,
+    category: "Strategy",
+    imgSrc: "/assets/images/blog/ai_and_developer.jpg",
+    imgAlt: "2026 새로운 도전: AI 기반 민첩성으로 글로벌 시장을 선도하다",
+    imgCaption: "2026 새로운 도전: AI 기반 민첩성으로 글로벌 시장을 선도하다",
+    title: "2026 새로운 도전: AI 기반 민첩성으로 글로벌 시장을 선도하다",
+    authorImg: "/assets/images/team/poh.webp",
+    authorAlt: "엠파시",
+    desc: "엠파시는 2026년 Sync Series와 AI를 결합해 비즈니스 민첩성을 극대화하고 글로벌 시장으로 도약합니다. SyncEta의 AI 기반 테스트 자동화, 온프레미스 AI 인사이트 플랫폼 SyncInsight, 통합 오케스트레이션 SyncVerse로 변화에 최적화된 솔루션을 제공합니다.",
+    content: "<section>\n" +
+      "  <p>안녕하세요, 엠파시(Empasy)입니다.</p>\n" +
+      "  <p>엠파시의 최고 가치는 <strong>\"변화에 최적화된 솔루션\"</strong>이며, 저희는 <strong>\"비즈니스 민첩성(Agility)을 위한 혜택\"</strong>을 제공하고자 합니다 (Boon to business by agility). 빠르게 변화하는 비즈니스 환경에 신속하게 대응하기 위해서는 소프트웨어의 신속한 변경이 필수적이며, 2026년은 Sync Series를 통해 이러한 민첩성을 극대화하고 새로운 영역으로 확장하는 도전의 한 해가 될 것입니다.</p>\n" +
+      "  <p>Sync Series는 SyncBoot (MSA 플랫폼), SyncAdmin (관리 시스템 템플릿), SyncCMS (콘텐츠 관리 시스템), 그리고 SyncEta (AI 테스트 자동화 플랫폼)로 구성되어 있으며, 각 영역에서 속도, 효율성, 유연성을 높여 변화에 최적화라는 궁극적인 목표를 이룹니다.</p>\n" +
+      "  <h2>1. AI 기반 테스트 혁신, 글로벌 시장으로의 도약</h2>\n" +
+      "  <p><strong>SyncEta</strong>는 AI를 활용하여 테스트 생성, 실행, 분석 과정을 지능적으로 수행하는 차세대 QA 솔루션입니다.</p>\n" +
+      "  <ul>\n" +
+      "    <li><strong>자연어 테스트 케이스 자동화 및 품질 향상:</strong> Selenium 기반의 웹 브라우저 동작 레코딩 모듈(SyncEta Recorder)로 캡처된 시나리오를 <strong>Mistral LLM 기반 생성 모듈</strong>로 분석하여 Step, Input, Expected Result를 포함하는 자연어 기반 엑셀 테스트케이스를 자동 생성합니다. 수작업 대비 테스트케이스 작성 시간을 <strong>80% 절감</strong>, QA 리소스를 <strong>30% 이상 절감</strong>하는 것을 목표로 합니다.</li>\n" +
+      "    <li><strong>지속적 품질 개선 루프:</strong> QA가 검증·수정한 엑셀 테스트케이스는 시스템에 업로드되어 LLM의 재학습(Fine-tuning 또는 RAG)에 반영됩니다. <strong>3개월 내 90%+</strong> 생성 정확도 달성을 목표로 신뢰성을 확보합니다.</li>\n" +
+      "    <li><strong>Playwright MCP 연동:</strong> 자동 테스트 실행 모듈은 <strong>Playwright MCP</strong>를 통해 실행 스크립트를 생성하고 멀티 브라우저 병렬 실행을 지원합니다. MCP 서버는 LLM이 웹 페이지와 구조화된 접근성 스냅샷으로 상호작용하도록 돕는 핵심 도구입니다.</li>\n" +
+      "    <li><strong>미국 시장 진출:</strong> 자연어 테스트케이스 생성 기능이 완성되면 <strong>미국 시장 진출</strong>을 추진합니다.</li>\n" +
+      "  </ul>\n" +
+      "  <h2>2. 온프레미스 AI와 통합 플랫폼으로 비즈니스 통찰력 확보</h2>\n" +
+      "  <ul>\n" +
+      "    <li><strong>온프레미스 AI 솔루션:</strong> 데이터 주권과 보안을 최우선으로 하는 기업을 위해 모든 데이터와 AI 모델을 내부망에 구축하는 <strong>SyncInsight</strong>를 제공합니다.</li>\n" +
+      "    <li><strong>리서치 자동화:</strong> 리서치와 보고서 작성 시간을 <strong>최대 90%</strong> 단축하여 적시에 정확한 의사결정을 지원하는 지능형 에이전트로 동작합니다. 중기적으로 멀티모달 분석과 예측 분석을 통합합니다.</li>\n" +
+      "    <li><strong>SyncVerse 통합:</strong> n8n과 AI 기술로 Sync Series 제품군을 <strong>E2E 플랫폼</strong>으로 묶어 콘텐츠 배포 자동화, 운영 인사이트, 테스트 자동화 등 복잡한 워크플로우를 오케스트레이션합니다.</li>\n" +
+      "  </ul>\n" +
+      "  <h2>3. 유연성과 맞춤화를 통한 경쟁력 강화</h2>\n" +
+      "  <ul>\n" +
+      "    <li><strong>Customization in its DNA:</strong> 고객 맞춤형 API 관리 시스템(<strong>SyncAPIM</strong>)과 AI 기반 테스트 자동화 플랫폼(<strong>SyncEta</strong>) 모두에서 요구사항에 맞춘 유연한 커스터마이즈를 제공합니다.</li>\n" +
+      "    <li><strong>애자일 조직 문화:</strong> Empathic Synergy 문화를 바탕으로 협업과 성장, 건강한 <strong>워크-라이프 밸런스</strong>를 지향합니다. 특히 <strong>주말/업무 외 시간 응답 의무 없음</strong>을 명확히 합니다.</li>\n" +
+      "  </ul>\n" +
+      "  <h2>4. 결론</h2>\n" +
+      "  <p>엠파시는 2026년, AI 기반 테스트 자동화(<strong>SyncEta</strong>)로 QA 효율을 극대화하고, 온프레미스 AI 솔루션(<strong>SyncInsight</strong>)으로 데이터 통찰을 강화하며, Sync Series의 E2E 솔루션으로 <strong>운영 효율 향상, 비용 절감, 서비스 안정성 및 품질 향상</strong>을 실현하겠습니다. 또한 API 중심 생태계로 <strong>새로운 수익 창출</strong>을 지원해 기업 경쟁력과 매출 성장을 돕겠습니다.</p>\n" +
+      "</section>",
+    authorName: "엠파시",
+    date: "2025, 10, 25",
+  }
 ];
 
 export const blogPosts5 = [
