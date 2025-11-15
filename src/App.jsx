@@ -42,7 +42,6 @@ import SearchPage from "./pages/innerPages/page-search";
 import CareerDetailsPage from "./pages/innerPages/page-career-detail";
 import ContactPage2 from "./pages/innerPages/page-contact-2";
 
-import { TawkLiveChat } from 'tawk-react'
 function App() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -191,7 +190,6 @@ function App() {
         <Cart />
         <BacktoTop />
         <ScrollTopBehaviour />
-        <TawkLiveChat propertyId="6844d9b8bac035190e0e94a2" widgetId="1it6f4u58" />
       </Context>
     </>
   );
