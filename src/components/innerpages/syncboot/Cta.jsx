@@ -13,9 +13,9 @@ export default function Cta() {
                 SyncBoot 제품 소개서
               </h2>
               <div className="vstack sm:hstack justify-center lg:justify-start gap-1 lg:gap-2 mt-1 lg:mt-2">
-                <a href='/assets/product/SyncBoot_제품소개_V1.2.0.pdf'
+                <a href='https://syncboot.empasy.com/'
                   className="btn btn-md lg:btn-lg btn-primary text-white" target='_blank'>
-                  다운로드
+                  보기
                 </a>
               </div>
             </div>

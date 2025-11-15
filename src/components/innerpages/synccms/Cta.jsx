@@ -13,14 +13,11 @@ export default function Cta() {
                   SyncCms 제품 소개서
                 </h2>
                 <div className="vstack sm:hstack justify-center lg:justify-start gap-1 lg:gap-2 mt-1 lg:mt-2">
-                  <a href='/assets/product/SyncCMS_제품소개_V1.0.3.pdf'
+                  <a href='https://synceta.empasy.com/'
                       className="btn btn-md lg:btn-lg btn-primary text-white" target='_blank'>
-                    다운로드
+                     보기
                   </a>
-                  <a href='https://gamma.app/docs/SyncCMS--kdchsylmyq9gmpy'
-                     className="btn btn-md lg:btn-lg btn-outline-primary" target='_blank'>
-                    사용 사례
-                  </a>
+
                 </div>
               </div>
               <div className="position-absolute top-50 ltr:end-0 rtl:start-0 translate-middle-y z-1 ltr:me-8 rtl:ms-8 d-none lg:d-block">
