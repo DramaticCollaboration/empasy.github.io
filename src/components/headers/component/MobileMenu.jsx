@@ -127,7 +127,13 @@ export default function MobileMenu() {
             <li>
               <Link to={`/about`}>엠파시는</Link>
             </li>
-            <li>
+              <li>
+                  <Link to={`/synceta`}>SyncEta</Link>
+              </li>
+              <li>
+                  <Link to={`/synccrawl`}>SyncCrawl</Link>
+              </li>
+              <li>
               <Link to={`/synccms`}>SyncCMS</Link>
             </li>
             <li>
@@ -138,9 +144,6 @@ export default function MobileMenu() {
             </li>
             <li>
               <Link to={`/syncapim`}>SyncApim</Link>
-            </li>
-            <li>
-              <Link to={`/synceta`}>SyncEta</Link>
             </li>
             <li>
               <Link to={`/contact`}>문의하기</Link>

@@ -22,6 +22,7 @@ import SyncBootPage from "./pages/innerPages/page-syncboot";
 import SyncApimPage from "./pages/innerPages/page-syncapim";
 import SyncEtaPage from "./pages/innerPages/page-synceta";
 import SyncAdminPage from "./pages/innerPages/page-syncadmin";
+import SyncCrawlPage from "./pages/innerPages/page-synccrawl";
 
 import AboutPage from "./pages/innerPages/page-about";
 import CareerPage from "./pages/innerPages/page-career";
@@ -137,6 +138,7 @@ function App() {
               <Route path="page-syncapim" element={<SyncApimPage />} />
               <Route path="page-syncadmin" element={<SyncAdminPage />} />
               <Route path="page-synceta" element={<SyncEtaPage />} />
+              <Route path="page-synccrawl" element={<SyncCrawlPage />} />
 
               <Route path="page-about" element={<AboutPage />} />
               <Route path="page-career" element={<CareerPage />} />
@@ -160,6 +162,7 @@ function App() {
             <Route path="syncapim" element={<SyncApimPage />} />
             <Route path="syncadmin" element={<SyncAdminPage />} />
             <Route path="synceta" element={<SyncEtaPage />} />
+            <Route path="synccrawl" element={<SyncCrawlPage />} />
 
             <Route path="about" element={<AboutPage />} />
             <Route path="career" element={<CareerPage />} />

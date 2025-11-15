@@ -39,6 +39,34 @@ export default function Nav() {
                               <li>
                                   <Link
                                       className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
+                                      to={`/synceta`}
+                                  >
+                                      <i className="icon-1 unicon-awake fw-bold text-primary dark:text-secondary"/>
+                                      <span className="vstack gap-narrow mt-nnarrow">
+                                      <b className="fw-bold dark:text-white">SyncEta</b>
+                                      <span className="fw-normal">
+                                        AI 자동 테스트로 품질 UP, 비즈니스 민첩성 확보
+                                      </span>
+                                    </span>
+                                  </Link>
+                              </li>
+                              <li>
+                                  <Link
+                                      className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
+                                      to={`/synccrawl`}
+                                  >
+                                      <i className="icon-1 unicon-awake fw-bold text-primary dark:text-secondary"/>
+                                      <span className="vstack gap-narrow mt-nnarrow">
+                                      <b className="fw-bold dark:text-white">SyncCrawl</b>
+                                      <span className="fw-normal">
+                                        자연어 기반 웹 수집 및 RAG 지식 구축 플랫폼
+                                      </span>
+                                    </span>
+                                  </Link>
+                              </li>
+                              <li>
+                                  <Link
+                                      className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
                                       to={`/synccms`}
                                   >
                                       <i className="icon-1 unicon-view fw-bold text-primary dark:text-secondary"/>
@@ -92,20 +120,7 @@ export default function Nav() {
                                         </span>
                                   </Link>
                               </li>
-                              <li>
-                                  <Link
-                                      className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
-                                      to={`/synceta`}
-                                  >
-                                      <i className="icon-1 unicon-awake fw-bold text-primary dark:text-secondary"/>
-                                      <span className="vstack gap-narrow mt-nnarrow">
-                                      <b className="fw-bold dark:text-white">SyncEta</b>
-                                      <span className="fw-normal">
-                                        AI 자동 테스트로 품질 UP, 비즈니스 민첩성 확보
-                                      </span>
-                                    </span>
-                                  </Link>
-                              </li>
+
                           </ul>
                       </div>
                       <div>
