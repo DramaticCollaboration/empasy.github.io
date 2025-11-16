@@ -8,6 +8,7 @@ import MetaComponent from "@/components/common/MetaComponent";
 
 import { searchMetadata }  from "@/utlis/searchMeta";
 import Search from "@/pages/homes/home-1/Search.jsx";
+import Cta from "./Cta.jsx";
 
 const metadata = {
     ...{
@@ -45,6 +46,7 @@ const metadata = {
             </div>
           </div>
           <About2 />
+            <Cta />
             <Search />
         </div>
         <Footer2 />

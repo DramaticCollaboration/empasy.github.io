@@ -39,11 +39,11 @@ export default function About() {
             className="section-inner panel mt-2 sm:mt-4 lg:mt-0"
             data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
           >
-            <div className="vstack items-center gap-4 mb-4 sm:mb-6 lg:mb-8 max-w-850px mx-auto text-center">
+            <div className="vstack items-center gap-4 mb-4 sm:mb-6 lg:mb-8 max-w-850px mx-auto">
             <article className="fs-6 md:fs-5 text-dark dark:text-white text-opacity-70">
                 <hr className="my-6 border-gray-200" />
 
-                <h1 className="text-2xl font-bold text-gray-900 mb-6">
+                <h1 className="text-2xl font-bold text-gray-900 mb-6  text-center">
                     빠르게 변하는 세상, 소프트웨어도 살아 움직여야 합니다.
                 </h1>
 
