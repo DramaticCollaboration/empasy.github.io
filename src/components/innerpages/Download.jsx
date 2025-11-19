@@ -7,8 +7,8 @@ export default function Download() {
     const downloads = [
         {
             os: "Windows",
-            version: "3.3.2",
-            downloadUrl: "https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA+Setup+3.3.2.exe",
+            version: "3.3.21",
+            downloadUrl: "https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA+Setup+3.3.21.exe",
             icon: "/assets/images/os/windows.svg",
             disabled: false,
         },
