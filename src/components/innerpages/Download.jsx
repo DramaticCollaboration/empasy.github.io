@@ -7,22 +7,22 @@ export default function Download() {
     const downloads = [
         {
             os: "Windows",
-            version: "3.2.82",
-            downloadUrl: "https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA+Setup+3.2.82.exe",
+            version: "3.3.21",
+            downloadUrl: "https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA+Setup+3.3.21.exe",
             icon: "/assets/images/os/windows.svg",
             disabled: false,
         },
         {
             os: "macOS",
-            version: "3.2.83",
-            downloadUrl: "https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA-3.2.83-arm64.dmg",
+            version: "3.3.21",
+            downloadUrl: "https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA-3.3.21-arm64.dmg",
             icon: "/assets/images/os/mac.svg",
             disabled: true,
         },
         {
             os: "Linux",
-            version: "3.2.82",
-            downloadUrl: "https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA-3.2.82.AppImage",
+            version: "3.3.21",
+            downloadUrl: "https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA-3.3.21.AppImage",
             icon: "/assets/images/os/linux.svg",
             disabled: true,
         },
