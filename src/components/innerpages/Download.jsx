@@ -31,8 +31,22 @@ export default function Download() {
 
 
     return (
+        <>
+        <style>{`
+        .col-md-row {
+          display: flex;
+          gap: 1rem;
+          flex-direction: column; /* 기본: 모바일 = 세로 */
+        }
+
+        @media (min-width: 600px) {
+          .col-md-row {
+            flex-direction: row;  /* md 이상 = 가로 */
+          }
+        }
+      `}</style>
         <div className="flex justify-center items-center mt-8">
-            <div className="download-options flex flex-row gap-4 flex-container">
+            <div className="col-md-row download-options flex gap-4 flex-container">
                 {downloads.map((download) => (
                     <div
                         key={download.os}
@@ -70,5 +84,6 @@ export default function Download() {
                 ))}
             </div>
         </div>
+    </>
   );
 }
