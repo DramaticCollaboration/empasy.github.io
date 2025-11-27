@@ -15,9 +15,10 @@ export default function Download() {
         {
             os: "macOS",
             version: "3.3.21",
-            downloadUrl: "https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA-3.3.21-arm64.dmg",
+            // 로컬에서 빌드해서 업로드 한 7일짜리 링크임 > 12/1 에 github action 으로 테스트 필요
+            downloadUrl: "https://synccms.s3.ap-northeast-2.amazonaws.com/SyncETA-v3.3.21-arm64.dmg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAUNS6HJO2YFHSPX7C%2F20251127%2Fap-northeast-2%2Fs3%2Faws4_request&X-Amz-Date=20251127T032550Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=56029fae4c99450cb031811f94e7739c0747421a3d18b446aa1c12c5ed347d4b",
             icon: "/assets/images/os/mac.svg",
-            disabled: true,
+            disabled: false,
         },
         {
             os: "Linux",
