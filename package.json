@@ -9,7 +9,7 @@
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "copy:pages": "node scripts/copy-files.js",
-    "build": "vite build && cpy CNAME dist/ && npm run copy:pages",
+    "build": "vite build && cpy CNAME dist",
     "build:ssg": "npm run build && react-snap",
     "lint": "eslint .",
     "preview": "vite preview"
