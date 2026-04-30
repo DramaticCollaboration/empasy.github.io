@@ -7,33 +7,20 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const DIST_DIR = 'dist';
-const SRC_DIR = 'src/pages/innerPages';
+const SRC_DIR = 'src/pages';
 
 // Mapping of HTML files to their corresponding JSX files
 const FILE_MAPPING = {
-    'page-about.html': 'page-about/index.jsx',
-    'page-synceta.html': 'page-synceta/index.jsx',
-    'page-synccms.html': 'page-synccms/index.jsx',
-    'page-syncadmin.html': 'page-syncadmin/index.jsx',
-    'page-syncapim.html': 'page-syncapim/index.jsx',
-    'page-syncboot.html': 'page-syncboot/index.jsx',
-    'page-career.html': 'page-career/index.jsx',
-    'page-career-detail.html': 'page-career-detail/index.jsx',
-    'page-contact.html': 'page-contact/index.jsx',
-    'page-contact-2.html': 'page-contact-2/index.jsx',
-    'page-team.html': 'page-team/index.jsx',
-    'blog.html': '../blogs/blog/index.jsx',
-    'about.html': 'page-about/index.jsx',
-    'synceta.html': 'page-synceta/index.jsx',
-    'synccms.html': 'page-synccms/index.jsx',
-    'syncadmin.html': 'page-syncadmin/index.jsx',
-    'syncapim.html': 'page-syncapim/index.jsx',
-    'syncboot.html': 'page-syncboot/index.jsx',
-    'career.html': 'page-career/index.jsx',
-    'career-detail.html': 'page-career-detail/index.jsx',
-    'contact.html': 'page-contact/index.jsx',
-    'contact-2.html': 'page-contact-2/index.jsx',
-    'team.html': 'page-team/index.jsx',
+    'hydra.html': 'Hydra.jsx',
+    'syncboot.html': 'SyncBoot.jsx',
+    'synceta.html': 'SyncEta.jsx',
+    'syncapim.html': 'SyncAPIM.jsx',
+    'synccms.html': 'SyncCMS.jsx',
+    'syncshop.html': 'CommerceLogi.jsx',
+    'logistics.html': 'CommerceLogi.jsx',
+    'use-cases.html': 'UseCases.jsx',
+    'company.html': 'Company.jsx',
+    'contact.html': 'Contact.jsx',
 };
 
 
@@ -126,6 +113,12 @@ function main() {
         // Process each file in the mapping
         for (const [htmlFile, jsxPath] of Object.entries(FILE_MAPPING)) {
             const fullJsxPath = path.join(SRC_DIR, jsxPath);
+            
+            if (!fs.existsSync(fullJsxPath)) {
+                console.warn(`Source file not found: ${fullJsxPath}. Skipping metadata injection for ${htmlFile}.`);
+                continue;
+            }
+
             const metadata = extractMetadata(fullJsxPath);
 
             if (metadata) {

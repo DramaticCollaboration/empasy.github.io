@@ -1,0 +1,21 @@
+{
+  "translation": {
+    "nav": {
+      "aiInfra": "AI Infra",
+      "syncSeries": "Sync Series",
+      "intro": "소개",
+      "syncboot": "SyncBoot",
+      "synccms": "SyncCMS",
+      "syncapim": "SyncAPIM",
+      "synceta": "SyncEta",
+      "commerceLogi": "Commerce & Logi",
+      "useCases": "Use Cases",
+      "company": "Company",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "Boon to business by agility",
+      "subtitle": "AI-DLC 기반의 완벽한 디지털 혁신 생태계"
+    }
+  }
+}

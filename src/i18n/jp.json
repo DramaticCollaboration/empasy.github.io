@@ -1,0 +1,20 @@
+{
+  "translation": {
+    "nav": {
+      "aiInfra": "AIインフラ",
+      "syncSeries": "Syncシリーズ",
+      "intro": "紹介",
+      "syncboot": "SyncBoot",
+      "synccms": "SyncCMS",
+      "syncapim": "SyncAPIM",
+      "synceta": "SyncEta",
+      "commerceLogi": "コマース＆ロジ",
+      "useCases": "導入事例",
+      "company": "企業情報"
+    },
+    "hero": {
+      "title": "俊敏性によるビジネスへの恩恵",
+      "subtitle": "AI-DLC基盤の完璧なデジタル革新エコシステム"
+    }
+  }
+}

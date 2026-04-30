@@ -1,197 +1,64 @@
-import Context from "@/context/Context";
-import "./styles/style.scss";
-import "react-modal-video/scss/modal-video.scss";
-import "photoswipe/dist/photoswipe.css";
-import "rc-slider/assets/index.css";
-import Cart from "@/components/common/Cart";
-import { useEffect } from "react";
-import anime from "animejs";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import Home from './pages/Home';
+import Hydra from './pages/Hydra';
+import SyncSeries from './pages/SyncSeries';
+import SyncBoot from './pages/SyncBoot';
+import SyncCMS from './pages/SyncCMS';
+import SyncAPIM from './pages/SyncAPIM';
+import SyncEta from './pages/SyncEta';
+import CommerceLogi from './pages/CommerceLogi';
+import UseCases from './pages/UseCases';
+import Company from './pages/Company';
+import Contact from './pages/Contact';
+import Layout from './layout/Layout';
+import { ThemeProvider } from './context/ThemeContext';
+import './styles/global.css';
 
-import MobileMenu from "@/components/headers/component/MobileMenu";
-import BacktoTop from "@/components/common/BacktoTop";
-import { ParallaxProvider } from "react-scroll-parallax";
-import ContactModal from "@/components/modals/ContactModal";
-import NewsletterModal from "@/components/modals/NewsletterModal";
-import SearchModal from "@/components/modals/SearchModal";
-import { Route, Routes, useLocation } from "react-router-dom";
-import ScrollTopBehaviour from "./components/common/ScrollToTopBehaviour";
-import HomePage1 from "./pages";
+const LanguageRedirect = () => {
+  const location = useLocation();
+  const path = location.pathname;
 
-import SyncCmsPage from "./pages/innerPages/page-synccms";
-import SyncBootPage from "./pages/innerPages/page-syncboot";
-import SyncApimPage from "./pages/innerPages/page-syncapim";
-import SyncEtaPage from "./pages/innerPages/page-synceta";
-import SyncAdminPage from "./pages/innerPages/page-syncadmin";
-import SyncCrawlPage from "./pages/innerPages/page-synccrawl";
+  // Language paths
+  const langPaths = ['/ko', '/en', '/jp'];
+  const hasLang = langPaths.some(lp => path.startsWith(lp));
 
-import AboutPage from "./pages/innerPages/page-about";
-import CareerPage from "./pages/innerPages/page-career";
-import ContactPage from "./pages/innerPages/page-contact";
-import BlogPage1 from "./pages/blogs/blog";
+  // If the path doesn't start with a language, default to /ko
+  if (!hasLang && path !== '/') {
+    return <Navigate to={`/ko${path}`} replace />;
+  }
+  
+  if (path === '/') {
+    return <Navigate to="/ko" replace />;
+  }
 
-import BlogDetailsPage1 from "./pages/blogs/blog-details";
-
-import NotFoundPage from "./pages/not-found";
-import TeamPage from "./pages/innerPages/page-team";
-import SyncEtaPricePage from "./pages/innerPages/page-pricing";
-import SyncEtaDownloadPage from "./pages/innerPages/page-download";
-
-import SearchPage from "./pages/innerPages/page-search";
-
-
-import CareerDetailsPage from "./pages/innerPages/page-career-detail";
-import ContactPage2 from "./pages/innerPages/page-contact-2";
+  return null;
+};
 
 function App() {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    const elements = document.querySelectorAll("[data-anime]");
-
-    // Intersection Observer callback function
-    const handleIntersection = (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const element = entry.target;
-          const dataAnime = element.getAttribute("data-anime");
-
-          const modifieddataAnime = dataAnime.replace(
-            /anime\.stagger\((\d+),\s*\{start:\s*(\d+)\}\)/,
-            "$1,$2"
-          );
-
-          if (modifieddataAnime) {
-            const parseAnimeData = (data) => {
-              const settings = {};
-              data.split(";").forEach((param) => {
-                const [key, value] = param
-                  .split(":")
-                  .map((item) => item.trim());
-                if (key && value) {
-                  settings[key] = value;
-                }
-              });
-              return settings;
-            };
-
-            const animeSettings = parseAnimeData(modifieddataAnime);
-
-            let targets;
-            if (animeSettings.targets === ">*") {
-              targets = element.children;
-            } else {
-              targets = element.querySelectorAll(animeSettings.targets);
-            }
-            // console.log(animeSettings);
-
-            // Apply Anime.js animation
-            anime({
-              loop: animeSettings.loop ? true : false,
-              targets: targets,
-              translateX: JSON.parse(animeSettings.translateX || "[0, 0]"),
-              translateY: JSON.parse(animeSettings.translateY || "[48, 0]"),
-              opacity: [0, 1],
-              // direction: "alternate",
-              easing: animeSettings.easing || "spring(1, 80, 10, 0)",
-              duration: Number(animeSettings.duration) || 450,
-              delay: animeSettings.delay
-                ? animeSettings.delay.includes(",")
-                  ? anime.stagger(animeSettings.delay.split(",")[0] / 1, {
-                      start: animeSettings.delay.split(",")[1] / 1,
-                    })
-                  : animeSettings.delay / 1
-                : 0,
-            });
-
-            // Unobserve the element after animation triggers
-            observer.unobserve(element);
-          }
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0, // Trigger when 10% of the element is in view
-    });
-
-    elements.forEach((element) => {
-      observer.observe(element);
-    });
-
-    return () => {
-      // Clean up the observer on component unmount
-      elements.forEach((element) => {
-        observer.unobserve(element);
-      });
-    };
-  }, [pathname]);
   return (
-    <>
-      <Context>
-        <ParallaxProvider>
-          <Routes>
-            <Route path="/">
-              <Route index element={<HomePage1 />} />
-
-              <Route path="page-synccms" element={<SyncCmsPage />} />
-              <Route path="page-syncboot" element={<SyncBootPage />} />
-              <Route path="page-syncapim" element={<SyncApimPage />} />
-              <Route path="page-syncadmin" element={<SyncAdminPage />} />
-              <Route path="page-synceta" element={<SyncEtaPage />} />
-              <Route path="page-synccrawl" element={<SyncCrawlPage />} />
-
-              <Route path="page-about" element={<AboutPage />} />
-              <Route path="page-career" element={<CareerPage />} />
-              <Route path="page-contact" element={<ContactPage />} />
-              <Route path="page-team" element={<TeamPage />} />
-                <Route
-                    path="page-career-detail/:id"
-                    element={<CareerDetailsPage />}
-                />
-
-              <Route path="page-contact-2" element={<ContactPage2 />} />
-              <Route path="blog" element={<BlogPage1 />} />
-              <Route path="blog-details/:id" element={<BlogDetailsPage1 />} />
-              <Route path="blog-details" element={<BlogDetailsPage1 />} />
-              <Route path="page-not-found" element={<NotFoundPage />} />
-
-
-
-            <Route path="synccms" element={<SyncCmsPage />} />
-            <Route path="syncboot" element={<SyncBootPage />} />
-            <Route path="syncapim" element={<SyncApimPage />} />
-            <Route path="syncadmin" element={<SyncAdminPage />} />
-            <Route path="synceta" element={<SyncEtaPage />} />
-            <Route path="synccrawl" element={<SyncCrawlPage />} />
-
-            <Route path="about" element={<AboutPage />} />
-            <Route path="career" element={<CareerPage />} />
-            <Route path="contact" element={<ContactPage />} />
-            <Route path="contact-2" element={<ContactPage2 />} />
-            <Route path="team" element={<TeamPage />} />
-            <Route path="synceta-price" element={<SyncEtaPricePage />} />
-            <Route path="synceta-download" element={<SyncEtaDownloadPage />} />
-             <Route path="search" element={<SearchPage />} />
-
-            <Route
-                path="career-detail"
-                element={<CareerDetailsPage />}
-            />
-
-              <Route path="page-not-found" element={<NotFoundPage />} />
-
-              <Route path="*" element={<NotFoundPage />} />
-            </Route>
-          </Routes>
-        </ParallaxProvider>
-        <MobileMenu />
-        <ContactModal />
-        <NewsletterModal />
-        <SearchModal />
-        <Cart />
-        <BacktoTop />
-        <ScrollTopBehaviour />
-      </Context>
-    </>
+    <ThemeProvider>
+      <Router>
+        <LanguageRedirect />
+        <Routes>
+          <Route path="/:lang" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="hydra" element={<Hydra />} />
+            <Route path="sync-series" element={<SyncSeries />} />
+            <Route path="syncboot" element={<SyncBoot />} />
+            <Route path="synccms" element={<SyncCMS />} />
+            <Route path="syncapim" element={<SyncAPIM />} />
+            <Route path="synceta" element={<SyncEta />} />
+            <Route path="commercelogi" element={<CommerceLogi />} />
+            <Route path="use-cases" element={<UseCases />} />
+            <Route path="company" element={<Company />} />
+            <Route path="contact" element={<Contact />} />
+          </Route>
+          {/* Fallback route */}
+          <Route path="*" element={<Navigate to="/ko" replace />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 

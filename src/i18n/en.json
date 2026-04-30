@@ -1,0 +1,20 @@
+{
+  "translation": {
+    "nav": {
+      "aiInfra": "AI Infra",
+      "syncSeries": "Sync Series",
+      "intro": "Intro",
+      "syncboot": "SyncBoot",
+      "synccms": "SyncCMS",
+      "syncapim": "SyncAPIM",
+      "synceta": "SyncEta",
+      "commerceLogi": "Commerce & Logi",
+      "useCases": "Use Cases",
+      "company": "Company"
+    },
+    "hero": {
+      "title": "Boon to business by agility",
+      "subtitle": "Perfect Digital Innovation Ecosystem based on AI-DLC"
+    }
+  }
+}

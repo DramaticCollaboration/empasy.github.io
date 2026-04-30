@@ -1,0 +1,142 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nav-menu > ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-menu > ul > li {
+  position: relative;
+}
+
+.nav-menu a {
+  font-weight: 500;
+  transition: color 0.3s;
+  display: block;
+  padding: 0.5rem 0;
+  color: var(--text-primary);
+}
+
+.nav-menu a:hover {
+  color: var(--primary-color);
+}
+
+.contact-nav-link {
+  background: var(--primary-color);
+  color: #fff !important;
+  padding: 0.5rem 1.5rem !important;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.contact-nav-link:hover {
+  background: var(--secondary-color);
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -1rem;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.5rem 0 !important;
+  min-width: 150px;
+  flex-direction: column !important;
+  gap: 0 !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.dropdown-menu.show {
+  display: flex;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  padding: 0.8rem 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--bg-surface-hover);
+  color: var(--primary-color);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+.lang-switcher {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.lang-switcher span {
+  transition: color 0.3s;
+}
+
+.lang-switcher span:hover {
+  color: var(--primary-color);
+}

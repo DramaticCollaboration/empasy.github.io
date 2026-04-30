@@ -1,0 +1,375 @@
+.company-container {
+  width: 100%;
+}
+
+.company-container section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.section-header p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+}
+
+/* 1. Hero Section */
+.company-hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.company-hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #FFFFFF, #B0BEC5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.company-hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: #EDF2F4;
+  line-height: 1.6;
+}
+
+.typography-animation-placeholder {
+  margin-top: 3rem;
+  padding: 4rem 2rem;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-guide {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pulse-arrow {
+  font-size: 1.2rem;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* 2. Core Values (Flip Cards) */
+.flip-cards-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 350px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-front {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.flip-card-front .icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.flip-card-front h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.flip-card-back {
+  background: var(--primary-color);
+  color: #0b0c10;
+  transform: rotateY(180deg);
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* 3. History & Milestone */
+.timeline-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.timeline-item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+.timeline-dot.pulse {
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0% { box-shadow: 0 0 0 0 rgba(0, 180, 216, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(0, 180, 216, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 180, 216, 0); }
+}
+
+.timeline-content {
+  width: 45%;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-content h3 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-image-placeholder {
+  width: 45%;
+  height: 150px;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+  opacity: 0.5;
+  border-radius: 10px;
+}
+
+/* 4. Leadership & Team */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.member-photo-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background: #222;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.3);
+  font-style: italic;
+  filter: grayscale(100%);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-member:hover .member-photo-placeholder {
+  filter: grayscale(0%);
+  background: #333;
+}
+
+.team-member:hover .member-photo-placeholder::after {
+  content: 'Matrix Code Data Flow';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 255, 0, 0.1);
+  color: #0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  animation: code-fall 2s linear infinite;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@keyframes code-fall {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(100%); }
+}
+
+.member-info h3 {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 0.2rem;
+}
+
+.member-info .role {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.member-info .desc {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.4;
+}
+
+/* 5. Tech R&D DNA */
+.badges-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hologram-badge-placeholder {
+  width: 250px;
+  height: 150px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 6. Contact CTA */
+.company-cta-section {
+  text-align: center;
+  padding: 4rem 2rem 8rem !important;
+}
+
+.location-container {
+  margin-bottom: 4rem;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 400px;
+  background: #111;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.magnetic-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.magnetic-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(0, 180, 216, 0.4);
+}

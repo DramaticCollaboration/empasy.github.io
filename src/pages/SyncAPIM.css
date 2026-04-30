@@ -1,0 +1,210 @@
+.syncapim-container {
+  width: 100%;
+}
+
+.syncapim-container section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+/* 1. Hero Section */
+.syncapim-hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.syncapim-hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #8338EC, #3A86FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.syncapim-hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #EDF2F4;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rolling-keywords {
+  margin-bottom: 3rem;
+  font-family: monospace;
+  font-size: 1.1rem;
+  color: var(--accent-color);
+}
+
+.gateway-particle-placeholder {
+  margin-top: 3rem;
+  padding: 4rem 2rem;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Common Placeholders for Sections */
+.architecture-map-placeholder,
+.shield-simulator-placeholder,
+.data-streaming-placeholder,
+.custom-dashboard-placeholder {
+  height: 350px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+  margin: 0 auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+/* 3. Core Features (Bento Grid) */
+.core-features-section .bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
+}
+
+.core-features-section .bento-card {
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  padding: 2rem;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.core-features-section .bento-card:hover {
+  transform: translateY(-10px);
+  background-color: #222;
+}
+
+.core-features-section .bento-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #8338EC;
+}
+
+.core-features-section .bento-card p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.5rem;
+}
+
+.hover-animation-placeholder {
+  height: 80px;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* 4. Security Section */
+.tooltip-trigger {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* 5. Observability Section */
+.analytics-visual-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.analytics-visual-container > div {
+  flex: 1;
+}
+
+.fade-in-text {
+  margin-top: 1rem;
+  opacity: 0;
+  animation: fadeIn 1s forwards 1s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* 6. CTA Section */
+.syncapim-cta-section {
+  text-align: center;
+  padding: 8rem 2rem !important;
+  background: radial-gradient(circle, rgba(131,56,236,0.1) 0%, transparent 70%);
+}
+
+.syncapim-cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  line-height: 1.4;
+}
+
+/* SyncAPIM Contact Button Style (Teal/Mint Ripple) */
+.syncapim-cta-section .contact-btn {
+  background: #3A86FF;
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.syncapim-cta-section .contact-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(0, 180, 216, 0.5); /* Teal/Mint color */
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s;
+}
+
+.syncapim-cta-section .contact-btn:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.syncapim-cta-section .contact-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(58, 134, 255, 0.3);
+}

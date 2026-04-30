@@ -1,0 +1,315 @@
+.hydra-container {
+  width: 100%;
+}
+
+.hydra-container section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* 1. Hero Section */
+.hydra-hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hydra-hero-section h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #00B4D8, #48CAE4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hydra-hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: #EDF2F4;
+}
+
+.interactive-prompt {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+  position: relative;
+  min-height: 300px;
+}
+
+.prompt-text {
+  font-family: monospace;
+  font-size: 1.2rem;
+  color: #a8ff60;
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+  text-align: left;
+}
+
+.infra-animation-placeholder {
+  margin-top: 3rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  perspective: 1000px;
+}
+
+.eks-control-plane, .gpu-node {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(0, 180, 216, 0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  animation: popIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.eks-control-plane {
+  animation-delay: 1s;
+}
+
+.gpu-nodes {
+  display: flex;
+  gap: 1rem;
+}
+
+.gpu-node {
+  animation-delay: 1.5s;
+}
+
+.gpu-node:nth-child(2) {
+  animation-delay: 1.7s;
+}
+
+.gpu-node:nth-child(3) {
+  animation-delay: 1.9s;
+}
+
+.eks-icon, .gpu-icon {
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.eks-icon {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1280px-Amazon_Web_Services_Logo.svg.png'); /* Replace with actual EKS icon if available */
+}
+
+.gpu-icon {
+  background-image: url('https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/gpu-accelerated-applications/data-science/data-science-icon-600x400.png'); /* Replace with actual GPU icon if available */
+}
+
+
+/* 2. Pipeline Section */
+.scroll-telling-container {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.pipeline-visual {
+  flex: 1;
+  position: sticky;
+  top: 100px;
+}
+
+.terminal-ui {
+  background: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.terminal-header {
+  background: #333;
+  padding: 0.5rem 1rem;
+  font-family: monospace;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+}
+
+.terminal-header::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #ff5f56;
+  border-radius: 50%;
+  margin-right: 8px;
+  box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+}
+
+.terminal-body {
+  padding: 1.5rem;
+  font-family: monospace;
+  color: #00ff00;
+  text-align: left;
+}
+
+.terminal-body p {
+  margin-bottom: 0.5rem;
+}
+
+.pipeline-steps {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.step-card {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.step-card.active {
+  opacity: 1;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 20px rgba(0, 180, 216, 0.2);
+}
+
+.step-card h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* 3. Validation Section */
+.agent-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.agent {
+  text-align: center;
+}
+
+.agent-icon {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.file-scan {
+  position: relative;
+  font-size: 4rem;
+}
+
+.scan-laser {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: calc(100% + 40px);
+  height: 2px;
+  background: #00ff00;
+  box-shadow: 0 0 10px #00ff00;
+  animation: scan 2s linear infinite alternate;
+}
+
+@keyframes scan {
+  from { top: 0; }
+  to { top: 100%; }
+}
+
+.validation-result {
+  font-size: 3rem;
+  color: #00ff00;
+  text-align: center;
+  opacity: 0;
+  animation: popIn 0.5s forwards 2s; /* Delayed appearance */
+}
+
+@keyframes popIn {
+  from { transform: scale(0) translateY(50px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+/* 4. Benefits Section */
+.benefits-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.benefit-card {
+  background: linear-gradient(145deg, #151515, #0a0a0a);
+  padding: 3rem;
+  border-radius: 15px;
+  text-align: center;
+  flex: 1;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.benefit-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.benefit-value {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.benefit-value .before {
+  color: #ff5f56;
+  text-decoration: line-through;
+  font-size: 2rem;
+}
+
+.benefit-value .after {
+  color: #27c93f;
+}
+
+/* 5. CTA Section */
+.hydra-cta-section {
+  text-align: center;
+  padding: 8rem 2rem !important;
+  background: radial-gradient(circle, rgba(0,180,216,0.1) 0%, transparent 70%);
+}
+
+.hydra-cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  line-height: 1.4;
+}
