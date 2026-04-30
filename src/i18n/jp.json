@@ -10,11 +10,517 @@
       "synceta": "SyncEta",
       "commerceLogi": "コマース＆ロジ",
       "useCases": "導入事例",
-      "company": "企業情報"
+      "company": "企業情報",
+      "contact": "お問い合わせ"
     },
     "hero": {
-      "title": "俊敏性によるビジネスへの恩恵",
-      "subtitle": "AI-DLC基盤の完璧なデジタル革新エコシステム"
+      "title": "Boon to business by agility",
+      "subtitle": "AI-DLC基盤の完璧なデジタル革新エコシステム",
+      "scrollDown": "Scroll Down"
+    },
+    "home": {
+      "pipeline": {
+        "title": "インセプションから運用まで、\nAIが主導する自律型インフラ",
+        "step1": {
+          "title": "1. Inception",
+          "desc": "Hydraによる自然言語意図分析およびステアリングファイルの注入"
+        },
+        "step2": {
+          "title": "2. Construction",
+          "desc": "SyncBootを活用したインフラ自動生成およびドキュメント化"
+        },
+        "step3": {
+          "title": "3. Operations",
+          "desc": "SyncEtaによるテストおよび自律運用の最適化"
+        }
+      },
+      "solutions": {
+        "title": "私たちのソリューション",
+        "syncboot": "Java/Spring BootベースのMSA高速開発プラットフォーム",
+        "synceta": "LLMベースの自然言語テストケース直接制御ソリューション",
+        "synccms": "Javaベースのエンタープライズ向けカスタマイズCMS",
+        "syncapim": "柔軟で強力なAPIエコシステムプラットフォーム",
+        "syncshop": "ヘッドレスコマースアーキテクチャ",
+        "logihub": "自律型AIエージェントを組み合わせた物流AIハブ"
+      },
+      "performance": {
+        "title": "実績と性能",
+        "stat1": "リアルタイム・インタラクション・データの整合性",
+        "stat2": "ピーク時の平均同期遅延",
+        "stat3": "手作業に対するテスト工数の削減率",
+        "stat4": "秒間大規模トラフィック処理 (TPS)"
+      },
+      "trusted": {
+        "title": "信頼の実績"
+      }
+    },
+    "hydra": {
+      "hero": {
+        "title": "話すだけで構築されるクラウド、Hydra",
+        "desc": "複雑な設定なしに自然言語での対話だけでAI-DLC（AI開発ライフサイクル）の全過程を完全に自動化します。",
+        "prompt": "Llama 3ファインチューニングのための低コストなGPU環境を構築して"
+      },
+      "pipeline": {
+        "title": "AI-DLC 3段階パイプライン",
+        "subtitle": "着手から運用まで、AIが主導する自律型インフラ",
+        "step1": {
+          "title": "1. Inception (着手)",
+          "desc": "ユーザーの自然言語プロンプトから目的とリソース制約条件を自動抽出し、組織のコストポリシーを強制注入します。"
+        },
+        "step2": {
+          "title": "2. Construction (構築)",
+          "desc": "TerraformおよびKubernetes Manifest(YAML)を自動生成して環境をプロビジョニングし、インフラ接続情報をドキュメント化します。"
+        },
+        "step3": {
+          "title": "3. Operations (運用)",
+          "desc": "トラフィック休止時にポッド数を0に減らす「Scale-to-Zero」技術と、スポット中断時に即座に代替するオーケストレーションで連続性を保証します。"
+        }
+      },
+      "validation": {
+        "title": "隙のない相互検証を行うインテリジェント・エージェントの協調",
+        "syntaxAgent": "構文検証エージェント",
+        "costAgent": "コスト監査エージェント"
+      },
+      "roi": {
+        "title": "Hydra導入効果",
+        "time": {
+          "title": "インフラ構築時間",
+          "before": "1週間",
+          "after": "5分以内",
+          "desc": "168時間かかっていた作業をわずか5分で完了"
+        },
+        "cost": {
+          "title": "クラウドコスト削減率",
+          "value": "40-60%",
+          "desc": "オンデマンドに対するスポットインスタンス活用の最大化"
+        }
+      },
+      "cta": {
+        "title": "DevOpsの専門家なしでも完璧なAIインフラを、\n今すぐ対話で始めてください。",
+        "btn": "Hydra導入のお問い合わせ"
+      }
+    },
+    "syncseries": {
+      "hero": {
+        "title": "Boon to business by agility, ビジネスの俊敏性のための完璧な同期",
+        "desc": "開発から運用, 検証, コンテンツ管理まで。断絶されたITインフラを接続し, 最も柔軟で強力なデジタル革新エコシステムを完成させます。"
+      },
+      "verse": {
+        "title": "断絶されたツールではなく、一つに繋がったインテリジェント・パイプライン (SyncVerse)"
+      },
+      "showcase": {
+        "title": "インタラクティブ・プロダクト・ショーケース"
+      },
+      "roi": {
+        "title": "Proven Synergy (導入期待効果)",
+        "ttm": {
+          "title": "TTM短縮",
+          "value": "最大 60% ↓",
+          "desc": "開発およびデプロイ時間の短縮"
+        },
+        "test": {
+          "title": "手動テスト工数",
+          "value": "80% ↓",
+          "desc": "テストおよび保守コストの削減"
+        },
+        "traffic": {
+          "title": "トラフィック処理能力",
+          "value": "10,000+ TPS",
+          "desc": "遅延のない大規模トラフィック処理"
+        }
+      },
+      "cta": {
+        "title": "単一ソリューションの限界を超え、完璧なデジタル革新エコシステムへ進んでください。",
+        "btn": "Sync Series 統合コンサルティングの申し込み"
+      },
+      "solutions": {
+        "syncboot": {
+          "title": "SyncBoot (MSAプラットフォーム)",
+          "desc": "巨大なモノリシックな岩が数十個の軽くて速いミニキューブに分かれて飛び交うパーティクルモーション。"
+        },
+        "synceta": {
+          "title": "SyncEta (AI品質検証)",
+          "desc": "ExcelアイコンがAIの脳を通過すると、数十台의画面で自動的にテストが並列実行されるモーション。"
+        },
+        "synccms": {
+          "title": "SyncCMS (エンタープライズCMS)",
+          "desc": "ページの断片が磁石のように引き寄せられ、一つの完璧なグローバルウェブサイトとして組み立てられるモーション。"
+        },
+        "syncapim": {
+          "title": "SyncAPIM (知能型API統合管理)",
+          "desc": "暴走するトラフィックラインがゲートウェイの盾にぶつかり、安全に分散ルーティングされるシールドエフェクト。"
+        }
+      }
+    },
+    "syncboot": {
+      "hero": {
+        "title": "ビジネスの俊敏性のためのMSA高速開発プラットフォーム、SyncBoot",
+        "desc": "コンテナ管理からCI/CD, モニタリング, APIゲートウェイまで。E2Eクラウドネイティブ・エコシステムを一度に構築します。"
+      },
+      "values": {
+        "title": "SyncBootの3大核心競争力",
+        "card1": {
+          "title": "100% オープンソースベース",
+          "desc": "ベンダーロックインのない、検証済みのオープンソース技術スタック"
+        },
+        "card2": {
+          "title": "End-to-End 統合環境",
+          "desc": "設計、開発、デプロイ、運用のパイプラインを一つの輪で接続"
+        },
+        "card3": {
+          "title": "Low-Code 開発生産성",
+          "desc": "ブロックを組み立てるようにUIコンポーネントが組み合わさり、バックエンドAPIコードを自動生成"
+        }
+      },
+      "arch": {
+        "title": "検証済みのオープンソースで構成された無欠陥アーキテクチャ"
+      },
+      "observability": {
+        "title": "統合モニタリングおよびデプロイ自動化",
+        "tabs": {
+          "circuit": "サーキットブレーカー",
+          "tracing": "コールチェーンモニタリング",
+          "logs": "統合ログ",
+          "cicd": "CI/CD ツールチェーン"
+        }
+      },
+      "framework": {
+        "title": "標準化されたフレームワークで、ビジネスロジックだけに集中してください。"
+      },
+      "cta": {
+        "title": "モノリシックの限界、今すぐSyncBootで乗り越えてください。",
+        "btn": "SyncBoot導入のお問い合わせ"
+      }
+    },
+    "synceta": {
+      "hero": {
+        "title": "人間のように理解し、機械のようにテストする",
+        "desc": "コード作成も, 画面録画도 필요ありません。エクセル文書が即座に実行可能なテストになるZero-Recording AIテストプラットフォーム。"
+      },
+      "recording": {
+        "title": "Zero-Recording Execution (エクセル直接実行技術)"
+      },
+      "healing": {
+        "title": "UIが変わっても止まらない知能型テスト、そしてピクセル単位の完璧な視覚検証。"
+      },
+      "dashboard": {
+        "title": "Real-time Dashboard & TestOps (リアルタイム観測および欠陥証跡)"
+      },
+      "feedback": {
+        "title": "使うほど賢くなるQAパートナー、Self-Evolving AI"
+      },
+      "cicd": {
+        "title": "CI/CD Pipeline Integration (DevOpsエコシステム)"
+      },
+      "download": {
+        "title": "今すぐ始めてください",
+        "guide": {
+          "title": "ユーザーガイド",
+          "desc": "SyncEtaのすべての機能を詳しく確認してください。",
+          "btn": "ガイドはこちら"
+        },
+        "client": {
+          "title": "クライアントダウンロード",
+          "linux": "Linux (準備中)"
+        }
+      },
+      "cta": {
+        "title": "QA業務のボトルネック、今すぐSyncEtaのAIと共に解決してください。",
+        "btn": "SyncEta導入のお問い合わせ"
+      }
+    },
+    "synccms": {
+      "hero": {
+        "title": "開発者なしでも、想像するすべてのウェブを組み立てる。",
+        "desc": "独歩的なテンプレートエンジンと視覚的なレイアウトビルダーで、ビジネス環境の変化に最も敏捷に対応するJavaベースの統合CMS。"
+      },
+      "builder": {
+        "title": "直感的な視覚的管理、クリック一つで終わる迅速なメンテナンス。"
+      },
+      "multisite": {
+        "title": "単一コアで統制するグローバルオムニチャネル。"
+      },
+      "hybrid": {
+        "title": "動的/静的ハイブリッドアーキテクチャ"
+      },
+      "history": {
+        "title": "すべての変更を記録する完璧なタイムマシン。"
+      },
+      "seo": {
+        "title": "成果を証明するデータ (SEO & 訪問者統計)"
+      },
+      "cta": {
+        "title": "古いシステムの限界を脱ぎ捨て、変化するビジネスの波に乗ってください。",
+        "btn": "SyncCMS導入のお問い合わせ"
+      }
+    },
+    "syncapim": {
+      "hero": {
+        "title": "API Platform with Customization in its DNA",
+        "desc": "標準化されたシステムの限界を超え、企業のビジネス環境に完璧に同期する知能型API統合管理プラットフォームです。"
+      },
+      "lifecycle": {
+        "title": "設計から収益化まで、一つのプラットフォームで完成するAPIエコシステム"
+      },
+      "features": {
+        "title": "SyncAPIM 5大核心機能",
+        "card1": {
+          "title": "① ポリシー管理 (Policy)",
+          "desc": "呼び出し制限(Rate Limiting), IP遮断などのトラフィック制御"
+        },
+        "card2": {
+          "title": "② API管理 (Management)",
+          "desc": "エンドポイントのグルーピングおよびドラッグ＆ドロップ整列"
+        },
+        "card3": {
+          "title": "③ APIテスト (Testing)",
+          "desc": "内蔵クライアントによるリアルタイムAPI呼び出しおよび応答確認"
+        },
+        "card4": {
+          "title": "④ モニタリング (Monitoring)",
+          "desc": "API性能および状態を追跡する準リアルタイムダッシュボード"
+        },
+        "card5": {
+          "title": "⑤ システム通知 (Alert)",
+          "desc": "危険イベント発生時に管理者へプッシュ通知を送信"
+        }
+      },
+      "security": {
+        "title": "10,000 TPSの極限環境でも揺るぎないカスタムセキュリティアーキテクチャ"
+      },
+      "observability": {
+        "title": "準リアルタイム分析およびインサイト",
+        "desc": "管理者と開発者にAPI使用に関する完璧なインサイトを提供"
+      },
+      "cta": {
+        "title": "不要な機能は削ぎ落とし、必要な機能だけを導入してください。\n今すぐカスタムAPIエコシステムを設計いたします。",
+        "btn": "SIカスタムAPI導入のお問い合わせ"
+      }
+    },
+    "commercelogi": {
+      "hero": {
+        "title": "コマースの限界を超え、物流の流れを支配する",
+        "desc": "フロント/バックエンドが分離された柔軟なSyncShopと, 完璧な動線・在庫最適化を導くAI Logistics Hub의 결합."
+      },
+      "syncshop": {
+        "title": "超柔軟コマースアーキテクチャ (SyncShop: Headless eCommerce)",
+        "pms": "PMS (商品)",
+        "pmsDesc": "[SKU在庫連動アニメーション]",
+        "oms": "OMS (注文/物流)",
+        "omsDesc": "[注文処理フローレンダリング]",
+        "sms": "SMS (マーケティング)",
+        "smsDesc": "[知能型クーポン発行ロジック]",
+        "ums": "UMS (会員)",
+        "umsDesc": "[会員ランクおよび特典同期]"
+      },
+      "logistics": {
+        "title": "データが予測し、AIが最適な経路を描きます。",
+        "optimized": "[最適化された直線経路マップ]",
+        "messy": "[複雑に絡み合った経路マップ]",
+        "alertTime": "配送時間を約22分短縮",
+        "alertDist": "移動距離を18%削減",
+        "btnAsIs": "初期化 (AS-IS)",
+        "btnToBe": "AI最適化実行 (TO-BE)"
+      },
+      "docai": {
+        "title": "知識資産化および文書自動化 (Document AI & Enterprise RAG)",
+        "ocr": "OCR品質 97.4% 確保",
+        "chatUser": "最近の首都圏の配送遅延の原因を分析して",
+        "chatAi": "WMSログおよびVOC分析の結果, 首都圏Aハブへの物量集中が原因です。\n解決策: 首都圏Aハブの在庫を12%先行配置することを推奨します。"
+      },
+      "kpi": {
+        "title": "MLOpsおよび導入期待効果",
+        "card1": {
+          "title": "物流運営コストの削減",
+          "desc": "物流最適化アルゴリズム"
+        },
+        "card2": {
+          "title": "文書処理時間の短縮",
+          "desc": "手作業比 (日単位)"
+        },
+        "card3": {
+          "title": "モデルサービング応答速度",
+          "desc": "MLOpsモニタリング"
+        },
+        "card4": {
+          "title": "契約書構造化コストの削減",
+          "desc": "Document AI導入"
+        }
+      },
+      "cta": {
+        "title": "注文から配送まで、あなたのビジネスを完璧に同期(Sync)させてください。",
+        "btn": "Commerce & Logi導入のお問い合わせ"
+      }
+    },
+    "usecases": {
+      "title": "Trusted by Global Innovators",
+      "desc": "複雑なエンタープライズ環境で証明されたビジネスの俊敏性。\nエムパシの技術力がグローバルリーダーのデジタル革新を完成させます。",
+      "portfolioTitle": "挑戦課題別のカスタム革新事例を確認してください。",
+      "filters": {
+        "all": "全体",
+        "ai-data": "AI & Data",
+        "testops": "AI TestOps",
+        "msa-infra": "MSA & インフラ",
+        "cms": "グローバル CMS"
+      },
+      "cases": {
+        "lg": {
+          "subtitle": "グローバル EAP 2.0 ポータルおよび診断ボットの構築",
+          "solution": "SyncEta, AI チャットボット"
+        },
+        "samsung": {
+          "subtitle": "ブランドデスク グローバル マイクロサイト",
+          "solution": "SyncCMS, MSA"
+        },
+        "hyosung": {
+          "subtitle": "知能型スマートクローリングおよび RAG システム",
+          "solution": "SyncCrawl, SyncInsight"
+        },
+        "lx": {
+          "subtitle": "グローバル多言語ブランドサイトの統合",
+          "solution": "SyncCMS Multi-Site"
+        },
+        "visang": {
+          "subtitle": "AI デジタル教科書(AIDT) 品質検証",
+          "solution": "SyncEta"
+        },
+        "penta": {
+          "subtitle": "次世代 API セキュリティ(WAAP) 統合プラットフォーム",
+          "solution": "SyncAPIM, SyncBoot"
+        }
+      },
+      "metrics": {
+        "title": "数値で証明するエムパシの実績",
+        "metric1": {
+          "title": "手作業に比べ TC 作成を 80% 短縮",
+          "desc": "TestOps 生産性"
+        },
+        "metric2": {
+          "title": "グローバルサイトのリソースを大幅に削減",
+          "desc": "CMS 効率性"
+        },
+        "metric3": {
+          "title": "応答遅延の最小化 (Zero Latency)",
+          "desc": "MSA 安定性"
+        }
+      },
+      "cta": {
+        "title": "最高の企業がエムパシを選んだ理由、\n貴社のビジネスで直接証明いたします。",
+        "btn": "貴社に合ったソリューションの相談"
+      }
+    },
+    "company": {
+      "hero": {
+        "title": "生きているソフトウェアを作ります。",
+        "desc": "Empathic Synergy. 深い共感と協業の力で、ビジネスの俊敏性(Agility)を最大化するデジタル革新を導きます。",
+        "scroll": "Discover Our DNA"
+      },
+      "values": {
+        "title": "Core Values",
+        "subtitle": "エムパシの3大核心価値",
+        "card1": {
+          "title": "Agile & Tech-Driven",
+          "desc": "素早いフィードバックと実験を恐れないアジャイル開発。先進的なAI技術とシステム安定性の完璧なバランスを追求します。"
+        },
+        "card2": {
+          "title": "Respect & Trust",
+          "desc": "すべての同僚、顧客、パートナーを公平に尊重します。正直で透明なコミュニケーションがエムパシの信頼を築きます。"
+        },
+        "card3": {
+          "title": "Work-Life Balance",
+          "desc": "週末および業務外時間の完全な保障。健康な生活バランスから爆発的なビジネス革新が誕生します。"
+        }
+      },
+      "history": {
+        "title": "History & Milestone",
+        "item1": "SyncCMS ソリューション発売 (コンテンツ革新の開始)",
+        "item2": "SyncBoot プラットフォーム発売 (MSA エコシステムの構築)",
+        "item3": "ホームプラス MIS システム再構築 / エムパシ法人設立",
+        "item4": "LG電子 グローバル AI 診断ポータル構築",
+        "item5": "SyncEta 北米 AWS Marketplace 進出および AI First QA プラットフォーム商用化"
+      },
+      "team": {
+        "title": "Leadership & Expert Team",
+        "subtitle": "グローバルエンタープライズの基準を超える最精鋭 Tech グループ",
+        "member1": {
+          "name": "Oh Byeong-mun",
+          "role": "CEO / PM",
+          "desc": "25年の特級技術者。LG/サムスン大型システム構築総括およびビッグデータ/AI/MSA/Cloud アーキテクチャ専門家。"
+        },
+        "member2": {
+          "name": "Kim Jae-eun",
+          "role": "CTO / PL",
+          "desc": "25年の特級技術者。データベースおよびバック/フロントエンド統合設計、グローバル eコマース技術リード。"
+        },
+        "member3": {
+          "name": "Ahn Su-ho",
+          "role": "Global Tech Advisor",
+          "desc": "AWS 米州 AI Product 開発およびグローバルコマースシステム総括。北米市場進出リード。"
+        },
+        "member4": {
+          "name": "Lee Ok-su",
+          "role": "QA / Data PL",
+          "desc": "10年の特級技術者。AI データ収集およびプラットフォーム構築運営総括。"
+        }
+      },
+      "rnd": {
+        "title": "Tech R&D DNA",
+        "badge1": "企業付設研究所",
+        "badge2": "ベンチャー企業認証 (革新成長タイプ)",
+        "badge3": "LLM MCP 源泉技術特許出願"
+      },
+      "cta": {
+        "title": "エムパシと共に革新を始めませんか？",
+        "btn": "プロジェクトのお問い合わせ"
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "革新の始まり、エムパシと同期(Sync)する準備はできましたか？",
+        "desc": "ビジネスの俊敏性(Agility)への旅、エムパシの最高専門家が最も迅速かつ正確な回答を提示します。"
+      },
+      "form": {
+        "title": "Smart Inquiry Form",
+        "subtitle": "貴社のビジネスの悩みを選択してください。最適なソリューションをマッピングします。",
+        "step1Title": "関心分野を選択してください。",
+        "interest1": "AI テスト自動化 (SyncEta)",
+        "interest2": "MSA & クラウドインフラ (SyncBoot)",
+        "interest3": "公共情報 AI 映像化 (GovTech)",
+        "interest4": "その他ソリューションおよび統合コンサルティング",
+        "question1": "現在の手作業 QA 人員規模はどのくらいですか？",
+        "question2": "現在運営中のレガシーシステム環境を教えてください。",
+        "question3": "所属する自治体および公共機関名を入力してください。",
+        "questionDefault": "導入しようとしているプロジェクトの大まかな概要を教えてください。",
+        "placeholderDetail": "詳細内容を入力してください...",
+        "placeholderCompany": "会社名",
+        "placeholderName": "担当者氏名",
+        "placeholderEmail": "メールアドレス",
+        "btnPrev": "以前",
+        "btnNext": "次へ",
+        "btnSubmit": "プロジェクトのお問い合わせを送信",
+        "successTitle": "正常に受け付けられました。",
+        "successDesc": "24時間以内に専門家からご連絡いたします。",
+        "btnReset": "新しいお問い合わせを残す"
+      },
+      "process": {
+        "title": "エムパシ業務プロセス案内",
+        "step1": "お問い合わせ受付",
+        "step2": "専門家事前分析",
+        "step3": "カスタムコンサルティングおよび PoC",
+        "step4": "ソリューション導入および構築"
+      },
+      "info": {
+        "title": "Contact Info",
+        "manager": "総括担当者: オ・ビョンムン代表 (理事)",
+        "email": "メール: poh@empasy.com",
+        "phone": "連絡先: +82 10-3420-8169"
+      }
+    },
+    "footer": {
+      "desc": "ビジネスの俊敏性のための完璧な同期",
+      "address": "東京都...",
+      "contact": "連絡先: info@empasy.com",
+      "rights": "All rights reserved."
     }
   }
 }

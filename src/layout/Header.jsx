@@ -31,7 +31,7 @@ const Header = () => {
         <div className="logo">
           <Link to={`/${currentLang}`}>
             <img 
-              src={theme === 'dark' ? "/empasy-logo_white.svg" : "/empasy-logo.svg"} 
+              src="/empasy-logo_white.svg" 
               alt="EMPASY Logo" 
               className="logo-img"
             />
@@ -61,9 +61,6 @@ const Header = () => {
           </ul>
         </nav>
         <div className="header-actions">
-          <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
-            {theme === 'dark' ? '☀️' : '🌙'}
-          </button>
           <div className="lang-switcher">
             <span onClick={() => changeLanguage('ko')} style={{ fontWeight: currentLang === 'ko' ? 'bold' : 'normal', color: currentLang === 'ko' ? 'var(--primary-color)' : 'inherit' }}>KO</span> | 
             <span onClick={() => changeLanguage('en')} style={{ fontWeight: currentLang === 'en' ? 'bold' : 'normal', color: currentLang === 'en' ? 'var(--primary-color)' : 'inherit' }}> EN</span> | 

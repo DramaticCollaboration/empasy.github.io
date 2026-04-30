@@ -17,17 +17,6 @@
   --card-bg: linear-gradient(145deg, #151515, #0a0a0a);
 }
 
-[data-theme='light'] {
-  /* Light Mode Variables */
-  --bg-color: #F8F9FA;
-  --bg-surface: #FFFFFF;
-  --bg-surface-hover: #F0F2F5;
-  --text-primary: #2B2D42;
-  --text-secondary: rgba(43, 45, 66, 0.7);
-  --border-color: rgba(0, 0, 0, 0.1);
-  --header-bg: rgba(255, 255, 255, 0.9);
-  --card-bg: #FFFFFF;
-}
 
 body {
   margin: 0;

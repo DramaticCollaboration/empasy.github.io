@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './Contact.css';
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     interest: '',
@@ -29,13 +31,13 @@ const Contact = () => {
   const getDynamicQuestion = () => {
     switch (formData.interest) {
       case 'SyncEta':
-        return "현재 수작업 QA 인력 규모는 어떻게 되십니까?";
+        return t('contact.form.question1');
       case 'SyncBoot':
-        return "현재 운영 중인 레거시 시스템 환경을 알려주세요.";
+        return t('contact.form.question2');
       case 'GovTech':
-        return "소속된 지자체 및 공공기관명을 입력해 주세요.";
+        return t('contact.form.question3');
       default:
-        return "도입하시려는 프로젝트의 대략적인 개요를 알려주세요.";
+        return t('contact.form.questionDefault');
     }
   };
 
@@ -44,8 +46,8 @@ const Contact = () => {
       {/* 1. Hero Section */}
       <section className="contact-hero-section">
         <div className="hero-content">
-          <h1>혁신의 시작, 엠파시와 동기화(Sync)할 준비가 되셨습니까?</h1>
-          <p className="typewriter-text">비즈니스 민첩성(Agility)을 향한 여정, 엠파시의 최고 전문가들이 가장 빠르고 정확한 해답을 제시합니다.</p>
+          <h1>{t('contact.hero.title')}</h1>
+          <p className="typewriter-text">{t('contact.hero.desc')}</p>
         </div>
       </section>
 
@@ -55,8 +57,8 @@ const Contact = () => {
           {/* 3. Smart Inquiry Form */}
           <section className="inquiry-form-section">
             <div className="section-header">
-              <h2>Smart Inquiry Form</h2>
-              <p>귀하의 비즈니스 고민을 선택해 주세요. 최적의 솔루션을 매핑해 드립니다.</p>
+              <h2>{t('contact.form.title')}</h2>
+              <p>{t('contact.form.subtitle')}</p>
             </div>
             
             <div className="form-progress">
@@ -67,12 +69,12 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="smart-form">
                 {step === 1 && (
                   <div className="form-step step-1 active">
-                    <h3>관심 분야를 선택해 주세요.</h3>
+                    <h3>{t('contact.form.step1Title')}</h3>
                     <div className="interest-buttons">
-                      <button type="button" onClick={() => handleInterestSelect('SyncEta')}>AI 테스트 자동화 (SyncEta)</button>
-                      <button type="button" onClick={() => handleInterestSelect('SyncBoot')}>MSA & 클라우드 인프라 (SyncBoot)</button>
-                      <button type="button" onClick={() => handleInterestSelect('GovTech')}>공공정보 AI 영상화 (GovTech)</button>
-                      <button type="button" onClick={() => handleInterestSelect('Other')}>기타 솔루션 및 통합 컨설팅</button>
+                      <button type="button" onClick={() => handleInterestSelect('SyncEta')}>{t('contact.form.interest1')}</button>
+                      <button type="button" onClick={() => handleInterestSelect('SyncBoot')}>{t('contact.form.interest2')}</button>
+                      <button type="button" onClick={() => handleInterestSelect('GovTech')}>{t('contact.form.interest3')}</button>
+                      <button type="button" onClick={() => handleInterestSelect('Other')}>{t('contact.form.interest4')}</button>
                     </div>
                   </div>
                 )}
@@ -83,28 +85,28 @@ const Contact = () => {
                     <textarea 
                       name="detailQuestion" 
                       rows="4" 
-                      placeholder="상세 내용을 입력해 주세요..."
+                      placeholder={t('contact.form.placeholderDetail')}
                       value={formData.detailQuestion}
                       onChange={handleInputChange}
                     ></textarea>
                     <div className="step-actions">
-                      <button type="button" className="btn-prev" onClick={() => setStep(1)}>이전</button>
-                      <button type="button" className="btn-next" onClick={() => setStep(3)}>다음</button>
+                      <button type="button" className="btn-prev" onClick={() => setStep(1)}>{t('contact.form.btnPrev')}</button>
+                      <button type="button" className="btn-next" onClick={() => setStep(3)}>{t('contact.form.btnNext')}</button>
                     </div>
                   </div>
                 )}
 
                 {step === 3 && (
                   <div className="form-step step-3 active">
-                    <h3>기본 정보를 입력해 주세요.</h3>
-                    <input type="text" name="company" placeholder="회사명" onChange={handleInputChange} required />
-                    <input type="text" name="name" placeholder="담당자 성함" onChange={handleInputChange} required />
-                    <input type="email" name="email" placeholder="이메일 주소" onChange={handleInputChange} required />
+                    <h3>{t('contact.form.placeholderName')}</h3>
+                    <input type="text" name="company" placeholder={t('contact.form.placeholderCompany')} onChange={handleInputChange} required />
+                    <input type="text" name="name" placeholder={t('contact.form.placeholderName')} onChange={handleInputChange} required />
+                    <input type="email" name="email" placeholder={t('contact.form.placeholderEmail')} onChange={handleInputChange} required />
                     <div className="step-actions">
-                      <button type="button" className="btn-prev" onClick={() => setStep(2)}>이전</button>
+                      <button type="button" className="btn-prev" onClick={() => setStep(2)}>{t('contact.form.btnPrev')}</button>
                       {/* 6. Final CTA */}
                       <button type="submit" className="submit-btn">
-                        프로젝트 문의 제출하기 <span className="paper-plane">✈️</span>
+                        {t('contact.form.btnSubmit')} <span className="paper-plane">✈️</span>
                       </button>
                     </div>
                   </div>
@@ -113,9 +115,9 @@ const Contact = () => {
             ) : (
               <div className="success-state">
                 <div className="check-mark">✔️</div>
-                <h3>성공적으로 접수되었습니다.</h3>
-                <p>24시간 이내에 전문가가 연락드리겠습니다.</p>
-                <button className="btn-reset" onClick={() => { setIsSubmitted(false); setStep(1); }}>새로운 문의 남기기</button>
+                <h3>{t('contact.form.successTitle')}</h3>
+                <p>{t('contact.form.successDesc')}</p>
+                <button className="btn-reset" onClick={() => { setIsSubmitted(false); setStep(1); }}>{t('contact.form.btnReset')}</button>
               </div>
             )}
           </section>
@@ -123,27 +125,27 @@ const Contact = () => {
           {/* 5. How we work */}
           <section className="process-section">
             <div className="section-header">
-              <h2>엠파시 업무 프로세스 안내</h2>
+              <h2>{t('contact.process.title')}</h2>
             </div>
             <div className="process-timeline">
               <div className="process-step">
                 <div className="step-icon">📝</div>
-                <p>문의 접수</p>
+                <p>{t('contact.process.step1')}</p>
               </div>
               <div className="process-line"></div>
               <div className="process-step">
                 <div className="step-icon">🔍</div>
-                <p>전문가 사전 분석</p>
+                <p>{t('contact.process.step2')}</p>
               </div>
               <div className="process-line"></div>
               <div className="process-step">
                 <div className="step-icon">🤝</div>
-                <p>맞춤형 컨설팅 및 PoC</p>
+                <p>{t('contact.process.step3')}</p>
               </div>
               <div className="process-line"></div>
               <div className="process-step">
                 <div className="step-icon">🚀</div>
-                <p>솔루션 도입 및 구축</p>
+                <p>{t('contact.process.step4')}</p>
               </div>
             </div>
           </section>
@@ -157,11 +159,11 @@ const Contact = () => {
               [Interactive 3D Globe Map with Seoul, California, Tokyo nodes here]
             </div>
             <div className="contact-info-card">
-              <h3>Contact Info</h3>
+              <h3>{t('contact.info.title')}</h3>
               <ul>
-                <li><strong>총괄 담당자:</strong> 오병문 대표 (이사)</li>
-                <li><strong>이메일:</strong> poh@empasy.com</li>
-                <li><strong>연락처:</strong> 010-3420-8169</li>
+                <li><strong>{t('contact.info.manager').split(':')[0]}:</strong> {t('contact.info.manager').split(':')[1]}</li>
+                <li><strong>{t('contact.info.email').split(':')[0]}:</strong> {t('contact.info.email').split(':')[1]}</li>
+                <li><strong>{t('contact.info.phone').split(':')[0]}:</strong> {t('contact.info.phone').split(':')[1]}</li>
               </ul>
             </div>
           </section>
