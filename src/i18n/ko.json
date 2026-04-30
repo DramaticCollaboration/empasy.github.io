@@ -252,19 +252,24 @@
         "desc": "코드 작성도, 화면 녹화도 필요 없습니다. 당신의 엑셀 문서가 즉시 실행 가능한 테스트가 되는 Zero-Recording AI 테스트 플랫폼."
       },
       "recording": {
-        "title": "Zero-Recording Execution (엑셀 직접 실행 기술)"
+        "title": "Zero-Recording Execution (엑셀 직접 실행 기술)",
+        "subtitle": "기존 Record & Playback 방식의 한계를 넘어, 문서가 곧 실행이 되는 Hyper-Automation 기술을 경험하세요."
       },
       "healing": {
-        "title": "UI가 바뀌어도 멈추지 않는 지능형 테스트, 그리고 픽셀 단위의 완벽한 시각 검증."
+        "title": "UI가 바뀌어도 멈추지 않는 지능형 테스트, 그리고 픽셀 단위의 완벽한 시각 검증.",
+        "subtitle": "UI가 변경되어도 AI가 스스로 위치를 찾아내어 테스트를 복구하고, 픽셀 단위의 오차까지 잡아냅니다."
       },
       "dashboard": {
-        "title": "Real-time Dashboard & TestOps (실시간 관측 및 결함 증빙)"
+        "title": "Real-time Dashboard & TestOps (실시간 관측 및 결함 증빙)",
+        "subtitle": "수백 개의 브라우저 병렬 실행 현황을 실시간으로 관측하고, 에러 발생 시 타임머신 레코딩으로 즉각적인 원인 분석이 가능합니다."
       },
       "feedback": {
-        "title": "사용할수록 더 똑똑해지는 QA 파트너, Self-Evolving AI"
+        "title": "사용할수록 더 똑똑해지는 QA 파트너, Self-Evolving AI",
+        "subtitle": "QA 엔지니어의 피드백을 학습하여 테스트 정교도를 높이는 Self-Evolving AI 생태계를 구축합니다."
       },
       "cicd": {
-        "title": "CI/CD Pipeline Integration (DevOps 생태계)"
+        "title": "CI/CD Pipeline Integration (DevOps 생태계)",
+        "subtitle": "Jenkins, GitHub Actions 등 기존 도구와 완벽히 결합하여 개발 전 주기에 걸친 Zero-Touch 자동화를 실현합니다."
       },
       "download": {
         "title": "지금 바로 시작해 보세요",
@@ -301,7 +306,8 @@
         "title": "모든 변경을 기록하는 완벽한 타임머신."
       },
       "seo": {
-        "title": "성과를 증명하는 데이터 (SEO & 방문자 통계)"
+        "title": "성과를 증명하는 데이터 (SEO & 방문자 통계)",
+        "subtitle": "빌트인 SEO 최적화와 실시간 트래픽 분석 대시보드로 마케팅 성과를 극대화합니다."
       },
       "cta": {
         "title": "낡은 시스템의 한계를 벗고, 변화하는 비즈니스에 올라타십시오.",
@@ -314,10 +320,12 @@
         "desc": "표준화된 시스템의 한계를 넘어, 기업의 비즈니스 환경에 완벽히 동기화되는 지능형 API 통합 관리 플랫폼입니다."
       },
       "lifecycle": {
-        "title": "설계부터 수익화까지, 하나의 플랫폼에서 완성하는 API 생태계"
+        "title": "설계부터 수익화까지, 하나의 플랫폼에서 완성하는 API 생태계",
+        "subtitle": "API 설계부터 보안 설정, 실시간 분석 및 수익화까지의 전 과정을 시각화하여 통합 관리합니다."
       },
       "features": {
         "title": "SyncAPIM 5대 핵심 기능",
+        "subtitle": "엔터프라이즈 API 운영에 필요한 모든 기능을 모듈화하여 유연하게 제공합니다.",
         "card1": {
           "title": "① 정책 관리 (Policy)",
           "desc": "호출 제한(Rate Limiting), IP 차단 등 트래픽 제어"
@@ -340,11 +348,12 @@
         }
       },
       "security": {
-        "title": "10,000 TPS의 극한 환경에서도 흔들림 없는 맞춤형 보안 아키텍처"
+        "title": "10,000 TPS의 극한 환경에서도 흔들림 없는 맞춤형 보안 아키텍처",
+        "subtitle": "강력한 트래픽 제어와 맞춤형 보안 정책으로 기업의 소중한 데이터 자산을 보호합니다."
       },
       "observability": {
         "title": "준실시간 분석 및 인사이트",
-        "desc": "관리자와 개발자에게 API 사용에 대한 완벽한 인사이트 제공"
+        "subtitle": "모든 API 호출을 실시간으로 추적하여 비즈니스 의사결정에 필요한 가시성을 제공합니다."
       },
       "cta": {
         "title": "불필요한 기능은 덜어내고, 필요한 기능만 도입하십시오.\n지금 맞춤형 API 생태계를 설계해 드립니다.",

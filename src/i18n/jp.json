@@ -252,19 +252,24 @@
         "desc": "コード作成も, 画面録画도 필요ありません。エクセル文書が即座に実行可能なテストになるZero-Recording AIテストプラットフォーム。"
       },
       "recording": {
-        "title": "Zero-Recording Execution (エクセル直接実行技術)"
+        "title": "Zero-Recording Execution (エクセル直接実行技術)",
+        "subtitle": "従来のRecord & Playback方式の限界を超え、ドキュメントがそのまま実行されるHyper-Automation技術を体験してください。"
       },
       "healing": {
-        "title": "UIが変わっても止まらない知能型テスト、そしてピクセル単位の完璧な視覚検証。"
+        "title": "UIが変わっても止まらない知능형 테스트, 그리고 피셀 단위의 완벽한 시각 검증.",
+        "subtitle": "UIが変更されてもAI가 자동으로 위치를 특정하여 테스트를 복구하고, 픽셀 단위의 오차까지 검출합니다."
       },
       "dashboard": {
-        "title": "Real-time Dashboard & TestOps (リアルタイム観測および欠陥証跡)"
+        "title": "Real-time Dashboard & TestOps (リアルタイム観測および欠陥証跡)",
+        "subtitle": "数百台のブラウザ並列実行状況을 リアルタイムで観測し、エラー発生時はタイムマシンレコーディングで即座に原因を分析できます。"
       },
       "feedback": {
-        "title": "使うほど賢くなるQAパートナー、Self-Evolving AI"
+        "title": "使うほど賢くなるQAパートナー、Self-Evolving AI",
+        "subtitle": "QAエンジニアのフィードバックを学習してテストの精度を高めるSelf-Evolving AIエコシステムを構築します。"
       },
       "cicd": {
-        "title": "CI/CD Pipeline Integration (DevOpsエコシステム)"
+        "title": "CI/CD Pipeline Integration (DevOpsエコシステム)",
+        "subtitle": "JenkinsやGitHub Actionsなどの既存ツールと完璧に連携し、開発全周期にわたるZero-Touch自動化を実現します。"
       },
       "download": {
         "title": "今すぐ始めてください",
@@ -301,7 +306,8 @@
         "title": "すべての変更を記録する完璧なタイムマシン。"
       },
       "seo": {
-        "title": "成果を証明するデータ (SEO & 訪問者統計)"
+        "title": "成果를 証明하는 데이터 (SEO & 訪問者統計)",
+        "subtitle": "ビルトインSEO最適化とリアルタイムトラフィック分析ダッシュボードでマーケティング成果を最大化します。"
       },
       "cta": {
         "title": "古いシステムの限界を脱ぎ捨て、変化するビジネスの波に乗ってください。",
@@ -314,10 +320,12 @@
         "desc": "標準化されたシステムの限界を超え、企業のビジネス環境に完璧に同期する知能型API統合管理プラットフォームです。"
       },
       "lifecycle": {
-        "title": "設計から収益化まで、一つのプラットフォームで完成するAPIエコシステム"
+        "title": "設計から収益化까지, 하나의 플랫폼에서 완성하는 API 생태계",
+        "subtitle": "API設計からセキュリティ設定、リアルタイム分析、収益化までの全プロセスを視覚化し、統合管理します。"
       },
       "features": {
         "title": "SyncAPIM 5大核心機能",
+        "subtitle": "エン터프라이즈 API 運用に必要なすべての機能をモジュール化し、柔軟に提供します。",
         "card1": {
           "title": "① ポリシー管理 (Policy)",
           "desc": "呼び出し制限(Rate Limiting), IP遮断などのトラフィック制御"
@@ -340,11 +348,12 @@
         }
       },
       "security": {
-        "title": "10,000 TPSの極限環境でも揺るぎないカスタムセキュリティアーキテクチャ"
+        "title": "10,000 TPSの極限環境でも揺るぎないカスタムセキュリティアーキテクチャ",
+        "subtitle": "強力なトラフィック制御とカスタムセキュリティポリシーで、企業の貴重な데이터 자산을 보호합니다."
       },
       "observability": {
         "title": "準リアルタイム分析およびインサイト",
-        "desc": "管理者と開発者にAPI使用に関する完璧なインサイトを提供"
+        "subtitle": "すべてのAPI呼び출을 실시간으로 추적하여 비즈니스 의사결정에 필요한 가시성을 제공합니다."
       },
       "cta": {
         "title": "不要な機能は削ぎ落とし、必要な機能だけを導入してください。\n今すぐカスタムAPIエコシステムを設計いたします。",

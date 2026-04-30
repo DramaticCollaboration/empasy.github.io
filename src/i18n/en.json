@@ -251,19 +251,24 @@
         "desc": "No code, no screen recording. Zero-Recording AI Test Platform where your Excel documents become executable tests instantly."
       },
       "recording": {
-        "title": "Zero-Recording Execution (Direct Excel Execution)"
+        "title": "Zero-Recording Execution (Direct Excel Execution)",
+        "subtitle": "Go beyond the limits of traditional Record & Playback with Hyper-Automation technology where documents become execution."
       },
       "healing": {
-        "title": "Intelligent testing that doesn't stop even if UI changes, and perfect pixel-level visual validation."
+        "title": "Intelligent testing that doesn't stop even if UI changes, and perfect pixel-level visual validation.",
+        "subtitle": "AI automatically recovers tests by finding elements even when the UI changes, catching errors down to the pixel level."
       },
       "dashboard": {
-        "title": "Real-time Dashboard & TestOps (Observation & Evidence)"
+        "title": "Real-time Dashboard & TestOps (Observation & Evidence)",
+        "subtitle": "Observe hundreds of parallel browser executions in real-time and analyze causes instantly with Time-Machine recording when errors occur."
       },
       "feedback": {
-        "title": "QA Partner Getting Smarter with Use, Self-Evolving AI"
+        "title": "QA Partner Getting Smarter with Use, Self-Evolving AI",
+        "subtitle": "Build a Self-Evolving AI ecosystem that learns from QA engineer feedback to increase test precision."
       },
       "cicd": {
-        "title": "CI/CD Pipeline Integration (DevOps Ecosystem)"
+        "title": "CI/CD Pipeline Integration (DevOps Ecosystem)",
+        "subtitle": "Seamlessly integrate with existing tools like Jenkins and GitHub Actions to realize Zero-Touch automation across the entire development lifecycle."
       },
       "download": {
         "title": "Start Now",
@@ -300,7 +305,8 @@
         "title": "A Perfect Time Machine Recording All Changes."
       },
       "seo": {
-        "title": "Data Proving Performance (SEO & Visitor Stats)"
+        "title": "Data Proving Performance (SEO & Visitor Stats)",
+        "subtitle": "Maximize marketing performance with built-in SEO optimization and a real-time traffic analytics dashboard."
       },
       "cta": {
         "title": "Break the limits of old systems and ride the wave of changing business.",
@@ -313,10 +319,12 @@
         "desc": "Beyond the limits of standardized systems, an intelligent API integration management platform perfectly synchronized with the corporate business environment."
       },
       "lifecycle": {
-        "title": "API Ecosystem from Design to Monetization in One Platform"
+        "title": "API Ecosystem from Design to Monetization in One Platform",
+        "subtitle": "Visually manage the entire process from API design and security configuration to real-time analytics and monetization."
       },
       "features": {
         "title": "5 Core Features of SyncAPIM",
+        "subtitle": "Provides all features required for enterprise API operations in a flexible, modularized format.",
         "card1": {
           "title": "① Policy Management",
           "desc": "Traffic control including Rate Limiting and IP blocking"
@@ -339,11 +347,12 @@
         }
       },
       "security": {
-        "title": "Customized Security Architecture Unshaken Even at 10,000 TPS"
+        "title": "Customized Security Architecture Unshaken Even at 10,000 TPS",
+        "subtitle": "Protect your valuable data assets with powerful traffic control and customized security policies."
       },
       "observability": {
         "title": "Near Real-time Analytics & Insights",
-        "desc": "Providing perfect insights into API usage for admins and developers"
+        "subtitle": "Track all API calls in real-time to provide the visibility needed for business decision-making."
       },
       "cta": {
         "title": "Remove unnecessary features and adopt only what you need.\nDesign your customized API ecosystem now.",

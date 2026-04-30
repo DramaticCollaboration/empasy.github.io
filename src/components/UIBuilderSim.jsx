@@ -180,7 +180,7 @@ const UIBuilderSim = () => {
               >
                 {item.type === 'map' ? (
                   <div style={{ height: '150px', background: '#E2E8F0', position: 'relative' }}>
-                    <div style={{ position: 'absolute', inset: 0, background: 'url(https://api.mapbox.com/styles/v1/mapbox/light-v10/static/0,0,1,0,0/400x150?access_token=pk.eyJ1IjoianVuaWUiLCJhIjoiY2xwZzR6NHI0MGptZzJpcW1yeG4yYnBsayJ9.x_ZqS7N4E8X_ZqS7N4E8Xw) center/cover' }} />
+                    <div style={{ position: 'absolute', inset: 0, background: 'url(https://api.mapbox.com/styles/v1/mapbox/light-v10/static/0,0,1,0,0/400x150) center/cover' }} />
                     <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
                       <MapIcon size={32} color="#00D1B2" />
                     </div>
