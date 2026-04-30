@@ -113,7 +113,7 @@ const SyncSeries = () => {
       {/* 6. Bottom CTA */}
       <section className="syncseries-cta-section">
         <h2>{t('syncseries.cta.title')}</h2>
-        <Link to={`/${currentLang}/contact`} className="contact-btn">{t('syncseries.cta.btn')}</Link>
+        <Link to={`/${currentLang}/contact`} state={{ interest: 'Other' }} className="contact-btn">{t('syncseries.cta.btn')}</Link>
       </section>
     </div>
   );

@@ -154,8 +154,19 @@
     },
     "syncboot": {
       "hero": {
+        "subtitle": "Breaking the Wall",
         "title": "비즈니스 민첩성을 위한 MSA 쾌속 개발 플랫폼, SyncBoot",
-        "desc": "컨테이너 관리부터 CI/CD, 모니터링, API 게이트웨이까지. E2E 클라우드 네이티브 생태계를 한 번에 구축하세요."
+        "title_gradient": "Monolithic to MSA",
+        "desc": "비즈니스 민첩성을 위한 가장 빠른 전환점. 경직된 시스템을 깨고 유연한 미래를 설계하세요.",
+        "monolith_text": "레거시 모놀리식",
+        "msa_nodes": {
+          "auth": "인증 서비스",
+          "order": "주문 관리",
+          "payment": "결제 모듈",
+          "inventory": "재고 최적화",
+          "logs": "통합 로그",
+          "gateway": "API 게이트웨이"
+        }
       },
       "values": {
         "title": "SyncBoot의 3대 핵심 경쟁력",
@@ -173,7 +184,50 @@
         }
       },
       "arch": {
-        "title": "검증된 오픈소스로 구성된 무결점 아키텍처"
+        "title": "검증된 오픈소스로 구성된 무결점 아키텍처",
+        "layers": {
+          "access": "사용자 및 외부 요청",
+          "gateway": "진입 계층 (Gateway)",
+          "service": "제어 및 서비스 계층",
+          "data": "데이터 계층 (Persistence)"
+        },
+        "tooltips": {
+          "gateway": "통합 인증 및 라우팅",
+          "service": "독립적 서비스 로직",
+          "discovery": "실시간 서비스 탐색",
+          "data": "고성능 데이터 분산 저장"
+        }
+      },
+      "cb": {
+        "title": "서킷 브레이커 시뮬레이션",
+        "status": {
+          "closed": "정상 연결",
+          "warning": "에러율 상승",
+          "open": "차단됨 (장애 격리)",
+          "half_open": "복구 시도 중"
+        },
+        "alert": "에러 임계치 초과!"
+      },
+      "tracing": {
+        "ui": "3D 분산 트레이싱 맵"
+      },
+      "logs": {
+        "cpu": "CPU 사용률 (%)",
+        "rps": "초당 요청 수 (RPS)",
+        "terminal": "STDOUT - 실시간 로그 스트림"
+      },
+      "cicd": {
+        "title": "자동화 파이프라인",
+        "stages": {
+          "build": "빌드 중",
+          "test": "테스트 검증",
+          "deploy": "배포 완료"
+        }
+      },
+      "uibuilder": {
+        "palette": "UI 컴포넌트 창고",
+        "properties": "상세 설정",
+        "ready": "배포 준비 완료!"
       },
       "observability": {
         "title": "통합 모니터링 및 배포 자동화",
@@ -304,6 +358,7 @@
       },
       "syncshop": {
         "title": "초유연 커머스 아키텍처 (SyncShop: Headless eCommerce)",
+        "subtitle": "백엔드와 프론트엔드가 분리되어 모든 채널에 즉시 대응하는 초유연 커머스 아키텍처",
         "pms": "PMS (상품)",
         "pmsDesc": "[SKU 재고 연동 애니메이션]",
         "oms": "OMS (주문/물류)",
@@ -315,6 +370,7 @@
       },
       "logistics": {
         "title": "데이터가 예측하고, AI가 최적의 경로를 그립니다.",
+        "subtitle": "AI 알고리즘을 통한 허브별 재고 선배치 및 배송 경로 최적화",
         "optimized": "[최적화된 직선 경로 맵]",
         "messy": "[복잡하게 꼬인 경로 맵]",
         "alertTime": "배송 시간 약 22분 단축",
@@ -324,12 +380,14 @@
       },
       "docai": {
         "title": "지식 자산화 및 문서 자동화 (Document AI & Enterprise RAG)",
+        "subtitle": "비정형 물류 데이터를 지능적으로 구조화하여 지식 자산으로 전환",
         "ocr": "OCR 품질 97.4% 확보",
         "chatUser": "최근 수도권 배송 지연 원인을 분석해 줘",
         "chatAi": "WMS 로그 및 VOC 분석 결과, 수도권 A허브의 물량 집중이 원인입니다.\n해결책: 수도권 A허브 재고를 12% 선배치할 것을 권장합니다."
       },
       "kpi": {
         "title": "MLOps 및 도입 기대 효과",
+        "subtitle": "인프라 최적화 및 비용 절감, 생산성 증대 효과를 수치로 증명",
         "card1": {
           "title": "물류 운영 비용 절감",
           "desc": "물류 최적화 알고리즘"
@@ -387,6 +445,60 @@
         "penta": {
           "subtitle": "차세대 API 보안(WAAP) 통합 플랫폼",
           "solution": "SyncAPIM, SyncBoot"
+        }
+      },
+      "vvs": {
+        "status": {
+          "scanning": "분석 중...",
+          "match": "일치율",
+          "verified": "검증 완료"
+        }
+      },
+      "svm": {
+        "metrics": {
+          "users": "임직원 사용자"
+        },
+        "security": {
+          "access": "보안 승인",
+          "vault": "데이터 저장소"
+        }
+      },
+      "dip": {
+        "process": {
+          "ingesting": "데이터 수집 중",
+          "cleaning": "데이터 정제",
+          "analysis": "분석 완료"
+        }
+      },
+      "gfs": {
+        "action": {
+          "syncing": "국가별 동기화 중"
+        },
+        "status": {
+          "allupdated": "전 국가 업데이트 완료"
+        },
+        "metric": {
+          "countries": "15개국 통합 관리"
+        }
+      },
+      "inw": {
+        "process": {
+          "verifying": "인터랙션 검증 중"
+        },
+        "result": {
+          "passed": "모든 테스트 통과"
+        },
+        "metric": {
+          "coverage": "테스트 커버리지"
+        }
+      },
+      "sdd": {
+        "alert": {
+          "monitoring": "실시간 모니터링 중",
+          "defended": "위협 방어 완료"
+        },
+        "metric": {
+          "latency": "응답 지연 시간"
         }
       },
       "metrics": {
@@ -498,6 +610,8 @@
         "btnPrev": "이전",
         "btnNext": "다음",
         "btnSubmit": "프로젝트 문의 제출하기",
+        "btnSubmitting": "전송 중...",
+        "errorSubmit": "전송에 실패했습니다. 나중에 다시 시도해 주세요.",
         "successTitle": "성공적으로 접수되었습니다.",
         "successDesc": "24시간 이내에 전문가가 연락드리겠습니다.",
         "btnReset": "새로운 문의 남기기"
@@ -513,13 +627,13 @@
         "title": "Contact Info",
         "manager": "총괄 담당자: 오병문 대표 (이사)",
         "email": "이메일: poh@empasy.com",
-        "phone": "연락처: 010-3420-8169"
+        "phone": "연락처: 0507-1360-8169"
       }
     },
     "footer": {
       "desc": "비즈니스 민첩성을 위한 완벽한 동기화",
-      "address": "서울특별시 강남구 ...",
-      "contact": "연락처: info@empasy.com",
+      "address": "서울 금천구 가산디지털1로 205-27 2층 FAC 208호",
+      "contact": "연락처: poh@empasy.com",
       "rights": "All rights reserved."
     }
   }

@@ -16,6 +16,16 @@ import { ThemeProvider } from './context/ThemeContext';
 import { detectLanguage } from './utils/languageDetector';
 import './styles/global.css';
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 const LanguageRedirect = ({ children }) => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -61,6 +71,7 @@ function App() {
   return (
     <ThemeProvider>
       <Router>
+        <ScrollToTop />
         <LanguageRedirect>
           <Routes>
             <Route path="/:lang" element={<Layout />}>

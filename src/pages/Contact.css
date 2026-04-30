@@ -316,3 +316,64 @@
   display: inline-block;
   width: 100px;
 }
+
+/* Responsive Styles */
+@media (max-width: 968px) {
+  .contact-main-layout {
+    flex-direction: column;
+    padding: 0 1.5rem;
+  }
+
+  .inquiry-form-section {
+    padding: 2rem !important;
+  }
+
+  .process-timeline {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .process-line {
+    display: none;
+  }
+
+  .interest-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .globe-placeholder {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero-section {
+    padding: 6rem 1.5rem !important;
+  }
+
+  .contact-hero-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .typewriter-text {
+    font-size: 1rem;
+    white-space: normal;
+    border-right: none;
+    animation: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .step-actions {
+    flex-direction: column;
+  }
+
+  .btn-prev, .btn-next, .submit-btn {
+    width: 100%;
+  }
+}

@@ -153,8 +153,19 @@
     },
     "syncboot": {
       "hero": {
+        "subtitle": "Breaking the Wall",
         "title": "Rapid MSA Development Platform for Business Agility, SyncBoot",
-        "desc": "From container management to CI/CD, monitoring, and API gateway. Build an E2E cloud-native ecosystem at once."
+        "title_gradient": "Monolithic to MSA",
+        "desc": "The fastest turning point for business agility. Break rigid systems and design a flexible future.",
+        "monolith_text": "Legacy Monolithic",
+        "msa_nodes": {
+          "auth": "Auth Service",
+          "order": "Order Management",
+          "payment": "Payment Module",
+          "inventory": "Inventory Opt.",
+          "logs": "Centralized Logs",
+          "gateway": "API Gateway"
+        }
       },
       "values": {
         "title": "3 Core Competencies of SyncBoot",
@@ -172,7 +183,50 @@
         }
       },
       "arch": {
-        "title": "Flawless Architecture Composed of Proven Open Source"
+        "title": "Flawless Architecture Composed of Proven Open Source",
+        "layers": {
+          "access": "User & External Requests",
+          "gateway": "Gateway Layer",
+          "service": "Control & Service Layer",
+          "data": "Persistence Layer"
+        },
+        "tooltips": {
+          "gateway": "Auth & Unified Routing",
+          "service": "Independent Service Logic",
+          "discovery": "Real-time Service Discovery",
+          "data": "High-perf Data Storage"
+        }
+      },
+      "cb": {
+        "title": "Circuit Breaker Simulation",
+        "status": {
+          "closed": "Connected",
+          "warning": "High Error Rate",
+          "open": "Circuit Opened",
+          "half_open": "Recovering"
+        },
+        "alert": "Error Threshold Exceeded!"
+      },
+      "tracing": {
+        "ui": "3D Distributed Tracing Map"
+      },
+      "logs": {
+        "cpu": "CPU Usage (%)",
+        "rps": "Requests Per Second (RPS)",
+        "terminal": "STDOUT - Real-time Log Stream"
+      },
+      "cicd": {
+        "title": "Automation Pipeline",
+        "stages": {
+          "build": "Building",
+          "test": "Testing",
+          "deploy": "Deployed"
+        }
+      },
+      "uibuilder": {
+        "palette": "UI Components",
+        "properties": "Properties",
+        "ready": "Ready to Deploy!"
       },
       "observability": {
         "title": "Integrated Monitoring & Deployment Automation",
@@ -303,6 +357,7 @@
       },
       "syncshop": {
         "title": "Ultra-flexible Commerce Architecture (SyncShop: Headless eCommerce)",
+        "subtitle": "Ultra-flexible commerce architecture with decoupled backend and frontend for instant channel response",
         "pms": "PMS (Product)",
         "pmsDesc": "[SKU Inventory Sync Animation]",
         "oms": "OMS (Order/Logistics)",
@@ -314,6 +369,7 @@
       },
       "logistics": {
         "title": "Data Predicts, and AI Draws Optimal Routes.",
+        "subtitle": "Inventory pre-positioning by hub and delivery route optimization via AI algorithms",
         "optimized": "[Optimized Straight Route Map]",
         "messy": "[Complex Tangled Route Map]",
         "alertTime": "Delivery time reduced by ~22 mins",
@@ -323,12 +379,14 @@
       },
       "docai": {
         "title": "Knowledge Assetization & Document Automation (Document AI & Enterprise RAG)",
+        "subtitle": "Intelligently structure unstructured logistics data into knowledge assets",
         "ocr": "OCR Quality 97.4% Secured",
         "chatUser": "Analyze the cause of recent metropolitan delivery delays",
         "chatAi": "WMS log and VOC analysis show volume concentration at Hub A.\nSolution: Recommend pre-positioning 12% of inventory at Hub A."
       },
       "kpi": {
         "title": "MLOps & Expected ROI",
+        "subtitle": "Proving infrastructure optimization, cost reduction, and productivity gains with data",
         "card1": {
           "title": "Logistics Cost Reduction",
           "desc": "Logistics optimization algorithm"
@@ -386,6 +444,60 @@
         "penta": {
           "subtitle": "Next-Gen API Security (WAAP) Platform",
           "solution": "SyncAPIM, SyncBoot"
+        }
+      },
+      "vvs": {
+        "status": {
+          "scanning": "Scanning...",
+          "match": "Match Rate",
+          "verified": "Verified"
+        }
+      },
+      "svm": {
+        "metrics": {
+          "users": "Total Users"
+        },
+        "security": {
+          "access": "Access Granted",
+          "vault": "Data Vault"
+        }
+      },
+      "dip": {
+        "process": {
+          "ingesting": "Ingesting Data",
+          "cleaning": "Data Cleansing",
+          "analysis": "Analysis Done"
+        }
+      },
+      "gfs": {
+        "action": {
+          "syncing": "Syncing Across Regions"
+        },
+        "status": {
+          "allupdated": "All Regions Updated"
+        },
+        "metric": {
+          "countries": "15 Countries Integrated"
+        }
+      },
+      "inw": {
+        "process": {
+          "verifying": "Verifying Interaction"
+        },
+        "result": {
+          "passed": "All Tests Passed"
+        },
+        "metric": {
+          "coverage": "Test Coverage"
+        }
+      },
+      "sdd": {
+        "alert": {
+          "monitoring": "Live Monitoring",
+          "defended": "Threat Defended"
+        },
+        "metric": {
+          "latency": "Response Latency"
         }
       },
       "metrics": {
@@ -497,6 +609,8 @@
         "btnPrev": "Prev",
         "btnNext": "Next",
         "btnSubmit": "Submit Inquiry",
+        "btnSubmitting": "Sending...",
+        "errorSubmit": "Failed to send. Please try again later.",
         "successTitle": "Successfully received.",
         "successDesc": "An expert will contact you within 24 hours.",
         "btnReset": "Leave a new inquiry"
@@ -518,7 +632,7 @@
     "footer": {
       "desc": "Perfect synchronization for business agility",
       "address": "Gangnam-gu, Seoul...",
-      "contact": "Contact: info@empasy.com",
+      "contact": "Contact: poh@empasy.com",
       "rights": "All rights reserved."
     }
   }

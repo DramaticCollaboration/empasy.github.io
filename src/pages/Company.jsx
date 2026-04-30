@@ -3,24 +3,20 @@ import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './Company.css';
 
+import CompanyLogoSynergy from '../components/CompanyLogoSynergy';
+import CompanyProjectFadeIn from '../components/CompanyProjectFadeIn';
+import CompanyDarkMap from '../components/CompanyDarkMap';
+
 const Company = () => {
   const { t } = useTranslation();
   const { lang } = useParams();
   const currentLang = lang || 'ko';
+
   return (
     <div className="company-container">
       {/* 1. Hero Section */}
       <section className="company-hero-section">
-        <div className="hero-content">
-          <h1>{t('company.hero.title')}</h1>
-          <p>{t('company.hero.desc')}</p>
-          <div className="typography-animation-placeholder">
-            [3D Particles gathering to form "EMPASY" logo here]
-          </div>
-          <div className="scroll-guide">
-            {t('company.hero.scroll')} <span className="pulse-arrow">↓</span>
-          </div>
-        </div>
+        <CompanyLogoSynergy />
       </section>
 
       {/* 2. Core Values */}
@@ -71,46 +67,7 @@ const Company = () => {
         <div className="section-header">
           <h2>{t('company.history.title')}</h2>
         </div>
-        <div className="timeline-container">
-          <div className="timeline-line"></div>
-          <div className="timeline-item">
-            <div className="timeline-dot"></div>
-            <div className="timeline-content">
-              <h3>2020. 10</h3>
-              <p>{t('company.history.item1')}</p>
-            </div>
-            <div className="timeline-image-placeholder">[SyncCMS Screenshot Fade-in]</div>
-          </div>
-          <div className="timeline-item">
-            <div className="timeline-dot"></div>
-            <div className="timeline-content">
-              <h3>2023. 01</h3>
-              <p>{t('company.history.item2')}</p>
-            </div>
-            <div className="timeline-image-placeholder">[SyncBoot Architecture Fade-in]</div>
-          </div>
-          <div className="timeline-item">
-            <div className="timeline-dot"></div>
-            <div className="timeline-content">
-              <h3>2024. 03</h3>
-              <p>{t('company.history.item3')}</p>
-            </div>
-          </div>
-          <div className="timeline-item">
-            <div className="timeline-dot"></div>
-            <div className="timeline-content">
-              <h3>2025. 01</h3>
-              <p>{t('company.history.item4')}</p>
-            </div>
-          </div>
-          <div className="timeline-item highlight">
-            <div className="timeline-dot pulse"></div>
-            <div className="timeline-content">
-              <h3>2026 (Vision)</h3>
-              <p>{t('company.history.item5')}</p>
-            </div>
-          </div>
-        </div>
+        <CompanyProjectFadeIn />
       </section>
 
       {/* 4. Leadership & Expert Team */}
@@ -175,14 +132,10 @@ const Company = () => {
 
       {/* 6. Location & Contact CTA */}
       <section className="company-cta-section">
-        <div className="location-container">
-          <div className="map-placeholder">
-            [Dark Mode Map Embed with Ping Marker here]
-          </div>
-        </div>
+        <CompanyDarkMap />
         <div className="cta-content">
           <h2>{t('company.cta.title')}</h2>
-          <Link to={`/${currentLang}/contact`} className="magnetic-btn">{t('company.cta.btn')}</Link>
+          <Link to={`/${currentLang}/contact`} state={{ interest: 'Other' }} className="magnetic-btn">{t('company.cta.btn')}</Link>
         </div>
       </section>
     </div>

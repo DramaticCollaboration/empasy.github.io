@@ -147,7 +147,7 @@ const Hydra = () => {
       {/* 5. CTA */}
       <section className="hydra-cta-section">
         <h2>{t('hydra.cta.title').split('\n').map((line, i) => <React.Fragment key={i}>{line}<br/></React.Fragment>)}</h2>
-        <Link to={`/${currentLang}/contact`} className="contact-btn">{t('hydra.cta.btn')}</Link>
+        <Link to={`/${currentLang}/contact`} state={{ interest: 'SyncBoot' }} className="contact-btn">{t('hydra.cta.btn')}</Link>
       </section>
     </div>
   );

@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 import './Contact.css';
+import ContactGlobalGlobe from '../components/ContactGlobalGlobe';
 
 const Contact = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+  
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     interest: '',
@@ -12,7 +16,17 @@ const Contact = () => {
     name: '',
     email: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
+
+  // Sync interest from location state
+  useEffect(() => {
+    if (location.state?.interest) {
+      setFormData(prev => ({ ...prev, interest: location.state.interest }));
+      setStep(2);
+    }
+  }, [location.state]);
 
   const handleInterestSelect = (interest) => {
     setFormData({ ...formData, interest });
@@ -23,9 +37,38 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    const payload = {
+      name: formData.name,
+      email: formData.email,
+      subject: `[Empasy Contact] ${formData.interest}`,
+      content: `Company: ${formData.company}\n\nQuestion:\n${formData.detailQuestion}`
+    };
+
+    try {
+      const response = await fetch('https://7f4wwc40if.execute-api.ap-northeast-2.amazonaws.com/dev/email-contact-us-template-dev-sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        throw new Error('Failed to send email');
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      setSubmitError(t('contact.form.errorSubmit'));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const getDynamicQuestion = () => {
@@ -103,12 +146,13 @@ const Contact = () => {
                     <input type="text" name="name" placeholder={t('contact.form.placeholderName')} onChange={handleInputChange} required />
                     <input type="email" name="email" placeholder={t('contact.form.placeholderEmail')} onChange={handleInputChange} required />
                     <div className="step-actions">
-                      <button type="button" className="btn-prev" onClick={() => setStep(2)}>{t('contact.form.btnPrev')}</button>
+                      <button type="button" className="btn-prev" onClick={() => setStep(2)} disabled={isSubmitting}>{t('contact.form.btnPrev')}</button>
                       {/* 6. Final CTA */}
-                      <button type="submit" className="submit-btn">
-                        {t('contact.form.btnSubmit')} <span className="paper-plane">✈️</span>
+                      <button type="submit" className="submit-btn" disabled={isSubmitting}>
+                        {isSubmitting ? t('contact.form.btnSubmitting') || 'Sending...' : t('contact.form.btnSubmit')} <span className="paper-plane">✈️</span>
                       </button>
                     </div>
+                    {submitError && <p className="error-message">{submitError}</p>}
                   </div>
                 )}
               </form>
@@ -121,6 +165,7 @@ const Contact = () => {
               </div>
             )}
           </section>
+
 
           {/* 5. How we work */}
           <section className="process-section">
@@ -155,10 +200,8 @@ const Contact = () => {
         <div className="info-column">
           {/* 2. Global Network & Contact Info */}
           <section className="global-network-section">
-            <div className="globe-placeholder">
-              [Interactive 3D Globe Map with Seoul, California, Tokyo nodes here]
-            </div>
             <div className="contact-info-card">
+              <ContactGlobalGlobe />
               <h3>{t('contact.info.title')}</h3>
               <ul>
                 <li><strong>{t('contact.info.manager').split(':')[0]}:</strong> {t('contact.info.manager').split(':')[1]}</li>

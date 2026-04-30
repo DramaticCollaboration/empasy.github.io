@@ -154,8 +154,19 @@
     },
     "syncboot": {
       "hero": {
+        "subtitle": "Breaking the Wall",
         "title": "ビジネスの俊敏性のためのMSA高速開発プラットフォーム、SyncBoot",
-        "desc": "コンテナ管理からCI/CD, モニタリング, APIゲートウェイまで。E2Eクラウドネイティブ・エコシステムを一度に構築します。"
+        "title_gradient": "Monolithic to MSA",
+        "desc": "ビジネスの俊敏性のための最も速い転換点。硬直したシステムを打破し、柔軟な未来を設計してください。",
+        "monolith_text": "レガシーモノリス",
+        "msa_nodes": {
+          "auth": "認証サービス",
+          "order": "注文管理",
+          "payment": "決済モジュール",
+          "inventory": "在庫最適化",
+          "logs": "統合ログ",
+          "gateway": "APIゲートウェイ"
+        }
       },
       "values": {
         "title": "SyncBootの3大核心競争力",
@@ -173,7 +184,50 @@
         }
       },
       "arch": {
-        "title": "検証済みのオープンソースで構成された無欠陥アーキテクチャ"
+        "title": "検証済みのオープンソースで構成された無欠陥アーキテクチャ",
+        "layers": {
+          "access": "ユーザーおよび外部リクエスト",
+          "gateway": "ゲートウェイ層",
+          "service": "制御・サービス層",
+          "data": "永続化データ層"
+        },
+        "tooltips": {
+          "gateway": "統合認証およびルーティング",
+          "service": "独立したサービスロジック",
+          "discovery": "リアルタイムサービス探索",
+          "data": "高性能データ分散ストレージ"
+        }
+      },
+      "cb": {
+        "title": "サーキットブレーカーシミュレーション",
+        "status": {
+          "closed": "正常接続",
+          "warning": "エラー率上昇",
+          "open": "遮断済み",
+          "half_open": "復旧試行中"
+        },
+        "alert": "エラー閾値超過！"
+      },
+      "tracing": {
+        "ui": "3D分散トレーシングマップ"
+      },
+      "logs": {
+        "cpu": "CPU使用率 (%)",
+        "rps": "秒間リクエスト数 (RPS)",
+        "terminal": "STDOUT - リアルタイムログストリーム"
+      },
+      "cicd": {
+        "title": "自動化パイプライン",
+        "stages": {
+          "build": "ビルド中",
+          "test": "テスト検証",
+          "deploy": "デプロイ完了"
+        }
+      },
+      "uibuilder": {
+        "palette": "UIコンポーネント",
+        "properties": "プロパティ設定",
+        "ready": "デプロイ準備完了！"
       },
       "observability": {
         "title": "統合モニタリングおよびデプロイ自動化",
@@ -304,6 +358,7 @@
       },
       "syncshop": {
         "title": "超柔軟コマースアーキテクチャ (SyncShop: Headless eCommerce)",
+        "subtitle": "バックエンドとフロントエンドが分離され、すべてのチャネルに即座に対応する超柔軟なコマースアーキテクチャ",
         "pms": "PMS (商品)",
         "pmsDesc": "[SKU在庫連動アニメーション]",
         "oms": "OMS (注文/物流)",
@@ -315,6 +370,7 @@
       },
       "logistics": {
         "title": "データが予測し、AIが最適な経路を描きます。",
+        "subtitle": "AIアルゴリズムによるハブ別在庫の事前配置および配送ルートの最適化",
         "optimized": "[最適化された直線経路マップ]",
         "messy": "[複雑に絡み合った経路マップ]",
         "alertTime": "配送時間を約22分短縮",
@@ -324,12 +380,14 @@
       },
       "docai": {
         "title": "知識資産化および文書自動化 (Document AI & Enterprise RAG)",
+        "subtitle": "非定型物流データをインテリジェントに構造化し、知識資産に転換",
         "ocr": "OCR品質 97.4% 確保",
         "chatUser": "最近の首都圏の配送遅延の原因を分析して",
         "chatAi": "WMSログおよびVOC分析の結果, 首都圏Aハブへの物量集中が原因です。\n解決策: 首都圏Aハブの在庫を12%先行配置することを推奨します。"
       },
       "kpi": {
         "title": "MLOpsおよび導入期待効果",
+        "subtitle": "インフラの最適化、コスト削減、生産性向上効果を数値で証明",
         "card1": {
           "title": "物流運営コストの削減",
           "desc": "物流最適化アルゴリズム"
@@ -387,6 +445,58 @@
         "penta": {
           "subtitle": "次世代 API セキュリティ(WAAP) 統合プラットフォーム",
           "solution": "SyncAPIM, SyncBoot"
+        }
+      },
+      "vvs": {
+        "status": {
+          "scanning": "スキャン中...",
+          "match": "一致率",
+          "verified": "検証完了"
+        }
+      },
+      "svm": {
+        "metrics": {
+          "users": "従業員ユーザー"
+        },
+        "security": {
+          "access": "アクセス承認",
+          "vault": "データ保管庫"
+        }
+      },
+      "dip": {
+        "process": {
+          "ingesting": "データ収集会中",
+          "cleaning": "データ精製",
+          "analysis": "分析完了"
+        }
+      },
+      "gfs": {
+        "action": {
+          "syncing": "地域別同期中"
+        },
+        "status": {
+          "allupdated": "全地域更新完了"
+        },
+        "metric": {
+          "countries": "15カ国統合管理"
+        }
+      },
+      "inw": {
+        "process": {
+          "verifying": "インタラクション検証中"
+        },
+        "result": {
+          "passed": "すべてのテストに合格",
+          "coverage": "テストカバレッジ"
+        }
+      },
+      "sdd": {
+        "alert": {
+          "monitoring": "リアルタイム監視中",
+          "defended": "脅威防御完了"
+        },
+        "metric": {
+          "latency": "応答遅延時間"
         }
       },
       "metrics": {
@@ -498,6 +608,8 @@
         "btnPrev": "以前",
         "btnNext": "次へ",
         "btnSubmit": "プロジェクトのお問い合わせを送信",
+        "btnSubmitting": "送信中...",
+        "errorSubmit": "送信に失敗しました。後でもう一度お試しください。",
         "successTitle": "正常に受け付けられました。",
         "successDesc": "24時間以内に専門家からご連絡いたします。",
         "btnReset": "新しいお問い合わせを残す"
@@ -519,7 +631,7 @@
     "footer": {
       "desc": "ビジネスの俊敏性のための完璧な同期",
       "address": "東京都...",
-      "contact": "連絡先: info@empasy.com",
+      "contact": "連絡先: poh@empasy.com",
       "rights": "All rights reserved."
     }
   }

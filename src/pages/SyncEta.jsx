@@ -3,10 +3,17 @@ import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './SyncEta.css';
 
+import EtaSelfHealing from '../components/EtaSelfHealing';
+import EtaVisualQA from '../components/EtaVisualQA';
+import EtaDashboardForensics from '../components/EtaDashboardForensics';
+import EtaAILoop from '../components/EtaAILoop';
+import EtaPipelineDomino from '../components/EtaPipelineDomino';
+
 const SyncEta = () => {
   const { t } = useTranslation();
   const { lang } = useParams();
   const currentLang = lang || 'ko';
+
   return (
     <div className="synceta-container">
       {/* 1. Hero Section */}
@@ -14,9 +21,8 @@ const SyncEta = () => {
         <div className="hero-content">
           <h1>{t('synceta.hero.title')}</h1>
           <p>{t('synceta.hero.desc')}</p>
-          {/* Placeholder for Typing & Transformation Motion */}
-          <div className="excel-to-code-placeholder">
-            [Excel cell typing "결제 플로우 테스트" and shattering into Playwright code here]
+          <div className="hero-visual">
+            <EtaAILoop />
           </div>
         </div>
       </section>
@@ -25,10 +31,10 @@ const SyncEta = () => {
       <section className="zero-recording-section">
         <div className="section-header">
           <h2>{t('synceta.recording.title')}</h2>
+          <p>{t('synceta.recording.subtitle')}</p>
         </div>
-        {/* Placeholder for Before & After comparison */}
-        <div className="before-after-placeholder">
-          [Scroll interaction: Manual Coding (AS-IS) vs AI Direct Execution (TO-BE) pipeline motion here]
+        <div className="interactive-container">
+          <EtaPipelineDomino />
         </div>
       </section>
 
@@ -36,15 +42,16 @@ const SyncEta = () => {
       <section className="self-healing-section">
         <div className="section-header">
           <h2>{t('synceta.healing.title')}</h2>
+          <p>{t('synceta.healing.subtitle')}</p>
         </div>
-        <div className="healing-visual-container">
-          {/* Placeholder for Interactive Self-Healing Simulator */}
-          <div className="healing-simulator-placeholder">
-            [Interactive Drag &amp; Drop button simulator with AI laser recovery here]
+        <div className="dual-visual-grid">
+          <div className="visual-card">
+            <h3>{t('synceta.healing.card1.title', 'AI Self-Healing')}</h3>
+            <EtaSelfHealing />
           </div>
-          {/* Placeholder for Visual Regression Magnifier */}
-          <div className="visual-qa-placeholder">
-            [Hover magnifier to detect 1px UI layout bug here]
+          <div className="visual-card">
+            <h3>{t('synceta.healing.card2.title', 'Visual Regression')}</h3>
+            <EtaVisualQA />
           </div>
         </div>
       </section>
@@ -53,10 +60,10 @@ const SyncEta = () => {
       <section className="testops-dashboard-section">
         <div className="section-header">
           <h2>{t('synceta.dashboard.title')}</h2>
+          <p>{t('synceta.dashboard.subtitle')}</p>
         </div>
-        {/* Placeholder for Live Dashboard Animation */}
-        <div className="dashboard-animation-placeholder">
-          [Live dashboard UI with data waves and hover video playback for error logs here]
+        <div className="interactive-container">
+          <EtaDashboardForensics />
         </div>
       </section>
 
@@ -64,10 +71,10 @@ const SyncEta = () => {
       <section className="ai-feedback-section">
         <div className="section-header">
           <h2>{t('synceta.feedback.title')}</h2>
+          <p>{t('synceta.feedback.subtitle')}</p>
         </div>
-        {/* Placeholder for Infinite Loop Animation */}
-        <div className="feedback-loop-placeholder">
-          [Infinite loop pipeline with data particles and accuracy chart drawing here]
+        <div className="interactive-container">
+          <EtaAILoop />
         </div>
       </section>
 
@@ -75,10 +82,10 @@ const SyncEta = () => {
       <section className="cicd-integration-section">
         <div className="section-header">
           <h2>{t('synceta.cicd.title')}</h2>
+          <p>{t('synceta.cicd.subtitle')}</p>
         </div>
-        {/* Placeholder for Dropdown Pipeline Routing */}
-        <div className="pipeline-routing-placeholder">
-          [Domino-like pipeline workflow from Commit to Slack notification on a conveyor belt here]
+        <div className="interactive-container">
+          <EtaPipelineDomino />
         </div>
       </section>
 
@@ -107,7 +114,7 @@ const SyncEta = () => {
       {/* 7. Bottom CTA */}
       <section className="synceta-cta-section">
         <h2>{t('synceta.cta.title')}</h2>
-        <Link to={`/${currentLang}/contact`} className="contact-btn">{t('synceta.cta.btn')}</Link>
+        <Link to={`/${currentLang}/contact`} state={{ interest: 'SyncEta' }} className="contact-btn">{t('synceta.cta.btn')}</Link>
       </section>
     </div>
   );

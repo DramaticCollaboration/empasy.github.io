@@ -46,10 +46,10 @@
 
 .architecture-animation-placeholder {
   margin-top: 3rem;
-  padding: 4rem 2rem;
-  border: 1px dashed rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.5);
-  font-style: italic;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* 2. Core Values */
@@ -97,14 +97,8 @@
 }
 
 /* 3. Interactive Architecture Map */
-.svg-map-placeholder {
-  height: 400px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.5);
-  font-style: italic;
+.architecture-map-section {
+  padding: 8rem 2rem !important;
 }
 
 /* 4. Observability & DevOps */
@@ -140,29 +134,24 @@
 
 .tab-content {
   flex: 1;
-  background: #111;
-  border-radius: 10px;
-  padding: 2rem;
-  min-height: 300px;
+  background: #0F172A;
+  border-radius: 12px;
+  padding: 1rem;
+  min-height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .dashboard-placeholder {
-  color: rgba(255, 255, 255, 0.5);
-  font-style: italic;
+  width: 100%;
+  height: 100%;
 }
 
 /* 5. UI Framework & Admin */
-.drag-drop-placeholder {
-  height: 300px;
-  border: 2px dashed rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.5);
-  font-style: italic;
+.ui-framework-section {
+  padding: 8rem 2rem !important;
 }
 
 /* 6. CTA Section */

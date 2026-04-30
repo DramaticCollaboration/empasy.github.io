@@ -2,6 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import CubeAnimation from '../components/CubeAnimation';
+import ArchitectureMap from '../components/ArchitectureMap';
+import CircuitBreaker from '../components/CircuitBreaker';
+import SkyWalking3D from '../components/SkyWalking3D';
+import LogGrafana from '../components/LogGrafana';
+import CICDPipeline from '../components/CICDPipeline';
+import UIBuilder from '../components/UIBuilder';
 import './SyncBoot.css';
 
 const SyncBoot = () => {
@@ -19,10 +25,10 @@ const SyncBoot = () => {
   }, []);
 
   const tabContent = {
-    circuit: '[Dashboard animation for Circuit Breaker will be here]',
-    tracing: '[3D Node topology for SkyWalking will be here]',
-    logs: '[Streaming terminal logs and Grafana charts will be here]',
-    cicd: '[Progress bar for Jenkins/GitLab pipeline will be here]',
+    circuit: <CircuitBreaker />,
+    tracing: <SkyWalking3D />,
+    logs: <LogGrafana />,
+    cicd: <CICDPipeline />,
   };
 
   return (
@@ -67,10 +73,7 @@ const SyncBoot = () => {
         <div className="section-header">
           <h2>{t('syncboot.arch.title')}</h2>
         </div>
-        {/* Placeholder for interactive SVG map */}
-        <div className="svg-map-placeholder">
-          [Interactive SVG Architecture Map will be here]
-        </div>
+        <ArchitectureMap />
       </section>
 
       {/* 4. Observability & DevOps */}
@@ -118,16 +121,13 @@ const SyncBoot = () => {
         <div className="section-header">
           <h2>{t('syncboot.framework.title')}</h2>
         </div>
-        {/* Placeholder for Drag & Drop simulation */}
-        <div className="drag-drop-placeholder">
-          [Drag &amp; Drop UI builder simulation will be here]
-        </div>
+        <UIBuilder />
       </section>
 
       {/* 6. Bottom CTA */}
       <section className="syncboot-cta-section">
         <h2>{t('syncboot.cta.title')}</h2>
-        <Link to={`/${currentLang}/contact`} className="contact-btn">{t('syncboot.cta.btn')}</Link>
+        <Link to={`/${currentLang}/contact`} state={{ interest: 'SyncBoot' }} className="contact-btn">{t('syncboot.cta.btn')}</Link>
       </section>
     </div>
   );

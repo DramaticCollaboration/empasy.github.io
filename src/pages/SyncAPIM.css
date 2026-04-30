@@ -208,3 +208,54 @@
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(58, 134, 255, 0.3);
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .syncapim-hero-section h1 {
+    font-size: 2.8rem;
+  }
+  
+  .core-features-section .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .syncapim-container section {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .syncapim-hero-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .syncapim-hero-section p {
+    font-size: 1rem;
+  }
+
+  .core-features-section .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .architecture-map-placeholder,
+  .shield-simulator-placeholder,
+  .data-streaming-placeholder,
+  .custom-dashboard-placeholder {
+    height: 250px;
+    padding: 1rem;
+  }
+
+  .syncapim-cta-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .syncapim-hero-section h1 {
+    font-size: 1.8rem;
+  }
+}

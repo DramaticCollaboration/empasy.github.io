@@ -313,3 +313,80 @@
   margin-bottom: 3rem;
   line-height: 1.4;
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .hydra-hero-section h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hydra-container section {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .hydra-hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .prompt-text {
+    font-size: 0.9rem;
+    white-space: normal;
+    border-right: none;
+    animation: none;
+  }
+
+  .gpu-nodes {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .scroll-telling-container {
+    flex-direction: column;
+  }
+
+  .pipeline-visual {
+    position: static;
+    margin-bottom: 2rem;
+  }
+
+  .agent-animation {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .benefits-grid {
+    flex-direction: column;
+  }
+
+  .benefit-card {
+    padding: 2rem;
+  }
+
+  .benefit-value {
+    font-size: 2rem;
+  }
+
+  .benefit-value .before {
+    font-size: 1.5rem;
+  }
+
+  .hydra-cta-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hydra-hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .benefit-value {
+    font-size: 1.8rem;
+  }
+}

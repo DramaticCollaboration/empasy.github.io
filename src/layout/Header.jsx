@@ -10,6 +10,7 @@ const Header = () => {
   const { theme, toggleTheme } = useTheme();
   const { lang } = useParams();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const changeLanguage = (newLang) => {
     i18n.changeLanguage(newLang);
@@ -21,15 +22,24 @@ const Header = () => {
     } else {
        navigate(`/${newLang}`);
     }
+    setIsMobileMenuOpen(false);
   };
 
   const currentLang = lang || 'ko';
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <Link to={`/${currentLang}`}>
+          <Link to={`/${currentLang}`} onClick={closeMobileMenu}>
             <img 
               src="/empasy-logo_white.svg" 
               alt="EMPASY Logo" 
@@ -37,29 +47,48 @@ const Header = () => {
             />
           </Link>
         </div>
-        <nav className="nav-menu">
+
+        <button className={`mobile-menu-toggle ${isMobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav className={`nav-menu ${isMobileMenuOpen ? 'open' : ''}`}>
           <ul>
-            <li><Link to={`/${currentLang}/hydra`}>{t('nav.aiInfra')}</Link></li>
+            <li><Link to={`/${currentLang}/hydra`} onClick={closeMobileMenu}>{t('nav.aiInfra')}</Link></li>
             <li 
               className="dropdown"
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <Link to={`/${currentLang}/sync-series`}>{t('nav.syncSeries')}</Link>
+              <div className="dropdown-trigger">
+                <Link to={`/${currentLang}/sync-series`} onClick={closeMobileMenu}>{t('nav.syncSeries')}</Link>
+                <button className="dropdown-toggle-btn" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>▼</button>
+              </div>
               <ul className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}>
-                <li><Link to={`/${currentLang}/sync-series`} onClick={() => setIsDropdownOpen(false)}>{t('nav.intro')}</Link></li>
-                <li><Link to={`/${currentLang}/syncboot`} onClick={() => setIsDropdownOpen(false)}>{t('nav.syncboot')}</Link></li>
-                <li><Link to={`/${currentLang}/synccms`} onClick={() => setIsDropdownOpen(false)}>{t('nav.synccms')}</Link></li>
-                <li><Link to={`/${currentLang}/syncapim`} onClick={() => setIsDropdownOpen(false)}>{t('nav.syncapim')}</Link></li>
-                <li><Link to={`/${currentLang}/synceta`} onClick={() => setIsDropdownOpen(false)}>{t('nav.synceta')}</Link></li>
+                <li><Link to={`/${currentLang}/sync-series`} onClick={closeMobileMenu}>{t('nav.intro')}</Link></li>
+                <li><Link to={`/${currentLang}/syncboot`} onClick={closeMobileMenu}>{t('nav.syncboot')}</Link></li>
+                <li><Link to={`/${currentLang}/synccms`} onClick={closeMobileMenu}>{t('nav.synccms')}</Link></li>
+                <li><Link to={`/${currentLang}/syncapim`} onClick={closeMobileMenu}>{t('nav.syncapim')}</Link></li>
+                <li><Link to={`/${currentLang}/synceta`} onClick={closeMobileMenu}>{t('nav.synceta')}</Link></li>
               </ul>
             </li>
-            <li><Link to={`/${currentLang}/commercelogi`}>{t('nav.commerceLogi')}</Link></li>
-            <li><Link to={`/${currentLang}/use-cases`}>{t('nav.useCases')}</Link></li>
-            <li><Link to={`/${currentLang}/company`}>{t('nav.company')}</Link></li>
-            <li><Link to={`/${currentLang}/contact`} className="contact-nav-link">{t('nav.contact')}</Link></li>
+            <li><Link to={`/${currentLang}/commercelogi`} onClick={closeMobileMenu}>{t('nav.commerceLogi')}</Link></li>
+            <li><Link to={`/${currentLang}/use-cases`} onClick={closeMobileMenu}>{t('nav.useCases')}</Link></li>
+            <li><Link to={`/${currentLang}/company`} onClick={closeMobileMenu}>{t('nav.company')}</Link></li>
+            <li><Link to={`/${currentLang}/contact`} className="contact-nav-link" onClick={closeMobileMenu}>{t('nav.contact')}</Link></li>
           </ul>
+          
+          <div className="mobile-header-actions">
+            <div className="lang-switcher">
+              <span onClick={() => changeLanguage('ko')} style={{ fontWeight: currentLang === 'ko' ? 'bold' : 'normal', color: currentLang === 'ko' ? 'var(--primary-color)' : 'inherit' }}>KO</span> | 
+              <span onClick={() => changeLanguage('en')} style={{ fontWeight: currentLang === 'en' ? 'bold' : 'normal', color: currentLang === 'en' ? 'var(--primary-color)' : 'inherit' }}> EN</span> | 
+              <span onClick={() => changeLanguage('jp')} style={{ fontWeight: currentLang === 'jp' ? 'bold' : 'normal', color: currentLang === 'jp' ? 'var(--primary-color)' : 'inherit' }}> JP</span>
+            </div>
+          </div>
         </nav>
+
         <div className="header-actions">
           <div className="lang-switcher">
             <span onClick={() => changeLanguage('ko')} style={{ fontWeight: currentLang === 'ko' ? 'bold' : 'normal', color: currentLang === 'ko' ? 'var(--primary-color)' : 'inherit' }}>KO</span> | 

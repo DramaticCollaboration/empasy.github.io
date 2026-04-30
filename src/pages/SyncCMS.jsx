@@ -3,20 +3,30 @@ import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './SyncCMS.css';
 
+import UIBuilderSim from '../components/UIBuilderSim';
+import GlobalNetworkGlobe from '../components/GlobalNetworkGlobe';
+import HybridPuzzle from '../components/HybridPuzzle';
+import TimeMachineSlider from '../components/TimeMachineSlider';
+import AnalyticsChartDraw from '../components/AnalyticsChartDraw';
+
 const SyncCMS = () => {
   const { t } = useTranslation();
   const { lang } = useParams();
   const currentLang = lang || 'ko';
+
   return (
     <div className="synccms-container">
       {/* 1. Hero Section */}
       <section className="synccms-hero-section">
         <div className="hero-content">
-          <h1>{t('synccms.hero.title')}</h1>
-          <p>{t('synccms.hero.desc')}</p>
-          {/* Placeholder for 3D block assembly animation */}
-          <div className="block-assembly-placeholder">
-            [3D blocks (Header, Banner, News) will fall and assemble into a website here]
+          <div className="hero-text-area">
+            <h1>{t('synccms.hero.title')}</h1>
+            <p className="hero-desc">{t('synccms.hero.desc')}</p>
+          </div>
+          {/* Placeholder for 3D block assembly animation - Using UIBuilderSim as a hero visual too if appropriate, 
+              or we can keep it simple for now as requested. The request asked to fill the specific placeholders. */}
+          <div className="hero-visual-area">
+             <UIBuilderSim />
           </div>
         </div>
       </section>
@@ -25,10 +35,10 @@ const SyncCMS = () => {
       <section className="visual-builder-section">
         <div className="section-header">
           <h2>{t('synccms.builder.title')}</h2>
+          <p>{t('synccms.builder.subtitle')}</p>
         </div>
-        {/* Placeholder for interactive Drag & Drop simulator */}
-        <div className="drag-drop-simulator-placeholder">
-          [Interactive Drag &amp; Drop UI builder simulation will be here]
+        <div className="interactive-container">
+          <UIBuilderSim />
         </div>
       </section>
 
@@ -36,10 +46,10 @@ const SyncCMS = () => {
       <section className="multisite-section">
         <div className="section-header">
           <h2>{t('synccms.multisite.title')}</h2>
+          <p>{t('synccms.multisite.subtitle')}</p>
         </div>
-        {/* Placeholder for 3D global network parallax */}
-        <div className="global-network-placeholder">
-          [3D Globe with network lines to country sites will be here]
+        <div className="interactive-container">
+          <GlobalNetworkGlobe />
         </div>
       </section>
 
@@ -47,10 +57,10 @@ const SyncCMS = () => {
       <section className="hybrid-architecture-section">
         <div className="section-header">
           <h2>{t('synccms.hybrid.title')}</h2>
+          <p>{t('synccms.hybrid.subtitle')}</p>
         </div>
-        {/* Placeholder for template puzzle assembly motion */}
-        <div className="puzzle-assembly-placeholder">
-          [Template puzzle pieces (Page, Fragment, Data) will assemble here]
+        <div className="interactive-container">
+          <HybridPuzzle />
         </div>
       </section>
 
@@ -58,10 +68,10 @@ const SyncCMS = () => {
       <section className="editor-history-section">
         <div className="section-header">
           <h2>{t('synccms.history.title')}</h2>
+          <p>{t('synccms.history.subtitle')}</p>
         </div>
-        {/* Placeholder for interactive time machine slider */}
-        <div className="time-machine-placeholder">
-          [Interactive time machine slider to revert content will be here]
+        <div className="interactive-container">
+          <TimeMachineSlider />
         </div>
       </section>
       
@@ -69,17 +79,17 @@ const SyncCMS = () => {
       <section className="seo-analytics-section">
         <div className="section-header">
           <h2>{t('synccms.seo.title')}</h2>
+          <p>{t('synccms.seo.subtitle')}</p>
         </div>
-        {/* Placeholder for real-time chart drawing */}
-        <div className="chart-drawing-placeholder">
-          [Real-time drawing of analytics charts will be here]
+        <div className="interactive-container">
+          <AnalyticsChartDraw />
         </div>
       </section>
 
       {/* 7. Bottom CTA */}
       <section className="synccms-cta-section">
         <h2>{t('synccms.cta.title')}</h2>
-        <Link to={`/${currentLang}/contact`} className="contact-btn">{t('synccms.cta.btn')}</Link>
+        <Link to={`/${currentLang}/contact`} state={{ interest: 'Other' }} className="contact-btn">{t('synccms.cta.btn')}</Link>
       </section>
     </div>
   );

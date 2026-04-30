@@ -231,10 +231,67 @@
 }
 
 .synceta-cta-section .contact-btn:hover {
-  transform: translateY(-px);
+  transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(57, 255, 20, 0.4);
   color: #fff;
   background: #39FF14;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .synceta-hero-section h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .synceta-container section {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .synceta-hero-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .synceta-hero-section p {
+    font-size: 1rem;
+  }
+
+  .healing-visual-container {
+    flex-direction: column;
+  }
+
+  .download-guide-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .guide-link, .download-links {
+    max-width: 100%;
+  }
+
+  .before-after-placeholder,
+  .healing-simulator-placeholder,
+  .visual-qa-placeholder,
+  .dashboard-animation-placeholder,
+  .feedback-loop-placeholder,
+  .pipeline-routing-placeholder {
+    height: 250px;
+  }
+
+  .synceta-cta-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .synceta-hero-section h1 {
+    font-size: 1.8rem;
+  }
 }
 
 .synceta-cta-section .contact-btn:hover::after {
