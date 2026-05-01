@@ -11,6 +11,7 @@ import CommerceLogi from './pages/CommerceLogi';
 import UseCases from './pages/UseCases';
 import Company from './pages/Company';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 import Layout from './layout/Layout';
 import { ThemeProvider } from './context/ThemeContext';
 import { detectLanguage } from './utils/languageDetector';
@@ -86,9 +87,10 @@ function App() {
               <Route path="use-cases" element={<UseCases />} />
               <Route path="company" element={<Company />} />
               <Route path="contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
             </Route>
             {/* Fallback route */}
-            <Route path="*" element={<Navigate to="/ko" replace />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </LanguageRedirect>
       </Router>
