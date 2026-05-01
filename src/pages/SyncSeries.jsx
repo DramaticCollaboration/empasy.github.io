@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/common/SEO';
 import './SyncSeries.css';
 import SyncCoreAnimation from './component/SyncSeries/SyncCoreAnimation';
 import ConveyorAnimation from './component/SyncSeries/ConveyorAnimation';
@@ -40,6 +41,7 @@ const SyncSeries = () => {
 
   return (
     <div className="syncseries-container">
+      <SEO pageKey="syncSeries" />
       {/* 1. Hero Section */}
       <section className="syncseries-hero-section">
         <div className="hero-content">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/common/SEO';
 import CubeAnimation from '../components/CubeAnimation';
 import ArchitectureMap from '../components/ArchitectureMap';
 import CircuitBreaker from '../components/CircuitBreaker';
@@ -33,6 +34,7 @@ const SyncBoot = () => {
 
   return (
     <div className="syncboot-container">
+      <SEO pageKey="syncboot" />
       {/* 1. Hero Section */}
       <section className="syncboot-hero-section">
         <div className="hero-content">

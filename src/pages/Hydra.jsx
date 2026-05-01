@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/common/SEO';
 import './Hydra.css';
 
 const Hydra = () => {
@@ -29,6 +30,7 @@ const Hydra = () => {
 
   return (
     <div className="hydra-container">
+      <SEO pageKey="hydra" />
       {/* 1. Hero Section */}
       <section className="hydra-hero-section">
         <div className="hero-content">

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/common/SEO';
 import './UseCases.css';
 
 import UseCaseGlobe from '../components/UseCaseGlobe';
@@ -83,6 +84,7 @@ const UseCases = () => {
 
   return (
     <div className="use-cases-container">
+      <SEO pageKey="useCases" />
       {/* 1. Hero Section */}
       <section className="uc-hero-section">
         <UseCaseGlobe />

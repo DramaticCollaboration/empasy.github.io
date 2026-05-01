@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/common/SEO';
 import { useLocation } from 'react-router-dom';
 import './Contact.css';
 import ContactGlobalGlobe from '../components/ContactGlobalGlobe';
@@ -86,6 +87,7 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
+      <SEO pageKey="contact" />
       {/* 1. Hero Section */}
       <section className="contact-hero-section">
         <div className="hero-content">

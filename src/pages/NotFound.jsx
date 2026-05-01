@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/common/SEO';
 import './NotFound.css';
 
 const NotFound = () => {
@@ -12,6 +13,7 @@ const NotFound = () => {
 
   return (
     <div className="not-found-container">
+      <SEO customTitle="404 - Page Not Found" />
       <div className="not-found-content">
         <h1>404</h1>
         <h2>{t('error.404.title')}</h2>

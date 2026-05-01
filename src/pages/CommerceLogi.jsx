@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/common/SEO';
 import './CommerceLogi.css';
 
 import LogiCityNetwork from '../components/LogiCityNetwork';
@@ -15,6 +16,7 @@ const CommerceLogi = () => {
 
   return (
     <div className="commerce-logi-container">
+      <SEO pageKey="commercelogi" />
       {/* 1. Hero Section */}
       <section className="comlogi-hero-section">
         <LogiCityNetwork />

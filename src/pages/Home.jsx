@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/common/SEO';
 import './Home.css';
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      <SEO pageKey="home" />
       {/* 1. Hero Section */}
       <section className="hero-section">
         <div className="hero-content">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/common/SEO';
 import './SyncEta.css';
 
 import EtaSelfHealing from '../components/EtaSelfHealing';
@@ -16,6 +17,7 @@ const SyncEta = () => {
 
   return (
     <div className="synceta-container">
+      <SEO pageKey="synceta" />
       {/* 1. Hero Section */}
       <section className="synceta-hero-section">
         <div className="hero-content">

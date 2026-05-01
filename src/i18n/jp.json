@@ -1,6 +1,63 @@
 {
   "translation": {
     "siteTitle": "Empasy",
+    "seo": {
+      "home": {
+        "title": "AI-DLC中心のデジタル・イノベーション、ビジネスのアジリティを最大化",
+        "description": "EmpasyはAI開発ライフサイクル(AI-DLC)を自動化するHydraプラットフォームと、MSA、QA、CMSなどのSync Seriesを通じて、ビジネスのアジリティを提供します。",
+        "keywords": "AI-DLC, Hydra, MSA, SyncBoot, SyncEta, SyncCMS, API管理, デジタルトランスフォーメーション, ビジネスアジリティ, Empasy"
+      },
+      "hydra": {
+        "title": "Hydra - AI-DLCベースのインフラ自動化ソリューション",
+        "description": "複雑なクラウド設定なしに自然言語対話だけでAI開発および運用環境を構築するPrompt-Driven AI Infra Orchestrator。",
+        "keywords": "Hydra, AI-DLC, インフラ自動化, クラウドオーケストレーション, MLOps, DevOps"
+      },
+      "syncSeries": {
+        "title": "Sync Series - ビジネスアジリティのための完璧な同期",
+        "description": "開発から運用、検証、コンテンツ管理まで。断絶されたITインフラを接続し、最も柔軟で強力なデジタル革新エコシステムSyncVerseを完成させます。",
+        "keywords": "Sync Series, SyncVerse, MSA, QA自動化, CMS, API管理, デジタルトランスフォーメーション"
+      },
+      "syncboot": {
+        "title": "SyncBoot - Java/Spring BootベースのMSAプラットフォーム",
+        "description": "モノリスの限界を克服し、独立したデプロイとスケールアウトが可能なマイクロサービス快速開発プラットフォーム。",
+        "keywords": "SyncBoot, MSA, マイクロサービス, Spring Boot, クラウドネイティブ, Javaプラットフォーム"
+      },
+      "synceta": {
+        "title": "SyncEta - LLMベースのAIテスト自動化",
+        "description": "人のように理解し、機械のようにテストする自然言語ベースのテスト自動化ソリューション。Zero-RecordingでQA効率を最大化します。",
+        "keywords": "SyncEta, テスト自動化, AI QA, LLMテスト, Playwright, Zero-Recording"
+      },
+      "synccms": {
+        "title": "SyncCMS - エンタープライズ向けカスタマイ즈・コンテンツ管理システム",
+        "description": "マルチサイトおよび多言語をサポートし、SEO最適化ツールを備えたJavaベースの強力なCMS。",
+        "keywords": "SyncCMS, CMS, コンテンツ管理システム, マルチサイト, SEO最適化"
+      },
+      "syncapim": {
+        "title": "SyncAPIM - 知能型API統合管理プラットフォーム",
+        "description": "APIゲートウェイ、開発者ポータル、分析ダッシュボードを統合したライフサイクル全体の管理ソリューション。",
+        "keywords": "SyncAPIM, API管理, API Gateway, APIエコシステム, 知能型API"
+      },
+      "commercelogi": {
+        "title": "SyncShop & AI Logistics - Eコマースおよび物流最適化",
+        "description": "ヘッドレスコマースアーキテクチャとLLMベースの物流自律運用AIエージェントの組み合わせにより、ビジネス効率を最大化します。",
+        "keywords": "SyncShop, AI Logistics, Eコマース, 物流最適化, ヘッドレスコマース, RAG"
+      },
+      "useCases": {
+        "title": "導入事例 - エンタープライズ・デジタル革新パートナー",
+        "description": "LG電子、Visang教育、Penta Securityなど、Empasyと共に歩んだ様々な産業分野の成功的なデジタルトランスフォーメーション事例をご覧ください。",
+        "keywords": "構築事例, 実績, DX事例, エンタープライズソリューション"
+      },
+      "company": {
+        "title": "会社紹介 - 共感とシナジーのEmpasy",
+        "description": "ビジネスアジリティのための革新的な技術を提供し、顧客との共感を通じてより大きな価値を創造します。",
+        "keywords": "Empasy紹介, ビジョン, 沿革, 企業文化"
+      },
+      "contact": {
+        "title": "お問い合わせ - デジタル革新の始まり",
+        "description": "Empasyのソリューション導入やパートナーシップに関するご質問がございましたら、お気軽にお問い合わせください。",
+        "keywords": "お問い合わせ, 導入相談, 技術相談, パートナーシップ"
+      }
+    },
     "nav": {
       "aiInfra": "AIインフラ",
       "syncSeries": "Syncシリーズ",
@@ -257,8 +314,8 @@
         "subtitle": "従来のRecord & Playback方式の限界を超え、ドキュメントがそのまま実行されるHyper-Automation技術を体験してください。"
       },
       "healing": {
-        "title": "UIが変わっても止まらない知능형 테스트, 그리고 피셀 단위의 완벽한 시각 검증.",
-        "subtitle": "UIが変更されてもAI가 자동으로 위치를 특정하여 테스트를 복구하고, 픽셀 단위의 오차까지 검출합니다."
+        "title": "UIが変わっても止まらない知能型テスト、そしてピクセル単位의 完璧な視覚検証。",
+        "subtitle": "UIが変更されてもAIが自動的に位置を特定してテストを復旧し、ピクセル単位の誤差まで検出します。"
       },
       "dashboard": {
         "title": "Real-time Dashboard & TestOps (リアルタイム観測および欠陥証跡)",

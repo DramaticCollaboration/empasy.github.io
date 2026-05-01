@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/common/SEO';
 import './Company.css';
 
 import CompanyLogoSynergy from '../components/CompanyLogoSynergy';
@@ -14,6 +15,7 @@ const Company = () => {
 
   return (
     <div className="company-container">
+      <SEO pageKey="company" />
       {/* 1. Hero Section */}
       <section className="company-hero-section">
         <CompanyLogoSynergy />

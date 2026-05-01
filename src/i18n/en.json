@@ -1,6 +1,63 @@
 {
   "translation": {
     "siteTitle": "Empasy",
+    "seo": {
+      "home": {
+        "title": "AI-DLC-centric Digital Innovation, Maximizing Business Agility",
+        "description": "Empasy provides business agility through its Hydra platform, which automates the AI Development Life Cycle (AI-DLC), and the Sync Series, including MSA, QA, and CMS.",
+        "keywords": "AI-DLC, Hydra, MSA, SyncBoot, SyncEta, SyncCMS, API Management, Digital Transformation, Business Agility, Empasy"
+      },
+      "hydra": {
+        "title": "Hydra - AI-DLC-based Infrastructure Automation Solution",
+        "description": "Prompt-Driven AI Infra Orchestrator that builds AI development and operation environments with natural language dialogue without complex cloud settings.",
+        "keywords": "Hydra, AI-DLC, Infra Automation, Cloud Orchestration, MLOps, DevOps"
+      },
+      "syncSeries": {
+        "title": "Sync Series - Perfect Synchronization for Business Agility",
+        "description": "From development to operation, validation, and content management. We complete SyncVerse, the most flexible and powerful digital innovation ecosystem, by connecting fragmented IT infrastructure.",
+        "keywords": "Sync Series, SyncVerse, MSA, QA Automation, CMS, API Management, Digital Transformation"
+      },
+      "syncboot": {
+        "title": "SyncBoot - Java/Spring Boot-based MSA Platform",
+        "description": "A rapid microservices development platform that overcomes the limitations of monoliths with independent deployment and scale-out capabilities.",
+        "keywords": "SyncBoot, MSA, Microservices, Spring Boot, Cloud Native, Java Platform"
+      },
+      "synceta": {
+        "title": "SyncEta - LLM-based AI Test Automation",
+        "description": "Natural language-based test automation solution that understands like a human and tests like a machine. Maximize QA efficiency with Zero-Recording.",
+        "keywords": "SyncEta, Test Automation, AI QA, LLM Test, Playwright, Zero-Recording"
+      },
+      "synccms": {
+        "title": "SyncCMS - Enterprise Custom Content Management System",
+        "description": "A powerful Java-based CMS supporting multi-site and multi-language environments with built-in SEO optimization tools.",
+        "keywords": "SyncCMS, CMS, Content Management System, Multi-site, SEO Optimization"
+      },
+      "syncapim": {
+        "title": "SyncAPIM - Intelligent API Integration Management Platform",
+        "description": "A full lifecycle management solution integrating API gateways, developer portals, and analytics dashboards.",
+        "keywords": "SyncAPIM, API Management, API Gateway, API Ecosystem, Intelligent API"
+      },
+      "commercelogi": {
+        "title": "SyncShop & AI Logistics - eCommerce and Logistics Optimization",
+        "description": "Maximize business efficiency by combining headless commerce architecture with LLM-based autonomous logistics AI agents.",
+        "keywords": "SyncShop, AI Logistics, eCommerce, Logistics Optimization, Headless Commerce, RAG"
+      },
+      "useCases": {
+        "title": "Use Cases - Enterprise Digital Innovation Partner",
+        "description": "Check out successful digital transformation cases across various industries with Empasy, including LG Electronics, Visang, and Penta Security.",
+        "keywords": "References, Empasy Track Record, DX Cases, Enterprise Solution"
+      },
+      "company": {
+        "title": "Company - Empasy, Empathy and Synergy",
+        "description": "We provide innovative technologies for business agility and create greater value through empathy with our customers.",
+        "keywords": "About Empasy, Vision, History, Corporate Culture"
+      },
+      "contact": {
+        "title": "Contact Us - Start of Digital Innovation",
+        "description": "If you have any questions about adopting Empasy's solutions or partnerships, feel free to contact us.",
+        "keywords": "Contact, Inquiry, Consulting, Partnership"
+      }
+    },
     "nav": {
       "aiInfra": "AI Infra",
       "syncSeries": "Sync Series",

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/common/SEO';
 import './SyncAPIM.css';
 
 import APIGatewayParticles from '../components/APIGatewayParticles';
@@ -16,6 +17,7 @@ const SyncAPIM = () => {
 
   return (
     <div className="syncapim-container">
+      <SEO pageKey="syncapim" />
       {/* 1. Hero Section */}
       <section className="syncapim-hero-section">
         <APIGatewayParticles />

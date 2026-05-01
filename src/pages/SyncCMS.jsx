@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/common/SEO';
 import './SyncCMS.css';
 
 import UIBuilderSim from '../components/UIBuilderSim';
@@ -16,6 +17,7 @@ const SyncCMS = () => {
 
   return (
     <div className="synccms-container">
+      <SEO pageKey="synccms" />
       {/* 1. Hero Section */}
       <section className="synccms-hero-section">
         <div className="hero-content">
