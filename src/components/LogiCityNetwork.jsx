@@ -115,14 +115,16 @@ const LogiCityNetwork = () => {
       <div style={{ 
         position: 'absolute', 
         top: isMobile ? '20px' : '40px', 
-        left: isMobile ? '20px' : '40px', 
+        left: 0, 
+        right: 0,
+        textAlign: 'center',
         pointerEvents: 'none',
-        maxWidth: isMobile ? '80%' : 'none'
+        zIndex: 10
       }}>
-        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} style={{ color: '#00D1B2', fontSize: isMobile ? '0.6rem' : '0.8rem', fontWeight: 800, letterSpacing: '0.2em', marginBottom: '10px' }}>
+        <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} style={{ color: '#00D1B2', fontSize: isMobile ? '0.6rem' : '0.8rem', fontWeight: 800, letterSpacing: '0.2em', marginBottom: '10px' }}>
           INTEGRATED LOGISTICS
         </motion.div>
-        <motion.h2 initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} style={{ color: '#FFFFFF', fontSize: isMobile ? '1.5rem' : '2rem', fontWeight: 900, margin: 0 }}>
+        <motion.h2 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} style={{ color: '#FFFFFF', fontSize: isMobile ? '1.5rem' : '2.2rem', fontWeight: 900, margin: 0 }}>
           {t('commercelogi.hero.title', 'Smart City Network')}
         </motion.h2>
       </div>

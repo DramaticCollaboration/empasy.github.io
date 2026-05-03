@@ -30,7 +30,13 @@ const SyncAPIM = () => {
       <SEO pageKey="syncapim" />
       {/* 1. Hero Section */}
       <section className="syncapim-hero-section">
-        <APIGatewayParticles isMobile={isMobile} />
+        <div className="hero-content">
+          <h1>{t('syncapim.hero.title')}</h1>
+          <p>{t('syncapim.hero.desc')}</p>
+          <div className="gateway-particle-placeholder">
+            <APIGatewayParticles isMobile={isMobile} hideText={true} />
+          </div>
+        </div>
       </section>
 
       {/* 2. Full Lifecycle Management */}

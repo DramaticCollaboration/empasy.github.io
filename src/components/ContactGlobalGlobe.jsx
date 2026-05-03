@@ -134,7 +134,7 @@ const ContactGlobalGlobe = () => {
         <Line points={[locations[0].pos, locations[2].pos]} color="#00D1B2" lineWidth={0.5} transparent opacity={0.1} />
       </Canvas>
 
-      <div style={{ position: 'absolute', top: '30px', left: '30px', pointerEvents: 'none' }}>
+      <div style={{ position: 'absolute', top: '30px', left: 0, right: 0, textAlign: 'center', pointerEvents: 'none' }}>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ color: '#00D1B2', fontSize: '0.75rem', fontWeight: 800, letterSpacing: '0.1em' }}>
           GLOBAL NETWORK
         </motion.div>

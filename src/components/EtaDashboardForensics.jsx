@@ -164,7 +164,7 @@ const EtaDashboardForensics = ({ isMobile }) => {
       </div>
 
       {/* Floating Info */}
-      <div style={{ position: 'absolute', bottom: isMobile ? '10px' : '30px', left: isMobile ? '20px' : '40px', color: '#475569', fontSize: '0.65rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+      <div style={{ position: 'absolute', bottom: isMobile ? '10px' : '30px', left: 0, right: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#475569', fontSize: '0.65rem', gap: '8px' }}>
         <Activity size={isMobile ? 12 : 16} color="#00D1B2" />
         {t('synceta.forensics.status', 'Real-time TestOps Monitoring Active')}
       </div>

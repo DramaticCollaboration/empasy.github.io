@@ -97,7 +97,7 @@ const GlobalNetworkGlobe = ({ isMobile }) => {
         <DataLines />
       </Canvas>
       
-      <div style={{ position: 'absolute', top: '20px', left: '20px', pointerEvents: 'none' }}>
+      <div style={{ position: 'absolute', top: '20px', left: 0, right: 0, textAlign: 'center', pointerEvents: 'none' }}>
         <div style={{ color: '#00D1B2', fontSize: '0.7rem', fontWeight: 600, letterSpacing: '0.1em' }}>
           GLOBAL CONNECTIVITY
         </div>

@@ -141,7 +141,7 @@ const EtaSelfHealing = ({ isMobile }) => {
       </div>
 
       {/* Guide Text */}
-      <div style={{ position: 'absolute', top: '20px', left: '20px', color: '#94A3B8', fontSize: isMobile ? '0.6rem' : '0.75rem', fontWeight: 600 }}>
+      <div style={{ position: 'absolute', top: '20px', left: 0, right: 0, textAlign: 'center', color: '#94A3B8', fontSize: isMobile ? '0.6rem' : '0.75rem', fontWeight: 600 }}>
         DRAG BUTTON TO BREAK TEST
       </div>
     </div>

@@ -11,6 +11,10 @@
 .section-header {
   text-align: center;
   margin-bottom: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section-header h2 {
@@ -18,15 +22,35 @@
   font-weight: 700;
   margin-bottom: 1rem;
   color: var(--primary-color);
+  text-align: center;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #EDF2F4;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: center;
 }
 
 /* 1. Hero Section */
 .syncseries-hero-section {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 10rem 2rem 6rem !important;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .syncseries-hero-section h1 {

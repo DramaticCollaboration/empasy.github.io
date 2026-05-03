@@ -117,7 +117,7 @@ const Nodes = () => {
   );
 };
 
-const APIGatewayParticles = ({ isMobile }) => {
+const APIGatewayParticles = ({ isMobile, hideText = false }) => {
   const { t } = useTranslation();
 
   return (
@@ -135,71 +135,75 @@ const APIGatewayParticles = ({ isMobile }) => {
         <Nodes />
       </Canvas>
 
-      <div style={{ 
-        position: 'absolute', 
-        top: isMobile ? '20px' : '40px', 
-        left: isMobile ? '20px' : '40px', 
-        pointerEvents: 'none' 
-      }}>
-        <motion.div 
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          style={{ 
-            color: '#00D1B2', 
-            fontSize: isMobile ? '0.7rem' : '0.9rem', 
-            fontWeight: 700, 
-            letterSpacing: '0.2em', 
-            marginBottom: '5px' 
-          }}
-        >
-          {t('syncapim.hero.status.routing', 'INTELLIGENT ROUTING')}
-        </motion.div>
-        <motion.h2 
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.2 }}
-          style={{ 
-            color: '#FFFFFF', 
-            fontSize: isMobile ? '1.8rem' : '2.5rem', 
-            fontWeight: 900, 
-            margin: 0 
-          }}
-        >
-          {t('syncapim.hero.ui.gateway', 'API Gateway')}
-        </motion.h2>
-      </div>
+      {!hideText && (
+        <div style={{ 
+          position: 'absolute', 
+          top: isMobile ? '20px' : '40px', 
+          left: isMobile ? '20px' : '40px', 
+          pointerEvents: 'none' 
+        }}>
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            style={{ 
+              color: '#00D1B2', 
+              fontSize: isMobile ? '0.7rem' : '0.9rem', 
+              fontWeight: 700, 
+              letterSpacing: '0.2em', 
+              marginBottom: '5px' 
+            }}
+          >
+            {t('syncapim.hero.status.routing', 'INTELLIGENT ROUTING')}
+          </motion.div>
+          <motion.h2 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+            style={{ 
+              color: '#FFFFFF', 
+              fontSize: isMobile ? '1.8rem' : '2.5rem', 
+              fontWeight: 900, 
+              margin: 0 
+            }}
+          >
+            {t('syncapim.hero.ui.gateway', 'API Gateway')}
+          </motion.h2>
+        </div>
+      )}
 
-      <div style={{ 
-        position: 'absolute', 
-        bottom: isMobile ? '20px' : '40px', 
-        right: isMobile ? '20px' : '40px', 
-        display: 'flex', 
-        flexDirection: isMobile ? 'column' : 'row',
-        gap: isMobile ? '10px' : '20px' 
-      }}>
+      {!hideText && (
         <div style={{ 
-          background: 'rgba(15, 23, 42, 0.6)', 
-          padding: isMobile ? '10px 15px' : '15px 25px', 
-          borderRadius: '12px', 
-          border: '1px solid #334155', 
-          backdropFilter: 'blur(10px)',
-          minWidth: isMobile ? '120px' : 'auto'
+          position: 'absolute', 
+          bottom: isMobile ? '20px' : '40px', 
+          right: isMobile ? '20px' : '40px', 
+          display: 'flex', 
+          flexDirection: isMobile ? 'column' : 'row',
+          gap: isMobile ? '10px' : '20px' 
         }}>
-          <div style={{ color: '#94A3B8', fontSize: '0.7rem', marginBottom: '2px' }}>THROUGHPUT</div>
-          <div style={{ color: '#00D1B2', fontSize: isMobile ? '1rem' : '1.2rem', fontWeight: 800 }}>45,200 TPS</div>
+          <div style={{ 
+            background: 'rgba(15, 23, 42, 0.6)', 
+            padding: isMobile ? '10px 15px' : '15px 25px', 
+            borderRadius: '12px', 
+            border: '1px solid #334155', 
+            backdropFilter: 'blur(10px)',
+            minWidth: isMobile ? '120px' : 'auto'
+          }}>
+            <div style={{ color: '#94A3B8', fontSize: '0.7rem', marginBottom: '2px' }}>THROUGHPUT</div>
+            <div style={{ color: '#00D1B2', fontSize: isMobile ? '1rem' : '1.2rem', fontWeight: 800 }}>45,200 TPS</div>
+          </div>
+          <div style={{ 
+            background: 'rgba(15, 23, 42, 0.6)', 
+            padding: isMobile ? '10px 15px' : '15px 25px', 
+            borderRadius: '12px', 
+            border: '1px solid #334155', 
+            backdropFilter: 'blur(10px)',
+            minWidth: isMobile ? '120px' : 'auto'
+          }}>
+            <div style={{ color: '#94A3B8', fontSize: '0.7rem', marginBottom: '2px' }}>LATENCY</div>
+            <div style={{ color: '#3B82F6', fontSize: isMobile ? '1rem' : '1.2rem', fontWeight: 800 }}>0.8 ms</div>
+          </div>
         </div>
-        <div style={{ 
-          background: 'rgba(15, 23, 42, 0.6)', 
-          padding: isMobile ? '10px 15px' : '15px 25px', 
-          borderRadius: '12px', 
-          border: '1px solid #334155', 
-          backdropFilter: 'blur(10px)',
-          minWidth: isMobile ? '120px' : 'auto'
-        }}>
-          <div style={{ color: '#94A3B8', fontSize: '0.7rem', marginBottom: '2px' }}>LATENCY</div>
-          <div style={{ color: '#3B82F6', fontSize: isMobile ? '1rem' : '1.2rem', fontWeight: 800 }}>0.8 ms</div>
-        </div>
-      </div>
+      )}
     </div>
   );
 };
