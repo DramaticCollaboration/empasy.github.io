@@ -43,11 +43,18 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitError(null);
 
+    const interestLabel = {
+      'SyncEta': t('contact.form.interest1'),
+      'SyncBoot': t('contact.form.interest2'),
+      'GovTech': t('contact.form.interest3'),
+      'Other': t('contact.form.interest4')
+    }[formData.interest] || formData.interest;
+
     const payload = {
       name: formData.name,
       email: formData.email,
       subject: `[Empasy Contact] ${formData.interest}`,
-      content: `Company: ${formData.company}\n\nQuestion:\n${formData.detailQuestion}`
+      content: `Interest Area: ${interestLabel}\nCompany: ${formData.company}\n\nQuestion:\n${formData.detailQuestion}`
     };
 
     try {
