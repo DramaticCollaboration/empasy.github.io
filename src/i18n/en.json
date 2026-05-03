@@ -13,7 +13,7 @@
         "keywords": "Hydra, AI-DLC, Infra Automation, Cloud Orchestration, MLOps, DevOps"
       },
       "syncSeries": {
-        "title": "Sync Series - Perfect Synchronization for Business Agility",
+        "title": "Sync Series - The Perfect Tool for Business Agility",
         "description": "From development to operation, validation, and content management. We complete SyncVerse, the most flexible and powerful digital innovation ecosystem, by connecting fragmented IT infrastructure.",
         "keywords": "Sync Series, SyncVerse, MSA, QA Automation, CMS, API Management, Digital Transformation"
       },
@@ -109,6 +109,10 @@
       },
       "trusted": {
         "title": "Trusted by Enterprise"
+      },
+      "cta": {
+        "title": "Experience Empasy's technology for business agility today.",
+        "btn": "Contact Us"
       }
     },
     "hydra": {
@@ -159,7 +163,7 @@
     },
     "syncseries": {
       "hero": {
-        "title": "Boon to business by agility, Perfect Synchronization for Business Agility",
+        "title": "Boon to business by agility, The Perfect Tool for Business Agility",
         "desc": "From development to operation, validation, and content management. Connect fragmented IT infrastructure to complete the most flexible and powerful digital innovation ecosystem."
       },
       "verse": {
@@ -193,19 +197,19 @@
       "solutions": {
         "syncboot": {
           "title": "SyncBoot (MSA Platform)",
-          "desc": "Particle motion where a giant monolithic rock breaks into dozens of light and fast mini-cubes."
+          "desc": "Support the transition from monolithic limits to light and fast microservices."
         },
         "synceta": {
           "title": "SyncEta (AI Quality Assurance)",
-          "desc": "Excel icons pass through an AI brain, and tests run automatically in parallel on dozens of screens."
+          "desc": "Automatically execute parallel tests across dozens of devices using natural language scenarios."
         },
         "synccms": {
           "title": "SyncCMS (Enterprise CMS)",
-          "desc": "Page fragments are pulled like magnets and assembled into one perfect global website."
+          "desc": "Instantly complete global websites by freely assembling page fragments."
         },
         "syncapim": {
           "title": "SyncAPIM (Intelligent API Integration Management)",
-          "desc": "Shield effect where surging traffic lines hit the gateway shield and are safely distributed and routed."
+          "desc": "An integrated management platform that safely controls and routes surging traffic."
         }
       }
     },
@@ -351,16 +355,20 @@
         "desc": "Java-based integrated CMS that responds most agilely to business environment changes with a unique template engine and visual layout builder."
       },
       "builder": {
-        "title": "Intuitive Visual Management, Fast Maintenance with One Click."
+        "title": "Intuitive Visual Management, Fast Maintenance with One Click.",
+        "subtitle": "Instantly configure and maintain professional web pages without coding using our intuitive drag-and-drop builder."
       },
       "multisite": {
-        "title": "Global Omni-channel Controlled by a Single Core."
+        "title": "Global Omni-channel Controlled by a Single Core.",
+        "subtitle": "Experience powerful scalability by controlling tens of thousands of independent sites and global multi-language content with a single core."
       },
       "hybrid": {
-        "title": "Dynamic/Static Hybrid Architecture"
+        "title": "Dynamic/Static Hybrid Architecture",
+        "subtitle": "Achieve both server-side rendering speed and content management flexibility by combining page fragments with recommendation data."
       },
       "history": {
-        "title": "A Perfect Time Machine Recording All Changes."
+        "title": "A Perfect Time Machine Recording All Changes.",
+        "subtitle": "Provide a safety net by perfectly recording all content changes and allowing instant recovery to any point in time when errors occur."
       },
       "seo": {
         "title": "Data Proving Performance (SEO & Visitor Stats)",
@@ -647,6 +655,12 @@
         "badge2": "Venture Company Certification",
         "badge3": "LLM MCP Core Tech Patent Pending"
       },
+      "location": {
+        "title": "Location",
+        "office": "Empasy HQ",
+        "address": "168, Gasan digital 1-ro, Geumcheon-gu, Seoul",
+        "directions": "Get Directions"
+      },
       "cta": {
         "title": "Ready to start innovation with EMPASY?",
         "btn": "Inquire about Project"
@@ -697,10 +711,13 @@
       }
     },
     "footer": {
-      "desc": "Perfect synchronization for business agility",
-      "address": "Gangnam-gu, Seoul...",
+      "desc": "The Perfect Tool for Business Agility",
+      "address": "FAC #208, 2nd Floor, 205-27 Gasan digital 1-ro, Geumcheon-gu, Seoul, Republic of Korea",
       "contact": "Contact: poh@empasy.com",
       "rights": "All rights reserved."
+    },
+    "common": {
+      "loading": "Syncing..."
     },
     "error": {
       "404": {

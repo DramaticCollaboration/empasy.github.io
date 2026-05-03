@@ -36,7 +36,7 @@ const UseCaseImpactCharts = () => {
   ];
 
   return (
-    <div ref={ref} style={{ width: '100%', display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', gap: '40px', padding: '40px 0' }}>
+    <div ref={ref} className="impact-charts-wrapper">
       {metrics.map((m, i) => (
         <MetricRadial key={m.id} metric={m} delay={i * 0.2} active={isInView} />
       ))}
@@ -78,10 +78,10 @@ const MetricRadial = ({ metric, delay, active }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={active ? { opacity: 1, y: 0 } : {}}
       transition={{ delay }}
-      style={{ textAlign: 'center', width: '200px' }}
+      className="metric-radial-container"
     >
-      <div style={{ position: 'relative', width: '180px', height: '180px', margin: '0 auto 20px' }}>
-        <svg width="180" height="180" viewBox="0 0 180 180">
+      <div className="radial-svg-container">
+        <svg viewBox="0 0 180 180">
           <circle cx="90" cy="90" r={radius} fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="12" />
           <motion.circle
             cx="90" cy="90" r={radius} fill="none"
@@ -95,9 +95,9 @@ const MetricRadial = ({ metric, delay, active }) => {
             transform="rotate(-90 90 90)"
           />
         </svg>
-        <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="radial-svg-content">
           <Icon size={24} color={metric.color} style={{ marginBottom: '5px' }} />
-          <div style={{ fontSize: '1.8rem', fontWeight: 900, color: '#FFFFFF' }}>
+          <div className="radial-value">
             {metric.id === 'latency' ? count.toFixed(1) : Math.floor(count)}{metric.suffix}
           </div>
         </div>
@@ -109,8 +109,8 @@ const MetricRadial = ({ metric, delay, active }) => {
           style={{ position: 'absolute', inset: -10, borderRadius: '50%', background: `radial-gradient(circle, ${metric.color}22 0%, transparent 70%)`, zIndex: -1 }} 
         />
       </div>
-      <div style={{ color: '#E2E8F0', fontSize: '0.9rem', fontWeight: 700, marginBottom: '5px' }}>{metric.label}</div>
-      <div style={{ color: '#64748B', fontSize: '0.7rem' }}>Validated by enterprise use-cases</div>
+      <div className="radial-label">{metric.label}</div>
+      <div className="radial-sublabel">Validated by enterprise use-cases</div>
     </motion.div>
   );
 };

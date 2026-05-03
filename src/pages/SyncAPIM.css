@@ -163,7 +163,7 @@
 .syncapim-cta-section {
   text-align: center;
   padding: 8rem 2rem !important;
-  background: radial-gradient(circle, rgba(131,56,236,0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(58, 134, 255, 0.1) 0%, transparent 70%);
 }
 
 .syncapim-cta-section h2 {
@@ -172,7 +172,6 @@
   line-height: 1.4;
 }
 
-/* SyncAPIM Contact Button Style (Teal/Mint Ripple) */
 .syncapim-cta-section .contact-btn {
   background: #3A86FF;
   color: white;
@@ -185,6 +184,7 @@
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
   overflow: hidden;
+  display: inline-block;
 }
 
 .syncapim-cta-section .contact-btn::after {
@@ -194,7 +194,7 @@
   left: 50%;
   width: 300%;
   height: 300%;
-  background: rgba(0, 180, 216, 0.5); /* Teal/Mint color */
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.5s;
@@ -222,11 +222,25 @@
 
 @media (max-width: 768px) {
   .syncapim-container section {
-    padding: 4rem 1.5rem;
+    padding: 3rem 1.25rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
   }
 
   .section-header h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .section-header p {
+    font-size: 0.95rem;
+  }
+
+  .syncapim-hero-section {
+    min-height: auto;
+    padding-top: 80px;
   }
 
   .syncapim-hero-section h1 {
@@ -241,16 +255,18 @@
     grid-template-columns: 1fr;
   }
 
-  .architecture-map-placeholder,
-  .shield-simulator-placeholder,
-  .data-streaming-placeholder,
-  .custom-dashboard-placeholder {
-    height: 250px;
-    padding: 1rem;
+  .interactive-container {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .syncapim-cta-section {
+    padding: 5rem 1.5rem !important;
   }
 
   .syncapim-cta-section h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
   }
 }
 

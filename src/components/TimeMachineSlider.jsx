@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { History, ShieldCheck } from 'lucide-react';
 
-const TimeMachineSlider = () => {
+const TimeMachineSlider = ({ isMobile }) => {
   const { t } = useTranslation();
   const [value, setValue] = useState(100);
   const [isRestored, setIsRestored] = useState(false);
@@ -45,17 +45,47 @@ const TimeMachineSlider = () => {
   };
 
   return (
-    <div style={{ width: '100%', height: '500px', background: '#FFFFFF', borderRadius: '20px', padding: '40px', display: 'flex', flexDirection: 'column', border: '1px solid #E2E8F0', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
+    <div style={{ 
+      width: '100%', 
+      height: isMobile ? 'auto' : '500px', 
+      minHeight: isMobile ? '500px' : 'none',
+      background: '#FFFFFF', 
+      borderRadius: '20px', 
+      padding: isMobile ? '20px' : '40px', 
+      display: 'flex', 
+      flexDirection: 'column', 
+      border: '1px solid #E2E8F0', 
+      boxShadow: '0 10px 30px rgba(0,0,0,0.05)' 
+    }}>
       {/* Content Canvas */}
-      <div style={{ flex: 1, background: '#F8FAFC', borderRadius: '12px', border: '1px solid #E2E8F0', position: 'relative', overflow: 'hidden', padding: '30px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+      <div style={{ 
+        flex: 1, 
+        background: '#F8FAFC', 
+        borderRadius: '12px', 
+        border: '1px solid #E2E8F0', 
+        position: 'relative', 
+        overflow: 'hidden', 
+        padding: isMobile ? '15px' : '30px', 
+        display: 'flex', 
+        flexDirection: 'column', 
+        gap: isMobile ? '10px' : '20px' 
+      }}>
         <motion.div
           animate={{ opacity: active.opacity, filter: `grayscale(${active.grayscale})` }}
           style={{ width: '100%' }}
         >
-          <div style={{ fontSize: '0.75rem', color: '#64748B', marginBottom: '5px', fontWeight: 600 }}>{active.date}</div>
-          <h3 style={{ fontSize: '2rem', fontWeight: 800, color: '#0F172A', marginBottom: '15px' }}>{active.title}</h3>
-          <div style={{ width: '100%', height: '200px', background: '#E2E8F0', borderRadius: '8px', marginBottom: '20px', backgroundImage: 'url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80)', backgroundSize: 'cover' }} />
-          <p style={{ color: '#475569', lineHeight: 1.6 }}>
+          <div style={{ fontSize: '0.65rem', color: '#64748B', marginBottom: '5px', fontWeight: 600 }}>{active.date}</div>
+          <h3 style={{ fontSize: isMobile ? '1.25rem' : '2rem', fontWeight: 800, color: '#0F172A', marginBottom: '10px' }}>{active.title}</h3>
+          <div style={{ 
+            width: '100%', 
+            height: isMobile ? '120px' : '200px', 
+            background: '#E2E8F0', 
+            borderRadius: '8px', 
+            marginBottom: '15px', 
+            backgroundImage: 'url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80)', 
+            backgroundSize: 'cover' 
+          }} />
+          <p style={{ color: '#475569', lineHeight: 1.5, fontSize: isMobile ? '0.85rem' : '1rem' }}>
             {t('synccms.history.content.body', 'Empowering businesses with agile content management solutions that scale globally.')}
           </p>
         </motion.div>
@@ -91,18 +121,27 @@ const TimeMachineSlider = () => {
       </div>
 
       {/* Slider Area */}
-      <div style={{ marginTop: '40px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '15px', alignItems: 'center' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#64748B', fontSize: '0.85rem' }}>
-            <History size={16} />
+      <div style={{ marginTop: isMobile ? '20px' : '40px' }}>
+        <div style={{ 
+          display: 'flex', 
+          justifyContent: 'space-between', 
+          marginBottom: '15px', 
+          alignItems: 'center',
+          flexDirection: isMobile ? 'column' : 'row',
+          gap: isMobile ? '15px' : '0'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#64748B', fontSize: '0.75rem' }}>
+            <History size={14} />
             <span>{t('synccms.history.slider.label', 'Slide to travel in time')}</span>
           </div>
           <button 
             onClick={handleRestore}
             style={{ 
               background: '#00D1B2', color: '#FFFFFF', border: 'none', 
-              padding: '8px 20px', borderRadius: '8px', fontSize: '0.85rem', 
-              fontWeight: 600, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' 
+              padding: '8px 20px', borderRadius: '8px', fontSize: '0.8rem', 
+              fontWeight: 600, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px',
+              width: isMobile ? '100%' : 'auto',
+              justifyContent: 'center'
             }}
           >
             <ShieldCheck size={16} />

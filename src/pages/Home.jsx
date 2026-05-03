@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SEO from '../components/common/SEO';
 import './Home.css';
 
 const Home = () => {
   const { t } = useTranslation();
+  const { lang } = useParams();
+  const currentLang = lang || 'ko';
 
   return (
     <div className="home-container">
@@ -116,6 +119,12 @@ const Home = () => {
             <span>비상교육</span>
           </div>
         </div>
+      </section>
+
+      {/* 6. Bottom CTA */}
+      <section className="home-cta-section">
+        <h2>{t('home.cta.title')}</h2>
+        <Link to={`/${currentLang}/contact`} state={{ interest: 'Other' }} className="contact-btn">{t('home.cta.btn')}</Link>
       </section>
     </div>
   );

@@ -79,35 +79,44 @@ const DataLines = () => {
   );
 };
 
-const GlobalNetworkGlobe = () => {
+const GlobalNetworkGlobe = ({ isMobile }) => {
   const { t } = useTranslation();
 
   return (
-    <div style={{ width: '100%', height: '500px', background: '#020617', borderRadius: '20px', position: 'relative', overflow: 'hidden' }}>
-      <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+    <div style={{ 
+      width: '100%', 
+      height: isMobile ? '350px' : '500px', 
+      background: '#020617', 
+      borderRadius: '20px', 
+      position: 'relative', 
+      overflow: 'hidden' 
+    }}>
+      <Canvas camera={{ position: [0, 0, 5], fov: isMobile ? 60 : 45 }}>
         <ambientLight intensity={0.5} />
         <GlobePoints />
         <DataLines />
       </Canvas>
       
       <div style={{ position: 'absolute', top: '20px', left: '20px', pointerEvents: 'none' }}>
-        <div style={{ color: '#00D1B2', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em' }}>
+        <div style={{ color: '#00D1B2', fontSize: '0.7rem', fontWeight: 600, letterSpacing: '0.1em' }}>
           GLOBAL CONNECTIVITY
         </div>
-        <div style={{ color: '#FFFFFF', fontSize: '1.5rem', fontWeight: 700 }}>
+        <div style={{ color: '#FFFFFF', fontSize: isMobile ? '1.1rem' : '1.5rem', fontWeight: 700 }}>
           {t('synccms.multisite.globe.title', 'Unified Global Control')}
         </div>
       </div>
 
-      <div style={{ position: 'absolute', bottom: '20px', right: '20px', background: 'rgba(15, 23, 42, 0.8)', padding: '15px', borderRadius: '12px', border: '1px solid #334155', backdropFilter: 'blur(10px)' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '5px' }}>
-          <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#00D1B2', boxShadow: '0 0 8px #00D1B2' }} />
-          <span style={{ color: '#E2E8F0', fontSize: '0.75rem' }}>{t('synccms.multisite.status.core', 'Integrated Core: Active')}</span>
+      {!isMobile && (
+        <div style={{ position: 'absolute', bottom: '20px', right: '20px', background: 'rgba(15, 23, 42, 0.8)', padding: '15px', borderRadius: '12px', border: '1px solid #334155', backdropFilter: 'blur(10px)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '5px' }}>
+            <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#00D1B2', boxShadow: '0 0 8px #00D1B2' }} />
+            <span style={{ color: '#E2E8F0', fontSize: '0.75rem' }}>{t('synccms.multisite.status.core', 'Integrated Core: Active')}</span>
+          </div>
+          <div style={{ color: '#94A3B8', fontSize: '0.7rem' }}>
+            {t('synccms.multisite.status.connection', 'Connections: 4 Active Nodes')}
+          </div>
         </div>
-        <div style={{ color: '#94A3B8', fontSize: '0.7rem' }}>
-          {t('synccms.multisite.status.connection', 'Connections: 4 Active Nodes')}
-        </div>
-      </div>
+      )}
     </div>
   );
 };

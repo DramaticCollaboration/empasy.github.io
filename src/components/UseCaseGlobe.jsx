@@ -55,7 +55,7 @@ const UseCaseGlobe = () => {
   ];
 
   return (
-    <div style={{ width: '100%', height: '600px', background: '#020617', borderRadius: '24px', position: 'relative', overflow: 'hidden' }}>
+    <div className="globe-wrapper">
       <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
         <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
         <ambientLight intensity={0.5} />
@@ -90,18 +90,18 @@ const UseCaseGlobe = () => {
         ))}
       </Canvas>
 
-      <div style={{ position: 'absolute', top: '40px', left: '40px', pointerEvents: 'none' }}>
-        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} style={{ color: '#00D1B2', fontSize: '0.8rem', fontWeight: 800, letterSpacing: '0.2em', marginBottom: '10px' }}>
+      <div className="globe-header">
+        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="globe-subtitle">
           GLOBAL TRUST NETWORK
         </motion.div>
-        <motion.h2 initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} style={{ color: '#FFFFFF', fontSize: '2rem', fontWeight: 900, margin: 0 }}>
+        <motion.h2 initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} className="globe-title">
           {t('usecases.hero.globe.title', 'Trusted by Industry Leaders')}
         </motion.h2>
       </div>
 
-      <div style={{ position: 'absolute', bottom: '40px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '40px' }}>
+      <div className="globe-brands">
         {['LG', 'SAMSUNG', 'HYOSUNG', 'VISANG'].map((brand) => (
-          <div key={brand} style={{ color: '#475569', fontSize: '1rem', fontWeight: 900, letterSpacing: '0.1em' }}>{brand}</div>
+          <div key={brand} className="brand-item">{brand}</div>
         ))}
       </div>
     </div>

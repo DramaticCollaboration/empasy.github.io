@@ -133,12 +133,16 @@ const Company = () => {
       </section>
 
       {/* 6. Location & Contact CTA */}
-      <section className="company-cta-section">
-        <CompanyDarkMap />
-        <div className="cta-content">
-          <h2>{t('company.cta.title')}</h2>
-          <Link to={`/${currentLang}/contact`} state={{ interest: 'Other' }} className="magnetic-btn">{t('company.cta.btn')}</Link>
+      <section className="location-section">
+        <div className="section-header">
+          <h2>{t('company.location.title', 'Our Location')}</h2>
         </div>
+        <CompanyDarkMap />
+      </section>
+
+      <section className="company-cta-section">
+        <h2>{t('company.cta.title')}</h2>
+        <Link to={`/${currentLang}/contact`} state={{ interest: 'Other' }} className="contact-btn">{t('company.cta.btn')}</Link>
       </section>
     </div>
   );

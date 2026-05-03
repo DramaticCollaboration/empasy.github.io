@@ -143,9 +143,7 @@ const UseCases = () => {
       {/* 5. Bottom CTA */}
       <section className="uc-cta-section">
         <h2>{t('usecases.cta.title')}</h2>
-        <Link to={`/${currentLang}/contact`} state={{ interest: 'Other' }} className="contact-btn">
-          {t('usecases.cta.btn')} <span className="arrow">→</span>
-        </Link>
+        <Link to={`/${currentLang}/contact`} state={{ interest: 'Other' }} className="contact-btn">{t('usecases.cta.btn')}</Link>
       </section>
     </div>
   );

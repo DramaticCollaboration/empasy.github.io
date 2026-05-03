@@ -1,24 +1,47 @@
 import React, { useRef, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './ConveyorAnimation.css';
 
 const ConveyorAnimation = () => {
+  const { t } = useTranslation();
   const beltRef = useRef(null);
   const containerRef = useRef(null);
+  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
 
-  const items = [
-    { title: 'Build', name: 'SyncBoot', desc: 'MSA 기반 신속한 개발' },
-    { title: 'Manage', name: 'SyncCMS', desc: '콘텐츠 중앙 관리' },
-    { title: 'Test', name: 'SyncEta', desc: 'AI 기반 자동화 테스트' },
-    { title: 'Connect', name: 'SyncAPIM', desc: 'API 통합 및 관리' },
-    // Add more items to make the belt feel continuous
-    { title: 'Build', name: 'SyncBoot', desc: 'MSA 기반 신속한 개발' },
-    { title: 'Manage', name: 'SyncCMS', desc: '콘텐츠 중앙 관리' },
-    { title: 'Test', name: 'SyncEta', desc: 'AI 기반 자동화 테스트' },
-    { title: 'Connect', name: 'SyncAPIM', desc: 'API 통합 및 관리' },
+  const baseItems = [
+    { 
+      title: 'Build', 
+      name: t('syncseries.solutions.syncboot.title').split(' ')[0], 
+      desc: t('syncseries.solutions.syncboot.desc') 
+    },
+    { 
+      title: 'Manage', 
+      name: t('syncseries.solutions.synccms.title').split(' ')[0], 
+      desc: t('syncseries.solutions.synccms.desc') 
+    },
+    { 
+      title: 'Test', 
+      name: t('syncseries.solutions.synceta.title').split(' ')[0], 
+      desc: t('syncseries.solutions.synceta.desc') 
+    },
+    { 
+      title: 'Connect', 
+      name: t('syncseries.solutions.syncapim.title').split(' ')[0], 
+      desc: t('syncseries.solutions.syncapim.desc') 
+    },
   ];
 
+  // Mobile uses single set, Desktop uses double for continuity
+  const items = isMobile ? baseItems : [...baseItems, ...baseItems];
+
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
     const handleScroll = () => {
+      if (isMobile) return; // Skip animation on mobile
+      
       if (containerRef.current && beltRef.current) {
         const { top, height } = containerRef.current.getBoundingClientRect();
         const windowHeight = window.innerHeight;
@@ -37,21 +60,29 @@ const ConveyorAnimation = () => {
       }
     };
 
+    window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isMobile]);
 
   return (
-    <div className="conveyor-container" ref={containerRef}>
+    <div className={`conveyor-container ${isMobile ? 'mobile' : ''}`} ref={containerRef}>
       <div className="conveyor-belt" ref={beltRef}>
         {items.map((item, index) => (
           <React.Fragment key={index}>
             <div className="conveyor-item">
-              <h3>{item.title}</h3>
-              <p><strong>{item.name}</strong></p>
+              <div className="item-category">{item.title}</div>
+              <h3>{item.name}</h3>
               <p>{item.desc}</p>
             </div>
-            {index < items.length / 2 -1 || (index >= items.length/2 && index < items.length -1) ? <div className="conveyor-arrow">→</div> : null}
+            {index < items.length - 1 && (
+              <div className="conveyor-arrow">
+                {isMobile ? '↓' : '→'}
+              </div>
+            )}
           </React.Fragment>
         ))}
       </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SEO from '../components/common/SEO';
@@ -14,13 +14,23 @@ const SyncAPIM = () => {
   const { t } = useTranslation();
   const { lang } = useParams();
   const currentLang = lang || 'ko';
+  
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div className="syncapim-container">
       <SEO pageKey="syncapim" />
       {/* 1. Hero Section */}
       <section className="syncapim-hero-section">
-        <APIGatewayParticles />
+        <APIGatewayParticles isMobile={isMobile} />
       </section>
 
       {/* 2. Full Lifecycle Management */}
@@ -30,7 +40,7 @@ const SyncAPIM = () => {
           <p>{t('syncapim.lifecycle.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <APIScrollTelling />
+          <APIScrollTelling isMobile={isMobile} />
         </div>
       </section>
 
@@ -41,7 +51,7 @@ const SyncAPIM = () => {
           <p>{t('syncapim.features.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <APIInteractiveBento />
+          <APIInteractiveBento isMobile={isMobile} />
         </div>
       </section>
 
@@ -52,7 +62,7 @@ const SyncAPIM = () => {
           <p>{t('syncapim.security.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <APISecurityShield />
+          <APISecurityShield isMobile={isMobile} />
         </div>
       </section>
 
@@ -63,7 +73,7 @@ const SyncAPIM = () => {
           <p>{t('syncapim.observability.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <APIPacketbeatAnalytics />
+          <APIPacketbeatAnalytics isMobile={isMobile} />
         </div>
       </section>
 

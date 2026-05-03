@@ -28,7 +28,7 @@ const CommerceLogi = () => {
           <h2>{t('commercelogi.syncshop.title')}</h2>
           <p>{t('commercelogi.syncshop.subtitle')}</p>
         </div>
-        <div className="interactive-container">
+        <div className="headless-simulator-container">
           <LogiHeadlessSim />
         </div>
       </section>
@@ -39,7 +39,7 @@ const CommerceLogi = () => {
           <h2>{t('commercelogi.logistics.title')}</h2>
           <p>{t('commercelogi.logistics.subtitle')}</p>
         </div>
-        <div className="interactive-container">
+        <div className="routing-optimization-container">
           <LogiRouteOptimization />
         </div>
       </section>
@@ -50,7 +50,7 @@ const CommerceLogi = () => {
           <h2>{t('commercelogi.docai.title')}</h2>
           <p>{t('commercelogi.docai.subtitle')}</p>
         </div>
-        <div className="interactive-container">
+        <div className="doc-ai-container">
           <LogiDocumentAI />
         </div>
       </section>
@@ -88,10 +88,7 @@ const CommerceLogi = () => {
       {/* 6. Bottom CTA */}
       <section className="comlogi-cta-section">
         <h2>{t('commercelogi.cta.title')}</h2>
-        <Link to={`/${currentLang}/contact`} state={{ interest: 'Other' }} className="contact-btn">
-          <span className="btn-text">{t('commercelogi.cta.btn')}</span>
-          <span className="truck-icon">🚚</span>
-        </Link>
+        <Link to={`/${currentLang}/contact`} state={{ interest: 'Other' }} className="contact-btn">{t('commercelogi.cta.btn')}</Link>
       </section>
     </div>
   );

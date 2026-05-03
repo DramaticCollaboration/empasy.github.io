@@ -23,25 +23,47 @@
 /* 1. Hero Section */
 .synccms-hero-section {
   min-height: 100vh;
+  padding-top: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text-area {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-visual-area {
+  flex: 1.2;
+  width: 100%;
 }
 
 .synccms-hero-section h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 900;
   margin-bottom: 1.5rem;
   background: linear-gradient(90deg, #F72585, #FFB5A7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  line-height: 1.1;
 }
 
-.synccms-hero-section p {
-  font-size: 1.2rem;
-  margin-bottom: 3rem;
+.synccms-hero-section .hero-desc {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
   color: #EDF2F4;
+  max-width: 600px;
 }
 
 .block-assembly-placeholder {
@@ -52,7 +74,13 @@
   font-style: italic;
 }
 
-/* Common Placeholders for Sections */
+/* Common Placeholders and Containers for Sections */
+.interactive-container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
 .drag-drop-simulator-placeholder,
 .global-network-placeholder,
 .puzzle-assembly-placeholder,
@@ -122,9 +150,33 @@
 }
 
 /* Responsive Styles */
+@media (max-width: 1200px) {
+  .hero-content {
+    gap: 2rem;
+  }
+  .synccms-hero-section h1 {
+    font-size: 3.2rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .synccms-hero-section h1 {
     font-size: 2.8rem;
+  }
+  
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .hero-text-area {
+    text-align: center;
+  }
+
+  .synccms-hero-section .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -133,16 +185,26 @@
     padding: 4rem 1.5rem;
   }
 
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
   .section-header h2 {
     font-size: 2rem;
+  }
+
+  .synccms-hero-section {
+    padding-top: 100px;
+    min-height: auto;
   }
 
   .synccms-hero-section h1 {
     font-size: 2.2rem;
   }
 
-  .synccms-hero-section p {
+  .synccms-hero-section .hero-desc {
     font-size: 1rem;
+    margin-bottom: 2rem;
   }
 
   .drag-drop-simulator-placeholder,

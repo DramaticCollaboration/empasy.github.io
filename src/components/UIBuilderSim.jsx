@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-const UIBuilderSim = () => {
+const UIBuilderSim = ({ isMobile }) => {
   const { t } = useTranslation();
   const [canvasItems, setCanvasItems] = useState([]);
   const [isDemoRunning, setIsDemoRunning] = useState(true);
@@ -85,8 +85,9 @@ const UIBuilderSim = () => {
   return (
     <div className="ui-builder-sim" style={{ 
       display: 'flex', 
+      flexDirection: isMobile ? 'column' : 'row',
       width: '100%', 
-      height: '500px', 
+      height: isMobile ? '400px' : '500px', 
       background: '#FFFFFF', 
       borderRadius: '20px', 
       overflow: 'hidden',
@@ -96,27 +97,46 @@ const UIBuilderSim = () => {
       color: '#1E293B'
     }}>
       {/* Palette */}
-      <div style={{ width: '220px', background: '#F8FAFC', padding: '24px', borderRight: '1px solid #E2E8F0' }}>
-        <h5 style={{ fontSize: '0.85rem', color: '#64748B', marginBottom: '24px', fontWeight: 600, letterSpacing: '0.05em' }}>
+      <div style={{ 
+        width: isMobile ? '100%' : '220px', 
+        height: isMobile ? 'auto' : '100%',
+        background: '#F8FAFC', 
+        padding: isMobile ? '16px' : '24px', 
+        borderRight: isMobile ? 'none' : '1px solid #E2E8F0',
+        borderBottom: isMobile ? '1px solid #E2E8F0' : 'none'
+      }}>
+        <h5 style={{ 
+          fontSize: '0.75rem', 
+          color: '#64748B', 
+          marginBottom: isMobile ? '12px' : '24px', 
+          fontWeight: 600, 
+          letterSpacing: '0.05em' 
+        }}>
           MODULE PALETTE
         </h5>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+        <div style={{ 
+          display: 'flex', 
+          flexDirection: isMobile ? 'row' : 'column', 
+          gap: isMobile ? '8px' : '12px',
+          overflowX: isMobile ? 'auto' : 'visible'
+        }}>
           {modules.map((mod) => (
             <motion.div 
               key={mod.id} 
-              whileHover={{ scale: 1.02, x: 5 }}
+              whileHover={{ scale: 1.02, x: isMobile ? 0 : 5 }}
               style={{ 
                 display: 'flex', 
                 alignItems: 'center', 
                 gap: '12px', 
-                padding: '12px 16px', 
+                padding: isMobile ? '8px 12px' : '12px 16px', 
                 background: '#FFFFFF', 
                 borderRadius: '12px',
-                fontSize: '0.8rem',
+                fontSize: '0.75rem',
                 color: '#334155',
                 border: '1px solid #E2E8F0',
                 boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                whiteSpace: 'nowrap'
               }}
             >
               <mod.icon size={18} color="#00D1B2" />

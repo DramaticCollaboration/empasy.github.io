@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { FileText, FileJson, Search, CheckCircle, Zap, Loader2 } from 'lucide-react';
+import { FileText, FileJson, Search, Zap, Loader2 } from 'lucide-react';
+import useMediaQuery from '../hooks/useMediaQuery';
 
 const LogiDocumentAI = () => {
   const { t } = useTranslation();
   const [status, setStatus] = useState('idle'); // idle, scanning, completed
   const [jsonLines, setJsonLines] = useState([]);
+  const isMobile = useMediaQuery('(max-width: 768px)');
 
   const mockJson = [
     '"document_type": "Invoice"',
@@ -41,16 +43,37 @@ const LogiDocumentAI = () => {
   }, [status]);
 
   return (
-    <div style={{ width: '100%', height: '500px', background: '#FFFFFF', borderRadius: '24px', border: '1px solid #E2E8F0', display: 'flex', gap: '20px', padding: '40px', position: 'relative', overflow: 'hidden' }}>
-      {/* 1. Raw Document (Left) */}
-      <div style={{ flex: 1, background: '#F8FAFC', borderRadius: '12px', border: '1px solid #E2E8F0', padding: '20px', position: 'relative', overflow: 'hidden' }}>
+    <div style={{ 
+      width: '100%', 
+      height: isMobile ? 'auto' : '500px', 
+      background: '#FFFFFF', 
+      borderRadius: '24px', 
+      border: '1px solid #E2E8F0', 
+      display: 'flex', 
+      flexDirection: isMobile ? 'column' : 'row',
+      gap: isMobile ? '10px' : '20px', 
+      padding: isMobile ? '20px' : '40px', 
+      position: 'relative', 
+      overflow: 'hidden' 
+    }}>
+      {/* 1. Raw Document */}
+      <div style={{ 
+        flex: 1, 
+        background: '#F8FAFC', 
+        borderRadius: '12px', 
+        border: '1px solid #E2E8F0', 
+        padding: '20px', 
+        position: 'relative', 
+        overflow: 'hidden',
+        minHeight: isMobile ? '150px' : 'auto'
+      }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#64748B', fontSize: '0.75rem', fontWeight: 800, marginBottom: '20px' }}>
           <FileText size={16} /> RAW DOCUMENT
         </div>
         <div style={{ opacity: 0.5 }}>
           <div style={{ width: '60%', height: '10px', background: '#CBD5E1', marginBottom: '10px' }} />
           <div style={{ width: '100%', height: '8px', background: '#E2E8F0', marginBottom: '5px' }} />
-          <div style={{ width: '90%', height: '8px', background: '#E2E8F0', marginBottom: '20px' }} />
+          <div style={{ width: '90%', height: '8px', background: '#E2E8F0', marginBottom: isMobile ? '10px' : '20px' }} />
           
           <div style={{ border: '1px solid #CBD5E1', padding: '15px', borderRadius: '4px' }}>
             <div style={{ fontSize: '0.8rem', fontWeight: 700, color: '#475569', marginBottom: '10px' }}>INVOICE #4592</div>
@@ -77,26 +100,40 @@ const LogiDocumentAI = () => {
         </AnimatePresence>
       </div>
 
-      {/* 2. AI Processing Module (Center) */}
-      <div style={{ width: '100px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '15px' }}>
-        <div style={{ width: '2px', height: '100%', background: 'linear-gradient(to bottom, #E2E8F0, #00D1B2, #E2E8F0)' }} />
-        <motion.div 
-          animate={status === 'scanning' ? { rotate: 360 } : {}}
-          transition={{ repeat: Infinity, duration: 2, ease: 'linear' }}
-          onClick={handleStart}
-          style={{ 
-            width: '60px', height: '60px', background: status === 'scanning' ? '#00D1B2' : '#F1F5F9', 
-            borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center',
-            cursor: 'pointer', border: '2px solid #E2E8F0', zIndex: 20
-          }}
-        >
-          {status === 'scanning' ? <Loader2 color="#FFF" /> : <Zap color={status === 'completed' ? '#00D1B2' : '#94A3B8'} />}
-        </motion.div>
-        <div style={{ width: '2px', height: '100%', background: 'linear-gradient(to bottom, #E2E8F0, #00D1B2, #E2E8F0)' }} />
-      </div>
+      {/* 2. AI Processing Module (Hidden or simplified on mobile) */}
+      {!isMobile ? (
+        <div style={{ width: '100px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '15px' }}>
+          <div style={{ width: '2px', height: '100%', background: 'linear-gradient(to bottom, #E2E8F0, #00D1B2, #E2E8F0)' }} />
+          <motion.div 
+            animate={status === 'scanning' ? { rotate: 360 } : {}}
+            transition={{ repeat: Infinity, duration: 2, ease: 'linear' }}
+            onClick={handleStart}
+            style={{ 
+              width: '60px', height: '60px', background: status === 'scanning' ? '#00D1B2' : '#F1F5F9', 
+              borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center',
+              cursor: 'pointer', border: '2px solid #E2E8F0', zIndex: 20
+            }}
+          >
+            {status === 'scanning' ? <Loader2 color="#FFF" /> : <Zap color={status === 'completed' ? '#00D1B2' : '#94A3B8'} />}
+          </motion.div>
+          <div style={{ width: '2px', height: '100%', background: 'linear-gradient(to bottom, #E2E8F0, #00D1B2, #E2E8F0)' }} />
+        </div>
+      ) : (
+        <div style={{ display: 'flex', justifyContent: 'center', padding: '10px 0' }}>
+           <Zap color={status === 'completed' ? '#00D1B2' : (status === 'scanning' ? '#00D1B2' : '#94A3B8')} />
+        </div>
+      )}
 
-      {/* 3. Structured Data (Right) */}
-      <div style={{ flex: 1.2, background: '#0F172A', borderRadius: '12px', padding: '20px', position: 'relative', overflow: 'hidden' }}>
+      {/* 3. Structured Data */}
+      <div style={{ 
+        flex: 1.2, 
+        background: '#0F172A', 
+        borderRadius: '12px', 
+        padding: '20px', 
+        position: 'relative', 
+        overflow: 'hidden',
+        minHeight: isMobile ? '200px' : 'auto'
+      }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#94A3B8', fontSize: '0.75rem', fontWeight: 800 }}>
             <FileJson size={16} /> STRUCTURED JSON
@@ -107,7 +144,7 @@ const LogiDocumentAI = () => {
             </motion.div>
           )}
         </div>
-        <div style={{ fontFamily: 'monospace', fontSize: '0.75rem', color: '#00D1B2' }}>
+        <div style={{ fontFamily: 'monospace', fontSize: isMobile ? '0.65rem' : '0.75rem', color: '#00D1B2' }}>
           {'{'}
           <div style={{ marginLeft: '15px' }}>
             {jsonLines.map((line, i) => (
@@ -130,11 +167,12 @@ const LogiDocumentAI = () => {
             onClick={handleStart}
             style={{ 
               background: '#0F172A', color: '#FFF', border: 'none', 
-              padding: '12px 30px', borderRadius: '50px', fontWeight: 800, 
-              cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px'
+              padding: isMobile ? '10px 20px' : '12px 30px', borderRadius: '50px', fontWeight: 800, 
+              cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px',
+              fontSize: isMobile ? '0.8rem' : '1rem'
             }}
           >
-            <Search size={18} /> START AI ANALYSIS
+            <Search size={isMobile ? 16 : 18} /> START AI ANALYSIS
           </motion.button>
         </div>
       )}

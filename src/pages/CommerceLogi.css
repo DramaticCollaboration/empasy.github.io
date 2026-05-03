@@ -8,6 +8,13 @@
   margin: 0 auto;
 }
 
+.headless-simulator-container,
+.routing-optimization-container,
+.doc-ai-container {
+  width: 100%;
+  margin-top: 2rem;
+}
+
 .section-header {
   text-align: center;
   margin-bottom: 4rem;
@@ -264,6 +271,18 @@
   gap: 1.5rem;
 }
 
+@media (max-width: 1024px) {
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .kpi-card {
   background: linear-gradient(145deg, #151515, #0a0a0a);
   padding: 2rem 1rem;
@@ -307,30 +326,32 @@
   background: #007F7A;
   color: white;
   border: none;
-  padding: 1rem 3rem;
-  font-size: 1.1rem;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
   font-weight: 700;
   border-radius: 50px;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
+  display: inline-block;
 }
 
-.comlogi-cta-section .btn-text {
-  position: relative;
-  z-index: 2;
-}
-
-.comlogi-cta-section .truck-icon {
+.comlogi-cta-section .contact-btn::after {
+  content: '';
   position: absolute;
   top: 50%;
-  left: -30px;
-  transform: translateY(-50%);
-  font-size: 1.5rem;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-  z-index: 1;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s;
+}
+
+.comlogi-cta-section .contact-btn:hover::after {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .comlogi-cta-section .contact-btn:hover {
@@ -350,6 +371,10 @@
     padding: 4rem 1.5rem;
   }
 
+  .comlogi-hero-section {
+    min-height: 60vh;
+  }
+
   .section-header h2 {
     font-size: 2rem;
   }
@@ -362,8 +387,11 @@
     font-size: 1rem;
   }
 
-  .headless-simulator-container {
+  .headless-simulator-container,
+  .routing-optimization-container,
+  .doc-ai-container {
     flex-direction: column;
+    gap: 1.5rem;
   }
 
   .headless-simulator-placeholder {
@@ -394,15 +422,20 @@
   .comlogi-cta-section h2 {
     font-size: 1.8rem;
   }
+
+  .headless-simulator-container,
+  .routing-optimization-container,
+  .doc-ai-container {
+    padding: 0;
+  }
 }
 
 @media (max-width: 480px) {
   .comlogi-hero-section h1 {
     font-size: 1.8rem;
   }
-}
 
-.comlogi-cta-section .contact-btn:hover .truck-icon {
-  opacity: 0.5;
-  left: 110%; /* Move across the button */
+  .kpi-card .kpi-value {
+    font-size: 1.5rem;
+  }
 }

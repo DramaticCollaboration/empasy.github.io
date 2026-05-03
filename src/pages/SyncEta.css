@@ -80,13 +80,24 @@
 }
 
 /* Specific Layouts */
-.healing-visual-container {
+.dual-visual-grid {
   display: flex;
   gap: 2rem;
 }
 
-.healing-visual-container > div {
+.visual-card {
   flex: 1;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+
+.visual-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  text-align: center;
 }
 
 /* Download and Guide Section */
@@ -186,55 +197,42 @@
   line-height: 1.4;
 }
 
-/* SyncEta Contact Button Style (Neon Scanning effect) */
+/* SyncEta Contact Button Style */
 .synceta-cta-section .contact-btn {
-  background: transparent;
-  color: #39FF14;
-  border: 2px solid #39FF14;
+  background: #39FF14;
+  color: #000;
+  border: none;
   padding: 1rem 2.5rem;
   font-size: 1rem;
   font-weight: 700;
   border-radius: 50px;
   cursor: pointer;
-  transition: all 0.3s;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
-}
-
-.synceta-cta-section .contact-btn::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(from 0deg at 50% 50%, transparent 0deg, #39FF14 90deg, transparent 180deg);
-  animation: scan-rotate 2s linear infinite;
-  opacity: 0.5;
-  z-index: 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: inline-block;
 }
 
 .synceta-cta-section .contact-btn::after {
-  content: 'SyncEta 도입 문의하기';
+  content: '';
   position: absolute;
-  top: 2px;
-  left: 2px;
-  right: 2px;
-  bottom: 2px;
-  background: var(--bg-dark);
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s;
+}
+
+.synceta-cta-section .contact-btn:hover::after {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .synceta-cta-section .contact-btn:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(57, 255, 20, 0.4);
-  color: #fff;
-  background: #39FF14;
 }
 
 /* Responsive Styles */
@@ -246,23 +244,45 @@
 
 @media (max-width: 768px) {
   .synceta-container section {
-    padding: 4rem 1.5rem;
+    padding: 3rem 1.2rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
   }
 
   .section-header h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .section-header p {
+    font-size: 0.9rem;
+  }
+
+  .synceta-hero-section {
+    min-height: auto;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
   }
 
   .synceta-hero-section h1 {
     font-size: 2.2rem;
+    line-height: 1.2;
   }
 
   .synceta-hero-section p {
     font-size: 1rem;
+    margin-bottom: 2rem;
   }
 
-  .healing-visual-container {
+  .dual-visual-grid {
     flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .interactive-container {
+    width: 100%;
+    overflow-x: hidden;
   }
 
   .download-guide-content {
@@ -274,17 +294,12 @@
     max-width: 100%;
   }
 
-  .before-after-placeholder,
-  .healing-simulator-placeholder,
-  .visual-qa-placeholder,
-  .dashboard-animation-placeholder,
-  .feedback-loop-placeholder,
-  .pipeline-routing-placeholder {
-    height: 250px;
+  .guide-link h3, .download-links h3 {
+    font-size: 1.5rem;
   }
 
   .synceta-cta-section h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -292,14 +307,4 @@
   .synceta-hero-section h1 {
     font-size: 1.8rem;
   }
-}
-
-.synceta-cta-section .contact-btn:hover::after {
-  background: transparent;
-  color: #000;
-}
-
-@keyframes scan-rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }

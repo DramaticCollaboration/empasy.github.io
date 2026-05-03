@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SEO from '../components/common/SEO';
@@ -15,6 +15,14 @@ const SyncEta = () => {
   const { lang } = useParams();
   const currentLang = lang || 'ko';
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="synceta-container">
       <SEO pageKey="synceta" />
@@ -24,7 +32,7 @@ const SyncEta = () => {
           <h1>{t('synceta.hero.title')}</h1>
           <p>{t('synceta.hero.desc')}</p>
           <div className="hero-visual">
-            <EtaAILoop />
+            <EtaAILoop isMobile={isMobile} />
           </div>
         </div>
       </section>
@@ -36,7 +44,7 @@ const SyncEta = () => {
           <p>{t('synceta.recording.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <EtaPipelineDomino />
+          <EtaPipelineDomino isMobile={isMobile} />
         </div>
       </section>
 
@@ -49,11 +57,11 @@ const SyncEta = () => {
         <div className="dual-visual-grid">
           <div className="visual-card">
             <h3>{t('synceta.healing.card1.title', 'AI Self-Healing')}</h3>
-            <EtaSelfHealing />
+            <EtaSelfHealing isMobile={isMobile} />
           </div>
           <div className="visual-card">
             <h3>{t('synceta.healing.card2.title', 'Visual Regression')}</h3>
-            <EtaVisualQA />
+            <EtaVisualQA isMobile={isMobile} />
           </div>
         </div>
       </section>
@@ -65,7 +73,7 @@ const SyncEta = () => {
           <p>{t('synceta.dashboard.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <EtaDashboardForensics />
+          <EtaDashboardForensics isMobile={isMobile} />
         </div>
       </section>
 
@@ -76,7 +84,7 @@ const SyncEta = () => {
           <p>{t('synceta.feedback.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <EtaAILoop />
+          <EtaAILoop isMobile={isMobile} />
         </div>
       </section>
 
@@ -87,7 +95,7 @@ const SyncEta = () => {
           <p>{t('synceta.cicd.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <EtaPipelineDomino />
+          <EtaPipelineDomino isMobile={isMobile} />
         </div>
       </section>
 

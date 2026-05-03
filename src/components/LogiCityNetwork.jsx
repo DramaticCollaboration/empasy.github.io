@@ -4,6 +4,7 @@ import { Float, Box, Sphere, Line, PerspectiveCamera, OrbitControls } from '@rea
 import * as THREE from 'three';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import useMediaQuery from '../hooks/useMediaQuery';
 
 const CityBuilding = ({ position, args, color }) => (
   <mesh position={position}>
@@ -62,11 +63,19 @@ const DataParticles = ({ start, end }) => {
 
 const LogiCityNetwork = () => {
   const { t } = useTranslation();
+  const isMobile = useMediaQuery('(max-width: 768px)');
 
   return (
-    <div style={{ width: '100%', height: '600px', background: '#020617', borderRadius: '24px', position: 'relative', overflow: 'hidden' }}>
+    <div style={{ 
+      width: '100%', 
+      height: isMobile ? '400px' : '600px', 
+      background: '#020617', 
+      borderRadius: '24px', 
+      position: 'relative', 
+      overflow: 'hidden' 
+    }}>
       <Canvas shadow={{ enabled: true }}>
-        <PerspectiveCamera makeDefault position={[10, 10, 10]} fov={40} />
+        <PerspectiveCamera makeDefault position={isMobile ? [12, 12, 12] : [10, 10, 10]} fov={isMobile ? 50 : 40} />
         <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
         <ambientLight intensity={0.4} />
         <pointLight position={[10, 10, 10]} intensity={1} />
@@ -103,21 +112,37 @@ const LogiCityNetwork = () => {
         <Line points={[[5, 0.1, 5], [0, 0.1, 0]]} color="#00D1B2" lineWidth={1} opacity={0.2} transparent />
       </Canvas>
 
-      <div style={{ position: 'absolute', top: '40px', left: '40px', pointerEvents: 'none' }}>
-        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} style={{ color: '#00D1B2', fontSize: '0.8rem', fontWeight: 800, letterSpacing: '0.2em', marginBottom: '10px' }}>
+      <div style={{ 
+        position: 'absolute', 
+        top: isMobile ? '20px' : '40px', 
+        left: isMobile ? '20px' : '40px', 
+        pointerEvents: 'none',
+        maxWidth: isMobile ? '80%' : 'none'
+      }}>
+        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} style={{ color: '#00D1B2', fontSize: isMobile ? '0.6rem' : '0.8rem', fontWeight: 800, letterSpacing: '0.2em', marginBottom: '10px' }}>
           INTEGRATED LOGISTICS
         </motion.div>
-        <motion.h2 initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} style={{ color: '#FFFFFF', fontSize: '2rem', fontWeight: 900, margin: 0 }}>
+        <motion.h2 initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} style={{ color: '#FFFFFF', fontSize: isMobile ? '1.5rem' : '2rem', fontWeight: 900, margin: 0 }}>
           {t('commercelogi.hero.title', 'Smart City Network')}
         </motion.h2>
       </div>
 
-      <div style={{ position: 'absolute', bottom: '40px', right: '40px', background: 'rgba(15, 23, 42, 0.8)', padding: '20px', borderRadius: '16px', border: '1px solid #334155', backdropFilter: 'blur(10px)' }}>
+      <div style={{ 
+        position: 'absolute', 
+        bottom: isMobile ? '20px' : '40px', 
+        right: isMobile ? '20px' : '40px', 
+        background: 'rgba(15, 23, 42, 0.8)', 
+        padding: isMobile ? '12px' : '20px', 
+        borderRadius: '16px', 
+        border: '1px solid #334155', 
+        backdropFilter: 'blur(10px)',
+        maxWidth: isMobile ? '200px' : 'none'
+      }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
           <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#00D1B2', boxShadow: '0 0 10px #00D1B2' }} />
-          <span style={{ color: '#E2E8F0', fontSize: '0.8rem', fontWeight: 700 }}>{t('commercelogi.hero.status.order', 'Orders Processing: 1,240')}</span>
+          <span style={{ color: '#E2E8F0', fontSize: isMobile ? '0.7rem' : '0.8rem', fontWeight: 700 }}>{t('commercelogi.hero.status.order', 'Orders Processing: 1,240')}</span>
         </div>
-        <div style={{ color: '#94A3B8', fontSize: '0.75rem' }}>{t('commercelogi.hero.status.sorting', 'AI Sorting: Active')}</div>
+        <div style={{ color: '#94A3B8', fontSize: isMobile ? '0.65rem' : '0.75rem' }}>{t('commercelogi.hero.status.sorting', 'AI Sorting: Active')}</div>
       </div>
     </div>
   );

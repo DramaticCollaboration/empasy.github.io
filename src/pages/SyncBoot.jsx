@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useLoading } from '../context/LoadingContext';
 import SEO from '../components/common/SEO';
 import CubeAnimation from '../components/CubeAnimation';
 import ArchitectureMap from '../components/ArchitectureMap';
@@ -14,16 +15,34 @@ import './SyncBoot.css';
 const SyncBoot = () => {
   const { t } = useTranslation();
   const { lang } = useParams();
+  const { IsPageLoading, setIsPageLoading, setIsFullPage } = useLoading();
   const currentLang = lang || 'ko';
   const [activeTab, setActiveTab] = useState('circuit');
   const [isShattered, setIsShattered] = useState(false);
 
   useEffect(() => {
+    // Initial entrance for SyncBoot: show mini spinner instead of full page
+    // because we want the Monolith animation to be visible.
+    setIsFullPage(false);
+    setIsPageLoading(true);
+
     const timer = setTimeout(() => {
+      setIsPageLoading(false);
       setIsShattered(true);
+      setIsFullPage(true); // Reset to default for other pages/tabs
     }, 2000); // Shatter after 2 seconds
     return () => clearTimeout(timer);
   }, []);
+
+  const handleTabChange = (tab) => {
+    if (tab === activeTab) return;
+    setIsFullPage(true);
+    setIsPageLoading(true);
+    setTimeout(() => {
+      setActiveTab(tab);
+      setIsPageLoading(false);
+    }, 500);
+  };
 
   const tabContent = {
     circuit: <CircuitBreaker />,
@@ -35,6 +54,7 @@ const SyncBoot = () => {
   return (
     <div className="syncboot-container">
       <SEO pageKey="syncboot" />
+      
       {/* 1. Hero Section */}
       <section className="syncboot-hero-section">
         <div className="hero-content">
@@ -87,25 +107,25 @@ const SyncBoot = () => {
           <div className="tab-nav">
             <button 
               className={`tab-btn ${activeTab === 'circuit' ? 'active' : ''}`}
-              onClick={() => setActiveTab('circuit')}
+              onClick={() => handleTabChange('circuit')}
             >
               {t('syncboot.observability.tabs.circuit')}
             </button>
             <button 
               className={`tab-btn ${activeTab === 'tracing' ? 'active' : ''}`}
-              onClick={() => setActiveTab('tracing')}
+              onClick={() => handleTabChange('tracing')}
             >
               {t('syncboot.observability.tabs.tracing')}
             </button>
             <button 
               className={`tab-btn ${activeTab === 'logs' ? 'active' : ''}`}
-              onClick={() => setActiveTab('logs')}
+              onClick={() => handleTabChange('logs')}
             >
               {t('syncboot.observability.tabs.logs')}
             </button>
             <button 
               className={`tab-btn ${activeTab === 'cicd' ? 'active' : ''}`}
-              onClick={() => setActiveTab('cicd')}
+              onClick={() => handleTabChange('cicd')}
             >
               {t('syncboot.observability.tabs.cicd')}
             </button>

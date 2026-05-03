@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Clock, Phone } from 'lucide-react';
 
-const GlobalNode = ({ position, name, timeZone, phone }) => {
+const GlobalNode = ({ position, name, timeZone, phone, isMobile }) => {
   const [hovered, setHovered] = useState(false);
   const [localTime, setLocalTime] = useState('');
 
@@ -53,14 +53,14 @@ const GlobalNode = ({ position, name, timeZone, phone }) => {
                 background: 'rgba(15, 23, 42, 0.85)',
                 backdropFilter: 'blur(10px)',
                 color: '#FFF',
-                padding: '20px',
+                padding: isMobile ? '12px' : '20px',
                 borderRadius: '16px',
-                fontSize: '0.8rem',
+                fontSize: isMobile ? '0.7rem' : '0.8rem',
                 whiteSpace: 'nowrap',
                 border: '1px solid rgba(0, 209, 178, 0.3)',
                 boxShadow: '0 10px 30px rgba(0,0,0,0.3)',
                 pointerEvents: 'none',
-                minWidth: '200px'
+                minWidth: isMobile ? '150px' : '200px'
               }}
             >
               <div style={{ fontWeight: 900, fontSize: '1rem', color: '#00D1B2', marginBottom: '10px' }}>{name}</div>
@@ -84,6 +84,13 @@ const GlobalNode = ({ position, name, timeZone, phone }) => {
 
 const ContactGlobalGlobe = () => {
   const { t } = useTranslation();
+  const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 768 : false);
+
+  React.useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const locations = [
     { name: 'Seoul HQ', pos: [1.3, 0.8, 1.5], tz: 'Asia/Seoul', phone: '+82 2-1234-5678' },
@@ -92,8 +99,15 @@ const ContactGlobalGlobe = () => {
   ];
 
   return (
-    <div style={{ width: '100%', height: '500px', background: 'radial-gradient(circle at center, #0F172A 0%, #020617 100%)', borderRadius: '24px', position: 'relative', overflow: 'hidden' }}>
-      <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+    <div style={{ 
+      width: '100%', 
+      height: isMobile ? '350px' : '500px', 
+      background: 'radial-gradient(circle at center, #0F172A 0%, #020617 100%)', 
+      borderRadius: '24px', 
+      position: 'relative', 
+      overflow: 'hidden' 
+    }}>
+      <Canvas camera={{ position: [0, 0, isMobile ? 7 : 5], fov: 45 }}>
         <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.3} />
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={1} />
@@ -112,7 +126,7 @@ const ContactGlobalGlobe = () => {
 
         {/* Location Nodes */}
         {locations.map((loc, i) => (
-          <GlobalNode key={i} position={loc.pos} name={loc.name} timeZone={loc.tz} phone={loc.phone} />
+          <GlobalNode key={i} position={loc.pos} name={loc.name} timeZone={loc.tz} phone={loc.phone} isMobile={isMobile} />
         ))}
 
         {/* Data lines between nodes */}
@@ -127,7 +141,17 @@ const ContactGlobalGlobe = () => {
       </div>
 
       {/* Floating UI Hints */}
-      <div style={{ position: 'absolute', bottom: '20px', right: '30px', color: '#475569', fontSize: '0.7rem', display: 'flex', gap: '20px' }}>
+      <div style={{ 
+        position: 'absolute', 
+        bottom: '20px', 
+        right: isMobile ? 'auto' : '30px',
+        left: isMobile ? '20px' : 'auto',
+        color: '#475569', 
+        fontSize: isMobile ? '0.6rem' : '0.7rem', 
+        display: 'flex', 
+        flexDirection: isMobile ? 'column' : 'row',
+        gap: isMobile ? '5px' : '20px' 
+      }}>
         <span>KR • SEOUL</span>
         <span>US • CALIFORNIA</span>
         <span>JP • TOKYO</span>

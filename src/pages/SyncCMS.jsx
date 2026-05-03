@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SEO from '../components/common/SEO';
@@ -14,6 +14,15 @@ const SyncCMS = () => {
   const { t } = useTranslation();
   const { lang } = useParams();
   const currentLang = lang || 'ko';
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div className="synccms-container">
@@ -28,7 +37,7 @@ const SyncCMS = () => {
           {/* Placeholder for 3D block assembly animation - Using UIBuilderSim as a hero visual too if appropriate, 
               or we can keep it simple for now as requested. The request asked to fill the specific placeholders. */}
           <div className="hero-visual-area">
-             <UIBuilderSim />
+             <UIBuilderSim isMobile={isMobile} />
           </div>
         </div>
       </section>
@@ -40,7 +49,7 @@ const SyncCMS = () => {
           <p>{t('synccms.builder.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <UIBuilderSim />
+          <UIBuilderSim isMobile={isMobile} />
         </div>
       </section>
 
@@ -51,7 +60,7 @@ const SyncCMS = () => {
           <p>{t('synccms.multisite.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <GlobalNetworkGlobe />
+          <GlobalNetworkGlobe isMobile={isMobile} />
         </div>
       </section>
 
@@ -62,7 +71,7 @@ const SyncCMS = () => {
           <p>{t('synccms.hybrid.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <HybridPuzzle />
+          <HybridPuzzle isMobile={isMobile} />
         </div>
       </section>
 
@@ -73,7 +82,7 @@ const SyncCMS = () => {
           <p>{t('synccms.history.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <TimeMachineSlider />
+          <TimeMachineSlider isMobile={isMobile} />
         </div>
       </section>
       
@@ -84,7 +93,7 @@ const SyncCMS = () => {
           <p>{t('synccms.seo.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <AnalyticsChartDraw />
+          <AnalyticsChartDraw isMobile={isMobile} />
         </div>
       </section>
 

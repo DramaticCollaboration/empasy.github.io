@@ -14,6 +14,7 @@ import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import Layout from './layout/Layout';
 import { ThemeProvider } from './context/ThemeContext';
+import { LoadingProvider } from './context/LoadingContext';
 import { detectLanguage } from './utils/languageDetector';
 import './styles/global.css';
 
@@ -72,27 +73,29 @@ function App() {
   return (
     <ThemeProvider>
       <Router>
-        <ScrollToTop />
-        <LanguageRedirect>
-          <Routes>
-            <Route path="/:lang" element={<Layout />}>
-              <Route index element={<Home />} />
-              <Route path="hydra" element={<Hydra />} />
-              <Route path="sync-series" element={<SyncSeries />} />
-              <Route path="syncboot" element={<SyncBoot />} />
-              <Route path="synccms" element={<SyncCMS />} />
-              <Route path="syncapim" element={<SyncAPIM />} />
-              <Route path="synceta" element={<SyncEta />} />
-              <Route path="commercelogi" element={<CommerceLogi />} />
-              <Route path="use-cases" element={<UseCases />} />
-              <Route path="company" element={<Company />} />
-              <Route path="contact" element={<Contact />} />
+        <LoadingProvider>
+          <ScrollToTop />
+          <LanguageRedirect>
+            <Routes>
+              <Route path="/:lang" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path="hydra" element={<Hydra />} />
+                <Route path="sync-series" element={<SyncSeries />} />
+                <Route path="syncboot" element={<SyncBoot />} />
+                <Route path="synccms" element={<SyncCMS />} />
+                <Route path="syncapim" element={<SyncAPIM />} />
+                <Route path="synceta" element={<SyncEta />} />
+                <Route path="commercelogi" element={<CommerceLogi />} />
+                <Route path="use-cases" element={<UseCases />} />
+                <Route path="company" element={<Company />} />
+                <Route path="contact" element={<Contact />} />
+                <Route path="*" element={<NotFound />} />
+              </Route>
+              {/* Fallback route */}
               <Route path="*" element={<NotFound />} />
-            </Route>
-            {/* Fallback route */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </LanguageRedirect>
+            </Routes>
+          </LanguageRedirect>
+        </LoadingProvider>
       </Router>
     </ThemeProvider>
   );
