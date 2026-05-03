@@ -104,7 +104,7 @@ const Contact = () => {
       </section>
 
       <div className="contact-main-layout">
-        {/* Left Column: Form */}
+        {/* Main Column: Form */}
         <div className="form-column">
           {/* 3. Smart Inquiry Form */}
           <section className="inquiry-form-section">
@@ -205,7 +205,7 @@ const Contact = () => {
           </section>
         </div>
 
-        {/* Right Column: Info & Map */}
+        {/* Bottom Column: Info & Map */}
         <div className="info-column">
           {/* 2. Global Network & Contact Info */}
           <section className="global-network-section">
