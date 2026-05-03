@@ -167,7 +167,19 @@
         "desc": "From development to operation, validation, and content management. Connect fragmented IT infrastructure to complete the most flexible and powerful digital innovation ecosystem."
       },
       "verse": {
-        "title": "Intelligent Pipeline Connected as One, Not Just Fragmented Tools (SyncVerse)"
+        "title": "Intelligent Pipeline Connected as One, Not Just Fragmented Tools (SyncVerse)",
+        "stages": {
+          "build": "[Build] Service Assembly",
+          "manage": "[Manage] Content Injection",
+          "test": "[Test] AI Self-healing",
+          "connect": "[Connect] Intelligent Delivery"
+        },
+        "desc": {
+          "build": "MSA-based rapid service construction",
+          "manage": "Business logic and content data injection",
+          "test": "AI-based quality validation and self-healing",
+          "connect": "Secure global deployment via API Gateway"
+        }
       },
       "showcase": {
         "title": "Interactive Product Showcase"

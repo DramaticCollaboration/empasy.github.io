@@ -73,14 +73,17 @@
 
 .core-animation-placeholder {
   margin-top: 3rem;
-  padding: 4rem 2rem;
-  border: 1px dashed rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.5);
-  font-style: italic;
-  min-height: 200px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 700px;
+}
+
+@media (max-width: 768px) {
+  .core-animation-placeholder {
+    min-height: 400px;
+  }
 }
 
 /* 4. Customization Section */
@@ -88,6 +91,26 @@
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
+}
+
+/* 2. SyncVerse Section */
+.syncverse-section {
+  padding: 6rem 0 !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  background: transparent;
+}
+
+.syncverse-section .section-header {
+  margin-bottom: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.syncverse-section .section-header h2 {
+  color: #fff;
 }
 
 /* 3. Interactive Product Showcase */

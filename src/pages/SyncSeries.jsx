@@ -53,13 +53,14 @@ const SyncSeries = () => {
         </div>
       </section>
 
-      {/* 2. SyncVerse: Integration Pipeline */}
+      {/* 2. SyncVerse: Integration Pipeline
       <section className="syncverse-section">
         <div className="section-header">
           <h2>{t('syncseries.verse.title')}</h2>
         </div>
         <ConveyorAnimation />
       </section>
+      */}
 
       {/* 3. Interactive Product Showcase */}
       <section className="showcase-section">

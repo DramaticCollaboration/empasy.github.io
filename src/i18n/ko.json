@@ -168,7 +168,19 @@
         "desc": "개발부터 운영, 검증, 콘텐츠 관리까지. 단절된 IT 인프라를 연결하여 가장 유연하고 강력한 디지털 혁신 생태계를 완성합니다."
       },
       "verse": {
-        "title": "단절된 도구가 아닌, 하나로 연결된 지능형 파이프라인"
+        "title": "단절된 도구가 아닌, 하나로 연결된 지능형 파이프라인",
+        "stages": {
+          "build": "[Build] 서비스 구축",
+          "manage": "[Manage] 콘텐츠 주입",
+          "test": "[Test] AI 자가 치유",
+          "connect": "[Connect] 지능형 배포"
+        },
+        "desc": {
+          "build": "MSA 플랫폼을 통한 신속한 서비스 구축",
+          "manage": "비즈니스 로직 및 콘텐츠 데이터 주입",
+          "test": "AI 기반 품질 검증 및 자가 치유 수행",
+          "connect": "API 게이트웨이를 통한 안전한 글로벌 배포"
+        }
       },
       "showcase": {
         "title": "Interactive Product Showcase"
