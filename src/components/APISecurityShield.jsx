@@ -26,7 +26,7 @@ const APISecurityShield = () => {
       <div style={{ position: 'absolute', inset: 0, opacity: 0.1, backgroundImage: 'linear-gradient(#334155 1px, transparent 1px), linear-gradient(90deg, #334155 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
       {/* Attack Source (Left) */}
-      <div style={{ position: 'absolute', left: '50px', zIndex: 10 }}>
+      <div style={{ position: 'absolute', left: '59px', zIndex: 10 }}>
         <motion.div
           animate={{ x: attackActive ? [0, -5, 5, -5, 5, 0] : 0 }}
           style={{ color: attackActive ? '#EF4444' : '#475569', textAlign: 'center' }}
