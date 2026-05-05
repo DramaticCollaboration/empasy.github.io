@@ -19,14 +19,14 @@ section h2 {
 }
 
 /* 1. Hero Section */
-.hero-section {
+section.hero-section {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
-  /* Add background for webgl particle effect later */
+  padding-top: 0 !important;
 }
 
 .hero-content h1 {
