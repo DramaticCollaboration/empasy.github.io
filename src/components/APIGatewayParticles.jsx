@@ -37,7 +37,7 @@ const ParticleStream = () => {
           (Math.random() - 0.5) * 20,
           10 + Math.random() * 10
         ),
-        speed: 0.1 + Math.random() * 0.2,
+        speed: 0.6 + Math.random() * 24,
         target: new THREE.Vector3(0, 0, 0),
         phase: 'incoming',
         color: new THREE.Color('#FFFFFF')

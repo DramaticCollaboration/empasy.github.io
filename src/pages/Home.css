@@ -1,9 +1,11 @@
 .home-container {
   width: 100%;
 }
-
+section:first-child {
+  padding-top: 8rem !important;
+}
 section {
-  padding: 6rem 2rem;
+  padding: 6rem 2rem !important;
   max-width: 1200px;
   margin: 0 auto;
   letter-spacing: -0.3px;
@@ -46,8 +48,7 @@ section h2 {
   white-space: nowrap;
   margin: 0 auto;
   /* letter-spacing: .15em; */
-  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-  justify-content: center;
+  animation: typing 3s steps(60, end), blink-caret .75s step-end infinite;
   padding-right: 0.4rem;
 }
 

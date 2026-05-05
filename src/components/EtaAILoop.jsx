@@ -44,7 +44,7 @@ const EtaAILoop = () => {
         {/* Active Segment Highlight */}
         <motion.ellipse
           cx="300" cy="150" rx="250" ry="120" fill="none" stroke="#00D1B2" strokeWidth="4"
-          strokeDasharray="200, 1000"
+          strokeDasharray="300, 1200"
           animate={{ strokeDashoffset: -activeStep * 300 }}
           transition={{ duration: 1, ease: 'easeInOut' }}
         />
