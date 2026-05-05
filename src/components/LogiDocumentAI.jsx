@@ -84,10 +84,10 @@ const LogiDocumentAI = () => {
           animate={status === 'scanning' ? { rotate: 360 } : {}}
           transition={{ repeat: Infinity, duration: 2, ease: 'linear' }}
           onClick={handleStart}
-          style={{ 
-            width: '60px', height: '60px', background: status === 'scanning' ? '#00D1B2' : '#F1F5F9', 
+          style={{
+            width: '60px', height: '60px', background: status === 'scanning' ? '#00D1B2' : '#F1F5F9',
             borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center',
-            cursor: 'pointer', border: '2px solid #E2E8F0', zIndex: 20
+            cursor: 'pointer', border: '2px solid #E2E8F0', zIndex: 20, flexShrink: 0,
           }}
         >
           {status === 'scanning' ? <Loader2 color="#FFF" /> : <Zap color={status === 'completed' ? '#00D1B2' : '#94A3B8'} />}

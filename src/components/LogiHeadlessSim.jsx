@@ -57,11 +57,7 @@ const LogiHeadlessSim = () => {
               scale: activeChannel ? [1, 1.1, 1] : 1,
               boxShadow: connectedChannels.length > 0 ? '0 0 50px rgba(0,209,178,0.3)' : 'none'
             }}
-            transition={{ 
-              rotateY: { duration: 10, repeat: Infinity, ease: 'linear' },
-              scale: { duration: 0.5 }
-            }}
-            style={{ 
+            style={{
               width: '150px', height: '150px', background: '#00D1B2', borderRadius: '24px',
               display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
               color: '#FFFFFF', position: 'relative', zIndex: 20
@@ -79,8 +75,8 @@ const LogiHeadlessSim = () => {
               return (
                 <motion.line
                   key={id}
-                  x1="50" y1={100 + chIndex * 60} // Approximate from sidebar
-                  x2="300" y2="300" // Center of SVG
+                  x1="152" y1={180 + chIndex * 66} // Approximate from sidebar
+                  x2="320" y2="380" // Center of SVG
                   stroke={ch.color}
                   strokeWidth="2"
                   initial={{ pathLength: 0 }}

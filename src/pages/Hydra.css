@@ -14,7 +14,7 @@
 }
 
 .section-header h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: var(--primary-color);
@@ -59,15 +59,12 @@
 }
 
 .prompt-text {
-  font-family: monospace;
   font-size: 1.2rem;
   color: #a8ff60;
   overflow: hidden;
-  border-right: .15em solid orange;
+  border-right: .15em solid #a8ff60;
   white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: .15em;
-  animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+  animation: typing 3s steps(60, end), blink-caret .75s;
   text-align: left;
 }
 
@@ -167,7 +164,7 @@
   height: 12px;
   background: #ff5f56;
   border-radius: 50%;
-  margin-right: 8px;
+  margin-right: 48px;
   box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
 }
 
@@ -309,7 +306,7 @@
 }
 
 .hydra-cta-section h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   margin-bottom: 3rem;
   line-height: 1.4;
 }
@@ -327,7 +324,7 @@
   }
 
   .section-header h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .hydra-hero-section h1 {

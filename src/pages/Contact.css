@@ -15,7 +15,7 @@
 }
 
 .section-header h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: var(--primary-color);
@@ -236,7 +236,7 @@
 }
 
 .step-icon {
-  font-size: 2rem;
+  font-size: 1.4rem;
   width: 60px;
   height: 60px;
   background: rgba(255, 255, 255, 0.05);
@@ -247,10 +247,10 @@
   justify-content: center;
   margin: 0 auto 1rem;
   transition: transform 0.3s;
+  cursor: default;
 }
 
 .process-step:hover .step-icon {
-  transform: translateY(-10px) scale(1.1);
   border-color: var(--primary-color);
   background: rgba(0, 180, 216, 0.1);
 }

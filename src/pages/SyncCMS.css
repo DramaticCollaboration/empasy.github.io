@@ -14,7 +14,7 @@
 }
 
 .section-header h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: var(--primary-color);
@@ -79,7 +79,7 @@
 }
 
 .synccms-cta-section h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   margin-bottom: 3rem;
   line-height: 1.4;
 }
@@ -134,7 +134,7 @@
   }
 
   .section-header h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .synccms-hero-section h1 {

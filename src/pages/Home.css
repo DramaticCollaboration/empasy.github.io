@@ -6,11 +6,12 @@ section {
   padding: 6rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  letter-spacing: -0.3px;
 }
 
 section h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 500;
   margin-bottom: 3rem;
   text-align: center;
 }
@@ -36,14 +37,18 @@ section h2 {
 }
 
 .typewriter {
+  display: flex;
+  width: fit-content;
   font-size: 1.5rem;
   color: var(--text-primary);
   overflow: hidden;
   border-right: .15em solid orange;
   white-space: nowrap;
   margin: 0 auto;
-  letter-spacing: .15em;
+  /* letter-spacing: .15em; */
   animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  justify-content: center;
+  padding-right: 0.4rem;
 }
 
 @keyframes typing {
@@ -58,7 +63,7 @@ section h2 {
 
 .scroll-indicator {
   position: absolute;
-  bottom: 2rem;
+  bottom: 8rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -173,7 +178,7 @@ section h2 {
 }
 
 .stat-card h3 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: var(--primary-color);
   margin-bottom: 1rem;
   font-weight: 900;
@@ -197,7 +202,7 @@ section h2 {
 
 .marquee span {
   display: inline-block;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--text-secondary);
   margin: 0 3rem;
@@ -293,6 +298,6 @@ section h2 {
   }
   
   section h2 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
 }
