@@ -41,7 +41,7 @@ const Header = () => {
         <div className="logo">
           <Link to={`/${currentLang}`} onClick={closeMobileMenu}>
             <img 
-              src="/empasy-logo_white.svg" 
+              src="/empasy-logo.svg"
               alt="EMPASY Logo" 
               className="logo-img"
             />

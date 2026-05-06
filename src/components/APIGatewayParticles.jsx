@@ -121,7 +121,7 @@ const APIGatewayParticles = () => {
   const { t } = useTranslation();
 
   return (
-    <div style={{ width: '100%', height: '600px', background: '#020617', position: 'relative', overflow: 'hidden' }}>
+    <div style={{ width: '100%', height: '600px', background: '#F8FAFC', position: 'relative', overflow: 'hidden' }}>
       <Canvas camera={{ position: [0, 0, 10], fov: 50 }}>
         <ambientLight intensity={0.5} />
         <Core />
@@ -141,18 +141,18 @@ const APIGatewayParticles = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
-          style={{ color: '#FFFFFF', fontSize: '2.5rem', fontWeight: 900, margin: 0 }}
+          style={{ color: '#0F172A', fontSize: '2.5rem', fontWeight: 900, margin: 0 }}
         >
           {t('syncapim.hero.ui.gateway', 'API Gateway')}
         </motion.h2>
       </div>
 
       <div style={{ position: 'absolute', bottom: '40px', right: '40px', display: 'flex', gap: '20px' }}>
-        <div style={{ background: 'rgba(15, 23, 42, 0.6)', padding: '15px 25px', borderRadius: '12px', border: '1px solid #334155', backdropFilter: 'blur(10px)' }}>
+        <div style={{ background: 'rgba(255,255,255,0.9)', padding: '15px 25px', borderRadius: '12px', border: '1px solid #E2E8F0', backdropFilter: 'blur(10px)' }}>
           <div style={{ color: '#94A3B8', fontSize: '0.75rem', marginBottom: '5px' }}>THROUGHPUT</div>
           <div style={{ color: '#00D1B2', fontSize: '1.2rem', fontWeight: 800 }}>45,200 TPS</div>
         </div>
-        <div style={{ background: 'rgba(15, 23, 42, 0.6)', padding: '15px 25px', borderRadius: '12px', border: '1px solid #334155', backdropFilter: 'blur(10px)' }}>
+        <div style={{ background: 'rgba(255,255,255,0.9)', padding: '15px 25px', borderRadius: '12px', border: '1px solid #E2E8F0', backdropFilter: 'blur(10px)' }}>
           <div style={{ color: '#94A3B8', fontSize: '0.75rem', marginBottom: '5px' }}>LATENCY</div>
           <div style={{ color: '#3B82F6', fontSize: '1.2rem', fontWeight: 800 }}>0.8 ms</div>
         </div>

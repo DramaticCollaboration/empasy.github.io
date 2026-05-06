@@ -33,7 +33,7 @@
   font-size: 3.5rem;
   font-weight: 900;
   margin-bottom: 1.5rem;
-  background: linear-gradient(90deg, #F72585, #FFB5A7);
+  background: linear-gradient(135deg, #0891B2, #0D9488);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -41,14 +41,14 @@
 .synccms-hero-section p {
   font-size: 1.2rem;
   margin-bottom: 3rem;
-  color: #EDF2F4;
+  color: #475569;
 }
 
 .block-assembly-placeholder {
   margin-top: 3rem;
   padding: 4rem 2rem;
-  border: 1px dashed rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.5);
+  border: 1px dashed rgba(0, 0, 0, 0.1);
+  color: #94A3B8;
   font-style: italic;
 }
 
@@ -59,13 +59,13 @@
 .time-machine-placeholder,
 .chart-drawing-placeholder {
   height: 350px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #E2E8F0;
+  background: #F8FAFC;
   border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.5);
+  color: #94A3B8;
   font-style: italic;
   margin: 0 auto;
   max-width: 900px;
@@ -75,7 +75,7 @@
 .synccms-cta-section {
   text-align: center;
   padding: 8rem 2rem !important;
-  background: radial-gradient(circle, rgba(247,37,133,0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(8,145,178,0.06) 0%, transparent 70%);
 }
 
 .synccms-cta-section h2 {
@@ -84,9 +84,8 @@
   line-height: 1.4;
 }
 
-/* SyncCMS Contact Button Style (Pinkish wave effect) */
 .synccms-cta-section .contact-btn {
-  background: #F72585;
+  background: linear-gradient(135deg, #0891B2, #0D9488);
   color: white;
   border: none;
   padding: 1rem 2.5rem;
@@ -97,6 +96,8 @@
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
   overflow: hidden;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(8, 145, 178, 0.25);
 }
 
 .synccms-cta-section .contact-btn::after {
@@ -106,7 +107,7 @@
   left: 50%;
   width: 300%;
   height: 300%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.5s;
@@ -118,7 +119,7 @@
 
 .synccms-cta-section .contact-btn:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(247, 37, 133, 0.3);
+  box-shadow: 0 10px 25px rgba(8, 145, 178, 0.35);
 }
 
 /* Responsive Styles */

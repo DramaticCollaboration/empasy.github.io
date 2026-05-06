@@ -21,7 +21,7 @@
 }
 
 .section-header p {
-  color: rgba(255, 255, 255, 0.7);
+  color: #475569;
   font-size: 1.1rem;
 }
 
@@ -39,7 +39,7 @@
   font-size: 3.5rem;
   font-weight: 900;
   margin-bottom: 1.5rem;
-  background: linear-gradient(90deg, #FFFFFF, #B0BEC5);
+  background: linear-gradient(135deg, #0891B2, #0D9488);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -47,15 +47,15 @@
 .company-hero-section p {
   font-size: 1.2rem;
   margin-bottom: 3rem;
-  color: #EDF2F4;
+  color: #475569;
   line-height: 1.6;
 }
 
 .typography-animation-placeholder {
   margin-top: 3rem;
   padding: 4rem 2rem;
-  border: 1px dashed rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.5);
+  border: 1px dashed rgba(0, 0, 0, 0.1);
+  color: #94A3B8;
   font-style: italic;
   min-height: 200px;
   display: flex;
@@ -68,7 +68,7 @@
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  color: rgba(255, 255, 255, 0.5);
+  color: #94A3B8;
   font-size: 0.9rem;
   display: flex;
   align-items: center;
@@ -108,7 +108,7 @@
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: var(--shadow-card);
 }
 
 .flip-card:hover .flip-card-inner {
@@ -130,9 +130,9 @@
 }
 
 .flip-card-front {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: white;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #0F172A;
 }
 
 .flip-card-front .icon {
@@ -146,8 +146,8 @@
 }
 
 .flip-card-back {
-  background: var(--primary-color);
-  color: #0b0c10;
+  background: var(--gradient-primary);
+  color: #FFFFFF;
   transform: rotateY(180deg);
   font-weight: 500;
   font-size: 1.1rem;
@@ -168,7 +168,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: rgba(255, 255, 255, 0.1);
+  background: #E2E8F0;
   transform: translateX(-50%);
 }
 
@@ -195,7 +195,7 @@
   background: var(--primary-color);
   border-radius: 50%;
   z-index: 2;
-  box-shadow: 0 0 10px var(--primary-color);
+  box-shadow: 0 0 8px rgba(8, 145, 178, 0.4);
 }
 
 .timeline-dot.pulse {
@@ -203,17 +203,18 @@
 }
 
 @keyframes pulse-dot {
-  0% { box-shadow: 0 0 0 0 rgba(0, 180, 216, 0.7); }
-  70% { box-shadow: 0 0 0 15px rgba(0, 180, 216, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(0, 180, 216, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(8, 145, 178, 0.5); }
+  70% { box-shadow: 0 0 0 15px rgba(8, 145, 178, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(8, 145, 178, 0); }
 }
 
 .timeline-content {
   width: 45%;
-  background: rgba(255, 255, 255, 0.05);
+  background: #FFFFFF;
   padding: 1.5rem;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #E2E8F0;
+  box-shadow: var(--shadow-card);
 }
 
 .timeline-content h3 {
@@ -224,13 +225,13 @@
 .timeline-image-placeholder {
   width: 45%;
   height: 150px;
-  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border: 1px dashed rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.5);
+  color: #94A3B8;
   font-style: italic;
-  opacity: 0.5;
+  opacity: 0.7;
   border-radius: 10px;
 }
 
@@ -248,48 +249,27 @@
 .member-photo-placeholder {
   width: 100%;
   aspect-ratio: 1;
-  background: #222;
+  background: #F1F5F9;
   border-radius: 15px;
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.3);
+  color: #94A3B8;
   font-style: italic;
-  filter: grayscale(100%);
   transition: all 0.3s;
   position: relative;
   overflow: hidden;
+  border: 1px solid #E2E8F0;
 }
 
 .team-member:hover .member-photo-placeholder {
-  filter: grayscale(0%);
-  background: #333;
-}
-
-.team-member:hover .member-photo-placeholder::after {
-  content: 'Matrix Code Data Flow';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(0, 255, 0, 0.1);
-  color: #0f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  animation: code-fall 2s linear infinite;
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-@keyframes code-fall {
-  from { transform: translateY(-100%); }
-  to { transform: translateY(100%); }
+  background: #E2E8F0;
 }
 
 .member-info h3 {
   font-size: 1.2rem;
-  color: white;
+  color: #0F172A;
   margin-bottom: 0.2rem;
 }
 
@@ -302,7 +282,7 @@
 
 .member-info .desc {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: #475569;
   line-height: 1.4;
 }
 
@@ -316,18 +296,24 @@
 .hologram-badge-placeholder {
   width: 250px;
   height: 150px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-  border: 1px solid rgba(255,255,255,0.2);
+  background: linear-gradient(135deg, rgba(8,145,178,0.08), rgba(13,148,136,0.05));
+  border: 1px solid #E2E8F0;
   border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.8);
+  color: #475569;
   font-weight: 500;
   text-align: center;
   padding: 1rem;
   position: relative;
   overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.hologram-badge-placeholder:hover {
+  box-shadow: var(--shadow-elevated);
+  transform: translateY(-2px);
 }
 
 /* 6. Contact CTA */
@@ -343,13 +329,13 @@
 .map-placeholder {
   width: 100%;
   height: 400px;
-  background: #111;
+  background: #F1F5F9;
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94A3B8;
+  border: 1px solid #E2E8F0;
 }
 
 .cta-content h2 {
@@ -358,7 +344,7 @@
 }
 
 .magnetic-btn {
-  background: var(--primary-color);
+  background: linear-gradient(135deg, #0891B2, #0D9488);
   color: white;
   border: none;
   padding: 1rem 3rem;
@@ -367,11 +353,12 @@
   border-radius: 50px;
   cursor: pointer;
   transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 4px 15px rgba(8, 145, 178, 0.25);
 }
 
 .magnetic-btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 10px 30px rgba(0, 180, 216, 0.4);
+  box-shadow: 0 10px 30px rgba(8, 145, 178, 0.35);
 }
 
 /* Responsive Styles */
@@ -379,7 +366,7 @@
   .company-hero-section h1 {
     font-size: 2.8rem;
   }
-  
+
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
   }

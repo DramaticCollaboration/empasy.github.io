@@ -23,9 +23,9 @@ const EtaDashboardForensics = () => {
   }, []);
 
   return (
-    <div style={{ width: '100%', minHeight: '500px', background: '#0F172A', borderRadius: '24px', padding: '40px', border: '1px solid #334155', position: 'relative' }}>
+    <div style={{ width: '100%', minHeight: '500px', background: '#F8FAFC', borderRadius: '24px', padding: '40px', border: '1px solid #E2E8F0', position: 'relative' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '30px' }}>
-        <h4 style={{ color: '#FFFFFF', fontSize: '1.2rem', fontWeight: 800, margin: 0, display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <h4 style={{ color: '#0F172A', fontSize: '1.2rem', fontWeight: 800, margin: 0, display: 'flex', alignItems: 'center', gap: '10px' }}>
           <Monitor color="#00D1B2" size={24} />
           {t('synceta.forensics.title', 'Live Test Dashboard')}
         </h4>

@@ -173,8 +173,8 @@ const TestingSim = () => {
   };
 
   return (
-    <div style={{ width: '100%', background: '#0F172A', borderRadius: '12px', padding: '15px', color: '#FFFFFF', fontFamily: 'monospace', fontSize: '0.75rem' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px', borderBottom: '1px solid #334155', paddingBottom: '8px' }}>
+    <div style={{ width: '100%', background: '#F8FAFC', borderRadius: '12px', padding: '15px', color: '#0F172A', fontFamily: 'monospace', fontSize: '0.75rem' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px', borderBottom: '1px solid #E2E8F0', paddingBottom: '8px' }}>
         <span>GET /api/v1/users</span>
         <motion.button 
           whileTap={{ scale: 0.95 }}

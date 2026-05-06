@@ -43,12 +43,12 @@ const APIPacketbeatAnalytics = () => {
   ];
 
   return (
-    <div style={{ width: '100%', height: '600px', background: '#0F172A', borderRadius: '24px', padding: '40px', display: 'flex', gap: '40px', overflow: 'hidden', position: 'relative' }}>
+    <div style={{ width: '100%', height: '600px', background: '#F8FAFC', borderRadius: '24px', padding: '40px', display: 'flex', gap: '40px', overflow: 'hidden', position: 'relative' }}>
       {/* 1. Source Servers (Left) */}
       <div style={{ width: '150px', display: 'flex', flexDirection: 'column', gap: '20px', zIndex: 10 }}>
         <div style={{ color: '#94A3B8', fontSize: '0.7rem', fontWeight: 800, marginBottom: '10px' }}>PACKETBEAT AGENTS</div>
         {[1, 2, 3].map(i => (
-          <div key={i} style={{ position: 'relative', background: '#1E293B', padding: '15px', borderRadius: '12px', border: '1px solid #334155', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div key={i} style={{ position: 'relative', background: '#FFFFFF', padding: '15px', borderRadius: '12px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <Server color="#94A3B8" size={32} />
             <motion.div 
               animate={{ opacity: [0, 1, 0] }}
@@ -85,7 +85,7 @@ const APIPacketbeatAnalytics = () => {
       {/* 3. Analytics Dashboard (Right) */}
       <div style={{ width: '500px', display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: 'auto 1fr 1fr', gap: '20px', zIndex: 10 }}>
         {/* Header Widget */}
-        <div style={{ gridColumn: 'span 2', background: 'rgba(30, 41, 59, 0.7)', padding: '20px', borderRadius: '16px', border: '1px solid #334155', display: 'flex', alignItems: 'center', gap: '20px' }}>
+        <div style={{ gridColumn: 'span 2', background: '#FFFFFF', padding: '20px', borderRadius: '16px', border: '1px solid #E2E8F0', display: 'flex', alignItems: 'center', gap: '20px' }}>
           <div style={{ flex: 1 }}>
             <div style={{ color: '#94A3B8', fontSize: '0.7rem', fontWeight: 600 }}>LATENCY</div>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: '5px' }}>
@@ -104,7 +104,7 @@ const APIPacketbeatAnalytics = () => {
         </div>
 
         {/* Method Distribution (Pie) */}
-        <div style={{ background: 'rgba(30, 41, 59, 0.7)', padding: '20px', borderRadius: '16px', border: '1px solid #334155', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '16px', border: '1px solid #E2E8F0', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <div style={{ color: '#94A3B8', fontSize: '0.7rem', fontWeight: 600, width: '100%', marginBottom: '10px' }}>METHODS</div>
           <div style={{ width: '100%', height: '120px' }}>
             <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
@@ -118,7 +118,7 @@ const APIPacketbeatAnalytics = () => {
         </div>
 
         {/* Throughput (Bar) */}
-        <div style={{ background: 'rgba(30, 41, 59, 0.7)', padding: '20px', borderRadius: '16px', border: '1px solid #334155' }}>
+        <div style={{ background: '#FFFFFF', padding: '20px', borderRadius: '16px', border: '1px solid #E2E8F0' }}>
           <div style={{ color: '#94A3B8', fontSize: '0.7rem', fontWeight: 600, marginBottom: '10px' }}>TPS TREND</div>
           <div style={{ width: '100%', height: '120px' }}>
             <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
@@ -130,7 +130,7 @@ const APIPacketbeatAnalytics = () => {
         </div>
 
         {/* Live Logs */}
-        <div style={{ gridColumn: 'span 2', background: 'rgba(15, 23, 42, 0.8)', padding: '15px', borderRadius: '12px', border: '1px solid #334155', fontFamily: 'monospace', fontSize: '0.65rem', overflow: 'hidden' }}>
+        <div style={{ gridColumn: 'span 2', background: '#F1F5F9', padding: '15px', borderRadius: '12px', border: '1px solid #E2E8F0', fontFamily: 'monospace', fontSize: '0.65rem', overflow: 'hidden' }}>
           <div style={{ color: '#00D1B2', marginBottom: '5px' }}>{'>'} PACKET CAPTURE ACTIVE...</div>
           <div style={{ color: '#94A3B8' }}>{`[${new Date().toLocaleTimeString()}] 192.168.1.10 -> Gateway [SYN]`}</div>
           <div style={{ color: '#94A3B8' }}>{`[${new Date().toLocaleTimeString()}] Gateway -> MSA_Auth [TRANS]`}</div>

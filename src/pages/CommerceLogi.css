@@ -27,14 +27,14 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: radial-gradient(circle at center, rgba(0, 127, 122, 0.1) 0%, transparent 60%);
+  background: radial-gradient(circle at center, rgba(8, 145, 178, 0.06) 0%, transparent 60%);
 }
 
 .comlogi-hero-section h1 {
   font-size: 3.5rem;
   font-weight: 900;
   margin-bottom: 1.5rem;
-  background: linear-gradient(90deg, #007F7A, #3A86FF); /* Teal to Blue */
+  background: linear-gradient(135deg, #0891B2, #0D9488);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -42,7 +42,7 @@
 .comlogi-hero-section p {
   font-size: 1.2rem;
   margin-bottom: 3rem;
-  color: #EDF2F4;
+  color: #475569;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -51,8 +51,8 @@
 .logistics-parallax-placeholder {
   margin-top: 3rem;
   padding: 4rem 2rem;
-  border: 1px dashed rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.5);
+  border: 1px dashed rgba(0, 0, 0, 0.1);
+  color: #94A3B8;
   font-style: italic;
   min-height: 250px;
   display: flex;
@@ -70,13 +70,13 @@
 .headless-simulator-placeholder {
   flex: 1;
   height: 400px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #E2E8F0;
+  background: #F8FAFC;
   border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.5);
+  color: #94A3B8;
   font-style: italic;
 }
 
@@ -88,31 +88,34 @@
 }
 
 .module-card {
-  background: #1a1a1a;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 15px;
   padding: 1.5rem;
   text-align: center;
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: var(--shadow-card);
 }
 
 .module-card:hover {
   transform: translateY(-5px);
-  background: #222;
+  box-shadow: var(--shadow-elevated);
+  background: #F8FAFC;
 }
 
 .module-card h3 {
   font-size: 1.2rem;
-  color: #007F7A;
+  color: #0891B2;
   margin-bottom: 1rem;
 }
 
 .hover-detail {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(0, 127, 122, 0.9);
+  background: rgba(8, 145, 178, 0.9);
   color: #fff;
   display: flex;
   align-items: center;
@@ -134,8 +137,8 @@
 
 .route-map {
   height: 350px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: #111;
+  border: 1px solid #E2E8F0;
+  background: #F8FAFC;
   border-radius: 15px;
   margin: 0 auto 2rem;
   max-width: 900px;
@@ -147,17 +150,17 @@
 }
 
 .route-map.optimized {
-  border-color: #39FF14;
-  box-shadow: 0 0 30px rgba(57, 255, 20, 0.2);
+  border-color: #0891B2;
+  box-shadow: 0 0 30px rgba(8, 145, 178, 0.15);
 }
 
 .map-visual {
-  color: rgba(255, 255, 255, 0.5);
+  color: #94A3B8;
   font-style: italic;
 }
 
 .route-map.optimized .map-visual {
-  color: #39FF14;
+  color: #0891B2;
 }
 
 .optimization-alerts {
@@ -170,8 +173,8 @@
 }
 
 .alert-pop {
-  background: rgba(57, 255, 20, 0.2);
-  color: #39FF14;
+  background: rgba(8, 145, 178, 0.1);
+  color: #0891B2;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-size: 0.9rem;
@@ -207,14 +210,14 @@
 .scanning-motion-placeholder {
   flex: 1;
   height: 300px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #E2E8F0;
+  background: #F8FAFC;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.5);
+  color: #94A3B8;
   font-style: italic;
   position: relative;
 }
@@ -222,13 +225,14 @@
 .ocr-quality {
   position: absolute;
   bottom: 1rem;
-  color: #39FF14;
+  color: #0D9488;
   font-weight: bold;
 }
 
 .rag-chat-placeholder {
   flex: 1;
-  background: #1e1e1e;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
   border-radius: 15px;
   padding: 1.5rem;
   display: flex;
@@ -247,14 +251,15 @@
 
 .chat-bubble.user {
   align-self: flex-end;
-  background: #3A86FF;
+  background: #0891B2;
   color: white;
 }
 
 .chat-bubble.ai {
   align-self: flex-start;
-  background: #333;
-  color: #ddd;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #334155;
 }
 
 /* 5. KPI Dashboard */
@@ -265,36 +270,43 @@
 }
 
 .kpi-card {
-  background: linear-gradient(145deg, #151515, #0a0a0a);
+  background: linear-gradient(145deg, #FFFFFF, #F8FAFC);
   padding: 2rem 1rem;
-  border-radius: 15px;
+  border-radius: 16px;
   text-align: center;
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid #E2E8F0;
+  box-shadow: var(--shadow-card);
+  transition: all 0.2s ease;
+}
+
+.kpi-card:hover {
+  box-shadow: var(--shadow-elevated);
+  transform: translateY(-2px);
 }
 
 .kpi-card h3 {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #475569;
   margin-bottom: 1rem;
 }
 
 .kpi-card .kpi-value {
   font-size: 2rem;
   font-weight: 900;
-  color: #007F7A; /* Teal */
+  color: #0891B2;
   margin-bottom: 1rem;
 }
 
 .kpi-card p {
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: #64748B;
 }
 
 /* 6. CTA Section */
 .comlogi-cta-section {
   text-align: center;
   padding: 8rem 2rem !important;
-  background: radial-gradient(circle, rgba(0,127,122,0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(8,145,178,0.06) 0%, transparent 70%);
 }
 
 .comlogi-cta-section h2 {
@@ -304,7 +316,7 @@
 }
 
 .comlogi-cta-section .contact-btn {
-  background: #007F7A;
+  background: linear-gradient(135deg, #0891B2, #0D9488);
   color: white;
   border: none;
   padding: 1rem 3rem;
@@ -315,6 +327,7 @@
   position: relative;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
+  display: inline-block;
 }
 
 .comlogi-cta-section .btn-text {
@@ -335,13 +348,17 @@
 
 .comlogi-cta-section .contact-btn:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 127, 122, 0.3);
+  box-shadow: 0 10px 20px rgba(8, 145, 178, 0.25);
 }
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .comlogi-hero-section h1 {
     font-size: 2.8rem;
+  }
+
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -376,19 +393,9 @@
     grid-template-columns: 1fr;
   }
 
-  .oms-wms-visual {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .visual-box {
-    width: 100%;
-    height: 150px;
-  }
-
-  .comparison-grid {
+  .kpi-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .comlogi-cta-section h2 {
@@ -404,5 +411,5 @@
 
 .comlogi-cta-section .contact-btn:hover .truck-icon {
   opacity: 0.5;
-  left: 110%; /* Move across the button */
+  left: 110%;
 }
