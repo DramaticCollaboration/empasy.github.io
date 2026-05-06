@@ -83,7 +83,7 @@ const GlobalNetworkGlobe = () => {
   const { t } = useTranslation();
 
   return (
-    <div style={{ width: '100%', height: '500px', background: '#020617', borderRadius: '20px', position: 'relative', overflow: 'hidden' }}>
+    <div style={{ width: '100%', height: '500px', background: '#F8FAFC', borderRadius: '20px', position: 'relative', overflow: 'hidden' }}>
       <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
         <ambientLight intensity={0.5} />
         <GlobePoints />
@@ -94,15 +94,15 @@ const GlobalNetworkGlobe = () => {
         <div style={{ color: '#00D1B2', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em' }}>
           GLOBAL CONNECTIVITY
         </div>
-        <div style={{ color: '#FFFFFF', fontSize: '1.5rem', fontWeight: 700 }}>
+        <div style={{ color: '#0F172A', fontSize: '1.5rem', fontWeight: 700 }}>
           {t('synccms.multisite.globe.title', 'Unified Global Control')}
         </div>
       </div>
 
-      <div style={{ position: 'absolute', bottom: '20px', right: '20px', background: 'rgba(15, 23, 42, 0.8)', padding: '15px', borderRadius: '12px', border: '1px solid #334155', backdropFilter: 'blur(10px)' }}>
+      <div style={{ position: 'absolute', bottom: '20px', right: '20px', background: 'rgba(255,255,255,0.9)', padding: '15px', borderRadius: '12px', border: '1px solid #E2E8F0', backdropFilter: 'blur(10px)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '5px' }}>
-          <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#00D1B2', boxShadow: '0 0 8px #00D1B2' }} />
-          <span style={{ color: '#E2E8F0', fontSize: '0.75rem' }}>{t('synccms.multisite.status.core', 'Integrated Core: Active')}</span>
+          <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0891B2', boxShadow: '0 0 8px rgba(8,145,178,0.3)' }} />
+          <span style={{ color: '#0F172A', fontSize: '0.75rem' }}>{t('synccms.multisite.status.core', 'Integrated Core: Active')}</span>
         </div>
         <div style={{ color: '#94A3B8', fontSize: '0.7rem' }}>
           {t('synccms.multisite.status.connection', 'Connections: 4 Active Nodes')}

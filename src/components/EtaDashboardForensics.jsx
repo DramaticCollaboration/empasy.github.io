@@ -42,10 +42,10 @@ const EtaDashboardForensics = () => {
       </div>
 
       {/* Dashboard Table */}
-      <div style={{ width: '100%', overflow: 'hidden', borderRadius: '12px', border: '1px solid #1E293B' }}>
+      <div style={{ width: '100%', overflow: 'hidden', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
         <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.85rem' }}>
           <thead>
-            <tr style={{ background: '#1E293B', color: '#94A3B8' }}>
+            <tr style={{ background: '#F1F5F9', color: '#94A3B8' }}>
               <th style={{ padding: '15px 20px', fontWeight: 600 }}>TEST CASE</th>
               <th style={{ padding: '15px 20px', fontWeight: 600 }}>DEVICE</th>
               <th style={{ padding: '15px 20px', fontWeight: 600 }}>STATUS</th>
@@ -59,7 +59,7 @@ const EtaDashboardForensics = () => {
                 onMouseEnter={() => setHoveredCase(tc.id)}
                 onMouseLeave={() => setHoveredCase(null)}
                 style={{ 
-                  color: '#E2E8F0', borderBottom: '1px solid #1E293B',
+                  color: '#0F172A', borderBottom: '1px solid #E2E8F0',
                   background: tc.status === 'failed' ? 'rgba(239, 68, 68, 0.05)' : 'transparent',
                   position: 'relative', cursor: tc.status === 'failed' ? 'help' : 'default'
                 }}
@@ -95,9 +95,9 @@ const EtaDashboardForensics = () => {
                       exit={{ opacity: 0, scale: 0.95 }}
                       style={{ 
                         position: 'absolute', top: '-150px', left: '20%', zIndex: 100,
-                        width: '280px', background: '#1E293B', borderRadius: '12px',
-                        boxShadow: '0 20px 40px rgba(0,0,0,0.4)', padding: '10px',
-                        border: '1px solid #334155', pointerEvents: 'none'
+                        width: '280px', background: '#FFFFFF', borderRadius: '12px',
+                        boxShadow: '0 20px 40px rgba(0,0,0,0.15)', padding: '10px',
+                        border: '1px solid #E2E8F0', pointerEvents: 'none'
                       }}
                     >
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#EF4444', fontSize: '0.7rem', fontWeight: 800, marginBottom: '8px' }}>

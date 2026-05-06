@@ -55,21 +55,21 @@ const APISecurityShield = () => {
         {shields.map((s, i) => (
           <div key={i} style={{ position: 'relative' }}>
             <motion.div
-              animate={{ 
+              animate={{
                 scale: attackActive ? [1, 1.05, 1] : 1,
-                boxShadow: attackActive ? '0 0 20px rgba(0, 209, 178, 0.4)' : 'none',
-                borderColor: attackActive ? '#00D1B2' : '#334155'
+                boxShadow: attackActive ? '0 0 8px rgba(8,145,178,0.3)' : 'none',
+                borderColor: attackActive ? '#0891B2' : '#E2E8F0'
               }}
               transition={{ repeat: Infinity, duration: 1, delay: s.delay }}
-              style={{ 
-                width: '120px', height: '180px', border: '2px solid #334155', borderRadius: '15px', 
-                background: 'rgba(15, 23, 42, 0.8)', backdropFilter: 'blur(5px)',
+              style={{
+                width: '120px', height: '180px', border: '2px solid #E2E8F0', borderRadius: '15px',
+                background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(5px)',
                 display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
                 textAlign: 'center', padding: '10px'
               }}
             >
-              <ShieldCheck color={attackActive ? '#00D1B2' : '#475569'} size={32} />
-              <div style={{ fontSize: '0.65rem', color: attackActive ? '#E2E8F0' : '#64748B', marginTop: '10px', fontWeight: 700 }}>{s.name}</div>
+              <ShieldCheck color={attackActive ? '#0891B2' : '#475569'} size={32} />
+              <div style={{ fontSize: '0.65rem', color: attackActive ? '#0F172A' : '#64748B', marginTop: '10px', fontWeight: 700 }}>{s.name}</div>
             </motion.div>
           </div>
         ))}
@@ -104,7 +104,7 @@ const APISecurityShield = () => {
           <Zap size={16} />
           <span>{t('syncapim.security.status.latency', 'Zero-Latency Filtering')}</span>
         </div>
-        <div style={{ width: '1px', height: '15px', background: '#334155' }} />
+        <div style={{ width: '1px', height: '15px', background: '#E2E8F0' }} />
         <motion.div 
           whileHover={{ scale: 1.05 }}
           style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', color: '#94A3B8', fontSize: '0.8rem' }}

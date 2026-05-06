@@ -37,10 +37,10 @@ const EtaAILoop = () => {
   }, [activeStep]);
 
   return (
-    <div style={{ width: '100%', height: '500px', background: '#020617', borderRadius: '24px', padding: '40px', border: '1px solid #1E293B', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <div style={{ width: '100%', height: '500px', background: '#F8FAFC', borderRadius: '24px', padding: '40px', border: '1px solid #E2E8F0', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       {/* Infinite Loop Track (SVG) */}
       <svg style={{ position: 'absolute', width: '600px', height: '300px' }} viewBox="0 0 600 300">
-        <ellipse cx="300" cy="150" rx="250" ry="120" fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="4" />
+        <ellipse cx="300" cy="150" rx="250" ry="120" fill="none" stroke="#E2E8F0" strokeWidth="4" />
         {/* Active Segment Highlight */}
         <motion.ellipse
           cx="300" cy="150" rx="250" ry="120" fill="none" stroke="#00D1B2" strokeWidth="4"
@@ -63,17 +63,17 @@ const EtaAILoop = () => {
               key={i}
               animate={{ 
                 scale: isActive ? 1.2 : 1,
-                boxShadow: isActive ? '0 0 20px #00D1B2' : 'none'
+                boxShadow: isActive ? '0 0 8px rgba(8,145,178,0.3)' : 'none'
               }}
               style={{ 
                 position: 'absolute', left: x, top: y, width: '80px', height: '80px', 
-                background: isActive ? '#00D1B2' : '#1E293B', borderRadius: '50%',
+                background: isActive ? '#0891B2' : '#E2E8F0', borderRadius: '50%',
                 display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                zIndex: 10, border: '2px solid rgba(255,255,255,0.1)'
+                zIndex: 10, border: '2px solid #E2E8F0'
               }}
             >
-              <step.icon color={isActive ? '#020617' : '#94A3B8'} size={24} />
-              <div style={{ fontSize: '0.6rem', fontWeight: 800, color: isActive ? '#020617' : '#94A3B8', textAlign: 'center', marginTop: '5px' }}>
+              <step.icon color={isActive ? '#FFFFFF' : '#94A3B8'} size={24} />
+              <div style={{ fontSize: '0.6rem', fontWeight: 800, color: isActive ? '#FFFFFF' : '#94A3B8', textAlign: 'center', marginTop: '5px' }}>
                 {step.name}
               </div>
             </motion.div>
@@ -83,7 +83,7 @@ const EtaAILoop = () => {
         {/* Central Accuracy Chart */}
         <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '200px', textAlign: 'center' }}>
           <div style={{ fontSize: '0.7rem', color: '#94A3B8', fontWeight: 600, letterSpacing: '0.1em' }}>{t('synceta.loop.metric.accuracy', 'AI ACCURACY')}</div>
-          <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#FFFFFF' }}>{accuracy}%</div>
+          <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#0F172A' }}>{accuracy}%</div>
           <div style={{ height: '60px', width: '100%' }}>
             <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
               <LineChart data={chartData}>

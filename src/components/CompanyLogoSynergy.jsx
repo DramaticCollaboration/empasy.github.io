@@ -76,7 +76,7 @@ const CompanyLogoSynergy = () => {
   const { t } = useTranslation();
 
   return (
-    <div style={{ width: '100%', height: '600px', background: '#0F172A', position: 'relative', overflow: 'hidden' }}>
+    <div style={{ width: '100%', height: '600px', background: '#F8FAFC', position: 'relative', overflow: 'hidden' }}>
       <Canvas camera={{ position: [0, 0, 10], fov: 50 }}>
         <ambientLight intensity={0.5} />
         <ParticleSynergy />
@@ -98,7 +98,7 @@ const CompanyLogoSynergy = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          style={{ color: '#FFFFFF', fontSize: '6rem', fontWeight: 900, margin: 0, letterSpacing: '0.3em', textShadow: '0 0 30px rgba(0,209,178,0.5)' }}
+          style={{ color: '#0F172A', fontSize: '6rem', fontWeight: 900, margin: 0, letterSpacing: '0.3em', textShadow: '0 0 30px rgba(8,145,178,0.3)' }}
         >
           EMPASY
         </motion.h1>

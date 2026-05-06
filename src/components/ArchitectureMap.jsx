@@ -73,12 +73,12 @@ const ArchitectureMap = () => {
 
   return (
     <div className="architecture-map-wrapper" style={{ 
-      background: '#0F172A', 
+      background: '#F8FAFC',
       padding: '40px 40px 80px 40px',
       borderRadius: '20px',
       position: 'relative',
       overflow: 'hidden',
-      color: '#fff',
+      color: '#0F172A',
       width: '100%',
       minHeight: '600px'
     }}>
@@ -113,8 +113,8 @@ const ArchitectureMap = () => {
                     alignItems: 'center',
                     gap: '10px',
                     borderRadius: '12px',
-                    background: node.color ? `${node.color}22` : 'rgba(255,255,255,0.05)',
-                    border: `1px solid ${hoveredNode === node.id ? '#00D1B2' : 'rgba(255,255,255,0.1)'}`,
+                    background: node.color ? `${node.color}22` : '#FFFFFF',
+                    border: `1px solid ${hoveredNode === node.id ? '#0891B2' : '#E2E8F0'}`,
                     width: '120px',
                     cursor: 'pointer',
                     transition: 'all 0.3s ease',
@@ -160,7 +160,7 @@ const ArchitectureMap = () => {
                 <svg width="100%" height="60" style={{ position: 'absolute', top: 0, left: 0 }}>
                   <motion.line 
                     x1="50%" y1="0" x2="50%" y2="100%" 
-                    stroke="#334155" strokeWidth="2" strokeDasharray="5,5"
+                    stroke="#E2E8F0" strokeWidth="2" strokeDasharray="5,5"
                     animate={{ strokeDashoffset: [0, -20] }}
                     transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
                   />
