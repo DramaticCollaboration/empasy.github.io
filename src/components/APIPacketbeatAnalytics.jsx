@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { 
@@ -12,8 +12,19 @@ import {
 
 const APIPacketbeatAnalytics = () => {
   const { t } = useTranslation();
+  const containerRef = useRef(null);
+  const [containerW, setContainerW] = useState(1136);
   const [data, setData] = useState([]);
   const [latency, setLatency] = useState(12);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    setContainerW(el.offsetWidth);
+    const obs = new ResizeObserver(() => setContainerW(el.offsetWidth));
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
 
   useEffect(() => {
     const generateData = () => {
@@ -42,8 +53,40 @@ const APIPacketbeatAnalytics = () => {
     { name: 'DELETE', value: 10, color: '#EF4444' },
   ];
 
+  // Fixed geometry constants
+  const PAD = 40, LEFT_W = 150, RIGHT_W = 500, H = 600;
+  const serverX = PAD + LEFT_W;                    // 190 – right edge of server cards
+  const analyticsX = containerW - PAD - RIGHT_W;  // varies with width
+  const convX = analyticsX;
+  const convY = H / 2;  // 300
+
+  // Server card center Y positions (from component top)
+  // label ~21px + (gap20 + marginBottom10) + cardH(62)/2 = 72 from inner top → +40 padding = 112
+  const cardYs = [112, 112 + 62 + 20, 112 + (62 + 20) * 2]; // [112, 194, 276]
+
   return (
-    <div style={{ width: '100%', height: '600px', background: '#F8FAFC', borderRadius: '24px', padding: '40px', display: 'flex', gap: '40px', overflow: 'hidden', position: 'relative' }}>
+    <div ref={containerRef} style={{ width: '100%', height: '600px', background: '#F8FAFC', borderRadius: '24px', padding: '40px', display: 'flex', gap: '40px', overflow: 'hidden', position: 'relative' }}>
+
+      {/* Fiber-optic Lines – full-container SVG overlay */}
+      <svg
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 5 }}
+        viewBox={`0 0 ${containerW} ${H}`}
+        preserveAspectRatio="none"
+      >
+        {cardYs.map((startY, i) => {
+          const midX = (serverX + convX) / 2;
+          const d = `M ${serverX},${startY} C ${midX},${startY} ${midX},${convY} ${convX},${convY}`;
+          return (
+            <React.Fragment key={i}>
+              <path d={d} fill="none" stroke="#CBD5E1" strokeWidth="2" />
+              <motion.circle r="4" fill="#00D1B2">
+                <animateMotion path={d} dur={`${1 + i * 0.5}s`} repeatCount="indefinite" />
+              </motion.circle>
+            </React.Fragment>
+          );
+        })}
+      </svg>
+
       {/* 1. Source Servers (Left) */}
       <div style={{ width: '150px', display: 'flex', flexDirection: 'column', gap: '20px', zIndex: 10 }}>
         <div style={{ color: '#94A3B8', fontSize: '0.7rem', fontWeight: 800, marginBottom: '10px' }}>PACKETBEAT AGENTS</div>
@@ -59,30 +102,8 @@ const APIPacketbeatAnalytics = () => {
         ))}
       </div>
 
-      {/* 2. Fiber-optic Lines (Center) */}
-      <div style={{ flex: 1, position: 'relative', minWidth: 0 }}>
-        <svg
-          viewBox="0 0 400 520"
-          preserveAspectRatio="none"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
-        >
-          {[
-            { y: 113, dur: '1s' },
-            { y: 280, dur: '1.5s' },
-            { y: 447, dur: '2s' },
-          ].map(({ y, dur }, i) => {
-            const d = `M 0,${y} C 120,${y} 280,260 400,260`;
-            return (
-              <React.Fragment key={i}>
-                <path d={d} fill="none" stroke="#CBD5E1" strokeWidth="2" />
-                <motion.circle r="4" fill="#00D1B2">
-                  <animateMotion path={d} dur={dur} repeatCount="indefinite" />
-                </motion.circle>
-              </React.Fragment>
-            );
-          })}
-        </svg>
-      </div>
+      {/* 2. Center spacer (lines drawn by full-container SVG above) */}
+      <div style={{ flex: 1 }} />
 
       {/* 3. Analytics Dashboard (Right) */}
       <div style={{ width: '500px', display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: 'auto 1fr 1fr', gap: '20px', zIndex: 10 }}>
