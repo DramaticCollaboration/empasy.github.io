@@ -60,25 +60,27 @@ const APIPacketbeatAnalytics = () => {
       </div>
 
       {/* 2. Fiber-optic Lines (Center) */}
-      <div style={{ flex: 1, position: 'relative' }}>
-        <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}>
-          {[0, 1, 2].map(i => (
-            <React.Fragment key={i}>
-              <path 
-                d={`M 0,${100 + i * 150} C 100,${100 + i * 150} 200,${300} 400,${300}`} 
-                fill="none" 
-                stroke="#E2E8F0"
-                strokeWidth="2" 
-              />
-              <motion.circle r="3" fill="#00D1B2">
-                <animateMotion 
-                  path={`M 0,${100 + i * 150} C 100,${100 + i * 150} 200,${300} 400,${300}`} 
-                  dur={`${1 + i * 0.5}s`} 
-                  repeatCount="indefinite" 
-                />
-              </motion.circle>
-            </React.Fragment>
-          ))}
+      <div style={{ flex: 1, position: 'relative', minWidth: 0 }}>
+        <svg
+          viewBox="0 0 400 520"
+          preserveAspectRatio="none"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
+        >
+          {[
+            { y: 113, dur: '1s' },
+            { y: 280, dur: '1.5s' },
+            { y: 447, dur: '2s' },
+          ].map(({ y, dur }, i) => {
+            const d = `M 0,${y} C 120,${y} 280,260 400,260`;
+            return (
+              <React.Fragment key={i}>
+                <path d={d} fill="none" stroke="#CBD5E1" strokeWidth="2" />
+                <motion.circle r="4" fill="#00D1B2">
+                  <animateMotion path={d} dur={dur} repeatCount="indefinite" />
+                </motion.circle>
+              </React.Fragment>
+            );
+          })}
         </svg>
       </div>
 
