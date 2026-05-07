@@ -27,14 +27,14 @@ const EtaPipelineDomino = () => {
   return (
     <div style={{ width: '100%', height: '500px', background: '#F8FAFC', borderRadius: '24px', border: '1px solid #E2E8F0', position: 'relative', overflow: 'hidden', padding: '60px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
       {/* Conveyor Belt Background */}
-      <div style={{ position: 'absolute', left: 0, right: 0, height: '40px', background: '#1E293B', bottom: '150px', boxShadow: 'inset 0 2px 10px rgba(0,0,0,0.5)' }}>
+      <div style={{ position: 'absolute', left: 0, right: 0, height: '40px', background: '#E2E8F0', bottom: '150px', boxShadow: 'inset 0 2px 6px rgba(0,0,0,0.08)' }}>
         <div style={{ display: 'flex', width: '200%', height: '100%' }}>
           {Array.from({ length: 20 }).map((_, i) => (
             <motion.div 
               key={i}
               animate={{ x: [-20, 0] }}
               transition={{ repeat: Infinity, duration: 1, ease: 'linear' }}
-              style={{ width: '40px', height: '100%', borderRight: '2px solid rgba(255,255,255,0.1)' }} 
+              style={{ width: '40px', height: '100%', borderRight: '2px solid rgba(0,0,0,0.1)' }}
             />
           ))}
         </div>

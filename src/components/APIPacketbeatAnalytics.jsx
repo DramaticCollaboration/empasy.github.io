@@ -67,7 +67,7 @@ const APIPacketbeatAnalytics = () => {
               <path 
                 d={`M 0,${100 + i * 150} C 100,${100 + i * 150} 200,${300} 400,${300}`} 
                 fill="none" 
-                stroke="rgba(255,255,255,0.05)" 
+                stroke="#E2E8F0"
                 strokeWidth="2" 
               />
               <motion.circle r="3" fill="#00D1B2">

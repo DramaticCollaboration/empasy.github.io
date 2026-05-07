@@ -99,7 +99,7 @@ const EtaVisualQA = () => {
             <AlertCircle size={18} /> {t('synceta.visual.msg.bug', 'Visual Bug Found: 1px Offset Detected!')}
           </div>
         ) : (
-          <div style={{ background: '#0F172A', color: '#FFF', padding: '10px 20px', borderRadius: '50px', display: 'flex', alignItems: 'center', gap: '10px', fontWeight: 600 }}>
+          <div style={{ background: 'linear-gradient(135deg, #0891B2, #0D9488)', color: '#FFFFFF', padding: '10px 20px', borderRadius: '50px', display: 'flex', alignItems: 'center', gap: '10px', fontWeight: 600 }}>
             <Search size={18} /> {t('synceta.visual.action.hint', 'Move mouse to inspect pixels')}
           </div>
         )}
