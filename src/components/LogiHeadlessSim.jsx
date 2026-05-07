@@ -132,9 +132,9 @@ const LogiHeadlessSim = () => {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -20, opacity: 0 }}
-            style={{ 
+            style={{
               position: 'absolute', bottom: '30px', left: '50%', transform: 'translateX(-50%)',
-              background: '#0F172A', color: '#FFF', padding: '12px 25px', borderRadius: '50px',
+              background: 'linear-gradient(135deg, #0891B2, #0D9488)', color: '#FFFFFF', padding: '12px 25px', borderRadius: '50px',
               display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.85rem', fontWeight: 600, zIndex: 100
             }}
           >

@@ -94,7 +94,7 @@ const UseCaseGlobe = () => {
         <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} style={{ color: '#00D1B2', fontSize: '0.8rem', fontWeight: 800, letterSpacing: '0.2em', marginBottom: '10px' }}>
           GLOBAL TRUST NETWORK
         </motion.div>
-        <motion.h2 initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} style={{ color: '#FFFFFF', fontSize: '2rem', fontWeight: 900, margin: 0 }}>
+        <motion.h2 initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} style={{ color: '#0F172A', fontSize: '2rem', fontWeight: 900, margin: 0 }}>
           {t('usecases.hero.globe.title', 'Trusted by Industry Leaders')}
         </motion.h2>
       </div>

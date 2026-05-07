@@ -96,9 +96,9 @@ const LogiDocumentAI = () => {
       </div>
 
       {/* 3. Structured Data (Right) */}
-      <div style={{ flex: 1.2, background: '#0F172A', borderRadius: '12px', padding: '20px', position: 'relative', overflow: 'hidden' }}>
+      <div style={{ flex: 1.2, background: '#F8FAFC', borderRadius: '12px', padding: '20px', position: 'relative', overflow: 'hidden', border: '1px solid #E2E8F0' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#94A3B8', fontSize: '0.75rem', fontWeight: 800 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#475569', fontSize: '0.75rem', fontWeight: 800 }}>
             <FileJson size={16} /> STRUCTURED JSON
           </div>
           {status === 'completed' && (
@@ -128,9 +128,9 @@ const LogiDocumentAI = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={handleStart}
-            style={{ 
-              background: '#0F172A', color: '#FFF', border: 'none', 
-              padding: '12px 30px', borderRadius: '50px', fontWeight: 800, 
+            style={{
+              background: 'linear-gradient(135deg, #0891B2, #0D9488)', color: '#FFFFFF', border: 'none',
+              padding: '12px 30px', borderRadius: '50px', fontWeight: 800,
               cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px'
             }}
           >

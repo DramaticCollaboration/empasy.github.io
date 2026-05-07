@@ -26,7 +26,7 @@ const LogiRouteOptimization = () => {
   ];
 
   return (
-    <div style={{ width: '100%', height: '500px', background: '#0F172A', borderRadius: '24px', position: 'relative', overflow: 'hidden', border: '1px solid #334155' }}>
+    <div style={{ width: '100%', height: '500px', background: '#F8FAFC', borderRadius: '24px', position: 'relative', overflow: 'hidden', border: '1px solid #E2E8F0' }}>
       {/* Map Background */}
       <div style={{ position: 'absolute', inset: 0, opacity: 0.1, backgroundImage: 'radial-gradient(#334155 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
 
@@ -106,11 +106,11 @@ const LogiRouteOptimization = () => {
           <div style={{ display: 'flex', gap: '15px' }}>
             <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} style={{ background: 'rgba(0, 209, 178, 0.1)', border: '1px solid #00D1B2', padding: '10px 20px', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '10px' }}>
               <Clock size={16} color="#00D1B2" />
-              <div style={{ color: '#E2E8F0', fontSize: '0.8rem', fontWeight: 700 }}>Time: -22%</div>
+              <div style={{ color: '#0F172A', fontSize: '0.8rem', fontWeight: 700 }}>Time: -22%</div>
             </motion.div>
             <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.1 }} style={{ background: 'rgba(59, 130, 246, 0.1)', border: '1px solid #3B82F6', padding: '10px 20px', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '10px' }}>
               <Navigation size={16} color="#3B82F6" />
-              <div style={{ color: '#E2E8F0', fontSize: '0.8rem', fontWeight: 700 }}>Dist: -18%</div>
+              <div style={{ color: '#0F172A', fontSize: '0.8rem', fontWeight: 700 }}>Dist: -18%</div>
             </motion.div>
             <button onClick={() => setIsOptimized(false)} style={{ background: 'transparent', border: 'none', color: '#94A3B8', fontSize: '0.7rem', textDecoration: 'underline', cursor: 'pointer' }}>Reset</button>
           </div>
