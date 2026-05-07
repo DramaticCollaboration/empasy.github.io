@@ -42,6 +42,7 @@ const UseCaseImpactCharts = () => {
       ))}
     </div>
   );
+
 };
 
 const MetricRadial = ({ metric, delay, active }) => {
@@ -78,13 +79,19 @@ const MetricRadial = ({ metric, delay, active }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={active ? { opacity: 1, y: 0 } : {}}
       transition={{ delay }}
-      style={{ textAlign: 'center', width: '200px' }}
+      style={{
+        textAlign: 'center', width: '220px',
+        background: '#FFFFFF', borderRadius: '20px',
+        border: '1px solid #E2E8F0',
+        padding: '30px 20px',
+        boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03)'
+      }}
     >
-      <div style={{ position: 'relative', width: '180px', height: '180px', margin: '0 auto 20px' }}>
-        <svg width="180" height="180" viewBox="0 0 180 180">
-          <circle cx="90" cy="90" r={radius} fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="12" />
+      <div style={{ position: 'relative', width: '160px', height: '160px', margin: '0 auto 20px' }}>
+        <svg width="160" height="160" viewBox="0 0 160 160">
+          <circle cx="80" cy="80" r={radius} fill="none" stroke="#E2E8F0" strokeWidth="12" />
           <motion.circle
-            cx="90" cy="90" r={radius} fill="none"
+            cx="80" cy="80" r={radius} fill="none"
             stroke={metric.color}
             strokeWidth="12"
             strokeDasharray={circumference}
@@ -92,25 +99,18 @@ const MetricRadial = ({ metric, delay, active }) => {
             animate={active ? { strokeDashoffset: offset } : {}}
             transition={{ duration: 2, ease: 'easeOut', delay }}
             strokeLinecap="round"
-            transform="rotate(-90 90 90)"
+            transform="rotate(-90 80 80)"
           />
         </svg>
         <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
           <Icon size={24} color={metric.color} style={{ marginBottom: '5px' }} />
-          <div style={{ fontSize: '1.8rem', fontWeight: 900, color: '#FFFFFF' }}>
+          <div style={{ fontSize: '1.8rem', fontWeight: 900, color: '#0F172A' }}>
             {metric.id === 'latency' ? count.toFixed(1) : Math.floor(count)}{metric.suffix}
           </div>
         </div>
-        
-        {/* Glow Effect on Hover */}
-        <motion.div 
-          whileHover={{ opacity: 1 }}
-          initial={{ opacity: 0 }}
-          style={{ position: 'absolute', inset: -10, borderRadius: '50%', background: `radial-gradient(circle, ${metric.color}22 0%, transparent 70%)`, zIndex: -1 }} 
-        />
       </div>
-      <div style={{ color: '#E2E8F0', fontSize: '0.9rem', fontWeight: 700, marginBottom: '5px' }}>{metric.label}</div>
-      <div style={{ color: '#64748B', fontSize: '0.7rem' }}>Validated by enterprise use-cases</div>
+      <div style={{ color: '#0F172A', fontSize: '0.9rem', fontWeight: 700, marginBottom: '5px' }}>{metric.label}</div>
+      <div style={{ color: '#94A3B8', fontSize: '0.7rem' }}>Validated by enterprise use-cases</div>
     </motion.div>
   );
 };
