@@ -225,13 +225,8 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div>
-<<<<<<< HEAD
                       <p className="contact-info-label">Email</p>
                       <p className="contact-info-value">poh@empasy.com</p>
-=======
-                      <p className="contact-info-label">{t('contact.page.info.emailLabel')}</p>
-                      <p className="contact-info-value">{t('contact.page.info.emailValue')}</p>
->>>>>>> dd80f9b (Apply i18n to Contact page hardcoded strings)
                     </div>
                   </div>
                   <div className="contact-info-item">
@@ -242,19 +237,8 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div>
-<<<<<<< HEAD
                       <p className="contact-info-label">Office</p>
                       <p className="contact-info-value">서울 금천구 가산디지털1로 205-27<br />2층 208호</p>
-=======
-                      <p className="contact-info-label">{t('contact.page.info.officeLabel')}</p>
-                      <p className="contact-info-value">
-                        {t('contact.page.info.officeValue').split('\n').map((line, i, arr) => (
-                          <React.Fragment key={i}>
-                            {line}{i < arr.length - 1 && <br />}
-                          </React.Fragment>
-                        ))}
-                      </p>
->>>>>>> dd80f9b (Apply i18n to Contact page hardcoded strings)
                     </div>
                   </div>
                 </div>
@@ -271,11 +255,7 @@ const Contact = () => {
                   loading="lazy"
                   title="Empasy Office Location"
                 />
-<<<<<<< HEAD
                 <div className="contact-map-badge">가산디지털단지역 1/7호선 도보 5분 거리</div>
-=======
-                <div className="contact-map-badge">{t('contact.page.info.mapBadge')}</div>
->>>>>>> dd80f9b (Apply i18n to Contact page hardcoded strings)
               </div>
             </div>
           </div>
