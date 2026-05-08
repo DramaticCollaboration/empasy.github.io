@@ -45,7 +45,13 @@ const Company = () => {
         <section className="company-hero">
           <div className="company-network-bg" />
           <div className="company-hero-inner">
-            <span className="company-badge">{t('company.page.badge')}</span>
+            <span className="company-badge">
+              <span style={{ position: 'relative', display: 'inline-flex', marginRight: '8px', width: '10px', height: '10px' }}>
+                <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#06B6D4', opacity: 0.75 }} />
+                <span style={{ position: 'relative', display: 'inline-flex', width: '10px', height: '10px', borderRadius: '50%', background: '#0891B2' }} />
+              </span>
+              {t('company.page.badge')}
+            </span>
             <h1 className="company-title">
               <span className="company-gradient-text">{t('company.page.title')}</span>
             </h1>
