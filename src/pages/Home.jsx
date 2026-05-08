@@ -1,12 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
+const useTypewriter = (text, speed = 50, startDelay = 800) => {
+  const [displayed, setDisplayed] = useState('');
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    setDisplayed('');
+    setDone(false);
+    let i = 0;
+    const timeout = setTimeout(() => {
+      const interval = setInterval(() => {
+        i++;
+        setDisplayed(text.slice(0, i));
+        if (i >= text.length) {
+          clearInterval(interval);
+          setDone(true);
+        }
+      }, speed);
+      return () => clearInterval(interval);
+    }, startDelay);
+    return () => clearTimeout(timeout);
+  }, [text, speed, startDelay]);
+
+  return { displayed, done };
+};
+
 const Home = () => {
   const { t } = useTranslation();
   const { lang = 'ko' } = useParams();
+  const subtitleText = t('hero.subtitle', 'AI-DLC 기반의 완벽한 디지털 혁신 생태계');
+  const { displayed, done } = useTypewriter(subtitleText, 45, 1000);
 
   return (
     <div style={{ background: '#F8FAFC', overflowX: 'hidden' }}>
@@ -79,12 +106,15 @@ const Home = () => {
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.25 }}
-            style={{ fontSize: '1.1rem', color: '#475569', maxWidth: '560px', margin: '0 auto 40px', lineHeight: 1.7 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.9 }}
+            style={{ fontSize: '1.1rem', color: '#475569', maxWidth: '560px', margin: '0 auto 40px', lineHeight: 1.7, minHeight: '1.7em' }}
           >
-            {t('hero.subtitle', 'AI-powered quality engineering and intelligent infrastructure platform for enterprise agility.')}
+            {displayed}
+            {!done && (
+              <span className="animate-blink" style={{ color: '#0891B2', fontWeight: 300 }}>|</span>
+            )}
           </motion.p>
 
           <motion.div
