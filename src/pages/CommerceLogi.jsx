@@ -51,7 +51,8 @@ const CommerceLogi = () => {
       {/* Background blobs */}
       <div style={{ position: 'fixed', inset: 0, zIndex: 0, overflow: 'hidden', pointerEvents: 'none' }}>
         <div className="animate-blob" style={{ position: 'absolute', top: '-10%', left: '-5%', width: '40%', height: '50%', borderRadius: '50%', background: 'rgba(34,211,238,0.12)', filter: 'blur(120px)' }} />
-        <div className="animate-blob animation-delay-2000" style={{ position: 'absolute', bottom: '-10%', right: '-5%', width: '40%', height: '50%', borderRadius: '50%', background: 'rgba(16,185,129,0.1)', filter: 'blur(120px)' }} />
+        <div className="animate-blob animation-delay-2000" style={{ position: 'absolute', top: '20%', right: '-10%', width: '45%', height: '60%', borderRadius: '50%', background: 'rgba(16,185,129,0.1)', filter: 'blur(140px)' }} />
+        <div className="animate-blob animation-delay-4000" style={{ position: 'absolute', bottom: '-20%', left: '20%', width: '50%', height: '50%', borderRadius: '50%', background: 'rgba(59,130,246,0.08)', filter: 'blur(130px)' }} />
       </div>
 
       <main className="cl-main">
@@ -59,10 +60,18 @@ const CommerceLogi = () => {
         <section className="cl-section cl-hero-section">
           <div className="cl-hero-inner">
             <div className="cl-hero-text">
-              <span className="cl-badge">{t('commercelogi.page.badge')}</span>
+              <span className="cl-badge">
+                <span style={{ position: 'relative', display: 'inline-flex', marginRight: '8px', width: '10px', height: '10px' }}>
+                  <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#06B6D4', opacity: 0.75 }} />
+                  <span style={{ position: 'relative', display: 'inline-flex', width: '10px', height: '10px', borderRadius: '50%', background: '#0891B2' }} />
+                </span>
+                {t('commercelogi.page.badge')}
+              </span>
               <h1 className="cl-hero-title">
                 {t('commercelogi.page.heroLine1')}<br />
-                <span className="cl-gradient-text">{t('commercelogi.page.heroLine2')}</span>
+                <span className="cl-gradient-text">
+                  {t('commercelogi.page.heroLine2')}
+                </span>
               </h1>
               <p className="cl-hero-desc">{t('commercelogi.page.heroDesc')}</p>
               <div className="cl-hero-btns">

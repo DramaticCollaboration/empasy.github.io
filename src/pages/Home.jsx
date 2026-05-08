@@ -148,7 +148,7 @@ const Home = () => {
                 backdropFilter: 'blur(8px)',
                 transition: 'background 0.2s, border-color 0.2s'
               }}
-              onMouseEnter={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.borderColor = '#0891B2'; }}
+              onMouseEnter={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.borderColor = '#67e8f9'; e.currentTarget.style.color = '#0891b2'; }}
               onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.8)'; e.currentTarget.style.borderColor = '#E2E8F0'; }}
             >
               {t('hero.cta.explore', 'AI Infra 보기')}
