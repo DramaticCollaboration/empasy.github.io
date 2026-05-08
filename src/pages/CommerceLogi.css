@@ -1,415 +1,458 @@
-.commerce-logi-container {
+/* =====================
+   Commerce & Logi Page
+   ===================== */
+
+.cl-page {
+  position: relative;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  overflow-x: hidden;
+}
+
+.cl-main {
+  position: relative;
+  z-index: 1;
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+}
+
+.cl-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  margin-bottom: 8rem;
+}
+
+/* Glass panel */
+.cl-glass-panel {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* Gradient text */
+.cl-gradient-text {
+  background: linear-gradient(135deg, #00B4D8 0%, #48CAE4 50%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Grid backgrounds */
+.cl-grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 180, 216, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 180, 216, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.cl-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 180, 216, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 180, 216, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* ---- Hero ---- */
+.cl-hero-section {
+  padding-top: 3rem;
+}
+
+.cl-hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .cl-hero-inner {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.cl-hero-text {
+  flex: 1;
+}
+
+.cl-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background-color: #ecfeff;
+  border: 1px solid #cffafe;
+  color: #0891b2;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.cl-hero-title {
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: #0f172a;
+}
+
+.cl-hero-desc {
+  font-size: 1.125rem;
+  color: #475569;
+  font-weight: 500;
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+  max-width: 36rem;
+}
+
+.cl-hero-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cl-btn-primary {
+  background: #0f172a;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s;
+  display: inline-block;
+}
+
+.cl-btn-primary:hover {
+  background: #1e293b;
+}
+
+.cl-btn-secondary {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.cl-btn-secondary:hover {
+  border-color: #67e8f9;
+  color: #0891b2;
+}
+
+/* SVG visual */
+.cl-hero-visual {
+  flex: 1;
   width: 100%;
 }
 
-.commerce-logi-container section {
-  padding: 6rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+.cl-svg-wrap {
+  border-radius: 2rem;
+  padding: 1rem;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
 }
 
-.section-header {
+.cl-logi-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cl-logistic-line {
+  stroke-dasharray: 10;
+  animation: clDash 5s linear infinite;
+}
+
+@keyframes clDash {
+  to { stroke-dashoffset: -100; }
+}
+
+/* Live status card */
+.cl-live-card {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  background: rgba(255, 255, 255, 0.9) !important;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cl-live-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0891b2;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.cl-live-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.cl-live-right {
+  text-align: right;
+}
+
+.cl-live-pct {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #0f172a;
+  display: block;
+}
+
+.cl-live-sub {
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: #10b981;
+}
+
+/* ---- Section Header ---- */
+.cl-section-header {
   text-align: center;
   margin-bottom: 4rem;
 }
 
-.section-header h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--primary-color);
-}
-
-/* 1. Hero Section */
-.comlogi-hero-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: radial-gradient(circle at center, rgba(8, 145, 178, 0.06) 0%, transparent 60%);
-}
-
-.comlogi-hero-section h1 {
-  font-size: 3.5rem;
+.cl-section-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 900;
-  margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, #0891B2, #0D9488);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #0f172a;
+  margin-bottom: 1rem;
 }
 
-.comlogi-hero-section p {
-  font-size: 1.2rem;
-  margin-bottom: 3rem;
-  color: #475569;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+.cl-section-subtitle {
+  font-size: 1.125rem;
+  color: #64748b;
 }
 
-.logistics-parallax-placeholder {
-  margin-top: 3rem;
-  padding: 4rem 2rem;
-  border: 1px dashed rgba(0, 0, 0, 0.1);
-  color: #94A3B8;
-  font-style: italic;
-  min-height: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* 2. SyncShop Section */
-.headless-simulator-container {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
-.headless-simulator-placeholder {
-  flex: 1;
-  height: 400px;
-  border: 1px solid #E2E8F0;
-  background: #F8FAFC;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #94A3B8;
-  font-style: italic;
-}
-
-.module-cards {
-  flex: 1;
+/* ---- Feature Cards ---- */
+.cl-features-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
-.module-card {
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 15px;
-  padding: 1.5rem;
-  text-align: center;
+@media (min-width: 768px) {
+  .cl-features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cl-feature-card {
+  padding: 2.5rem;
+  border-radius: 2.5rem;
+  border: 2px solid transparent;
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cl-feature-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0, 180, 216, 0.3);
+  box-shadow: 0 20px 40px -10px rgba(0, 180, 216, 0.1);
+}
+
+.cl-feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.cl-feature-icon--cyan { background: #ecfeff; color: #0891b2; }
+.cl-feature-icon--emerald { background: #ecfdf5; color: #059669; }
+.cl-feature-icon--blue { background: #eff6ff; color: #2563eb; }
+
+.cl-feature-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.cl-feature-desc {
+  color: #64748b;
+  line-height: 1.75;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.cl-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cl-feature-li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.cl-dot {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.cl-dot--cyan { background: #67e8f9; }
+.cl-dot--emerald { background: #6ee7b7; }
+.cl-dot--blue { background: #93c5fd; }
+
+/* ---- Stats Section ---- */
+.cl-stats-section {
+  margin-bottom: 0;
+}
+
+.cl-stats-box {
+  background: #0f172a;
+  border-radius: 3rem;
+  padding: 4rem 3rem;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: var(--shadow-card);
 }
 
-.module-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-elevated);
-  background: #F8FAFC;
+@media (min-width: 1024px) {
+  .cl-stats-box {
+    padding: 5rem;
+  }
 }
 
-.module-card h3 {
-  font-size: 1.2rem;
-  color: #0891B2;
-  margin-bottom: 1rem;
-}
-
-.hover-detail {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(8, 145, 178, 0.9);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s;
-  font-size: 0.9rem;
-  padding: 1rem;
-}
-
-.module-card:hover .hover-detail {
-  opacity: 1;
-}
-
-/* 3. AI Logistics Hub */
-.routing-optimization-container {
-  text-align: center;
-}
-
-.route-map {
-  height: 350px;
-  border: 1px solid #E2E8F0;
-  background: #F8FAFC;
-  border-radius: 15px;
-  margin: 0 auto 2rem;
-  max-width: 900px;
+.cl-stats-inner {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.5s ease-in-out;
-}
-
-.route-map.optimized {
-  border-color: #0891B2;
-  box-shadow: 0 0 30px rgba(8, 145, 178, 0.15);
-}
-
-.map-visual {
-  color: #94A3B8;
-  font-style: italic;
-}
-
-.route-map.optimized .map-visual {
-  color: #0891B2;
-}
-
-.optimization-alerts {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.alert-pop {
-  background: rgba(8, 145, 178, 0.1);
-  color: #0891B2;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  animation: slideInRight 0.5s forwards;
-}
-
-@keyframes slideInRight {
-  from { transform: translateX(20px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
-.optimize-toggle-btn {
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.optimize-toggle-btn:hover {
-  background: var(--secondary-color);
-}
-
-/* 4. Document AI Section */
-.doc-ai-container {
-  display: flex;
-  gap: 2rem;
-}
-
-.scanning-motion-placeholder {
-  flex: 1;
-  height: 300px;
-  border: 1px solid #E2E8F0;
-  background: #F8FAFC;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #94A3B8;
-  font-style: italic;
-  position: relative;
-}
-
-.ocr-quality {
-  position: absolute;
-  bottom: 1rem;
-  color: #0D9488;
-  font-weight: bold;
-}
-
-.rag-chat-placeholder {
-  flex: 1;
-  background: #F8FAFC;
-  border: 1px solid #E2E8F0;
-  border-radius: 15px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.chat-bubble {
-  padding: 1rem;
-  border-radius: 10px;
-  max-width: 80%;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.chat-bubble.user {
-  align-self: flex-end;
-  background: #0891B2;
-  color: white;
-}
-
-.chat-bubble.ai {
-  align-self: flex-start;
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  color: #334155;
-}
-
-/* 5. KPI Dashboard */
-.kpi-grid {
+  z-index: 1;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
 }
 
-.kpi-card {
-  background: linear-gradient(145deg, #FFFFFF, #F8FAFC);
-  padding: 2rem 1rem;
-  border-radius: 16px;
-  text-align: center;
-  border: 1px solid #E2E8F0;
-  box-shadow: var(--shadow-card);
-  transition: all 0.2s ease;
+@media (min-width: 1024px) {
+  .cl-stats-inner {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-.kpi-card:hover {
-  box-shadow: var(--shadow-elevated);
-  transform: translateY(-2px);
-}
-
-.kpi-card h3 {
-  font-size: 1rem;
-  color: #475569;
-  margin-bottom: 1rem;
-}
-
-.kpi-card .kpi-value {
-  font-size: 2rem;
-  font-weight: 900;
-  color: #0891B2;
-  margin-bottom: 1rem;
-}
-
-.kpi-card p {
-  font-size: 0.8rem;
-  color: #64748B;
-}
-
-/* 6. CTA Section */
-.comlogi-cta-section {
-  text-align: center;
-  padding: 8rem 2rem !important;
-  background: radial-gradient(circle, rgba(8,145,178,0.06) 0%, transparent 70%);
-}
-
-.comlogi-cta-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 3rem;
+.cl-stats-title {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2rem;
   line-height: 1.4;
 }
 
-.comlogi-cta-section .contact-btn {
-  background: linear-gradient(135deg, #0891B2, #0D9488);
-  color: white;
-  border: none;
-  padding: 1rem 3rem;
-  font-size: 1.1rem;
+.cl-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.cl-bar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cl-bar-labels {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.cl-bar-name {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.cl-bar-value {
   font-weight: 700;
-  border-radius: 50px;
-  cursor: pointer;
-  position: relative;
+}
+
+.cl-bar-value--emerald { color: #34d399; }
+.cl-bar-value--cyan { color: #67e8f9; }
+
+.cl-bar-track {
+  width: 100%;
+  height: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: inline-block;
 }
 
-.comlogi-cta-section .btn-text {
-  position: relative;
-  z-index: 2;
+.cl-bar-fill {
+  height: 100%;
+  border-radius: 9999px;
 }
 
-.comlogi-cta-section .truck-icon {
-  position: absolute;
-  top: 50%;
-  left: -30px;
-  transform: translateY(-50%);
-  font-size: 1.5rem;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-  z-index: 1;
+.cl-bar-fill--emerald { background: #34d399; }
+.cl-bar-fill--cyan { background: #67e8f9; }
+
+/* Stat grid */
+.cl-stat-grid-panel {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  padding: 2rem;
+  border-radius: 1.5rem;
 }
 
-.comlogi-cta-section .contact-btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(8, 145, 178, 0.25);
+.cl-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .comlogi-hero-section h1 {
-    font-size: 2.8rem;
-  }
-
-  .kpi-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.cl-stat-cell {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
 }
 
-@media (max-width: 768px) {
-  .commerce-logi-container section {
-    padding: 4rem 1.5rem;
-  }
-
-  .section-header h2 {
-    font-size: 1.8rem;
-  }
-
-  .comlogi-hero-section h1 {
-    font-size: 2.2rem;
-  }
-
-  .comlogi-hero-section p {
-    font-size: 1rem;
-  }
-
-  .headless-simulator-container {
-    flex-direction: column;
-  }
-
-  .headless-simulator-placeholder {
-    width: 100%;
-    height: 300px;
-  }
-
-  .module-cards {
-    width: 100%;
-    grid-template-columns: 1fr;
-  }
-
-  .kpi-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .comlogi-cta-section h2 {
-    font-size: 1.8rem;
-  }
+.cl-stat-label {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
 }
 
-@media (max-width: 480px) {
-  .comlogi-hero-section h1 {
-    font-size: 1.8rem;
-  }
+.cl-stat-value {
+  font-size: 1.875rem;
+  font-weight: 900;
+  color: #fff;
 }
 
-.comlogi-cta-section .contact-btn:hover .truck-icon {
-  opacity: 0.5;
-  left: 110%;
+.cl-stat-value--emerald {
+  color: #34d399;
 }

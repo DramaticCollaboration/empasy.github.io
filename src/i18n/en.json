@@ -448,6 +448,42 @@
       "cta": {
         "title": "From order to delivery, synchronize your business perfectly.",
         "btn": "Inquire about Commerce & Logi"
+      },
+      "page": {
+        "badge": "SMART LOGISTICS",
+        "heroLine1": "Beyond the limits of space,",
+        "heroLine2": "Intelligent Logistics System",
+        "heroDesc": "Empasy's Commerce & Logi solution revolutionizes the entire process from warehouse automation to last-mile delivery through real-time data synchronization and AI prediction.",
+        "btnDiagnose": "Get Free Assessment",
+        "btnDetail": "View Solution Details",
+        "featuresTitle": "3 Core Drivers of Next-Gen Commerce Logistics",
+        "featuresSubtitle": "Manage complex supply chains simply and transparently.",
+        "feature1": {
+          "title": "Intelligent Warehouse Automation",
+          "desc": "Fulfillment center automation integrated with AGVs and robotic arms boosts throughput by 200% while optimizing labor costs.",
+          "b1": "AI-optimized picking routes",
+          "b2": "Robot integrated control system (WCS)",
+          "b3": "Real-time space occupancy analysis"
+        },
+        "feature2": {
+          "title": "Real-time Inventory Management (IMS)",
+          "desc": "Synchronize inventory data across online/offline channels every 0.1 seconds to prevent stockouts and maintain optimal inventory levels.",
+          "b1": "Omnichannel inventory integration",
+          "b2": "Demand forecast-based auto ordering",
+          "b3": "Expiry & LOT tracking management"
+        },
+        "feature3": {
+          "title": "Smart Routing Delivery",
+          "desc": "Analyze traffic and delivery density in real time to generate optimal routes and transparently visualize delivery status.",
+          "b1": "AI dispatch & route optimization (TMS)",
+          "b2": "Customer real-time delivery tracking dashboard",
+          "b3": "ETA accuracy within 5 minutes"
+        },
+        "statsTitle": "Logistics Innovation Results\nProven by Data",
+        "bar1Label": "Misdelivery rate reduction",
+        "bar1Value": "-85%",
+        "bar2Label": "Average delivery time reduction",
+        "bar2Value": "-4.2 Hours"
       }
     },
     "usecases": {
