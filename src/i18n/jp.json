@@ -708,6 +708,44 @@
         "manager": "総括担当者: オ・ビョンムン代表 (理事)",
         "email": "メール: poh@empasy.com",
         "phone": "連絡先: +82 10-3420-8169"
+      },
+      "page": {
+        "badge": "お問い合わせ",
+        "title": "Contact Us",
+        "subtitle": "Empasyのソリューションについてご不明な点はございますか？\n専門家チームが貴社のデジタル変革をサポートします。",
+        "form": {
+          "nameLabel": "お名前",
+          "namePlaceholder": "山田 太郎",
+          "companyLabel": "会社名",
+          "companyPlaceholder": "Empasy",
+          "emailLabel": "メールアドレス",
+          "emailPlaceholder": "example@company.com",
+          "inquiryLabel": "お問い合わせ分野",
+          "inquiryPlaceholder": "お問い合わせ種類を選択してください",
+          "inquiryAI": "AIインフラ構築",
+          "inquiryLogistics": "物流・流通自動化",
+          "inquirySync": "Sync Series 導入",
+          "inquiryOther": "その他のお問い合わせ",
+          "messageLabel": "お問い合わせ内容",
+          "messagePlaceholder": "プロジェクトの概要やご質問内容をご記入ください。",
+          "submit": "メッセージを送信",
+          "submitting": "送信中...",
+          "errorSubmit": "送信に失敗しました。後でもう一度お試しください。"
+        },
+        "success": {
+          "title": "メッセージが送信されました！",
+          "desc": "近日中にご返答いたします。",
+          "reset": "新しいお問い合わせ"
+        },
+        "info": {
+          "phoneLabel": "Phone",
+          "phoneValue": "02-1234-5678",
+          "emailLabel": "Email",
+          "emailValue": "contact@empasy.ai",
+          "officeLabel": "Office",
+          "officeValue": "ソウル特別市江南区テヘラン路123\nEmpasyビル 12階",
+          "mapBadge": "江南駅2号線から徒歩5分"
+        }
       }
     },
     "footer": {

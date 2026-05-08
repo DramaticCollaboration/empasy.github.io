@@ -56,22 +56,22 @@ const Contact = () => {
       }
     } catch (error) {
       console.error('Submission error:', error);
-      setSubmitError(t('contact.form.errorSubmit') || '메시지 전송에 실패했습니다. 다시 시도해주세요.');
+      setSubmitError(t('contact.page.form.errorSubmit'));
     } finally {
       setIsSubmitting(false);
     }
   };
 
+  const subtitleLines = t('contact.page.subtitle').split('\n');
+
   return (
     <div className="contact-page">
-      {/* Background blobs */}
       <div className="contact-bg-blobs">
         <div className="blob blob-cyan" />
         <div className="blob blob-emerald" />
       </div>
 
       <main className="contact-main">
-        {/* Network pattern overlay */}
         <div className="network-bg-overlay" />
 
         <div className="contact-content">
@@ -82,14 +82,14 @@ const Contact = () => {
                 <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#06B6D4', opacity: 0.75 }} />
                 <span style={{ position: 'relative', display: 'inline-flex', width: '10px', height: '10px', borderRadius: '50%', background: '#0891B2' }} />
               </span>
-              Get in touch
+              {t('contact.page.badge')}
             </span>
             <h1 className="contact-title">
-              <span className="text-gradient-primary">Contact Us</span>
+              <span className="text-gradient-primary">{t('contact.page.title')}</span>
             </h1>
             <p className="contact-subtitle">
-              Empasy의 솔루션에 대해 궁금한 점이 있으신가요?<br />
-              전문가 팀이 귀사의 디지털 혁신을 위해 대기하고 있습니다.
+              {subtitleLines[0]}<br />
+              {subtitleLines[1]}
             </p>
           </div>
 
@@ -102,11 +102,11 @@ const Contact = () => {
                   <form onSubmit={handleSubmit} className="contact-form">
                     <div className="form-row-2">
                       <div className="form-group">
-                        <label className="form-label">성함</label>
+                        <label className="form-label">{t('contact.page.form.nameLabel')}</label>
                         <input
                           type="text"
                           name="name"
-                          placeholder="홍길동"
+                          placeholder={t('contact.page.form.namePlaceholder')}
                           value={formData.name}
                           onChange={handleInputChange}
                           className="form-input"
@@ -114,11 +114,11 @@ const Contact = () => {
                         />
                       </div>
                       <div className="form-group">
-                        <label className="form-label">회사명</label>
+                        <label className="form-label">{t('contact.page.form.companyLabel')}</label>
                         <input
                           type="text"
                           name="company"
-                          placeholder="Empasy"
+                          placeholder={t('contact.page.form.companyPlaceholder')}
                           value={formData.company}
                           onChange={handleInputChange}
                           className="form-input"
@@ -127,11 +127,11 @@ const Contact = () => {
                     </div>
 
                     <div className="form-group">
-                      <label className="form-label">이메일</label>
+                      <label className="form-label">{t('contact.page.form.emailLabel')}</label>
                       <input
                         type="email"
                         name="email"
-                        placeholder="example@company.com"
+                        placeholder={t('contact.page.form.emailPlaceholder')}
                         value={formData.email}
                         onChange={handleInputChange}
                         className="form-input"
@@ -140,27 +140,27 @@ const Contact = () => {
                     </div>
 
                     <div className="form-group">
-                      <label className="form-label">문의 분야</label>
+                      <label className="form-label">{t('contact.page.form.inquiryLabel')}</label>
                       <select
                         name="inquiry"
                         value={formData.inquiry}
                         onChange={handleInputChange}
                         className="form-input form-select"
                       >
-                        <option value="">문의 유형을 선택해주세요</option>
-                        <option value="AI 인프라 구축">AI 인프라 구축</option>
-                        <option value="물류/유통 자동화">물류/유통 자동화</option>
-                        <option value="Sync Series 도입">Sync Series 도입</option>
-                        <option value="기타 문의">기타 문의</option>
+                        <option value="">{t('contact.page.form.inquiryPlaceholder')}</option>
+                        <option value="AI 인프라 구축">{t('contact.page.form.inquiryAI')}</option>
+                        <option value="물류/유통 자동화">{t('contact.page.form.inquiryLogistics')}</option>
+                        <option value="Sync Series 도입">{t('contact.page.form.inquirySync')}</option>
+                        <option value="기타 문의">{t('contact.page.form.inquiryOther')}</option>
                       </select>
                     </div>
 
                     <div className="form-group">
-                      <label className="form-label">문의 내용</label>
+                      <label className="form-label">{t('contact.page.form.messageLabel')}</label>
                       <textarea
                         name="message"
                         rows={5}
-                        placeholder="프로젝트에 대한 간략한 설명이나 궁금한 점을 적어주세요."
+                        placeholder={t('contact.page.form.messagePlaceholder')}
                         value={formData.message}
                         onChange={handleInputChange}
                         className="form-input form-textarea"
@@ -176,19 +176,24 @@ const Contact = () => {
                       className="contact-submit-btn"
                       disabled={isSubmitting}
                     >
-                      {isSubmitting ? '전송 중...' : '메시지 보내기'}
+                      {isSubmitting
+                        ? t('contact.page.form.submitting')
+                        : t('contact.page.form.submit')}
                     </button>
                   </form>
                 ) : (
                   <div className="contact-success">
                     <div className="success-icon">✔️</div>
-                    <h3>메시지가 전송되었습니다!</h3>
-                    <p>빠른 시일 내에 답변 드리겠습니다.</p>
+                    <h3>{t('contact.page.success.title')}</h3>
+                    <p>{t('contact.page.success.desc')}</p>
                     <button
                       className="contact-reset-btn"
-                      onClick={() => { setIsSubmitted(false); setFormData({ name: '', company: '', email: '', inquiry: '', message: '' }); }}
+                      onClick={() => {
+                        setIsSubmitted(false);
+                        setFormData({ name: '', company: '', email: '', inquiry: '', message: '' });
+                      }}
                     >
-                      새 문의하기
+                      {t('contact.page.success.reset')}
                     </button>
                   </div>
                 )}
@@ -197,9 +202,8 @@ const Contact = () => {
 
             {/* Info column */}
             <div className="contact-info-col">
-              {/* Contact info panel */}
               <div className="glass-panel contact-info-panel">
-                <h3 className="contact-info-title">Contact Info</h3>
+                <h3 className="contact-info-title">{t('contact.info.title')}</h3>
                 <div className="contact-info-list">
                   <div className="contact-info-item">
                     <div className="contact-info-icon contact-info-icon--cyan">
@@ -208,8 +212,8 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div>
-                      <p className="contact-info-label">Phone</p>
-                      <p className="contact-info-value">02-1234-5678</p>
+                      <p className="contact-info-label">{t('contact.page.info.phoneLabel')}</p>
+                      <p className="contact-info-value">{t('contact.page.info.phoneValue')}</p>
                     </div>
                   </div>
                   <div className="contact-info-item">
@@ -220,8 +224,13 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div>
+<<<<<<< HEAD
                       <p className="contact-info-label">Email</p>
                       <p className="contact-info-value">poh@empasy.com</p>
+=======
+                      <p className="contact-info-label">{t('contact.page.info.emailLabel')}</p>
+                      <p className="contact-info-value">{t('contact.page.info.emailValue')}</p>
+>>>>>>> dd80f9b (Apply i18n to Contact page hardcoded strings)
                     </div>
                   </div>
                   <div className="contact-info-item">
@@ -232,8 +241,19 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div>
+<<<<<<< HEAD
                       <p className="contact-info-label">Office</p>
                       <p className="contact-info-value">서울 금천구 가산디지털1로 205-27<br />2층 208호</p>
+=======
+                      <p className="contact-info-label">{t('contact.page.info.officeLabel')}</p>
+                      <p className="contact-info-value">
+                        {t('contact.page.info.officeValue').split('\n').map((line, i, arr) => (
+                          <React.Fragment key={i}>
+                            {line}{i < arr.length - 1 && <br />}
+                          </React.Fragment>
+                        ))}
+                      </p>
+>>>>>>> dd80f9b (Apply i18n to Contact page hardcoded strings)
                     </div>
                   </div>
                 </div>
@@ -250,7 +270,11 @@ const Contact = () => {
                   loading="lazy"
                   title="Empasy Office Location"
                 />
+<<<<<<< HEAD
                 <div className="contact-map-badge">가산디지털단지역 1/7호선 도보 5분 거리</div>
+=======
+                <div className="contact-map-badge">{t('contact.page.info.mapBadge')}</div>
+>>>>>>> dd80f9b (Apply i18n to Contact page hardcoded strings)
               </div>
             </div>
           </div>

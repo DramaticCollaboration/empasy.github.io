@@ -710,6 +710,44 @@
         "manager": "총괄 담당자: 오병문 대표 (이사)",
         "email": "이메일: poh@empasy.com",
         "phone": "연락처: 0507-1360-8169"
+      },
+      "page": {
+        "badge": "Get in touch",
+        "title": "Contact Us",
+        "subtitle": "Empasy의 솔루션에 대해 궁금한 점이 있으신가요?\n전문가 팀이 귀사의 디지털 혁신을 위해 대기하고 있습니다.",
+        "form": {
+          "nameLabel": "성함",
+          "namePlaceholder": "홍길동",
+          "companyLabel": "회사명",
+          "companyPlaceholder": "Empasy",
+          "emailLabel": "이메일",
+          "emailPlaceholder": "example@company.com",
+          "inquiryLabel": "문의 분야",
+          "inquiryPlaceholder": "문의 유형을 선택해주세요",
+          "inquiryAI": "AI 인프라 구축",
+          "inquiryLogistics": "물류/유통 자동화",
+          "inquirySync": "Sync Series 도입",
+          "inquiryOther": "기타 문의",
+          "messageLabel": "문의 내용",
+          "messagePlaceholder": "프로젝트에 대한 간략한 설명이나 궁금한 점을 적어주세요.",
+          "submit": "메시지 보내기",
+          "submitting": "전송 중...",
+          "errorSubmit": "전송에 실패했습니다. 나중에 다시 시도해 주세요."
+        },
+        "success": {
+          "title": "메시지가 전송되었습니다!",
+          "desc": "빠른 시일 내에 답변 드리겠습니다.",
+          "reset": "새 문의하기"
+        },
+        "info": {
+          "phoneLabel": "Phone",
+          "phoneValue": "02-1234-5678",
+          "emailLabel": "Email",
+          "emailValue": "contact@empasy.ai",
+          "officeLabel": "Office",
+          "officeValue": "서울특별시 강남구 테헤란로 123\nEmpasy 빌딩 12층",
+          "mapBadge": "강남역 2호선 도보 5분 거리"
+        }
       }
     },
     "footer": {
