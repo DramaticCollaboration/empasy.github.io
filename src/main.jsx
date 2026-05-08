@@ -1,12 +1,13 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
-import { BrowserRouter } from "react-router-dom";
+import React, { Suspense } from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './i18n'; // i18n 초기화
+import './styles/global.css';
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <BrowserRouter>
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <Suspense fallback="loading...">
       <App />
-    </BrowserRouter>
-  </StrictMode>
+    </Suspense>
+  </React.StrictMode>,
 );

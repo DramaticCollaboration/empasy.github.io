@@ -1,0 +1,243 @@
+.syncboot-container {
+  width: 100%;
+}
+
+.syncboot-container section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+/* 1. Hero Section */
+.syncboot-hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.syncboot-hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #0891B2, #0D9488);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.syncboot-hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: #475569;
+}
+
+.architecture-animation-placeholder {
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 2. Core Values */
+.stacking-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  padding: 3rem;
+  border-radius: 16px;
+  width: 80%;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: var(--shadow-card);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-elevated);
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.tech-logos {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.tech-logos span {
+  padding: 0.5rem 1rem;
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+/* 3. Interactive Architecture Map */
+.architecture-map-section {
+  padding: 8rem 2rem !important;
+}
+
+/* 4. Observability & DevOps */
+.tabs-container {
+  display: flex;
+  gap: 3rem;
+}
+
+.tab-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 30%;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 1rem;
+  color: #475569;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+.tab-btn.active, .tab-btn:hover {
+  color: #0F172A;
+  border-left-color: var(--primary-color);
+  background: rgba(8, 145, 178, 0.06);
+}
+
+.tab-content {
+  flex: 1;
+  background: #F8FAFC;
+  border-radius: 12px;
+  padding: 1rem;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #E2E8F0;
+}
+
+.dashboard-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+/* 5. UI Framework & Admin */
+.ui-framework-section {
+  padding: 8rem 2rem !important;
+}
+
+/* 6. CTA Section */
+.syncboot-cta-section {
+  text-align: center;
+  padding: 8rem 2rem !important;
+  background: radial-gradient(circle, rgba(8,145,178,0.06) 0%, transparent 70%);
+}
+
+.syncboot-cta-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  line-height: 1.4;
+}
+
+.syncboot-cta-section .contact-btn {
+  background: linear-gradient(135deg, #0891B2, #0D9488);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(8, 145, 178, 0.25);
+}
+
+.syncboot-cta-section .contact-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(8, 145, 178, 0.35);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .syncboot-hero-section h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .syncboot-container section {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .syncboot-hero-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .syncboot-hero-section p {
+    font-size: 1rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .tabs-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .tab-nav {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .tab-content {
+    min-height: 300px;
+  }
+
+  .syncboot-cta-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .syncboot-hero-section h1 {
+    font-size: 1.8rem;
+  }
+}
