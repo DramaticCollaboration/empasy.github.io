@@ -154,81 +154,132 @@ const Hydra = () => {
       </section>
 
       {/* ── 2. Pipeline Section ── */}
-      <section style={{ padding: '96px 24px', position: 'relative', zIndex: 10 }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-            <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', fontWeight: 800, color: '#0F172A', marginBottom: '20px' }}>
-              {t('hydra.pipeline.title', 'How Hydra Works')}
-            </h2>
-            <p style={{ fontSize: '1.1rem', color: '#64748B', fontWeight: 500 }}>
-              {t('hydra.pipeline.subtitle', '자연어에서 완벽한 인프라까지, 단 3단계')}
-            </p>
-          </div>
+      <section style={{maxWidth: '1200px', margin: '0 auto', padding: '96px 24px', position: 'relative', zIndex: 10}}>
+        <div style={{textAlign: 'center', marginBottom: '64px'}}>
+          <h2 style={{fontSize: 'clamp(1.8rem, 4vw, 3rem)', fontWeight: 800, color: '#0F172A', marginBottom: '20px'}}>
+            {t('hydra.pipeline.title', 'How Hydra Works')}
+          </h2>
+          <p style={{fontSize: '1.1rem', color: '#64748B', fontWeight: 500}}>
+            {t('hydra.pipeline.subtitle', '자연어에서 완벽한 인프라까지, 단 3단계')}
+          </p>
+        </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '32px', alignItems: 'start' }}>
-            {[
-              {
-                step: 'Step 01', color: '#0891B2', bg: 'rgba(8,145,178,0.1)',
-                icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>,
-                title: t('hydra.pipeline.step1.title'),
-                desc: t('hydra.pipeline.step1.desc'),
-                tags: ['NLP Parsing', 'Blueprint'],
-                offset: 0
-              },
-              {
-                step: 'Step 02', color: '#10B981', bg: 'rgba(16,185,129,0.1)',
-                icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>,
-                title: t('hydra.pipeline.step2.title'),
-                desc: t('hydra.pipeline.step2.desc'),
-                tags: ['IaC Automation', 'Provisioning'],
-                offset: 24
-              },
-              {
-                step: 'Step 03', color: '#3B82F6', bg: 'rgba(59,130,246,0.1)',
-                icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>,
-                title: t('hydra.pipeline.step3.title'),
-                desc: t('hydra.pipeline.step3.desc'),
-                tags: ['Auto-Scaling', 'Cost Ops'],
-                offset: 48
-              },
-            ].map((item, i) => (
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '32px',
+          alignItems: 'start'
+        }}>
+          {[
+            {
+              step: 'Step 01', color: '#0891B2', bg: 'rgba(8,145,178,0.1)',
+              icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+                         strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>,
+              title: t('hydra.pipeline.step1.title'),
+              desc: t('hydra.pipeline.step1.desc'),
+              tags: ['NLP Parsing', 'Blueprint'],
+              offset: 0
+            },
+            {
+              step: 'Step 02', color: '#10B981', bg: 'rgba(16,185,129,0.1)',
+              icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+                         strokeLinecap="round" strokeLinejoin="round">
+                <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>,
+              title: t('hydra.pipeline.step2.title'),
+              desc: t('hydra.pipeline.step2.desc'),
+              tags: ['IaC Automation', 'Provisioning'],
+              offset: 24
+            },
+            {
+              step: 'Step 03', color: '#3B82F6', bg: 'rgba(59,130,246,0.1)',
+              icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+                         strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>,
+              title: t('hydra.pipeline.step3.title'),
+              desc: t('hydra.pipeline.step3.desc'),
+              tags: ['Auto-Scaling', 'Cost Ops'],
+              offset: 48
+            },
+          ].map((item, i) => (
               <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-                whileHover={{ y: -8, boxShadow: '0 20px 40px rgba(0,0,0,0.08)' }}
-                style={{
-                  background: 'rgba(255,255,255,0.65)', backdropFilter: 'blur(20px)',
-                  padding: '48px 40px', borderRadius: '2.5rem',
-                  border: '1px solid rgba(255,255,255,0.9)',
-                  boxShadow: '0 8px 30px rgba(0,0,0,0.04)',
-                  // marginTop: `${item.offset}px`,
-                  transition: 'box-shadow 0.3s'
-                }}
+                  key={i}
+                  initial={{opacity: 0, y: 30}}
+                  whileInView={{opacity: 1, y: 0}}
+                  viewport={{once: true}}
+                  transition={{delay: i * 0.1, duration: 0.5}}
+                  whileHover={{y: -8, boxShadow: '0 20px 40px rgba(0,0,0,0.08)'}}
+                  style={{
+                    background: 'rgba(255,255,255,0.65)', backdropFilter: 'blur(20px)',
+                    padding: '48px 40px', borderRadius: '2.5rem',
+                    border: '1px solid rgba(255,255,255,0.9)',
+                    boxShadow: '0 8px 30px rgba(0,0,0,0.04)',
+                    // marginTop: `${item.offset}px`,
+                    transition: 'box-shadow 0.3s'
+                  }}
               >
-                <div style={{ width: '64px', height: '64px', borderRadius: '16px', background: item.bg, color: item.color, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '32px', transition: 'all 0.3s' }}>
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  borderRadius: '16px',
+                  background: item.bg,
+                  color: item.color,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginBottom: '32px',
+                  transition: 'all 0.3s'
+                }}>
                   {item.icon}
                 </div>
-                <div style={{ color: item.color, fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '12px' }}>{item.step}</div>
-                <h3 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#0F172A', marginBottom: '16px' }}>{item.title}</h3>
-                <p style={{ color: '#475569', lineHeight: 1.7, marginBottom: '32px', fontSize: '0.95rem' }}>{item.desc}</p>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                <div style={{
+                  color: item.color,
+                  fontWeight: 700,
+                  fontSize: '0.8rem',
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                  marginBottom: '12px'
+                }}>{item.step}</div>
+                <h3 style={{
+                  fontSize: '1.5rem',
+                  fontWeight: 700,
+                  color: '#0F172A',
+                  marginBottom: '16px'
+                }}>{item.title}</h3>
+                <p style={{
+                  color: '#475569',
+                  lineHeight: 1.7,
+                  marginBottom: '32px',
+                  fontSize: '0.95rem'
+                }}>{item.desc}</p>
+                <div style={{display: 'flex', flexWrap: 'wrap', gap: '8px'}}>
                   {item.tags.map(tag => (
-                    <span key={tag} style={{ padding: '4px 12px', borderRadius: '8px', background: 'rgba(255,255,255,0.8)', fontSize: '0.75rem', fontWeight: 700, color: '#64748B', border: '1px solid #E2E8F0' }}>{tag}</span>
+                      <span key={tag} style={{
+                        padding: '4px 12px',
+                        borderRadius: '8px',
+                        background: 'rgba(255,255,255,0.8)',
+                        fontSize: '0.75rem',
+                        fontWeight: 700,
+                        color: '#64748B',
+                        border: '1px solid #E2E8F0'
+                      }}>{tag}</span>
                   ))}
                 </div>
               </motion.div>
-            ))}
-          </div>
+          ))}
         </div>
       </section>
 
       {/* ── 3. Validation Section ── */}
-      <section style={{ padding: '96px 24px', position: 'relative', zIndex: 10 }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '64px', alignItems: 'center' }}>
-
+      <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '96px 24px', position: 'relative', zIndex: 10 }}>
+        <div style={{  display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '64px', alignItems: 'center' }}>
           {/* Left: code scanner visual */}
           <motion.div
             initial={{ opacity: 1, rotate: 0 }}

@@ -127,17 +127,23 @@ const SyncSeries = () => {
             </h2>
             <Link
               to={`/${currentLang}/contact`}
-              state={{ interest: 'Other' }}
+              state={{interest: 'Other'}}
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: '12px',
-                background: '#0F172A', color: '#fff',
+                background: 'linear-gradient(135deg, #0891B2, #0D9488)', color: '#fff',
                 padding: '20px 40px', borderRadius: '50px',
                 fontSize: '1.05rem', fontWeight: 700, textDecoration: 'none',
-                boxShadow: '0 20px 40px rgba(15,23,42,0.2)',
+                boxShadow: '0 4px 15px rgba(8, 145, 178, 0.25)',
                 transition: 'all 0.25s'
               }}
-              onMouseEnter={e => { e.currentTarget.style.background = '#1E293B'; e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 28px 50px rgba(15,23,42,0.28)'; }}
-              onMouseLeave={e => { e.currentTarget.style.background = '#0F172A'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '0 20px 40px rgba(15,23,42,0.2)'; }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 10px 25px rgba(8, 145, 178, 0.35)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = '';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(8, 145, 178,0.2)';
+              }}
             >
               {t('syncseries.cta.btn')}
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
