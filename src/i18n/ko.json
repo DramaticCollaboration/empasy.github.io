@@ -16,7 +16,14 @@
     "hero": {
       "title": "Boon to business by agility",
       "subtitle": "AI-DLC 기반의 완벽한 디지털 혁신 생태계",
-      "scrollDown": "Scroll Down"
+      "scrollDown": "Scroll Down",
+      "headline": "Boon to business",
+      "headline2": "by agility",
+      "cta": {
+        "contact": "상담 시작하기",
+        "explore": "AI Infra 보기"
+      },
+      "scroll": "SCROLL"
     },
     "home": {
       "pipeline": {
@@ -52,6 +59,26 @@
       },
       "trusted": {
         "title": "Trusted by Enterprise"
+      },
+      "ecosystem": {
+        "title": "하나의 플랫폼, 모든 솔루션",
+        "subtitle": "AI 인프라부터 커머스 물류까지 통합된 엔터프라이즈 솔루션"
+      },
+      "bento": {
+        "hydra": {
+          "desc": "AI 기반 품질 엔지니어링 플랫폼으로 TC 생성부터 자동화 실행, 피드백 루프까지 완전 자동화"
+        },
+        "explore": "자세히 보기",
+        "sync": {
+          "desc": "모든 테스트 워크플로우를 하나의 파이프라인으로 통합"
+        },
+        "commerce": {
+          "desc": "AI 커머스 & 스마트 물류"
+        },
+        "contact": {
+          "title": "Let's Talk",
+          "desc": "전문가와 직접 상담"
+        }
       }
     },
     "hydra": {

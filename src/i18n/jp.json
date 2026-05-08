@@ -16,7 +16,14 @@
     "hero": {
       "title": "Boon to business by agility",
       "subtitle": "AI-DLC基盤の完璧なデジタル革新エコシステム",
-      "scrollDown": "Scroll Down"
+      "scrollDown": "Scroll Down",
+      "headline": "Boon to business",
+      "headline2": "by agility",
+      "cta": {
+        "contact": "相談を始める",
+        "explore": "AI Infraを見る"
+      },
+      "scroll": "SCROLL"
     },
     "home": {
       "pipeline": {
@@ -52,6 +59,26 @@
       },
       "trusted": {
         "title": "信頼の実績"
+      },
+      "ecosystem": {
+        "title": "一つのプラットフォーム、全ソリューション",
+        "subtitle": "AIインフラからコマース物流まで統合されたエンタープライズソリューション"
+      },
+      "bento": {
+        "hydra": {
+          "desc": "TC生成から自動実行、フィードバックループまで完全自動化するAIベースの品質エンジニアリングプラットフォーム"
+        },
+        "explore": "詳細を見る",
+        "sync": {
+          "desc": "すべてのテストワークフローを一つのパイプラインに統合"
+        },
+        "commerce": {
+          "desc": "AIコマース＆スマート物流"
+        },
+        "contact": {
+          "title": "Let's Talk",
+          "desc": "専門家に直接ご相談"
+        }
       }
     },
     "hydra": {

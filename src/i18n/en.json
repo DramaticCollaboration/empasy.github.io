@@ -15,7 +15,14 @@
     "hero": {
       "title": "Boon to business by agility",
       "subtitle": "Perfect Digital Innovation Ecosystem based on AI-DLC",
-      "scrollDown": "Scroll Down"
+      "scrollDown": "Scroll Down",
+      "headline": "Boon to business",
+      "headline2": "by agility",
+      "cta": {
+        "contact": "Get Started",
+        "explore": "Explore AI Infra"
+      },
+      "scroll": "SCROLL"
     },
     "home": {
       "pipeline": {
@@ -51,6 +58,26 @@
       },
       "trusted": {
         "title": "Trusted by Enterprise"
+      },
+      "ecosystem": {
+        "title": "One Platform, All Solutions",
+        "subtitle": "Integrated enterprise solutions from AI infra to commerce logistics"
+      },
+      "bento": {
+        "hydra": {
+          "desc": "Fully automated AI quality engineering platform — from TC generation to execution and feedback loops"
+        },
+        "explore": "Learn More",
+        "sync": {
+          "desc": "Integrate all test workflows into a single pipeline"
+        },
+        "commerce": {
+          "desc": "AI Commerce & Smart Logistics"
+        },
+        "contact": {
+          "title": "Let's Talk",
+          "desc": "Talk directly with an expert"
+        }
       }
     },
     "hydra": {
