@@ -204,7 +204,7 @@ const Hydra = () => {
                   padding: '48px 40px', borderRadius: '2.5rem',
                   border: '1px solid rgba(255,255,255,0.9)',
                   boxShadow: '0 8px 30px rgba(0,0,0,0.04)',
-                  marginTop: `${item.offset}px`,
+                  // marginTop: `${item.offset}px`,
                   transition: 'box-shadow 0.3s'
                 }}
               >
@@ -231,8 +231,8 @@ const Hydra = () => {
 
           {/* Left: code scanner visual */}
           <motion.div
-            initial={{ opacity: 0, rotate: 0 }}
-            whileInView={{ opacity: 1, rotate: 1 }}
+            initial={{ opacity: 1, rotate: 0 }}
+            // whileInView={{ opacity: 1, rotate: 1 }}
             whileHover={{ rotate: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
