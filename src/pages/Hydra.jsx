@@ -32,16 +32,14 @@ const Hydra = () => {
             </div>
 
             {/* Heading */}
-            <h1 style={{ fontSize: 'clamp(3rem, 7vw, 5.25rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
-              <span style={{ display: 'block', color: '#0F172A', marginBottom: '8px' }}>Meet</span>
+            <h1 style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.15, margin: 0 }}>
               <span style={{ display: 'block', background: 'linear-gradient(90deg, #00B4D8, #10b981, #00B4D8)', backgroundSize: '200% auto', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-                Hydra
+                {t('hydra.hero.title')}
               </span>
             </h1>
 
             <p style={{ fontSize: '1.2rem', color: '#475569', fontWeight: 500, lineHeight: 1.7, margin: 0, maxWidth: '480px' }}>
-              {t('hydra.hero.desc', '의도를 분석하고, 인프라를 설계하고,')}<br />
-              자율 운영을 구축합니다.
+              {t('hydra.hero.desc')}
             </p>
 
             {/* Terminal card */}
@@ -158,7 +156,7 @@ const Hydra = () => {
               {
                 step: 'Step 01', color: '#0891B2', bg: 'rgba(8,145,178,0.1)',
                 icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>,
-                title: t('hydra.pipeline.step1.title', 'Inception'),
+                title: t('hydra.pipeline.step1.title'),
                 desc: t('hydra.pipeline.step1.desc'),
                 tags: ['NLP Parsing', 'Blueprint'],
                 offset: 0
@@ -166,7 +164,7 @@ const Hydra = () => {
               {
                 step: 'Step 02', color: '#10B981', bg: 'rgba(16,185,129,0.1)',
                 icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>,
-                title: t('hydra.pipeline.step2.title', 'Construction'),
+                title: t('hydra.pipeline.step2.title'),
                 desc: t('hydra.pipeline.step2.desc'),
                 tags: ['IaC Automation', 'Provisioning'],
                 offset: 24
@@ -174,7 +172,7 @@ const Hydra = () => {
               {
                 step: 'Step 03', color: '#3B82F6', bg: 'rgba(59,130,246,0.1)',
                 icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>,
-                title: t('hydra.pipeline.step3.title', 'Operations'),
+                title: t('hydra.pipeline.step3.title'),
                 desc: t('hydra.pipeline.step3.desc'),
                 tags: ['Auto-Scaling', 'Cost Ops'],
                 offset: 48
@@ -274,12 +272,9 @@ const Hydra = () => {
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               AI Agent
             </div>
-            <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 800, color: '#0F172A', marginBottom: '24px', lineHeight: 1.2 }}>
-              {t('hydra.validation.title', '실시간 자율 검증 시스템')}
+            <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: 800, color: '#0F172A', marginBottom: '40px', lineHeight: 1.2 }}>
+              {t('hydra.validation.title')}
             </h2>
-            <p style={{ fontSize: '1.05rem', color: '#475569', marginBottom: '40px', lineHeight: 1.75, fontWeight: 500 }}>
-              인프라 코드가 배포되기 전, 수천 가지의 보안, 컴플라이언스, 비용 효율성 규칙을 AI가 밀리초 단위로 스캔하고 검증합니다.
-            </p>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
               {/* Syntax card */}
@@ -290,7 +285,7 @@ const Hydra = () => {
                   </div>
                   <span style={{ fontSize: '0.7rem', fontWeight: 800, color: '#10B981', background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.15)', padding: '4px 8px', borderRadius: '6px', letterSpacing: '0.05em' }}>OK</span>
                 </div>
-                <div style={{ fontWeight: 700, color: '#0F172A', fontSize: '0.9rem' }}>{t('hydra.validation.syntaxAgent', 'Syntax & Logic')}</div>
+                <div style={{ fontWeight: 700, color: '#0F172A', fontSize: '0.9rem' }}>{t('hydra.validation.syntaxAgent')}</div>
               </div>
 
               {/* Security card */}
@@ -310,7 +305,7 @@ const Hydra = () => {
                   <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(59,130,246,0.1)', color: '#3B82F6', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
                   </div>
-                  <div style={{ fontWeight: 700, color: '#0F172A', fontSize: '1.05rem' }}>{t('hydra.validation.costAgent', 'Cost Optimized')}</div>
+                  <div style={{ fontWeight: 700, color: '#0F172A', fontSize: '1.05rem' }}>{t('hydra.validation.costAgent')}</div>
                 </div>
                 <span style={{ fontSize: '0.7rem', fontWeight: 800, color: '#3B82F6', background: 'rgba(59,130,246,0.08)', border: '1px solid rgba(59,130,246,0.15)', padding: '6px 12px', borderRadius: '6px', letterSpacing: '0.05em' }}>OPTIMIZED</span>
               </div>
@@ -332,17 +327,14 @@ const Hydra = () => {
 
           <div style={{ flex: '2 1 280px', color: '#fff', position: 'relative', zIndex: 1 }}>
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 900, marginBottom: '24px', lineHeight: 1.2, color: '#fff' }}>
-              압도적인<br />{t('hydra.roi.title', '효율성의 차이')}
+              {t('hydra.roi.title')}
             </h2>
-            <p style={{ color: '#94A3B8', fontSize: '1.1rem', lineHeight: 1.7, fontWeight: 500 }}>
-              기존 수작업 방식과 비교할 수 없는 속도와 안정성.<br />Hydra가 인프라 구축의 모든 병목을 해소합니다.
-            </p>
           </div>
 
           <div style={{ flex: '3 1 400px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '24px', position: 'relative', zIndex: 1 }}>
             {[
-              { label: '인프라 설계 및 개발', value: '2', unit: 'Weeks', before: '10 Weeks', badge: '80% 절감', badgeColor: '#34D399', badgeBg: 'rgba(16,185,129,0.2)', badgeBorder: 'rgba(16,185,129,0.3)' },
-              { label: '신규 환경 배포 시간', value: '15', unit: 'Mins', before: '4 Hours', badge: '90% 단축', badgeColor: '#22D3EE', badgeBg: 'rgba(6,182,212,0.2)', badgeBorder: 'rgba(6,182,212,0.3)' },
+              { label: t('hydra.roi.time.title'), value: '2', unit: 'Weeks', before: '10 Weeks', badge: '80% 절감', badgeColor: '#34D399', badgeBg: 'rgba(16,185,129,0.2)', badgeBorder: 'rgba(16,185,129,0.3)' },
+              { label: t('hydra.roi.cost.title'), value: '15', unit: 'Mins', before: '4 Hours', badge: '90% 단축', badgeColor: '#22D3EE', badgeBg: 'rgba(6,182,212,0.2)', badgeBorder: 'rgba(6,182,212,0.3)' },
             ].map((card, i) => (
               <div key={i}
                 style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(16px)', padding: '32px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.1)', transition: 'background 0.2s', cursor: 'default' }}
@@ -373,12 +365,11 @@ const Hydra = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 900, color: '#0F172A', marginBottom: '32px', lineHeight: 1.2 }}>
-              인프라 구축의 새로운 패러다임,<br />지금 경험해보세요.
+            <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 900, color: '#0F172A', marginBottom: '48px', lineHeight: 1.2 }}>
+              {t('hydra.cta.title').split('\n').map((line, i) => (
+                <React.Fragment key={i}>{line}{i < t('hydra.cta.title').split('\n').length - 1 && <br />}</React.Fragment>
+              ))}
             </h2>
-            <p style={{ fontSize: '1.15rem', color: '#475569', marginBottom: '48px', fontWeight: 500 }}>
-              {t('hydra.cta.title', '전문가와 상담하여 귀사에 최적화된 AI 인프라 자동화 전략을 수립하세요.')}
-            </p>
             <Link
               to={`/${currentLang}/contact`}
               state={{ interest: 'Hydra' }}
