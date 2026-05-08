@@ -8,8 +8,9 @@ const featureCards = [
     color: 'cyan',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17.5 19c.7 0 1.3-.2 1.8-.7.5-.4.7-1 .7-1.8 0-1.5-1.2-2.7-2.7-2.7h-.3c-.3-1.5-1.7-2.8-3.3-2.8-1.3 0-2.5.8-3 2-.3-.1-.6-.2-1-.2-1.7 0-3 1.3-3 3s1.3 3 3 3" />
-        <path d="M12 13v9" /><path d="m9 16 3-3 3 3" />
+        <polyline points="16 16 12 12 8 16" />
+        <line x1="12" y1="12" x2="12" y2="21" />
+        <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3" />
       </svg>
     ),
     titleKey: 'syncseries.page.feature1.title',
