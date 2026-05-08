@@ -123,18 +123,17 @@ const Home = () => {
             <Link
               to={`/${lang}/contact`}
               style={{
-                display: 'inline-flex', alignItems: 'center', gap: '12px',
-                background: '#0F172A', color: '#fff',
-                padding: '16px 36px', borderRadius: '50px',
+                display: 'inline-flex', alignItems: 'center', gap: '8px',
+                background: 'linear-gradient(135deg, #0891B2, #0D9488)',
+                color: '#fff', padding: '14px 32px', borderRadius: '12px',
                 fontWeight: 700, fontSize: '0.95rem', textDecoration: 'none',
-                boxShadow: '0 20px 40px rgba(15,23,42,0.2)',
-                transition: 'all 0.25s'
+                boxShadow: '0 4px 20px rgba(8,145,178,0.3)',
+                transition: 'transform 0.2s, box-shadow 0.2s'
               }}
-              onMouseEnter={e => { e.currentTarget.style.background = '#1E293B'; e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 28px 50px rgba(15,23,42,0.28)'; }}
-              onMouseLeave={e => { e.currentTarget.style.background = '#0F172A'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '0 20px 40px rgba(15,23,42,0.2)'; }}
+              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 28px rgba(8,145,178,0.4)'; }}
+              onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '0 4px 20px rgba(8,145,178,0.3)'; }}
             >
               {t('hero.cta.contact', '상담 시작하기')}
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </Link>
             <Link
               to={`/${lang}/hydra`}
