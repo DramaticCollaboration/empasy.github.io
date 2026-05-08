@@ -83,7 +83,7 @@ const Home = () => {
             transition={{ duration: 0.6 }}
           >
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(8,145,178,0.08)', border: '1px solid rgba(8,145,178,0.2)', borderRadius: '50px', padding: '6px 16px', marginBottom: '32px' }}>
-              <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0891B2', display: 'inline-block' }} className="animate-blink" />
+              <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0891B2', display: 'inline-block' }} />
               <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#0891B2', letterSpacing: '0.1em' }}>EMPASY PLATFORM</span>
             </div>
           </motion.div>
@@ -111,9 +111,7 @@ const Home = () => {
             style={{ fontSize: '1.1rem', color: '#475569', maxWidth: '560px', margin: '0 auto 40px', lineHeight: 1.7, minHeight: '1.7em' }}
           >
             {displayed}
-            {!done && (
-              <span className="animate-blink" style={{ color: '#0891B2', fontWeight: 300 }}>|</span>
-            )}
+            <span className="animate-blink" style={{ color: '#0891B2', fontWeight: 300 }}>|</span>
           </motion.p>
 
           <motion.div
