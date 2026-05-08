@@ -318,6 +318,52 @@
       }
     },
     "synceta": {
+      "page": {
+        "badge": "AI Pipeline Prediction",
+        "heroLine1": "Know When Your Sync",
+        "heroLine2": "Will Complete",
+        "heroDesc": "Our ML-powered ETA engine predicts pipeline completion times in real-time, enabling teams to respond proactively before delays impact the business.",
+        "activePipeline": "Active Pipeline",
+        "syncStatus": "Sync Status",
+        "minToComplete": "min to complete",
+        "reliabilityScore": "Reliability Score",
+        "reliabilitySub": "Prediction accuracy (last 30 days)",
+        "feature1": {
+          "title": "Real-Time ETA Prediction",
+          "desc": "Combines current traffic patterns, resource utilization, and historical data to precisely predict pipeline completion times."
+        },
+        "feature2": {
+          "title": "Auto Alerts & Escalation",
+          "desc": "Instantly notifies your team and automatically escalates when predicted delays exceed defined thresholds."
+        },
+        "feature3": {
+          "title": "Predictive Analytics Dashboard",
+          "desc": "A unified dashboard to monitor ETA trends, analyze delay root causes, and benchmark pipeline performance."
+        },
+        "ctrlEyebrow": "Predictive Control Center",
+        "ctrlTitle": "Take Full Control\nof Your Pipelines",
+        "ctrl1": {
+          "title": "Priority-Based Scheduling",
+          "desc": "Dynamically adjusts pipeline priorities based on business criticality to guarantee SLA compliance."
+        },
+        "ctrl2": {
+          "title": "Automatic Resource Optimization",
+          "desc": "The prediction model proactively detects resource bottlenecks and auto-scales to maintain peak performance."
+        },
+        "ctrl3": {
+          "title": "Multi-Pipeline Orchestration",
+          "desc": "Intelligently coordinates the execution order and timing of interdependent pipelines."
+        },
+        "statsTitle": "Proven Performance Metrics",
+        "stat1": "Prediction Accuracy",
+        "stat2": "Delay Reduction",
+        "stat3": "Monitoring",
+        "stat4": "Faster Completion",
+        "ctaTitle": "Stop Pipeline Delays\nBefore They Happen",
+        "ctaDesc": "Use SyncEta's AI prediction engine to know exactly when your syncs will finish and guarantee business continuity.",
+        "ctaBtn1": "Start Free Trial",
+        "ctaBtn2": "View Documentation"
+      },
       "hero": {
         "title": "Understand Like a Human, Test Like a Machine",
         "desc": "No code, no screen recording. Zero-Recording AI Test Platform where your Excel documents become executable tests instantly."
