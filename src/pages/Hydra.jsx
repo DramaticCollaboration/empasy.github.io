@@ -12,7 +12,7 @@ const Hydra = () => {
     <div style={{ background: '#F8FAFC', overflowX: 'hidden' }}>
 
       {/* ── 1. Hero Section ── */}
-      <section style={{ position: 'relative', zIndex: 10, paddingTop: '160px', paddingBottom: '80px', paddingLeft: '24px', paddingRight: '24px', maxWidth: '1400px', margin: '0 auto', minHeight: '90vh', display: 'flex', alignItems: 'center' }}>
+      <section style={{ position: 'relative', zIndex: 10, paddingTop: '160px', paddingBottom: '80px', paddingLeft: '24px', paddingRight: '24px', maxWidth: '1200px', margin: '0 auto', minHeight: '90vh', display: 'flex', alignItems: 'center' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '64px', width: '100%', alignItems: 'center' }}>
 
           {/* Left */}
@@ -79,59 +79,73 @@ const Hydra = () => {
           </motion.div>
 
           {/* Right – floating infra cards */}
-          <div style={{ position: 'relative', height: '500px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            {/* SVG connection lines */}
-            <svg viewBox="0 0 800 800" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '800px', height: '800px', zIndex: 0, pointerEvents: 'none' }}>
-              <path d="M400,400 Q 550,250 650,200" fill="none" stroke="#48CAE4" strokeWidth="2" strokeDasharray="6 6" style={{ animation: 'svg-dash 30s linear infinite', opacity: 0.4 }} />
-              <path d="M400,400 Q 600,500 650,650" fill="none" stroke="#10b981" strokeWidth="2" strokeDasharray="6 6" style={{ animation: 'svg-dash 30s linear infinite', opacity: 0.4 }} />
-              <path d="M400,400 Q 250,550 150,600" fill="none" stroke="#3b82f6" strokeWidth="2" strokeDasharray="6 6" style={{ animation: 'svg-dash 30s linear infinite', opacity: 0.4 }} />
+          {/*
+            Coordinate system: viewBox 0 0 560 500 matches container 560×500.
+            Card centers (SVG px → CSS %): EKS(280,250)=50%/50%, A100(420,80)=75%/16%,
+            H100(420,410)=75%/82%, SysNode(120,390)=21.4%/78%.
+            SVG lines end exactly at these centers so nothing drifts.
+          */}
+          <div style={{ position: 'relative', height: '500px' }}>
+            {/* SVG connection lines – same coordinate space as card % positions */}
+            <svg viewBox="0 0 560 500" preserveAspectRatio="none" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, pointerEvents: 'none' }}>
+              <path d="M280,250 Q 370,150 420,80"  fill="none" stroke="#48CAE4" strokeWidth="2" strokeDasharray="6 6" style={{ animation: 'svg-dash 30s linear infinite', opacity: 0.5 }} />
+              <path d="M280,250 Q 390,360 420,410" fill="none" stroke="#10b981" strokeWidth="2" strokeDasharray="6 6" style={{ animation: 'svg-dash 30s linear infinite', opacity: 0.5 }} />
+              <path d="M280,250 Q 190,340 120,390" fill="none" stroke="#3b82f6" strokeWidth="2" strokeDasharray="6 6" style={{ animation: 'svg-dash 30s linear infinite', opacity: 0.5 }} />
             </svg>
 
-            {/* Center: EKS Control Plane */}
-            <div className="anim-float-1" style={{ position: 'absolute', zIndex: 10, background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.9)', boxShadow: '0 8px 30px rgba(0,0,0,0.06)', borderRadius: '24px', padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '192px', height: '192px', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }}>
-              <span style={{ position: 'absolute', top: '-8px', right: '-8px', width: '20px', height: '20px' }}>
-                <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#34D399', opacity: 0.75 }} />
-                <span style={{ position: 'relative', display: 'inline-flex', width: '20px', height: '20px', borderRadius: '50%', background: '#10B981', border: '4px solid white', boxShadow: '0 1px 4px rgba(0,0,0,0.1)' }} />
-              </span>
-              <div style={{ width: '64px', height: '64px', background: 'linear-gradient(135deg, #fb923c, #f59e0b)', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 8px 20px rgba(251,146,60,0.3)', marginBottom: '12px', color: '#fff' }}>
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-              </div>
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ fontWeight: 800, color: '#0F172A', fontSize: '0.95rem' }}>AWS EKS</div>
-                <div style={{ fontSize: '0.75rem', fontWeight: 600, color: '#64748B', marginTop: '2px' }}>Control Plane</div>
-              </div>
-            </div>
-
-            {/* Top-right: GPU A100 */}
-            <div className="anim-float-2" style={{ position: 'absolute', zIndex: 10, background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.9)', boxShadow: '0 8px 30px rgba(0,0,0,0.06)', borderRadius: '16px', padding: '16px', display: 'flex', alignItems: 'center', gap: '16px', width: '240px', top: '10%', right: '2%' }}>
-              <div style={{ width: '48px', height: '48px', background: '#76B900', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', flexShrink: 0 }}>
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5h-2v-5h2v5zm0-6.5h-2v-2h2v2zm4 6.5h-2v-5h2v5zm0-6.5h-2v-2h2v2z"/></svg>
-              </div>
-              <div>
-                <div style={{ fontWeight: 700, color: '#0F172A', fontSize: '0.875rem' }}>GPU Node Group</div>
-                <div style={{ fontSize: '0.75rem', color: '#10B981', fontWeight: 700, marginTop: '2px' }}>NVIDIA A100 × 4</div>
+            {/* Center: EKS Control Plane — SVG center (280,250) = 50%/50% */}
+            <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', zIndex: 10 }}>
+              <div className="anim-float-1" style={{ background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.9)', boxShadow: '0 8px 30px rgba(0,0,0,0.06)', borderRadius: '24px', padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '168px', height: '168px', position: 'relative' }}>
+                <span style={{ position: 'absolute', top: '-8px', right: '-8px', width: '20px', height: '20px' }}>
+                  <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#34D399', opacity: 0.75 }} />
+                  <span style={{ position: 'relative', display: 'inline-flex', width: '20px', height: '20px', borderRadius: '50%', background: '#10B981', border: '4px solid white', boxShadow: '0 1px 4px rgba(0,0,0,0.1)' }} />
+                </span>
+                <div style={{ width: '56px', height: '56px', background: 'linear-gradient(135deg, #fb923c, #f59e0b)', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 8px 20px rgba(251,146,60,0.3)', marginBottom: '12px', color: '#fff' }}>
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <div style={{ textAlign: 'center' }}>
+                  <div style={{ fontWeight: 800, color: '#0F172A', fontSize: '0.9rem' }}>AWS EKS</div>
+                  <div style={{ fontSize: '0.72rem', fontWeight: 600, color: '#64748B', marginTop: '2px' }}>Control Plane</div>
+                </div>
               </div>
             </div>
 
-            {/* Bottom-right: GPU H100 */}
-            <div className="anim-float-3" style={{ position: 'absolute', zIndex: 10, background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.9)', boxShadow: '0 8px 30px rgba(0,0,0,0.06)', borderRadius: '16px', padding: '16px', display: 'flex', alignItems: 'center', gap: '16px', width: '240px', bottom: '10%', right: '8%' }}>
-              <div style={{ width: '48px', height: '48px', background: '#76B900', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', flexShrink: 0 }}>
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5h-2v-5h2v5zm0-6.5h-2v-2h2v2zm4 6.5h-2v-5h2v5zm0-6.5h-2v-2h2v2z"/></svg>
-              </div>
-              <div>
-                <div style={{ fontWeight: 700, color: '#0F172A', fontSize: '0.875rem' }}>GPU Node Group</div>
-                <div style={{ fontSize: '0.75rem', color: '#10B981', fontWeight: 700, marginTop: '2px' }}>NVIDIA H100 × 8</div>
+            {/* Top-right: GPU A100 — SVG (420,80) = 75%/16% */}
+            <div style={{ position: 'absolute', top: '16%', left: '75%', transform: 'translate(-50%,-50%)', zIndex: 10 }}>
+              <div className="anim-float-2" style={{ background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.9)', boxShadow: '0 8px 30px rgba(0,0,0,0.06)', borderRadius: '16px', padding: '14px 16px', display: 'flex', alignItems: 'center', gap: '14px', width: '220px' }}>
+                <div style={{ width: '44px', height: '44px', background: '#76B900', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', flexShrink: 0 }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5h-2v-5h2v5zm0-6.5h-2v-2h2v2zm4 6.5h-2v-5h2v5zm0-6.5h-2v-2h2v2z"/></svg>
+                </div>
+                <div>
+                  <div style={{ fontWeight: 700, color: '#0F172A', fontSize: '0.825rem' }}>GPU Node Group</div>
+                  <div style={{ fontSize: '0.72rem', color: '#10B981', fontWeight: 700, marginTop: '2px' }}>NVIDIA A100 × 4</div>
+                </div>
               </div>
             </div>
 
-            {/* Bottom-left: System Node */}
-            <div className="anim-float-2" style={{ position: 'absolute', zIndex: 10, background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.9)', boxShadow: '0 8px 30px rgba(0,0,0,0.06)', borderRadius: '16px', padding: '16px', display: 'flex', alignItems: 'center', gap: '16px', width: '208px', bottom: '18%', left: '2%' }}>
-              <div style={{ width: '48px', height: '48px', background: '#3B82F6', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', flexShrink: 0 }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            {/* Bottom-right: GPU H100 — SVG (420,410) = 75%/82% */}
+            <div style={{ position: 'absolute', top: '82%', left: '75%', transform: 'translate(-50%,-50%)', zIndex: 10 }}>
+              <div className="anim-float-3" style={{ background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.9)', boxShadow: '0 8px 30px rgba(0,0,0,0.06)', borderRadius: '16px', padding: '14px 16px', display: 'flex', alignItems: 'center', gap: '14px', width: '220px' }}>
+                <div style={{ width: '44px', height: '44px', background: '#76B900', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', flexShrink: 0 }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5h-2v-5h2v5zm0-6.5h-2v-2h2v2zm4 6.5h-2v-5h2v5zm0-6.5h-2v-2h2v2z"/></svg>
+                </div>
+                <div>
+                  <div style={{ fontWeight: 700, color: '#0F172A', fontSize: '0.825rem' }}>GPU Node Group</div>
+                  <div style={{ fontSize: '0.72rem', color: '#10B981', fontWeight: 700, marginTop: '2px' }}>NVIDIA H100 × 8</div>
+                </div>
               </div>
-              <div>
-                <div style={{ fontWeight: 700, color: '#0F172A', fontSize: '0.875rem' }}>System Node</div>
-                <div style={{ fontSize: '0.75rem', color: '#3B82F6', fontWeight: 700, marginTop: '2px' }}>t3.xlarge × 2</div>
+            </div>
+
+            {/* Bottom-left: System Node — SVG (120,390) = 21.4%/78% */}
+            <div style={{ position: 'absolute', top: '78%', left: '21.4%', transform: 'translate(-50%,-50%)', zIndex: 10 }}>
+              <div className="anim-float-2" style={{ background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.9)', boxShadow: '0 8px 30px rgba(0,0,0,0.06)', borderRadius: '16px', padding: '14px 16px', display: 'flex', alignItems: 'center', gap: '14px', width: '196px' }}>
+                <div style={{ width: '44px', height: '44px', background: '#3B82F6', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', flexShrink: 0 }}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <div>
+                  <div style={{ fontWeight: 700, color: '#0F172A', fontSize: '0.825rem' }}>System Node</div>
+                  <div style={{ fontSize: '0.72rem', color: '#3B82F6', fontWeight: 700, marginTop: '2px' }}>t3.xlarge × 2</div>
+                </div>
               </div>
             </div>
           </div>
@@ -141,7 +155,7 @@ const Hydra = () => {
 
       {/* ── 2. Pipeline Section ── */}
       <section style={{ padding: '96px 24px', position: 'relative', zIndex: 10 }}>
-        <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '64px' }}>
             <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', fontWeight: 800, color: '#0F172A', marginBottom: '20px' }}>
               {t('hydra.pipeline.title', 'How Hydra Works')}
@@ -213,7 +227,7 @@ const Hydra = () => {
 
       {/* ── 3. Validation Section ── */}
       <section style={{ padding: '96px 24px', position: 'relative', zIndex: 10 }}>
-        <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '64px', alignItems: 'center' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '64px', alignItems: 'center' }}>
 
           {/* Left: code scanner visual */}
           <motion.div
@@ -315,7 +329,7 @@ const Hydra = () => {
       </section>
 
       {/* ── 4. ROI Section ── */}
-      <section style={{ padding: '96px 24px', position: 'relative', zIndex: 10, maxWidth: '1400px', margin: '0 auto' }}>
+      <section style={{ padding: '96px 24px', position: 'relative', zIndex: 10, maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{
           display: 'flex', flexWrap: 'wrap', gap: '48px', alignItems: 'center',
           background: '#0f172a', borderRadius: '3rem', padding: 'clamp(40px, 6vw, 80px)',
