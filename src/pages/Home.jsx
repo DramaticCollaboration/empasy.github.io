@@ -101,7 +101,6 @@ const Home = () => {
             <br />
             <span style={{ color: '#0F172A' }}>
               {t('hero.headline2', 'by agility')}
-              <span className="animate-blink" style={{ color: '#0891B2', marginLeft: '4px' }}>|</span>
             </span>
           </motion.h1>
 
