@@ -341,10 +341,10 @@ const Home = () => {
           {t('home.trusted.title', 'TRUSTED BY ENTERPRISE')}
         </div>
         <div style={{ position: 'relative', overflow: 'hidden' }}>
-          <div style={{ display: 'flex', animation: 'marquee 24s linear infinite', width: 'max-content' }}>
-            {[...Array(2)].map((_, setIdx) =>
+          <div style={{ display: 'flex', width: 'max-content', animation: 'marquee 32s linear infinite', willChange: 'transform' }}>
+            {[...Array(4)].map((_, setIdx) =>
               ['LG전자', '삼성전자 DS', '효성ITX', '비상교육', 'SK매직', '홈플러스', '펜타시큐리티', 'LX하우시스'].map((name, i) => (
-                <span key={`${setIdx}-${i}`} style={{ color: '#94A3B8', fontSize: '0.9rem', fontWeight: 600, padding: '0 32px', whiteSpace: 'nowrap' }}>{name}</span>
+                <span key={`${setIdx}-${i}`} style={{ color: '#94A3B8', fontSize: '0.9rem', fontWeight: 600, padding: '0 36px', whiteSpace: 'nowrap', flexShrink: 0 }}>{name}</span>
               ))
             )}
           </div>
