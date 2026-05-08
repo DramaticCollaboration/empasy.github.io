@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-bottom">
           <div className="company-info">
-            <span className="footer-logo">EMPASY</span>
+            <img src="/empasy-logo.svg" alt="EMPASY Logo" className="footer-logo" />
             <p>{t('footer.desc')}</p>
             <p>{t('footer.address')}</p>
             <p>{t('footer.contact')}</p>
