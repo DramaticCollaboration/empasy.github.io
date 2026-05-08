@@ -122,24 +122,74 @@ const Hydra = () => {
       </section>
 
       {/* 4. Expected Benefits (ROI) */}
-      <section className="benefits-section">
-        <div className="section-header">
-          <h2>{t('hydra.roi.title')}</h2>
-        </div>
-        <div className="benefits-grid">
-          <div className="benefit-card">
-            <h3>{t('hydra.roi.time.title')}</h3>
-            <div className="benefit-value">
-              <span className="before">{t('hydra.roi.time.before')}</span> → <span className="after">{t('hydra.roi.time.after')}</span>
+      <section style={{ padding: '96px 0', position: 'relative', zIndex: 10, maxWidth: '1400px', margin: '0 auto', paddingLeft: '24px', paddingRight: '24px' }}>
+        <div style={{
+          display: 'flex', flexDirection: 'column', gap: '48px', alignItems: 'center',
+          background: '#0f172a', borderRadius: '3rem', padding: 'clamp(40px, 6vw, 80px)',
+          overflow: 'hidden', position: 'relative',
+          boxShadow: '0 20px 60px rgba(15,23,42,0.3)'
+        }}>
+          {/* Background glows */}
+          <div style={{ position: 'absolute', top: 0, right: 0, width: '600px', height: '600px', background: 'rgba(6,182,212,0.2)', borderRadius: '50%', filter: 'blur(120px)', transform: 'translate(33%, -33%)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', bottom: 0, left: 0, width: '500px', height: '500px', background: 'rgba(16,185,129,0.2)', borderRadius: '50%', filter: 'blur(120px)', transform: 'translate(-33%, 33%)', pointerEvents: 'none' }} />
+
+          {/* Inner layout: text left + cards right */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '48px', alignItems: 'center', position: 'relative', zIndex: 1, width: '100%' }}>
+
+            {/* Left: Title & description */}
+            <div style={{ flex: '2 1 280px', color: '#fff' }}>
+              <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 900, marginBottom: '24px', lineHeight: 1.2, color: '#fff' }}>
+                압도적인<br />{t('hydra.roi.title', '도입 효과')}
+              </h2>
+              <p style={{ color: '#94A3B8', fontSize: '1.1rem', lineHeight: 1.7, fontWeight: 500 }}>
+                기존 수작업 방식과 비교할 수 없는 속도와 안정성.<br />Hydra가 인프라 구축의 모든 병목을 해소합니다.
+              </p>
             </div>
-            <p>{t('hydra.roi.time.desc')}</p>
-          </div>
-          <div className="benefit-card">
-            <h3>{t('hydra.roi.cost.title')}</h3>
-            <div className="benefit-value">
-              <span className="after">{t('hydra.roi.cost.value')}</span>
+
+            {/* Right: Stat cards */}
+            <div style={{ flex: '3 1 400px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '24px' }}>
+
+              {/* Card 1 – 인프라 설계 및 개발 */}
+              <div style={{
+                background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(16px)',
+                padding: '32px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.1)',
+                transition: 'background 0.2s'
+              }}
+                onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}
+                onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}
+              >
+                <div style={{ color: '#94A3B8', fontWeight: 500, marginBottom: '12px', fontSize: '0.9rem' }}>{t('hydra.roi.time.title', '인프라 설계 및 개발')}</div>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', marginBottom: '16px' }}>
+                  <span style={{ fontSize: 'clamp(3rem, 5vw, 4rem)', fontWeight: 900, color: '#fff', lineHeight: 1 }}>2</span>
+                  <span style={{ fontSize: '1.5rem', fontWeight: 700, color: '#CBD5E1' }}>Weeks</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '0.875rem' }}>
+                  <span style={{ color: '#64748B', textDecoration: 'line-through', fontWeight: 500 }}>10 Weeks</span>
+                  <span style={{ padding: '4px 10px', borderRadius: '6px', background: 'rgba(16,185,129,0.2)', color: '#34D399', fontWeight: 700, border: '1px solid rgba(16,185,129,0.3)' }}>80% 절감</span>
+                </div>
+              </div>
+
+              {/* Card 2 – 신규 환경 배포 */}
+              <div style={{
+                background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(16px)',
+                padding: '32px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.1)',
+                transition: 'background 0.2s'
+              }}
+                onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}
+                onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'}
+              >
+                <div style={{ color: '#94A3B8', fontWeight: 500, marginBottom: '12px', fontSize: '0.9rem' }}>{t('hydra.roi.cost.title', '신규 환경 배포 시간')}</div>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', marginBottom: '16px' }}>
+                  <span style={{ fontSize: 'clamp(3rem, 5vw, 4rem)', fontWeight: 900, color: '#fff', lineHeight: 1 }}>15</span>
+                  <span style={{ fontSize: '1.5rem', fontWeight: 700, color: '#CBD5E1' }}>Mins</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '0.875rem' }}>
+                  <span style={{ color: '#64748B', textDecoration: 'line-through', fontWeight: 500 }}>4 Hours</span>
+                  <span style={{ padding: '4px 10px', borderRadius: '6px', background: 'rgba(6,182,212,0.2)', color: '#22D3EE', fontWeight: 700, border: '1px solid rgba(6,182,212,0.3)' }}>90% 단축</span>
+                </div>
+              </div>
+
             </div>
-            <p>{t('hydra.roi.cost.desc')}</p>
           </div>
         </div>
       </section>
