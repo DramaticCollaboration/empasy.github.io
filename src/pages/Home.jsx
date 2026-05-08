@@ -154,12 +154,14 @@ const Home = () => {
         </div>
 
         {/* Scroll indicator */}
-        <div
-          className="animate-float"
-          style={{ position: 'absolute', bottom: '40px', left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', color: '#94A3B8', fontSize: '0.75rem', letterSpacing: '0.1em', zIndex: 10 }}
-        >
-          <span>{t('hero.scroll', 'SCROLL')}</span>
-          <div style={{ width: '1px', height: '48px', background: 'linear-gradient(to bottom, #94A3B8, transparent)' }} />
+        <div style={{ position: 'absolute', bottom: '40px', left: '50%', transform: 'translateX(-50%)', zIndex: 10 }}>
+          <div
+            className="animate-float"
+            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', color: '#94A3B8', fontSize: '0.75rem', letterSpacing: '0.1em' }}
+          >
+            <span>{t('hero.scroll', 'SCROLL')}</span>
+            <div style={{ width: '1px', height: '48px', background: 'linear-gradient(to bottom, #94A3B8, transparent)' }} />
+          </div>
         </div>
       </section>
 
