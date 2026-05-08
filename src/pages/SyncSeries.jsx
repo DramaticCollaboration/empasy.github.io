@@ -62,10 +62,19 @@ const SyncSeries = () => {
         {/* Hero */}
         <section className="ss-hero-section">
           <div className="ss-network-bg" />
-          <div className="ss-pulse-dot ss-pulse-dot--cyan" />
-          <div className="ss-pulse-dot ss-pulse-dot--emerald" style={{ animationDelay: '1s' }} />
+          {/* Floating dots */}
+          <span className="animate-pulse-slow" style={{ position: 'absolute', top: '80px', left: '20%', width: '12px', height: '12px', borderRadius: '50%', background: '#22d3ee', boxShadow: '0 0 15px rgba(34,211,238,0.6)', display: 'block' }} />
+          <span className="animate-pulse-slow" style={{ position: 'absolute', bottom: '80px', right: '25%', width: '16px', height: '16px', borderRadius: '50%', background: '#34d399', boxShadow: '0 0 20px rgba(52,211,153,0.6)', animationDelay: '1s', display: 'block' }} />
+          <span className="animate-pulse-slow" style={{ position: 'absolute', top: '160px', right: '15%', width: '8px', height: '8px', borderRadius: '50%', background: '#60a5fa', boxShadow: '0 0 10px rgba(96,165,250,0.6)', animationDelay: '2s', display: 'block' }} />
+
           <div className="ss-hero-inner">
-            <span className="ss-badge">{t('syncseries.page.badge')}</span>
+            <span className="ss-badge">
+              <span style={{ position: 'relative', display: 'inline-flex', marginRight: '8px', width: '10px', height: '10px' }}>
+                <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#06B6D4', opacity: 0.75 }} />
+                <span style={{ position: 'relative', display: 'inline-flex', width: '10px', height: '10px', borderRadius: '50%', background: '#0891B2' }} />
+              </span>
+              {t('syncseries.page.badge')}
+            </span>
             <h1 className="ss-hero-title">
               <span className="ss-gradient-text">{t('syncseries.page.heroTitle')}</span>
             </h1>
@@ -151,29 +160,30 @@ const SyncSeries = () => {
           </div>
 
           {/* Performance Stats */}
-          <div className="ss-glass-panel-solid ss-perf-box">
-            <div className="ss-perf-glow" />
+          <div className="ss-glass-panel-solid-2 ss-perf-box">
+            <div style={{ position: 'absolute', top: 0, right: 0, width: '600px', height: '600px', background: 'rgba(6,182,212,0.2)', borderRadius: '50%', filter: 'blur(120px)', transform: 'translate(33%, -33%)', pointerEvents: 'none' }} />
+            <div style={{ position: 'absolute', bottom: 0, left: 0, width: '500px', height: '500px', background: 'rgba(16,185,129,0.2)', borderRadius: '50%', filter: 'blur(120px)', transform: 'translate(-33%, 33%)', pointerEvents: 'none' }} />
             <div className="ss-perf-inner">
               <div className="ss-perf-header">
-                <h2 className="ss-perf-title">{t('syncseries.page.perfTitle')}</h2>
-                <p className="ss-perf-subtitle">{t('syncseries.page.perfSubtitle')}</p>
+                <h1 className="ss-perf-title">{t('syncseries.page.perfTitle')}</h1>
+                <h3 className="ss-perf-subtitle">{t('syncseries.page.perfSubtitle')}</h3>
               </div>
               <div className="ss-perf-grid">
                 <div className="ss-perf-cell">
-                  <p className="ss-perf-label">{t('syncseries.page.perf1Label')}</p>
-                  <h3 className="ss-perf-value">10<span className="ss-perf-unit">GB/s</span></h3>
+                  <h3 className="ss-perf-label">{t('syncseries.page.perf1Label')}</h3>
+                  <h1 className="ss-perf-value">10<span className="ss-perf-unit">GB/s</span></h1>
                 </div>
                 <div className="ss-perf-cell">
-                  <p className="ss-perf-label">{t('syncseries.page.perf2Label')}</p>
-                  <h3 className="ss-perf-value">0.5<span className="ss-perf-unit">s</span></h3>
+                  <h3 className="ss-perf-label">{t('syncseries.page.perf2Label')}</h3>
+                  <h1 className="ss-perf-value">0.5<span className="ss-perf-unit">s</span></h1>
                 </div>
                 <div className="ss-perf-cell">
-                  <p className="ss-perf-label">{t('syncseries.page.perf3Label')}</p>
-                  <h3 className="ss-perf-value ss-perf-value--gradient">99.99<span className="ss-perf-unit ss-perf-unit--emerald">%</span></h3>
+                  <h3 className="ss-perf-label">{t('syncseries.page.perf3Label')}</h3>
+                  <h1 className="ss-perf-value ss-perf-value--gradient">99.99<span className="ss-perf-unit ss-perf-unit--emerald">%</span></h1>
                 </div>
                 <div className="ss-perf-cell">
-                  <p className="ss-perf-label">{t('syncseries.page.perf4Label')}</p>
-                  <h3 className="ss-perf-value">120<span className="ss-perf-unit">+</span></h3>
+                  <h3 className="ss-perf-label">{t('syncseries.page.perf4Label')}</h3>
+                  <h1 className="ss-perf-value">120<span className="ss-perf-unit">+</span></h1>
                 </div>
               </div>
             </div>
