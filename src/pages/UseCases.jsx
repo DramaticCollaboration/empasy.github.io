@@ -290,12 +290,12 @@ const UseCases = () => {
 
           <div style={{ position: 'relative', zIndex: 1 }}>
             <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-              <h2 style={{ fontSize: 'clamp(1.6rem, 4vw, 2.2rem)', fontWeight: 900, color: '#fff', marginBottom: '12px' }}>
+              <h1 style={{ fontSize: 'clamp(1.6rem, 4vw, 2.2rem)', fontWeight: 900, color: '#fff', marginBottom: '12px' }}>
                 {t('usecases.impact.title')}
-              </h2>
-              <p style={{ color: '#64748B', fontSize: '1rem', fontWeight: 500 }}>
+              </h1>
+              <h3 style={{ color: '#64748B', fontSize: '1rem', fontWeight: 500 }}>
                 {t('usecases.impact.subtitle')}
-              </p>
+              </h3>
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '0', textAlign: 'center' }}>
@@ -306,8 +306,8 @@ const UseCases = () => {
                 { label: t('usecases.impact.s4l'), value: t('usecases.impact.s4v'), suffixColor: '#0891B2' },
               ].map((stat, i) => (
                 <div key={i} style={{ padding: '16px', borderLeft: i > 0 ? '1px solid rgba(203,213,225,0.4)' : 'none' }}>
-                  <p style={{ fontSize: '0.85rem', fontWeight: 600, color: '#64748B', marginBottom: '8px' }}>{stat.label}</p>
-                  <h3 style={{
+                  <h3 style={{ fontSize: '0.85rem', fontWeight: 600, color: '#64748B', marginBottom: '8px' }}>{stat.label}</h3>
+                  <h1 style={{
                     fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 900, letterSpacing: '-0.02em',
                     ...(stat.gradient
                       ? { background: 'linear-gradient(135deg, #00B4D8, #10b981)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }
@@ -316,7 +316,7 @@ const UseCases = () => {
                     {stat.value}
                     {stat.suffix && <span style={{ fontSize: '1.2rem', color: stat.suffixColor, WebkitTextFillColor: stat.gradient ? 'transparent' : stat.suffixColor }}>{stat.suffix}</span>}
                     {stat.arrow && <span style={{ fontSize: '1.2rem', color: stat.arrowColor, WebkitTextFillColor: 'initial', marginLeft: '2px' }}>{stat.arrow}</span>}
-                  </h3>
+                  </h1>
                 </div>
               ))}
             </div>
