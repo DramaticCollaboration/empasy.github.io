@@ -170,10 +170,14 @@ const UseCases = () => {
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px', textAlign: 'center', position: 'relative', zIndex: 1 }}>
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span style={{ display: 'inline-block', padding: '4px 14px', borderRadius: '50px', background: 'rgba(8,145,178,0.07)', border: '1px solid rgba(8,145,178,0.15)', color: '#0891B2', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '24px' }}>
+              <span style={{ position: 'relative', display: 'inline-flex', marginRight: '8px', width: '10px', height: '10px' }}>
+                <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#06B6D4', opacity: 0.75 }} />
+                <span style={{ position: 'relative', display: 'inline-flex', width: '10px', height: '10px', borderRadius: '50%', background: '#0891B2' }} />
+              </span>
               {t('usecases.hero.badge')}
             </span>
             <h1 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.1, marginBottom: '24px' }}>
-              <span style={{ background: 'linear-gradient(135deg, #00B4D8 0%, #48CAE4 50%, #10b981 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              <span style={{ background: 'linear-gradient(135deg, #0891B2 0%, #0D9488 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                 Use Cases
               </span>
             </h1>
@@ -278,7 +282,7 @@ const UseCases = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          style={{ padding: 'clamp(40px, 6vw, 56px)', marginBottom: '80px' }}
+          style={{ background: '#0f172a', padding: 'clamp(40px, 6vw, 56px)', marginBottom: '80px' }}
         >
           {/* Deco blobs */}
           <div style={{ position: 'absolute', right: '-80px', top: '-80px', width: '256px', height: '256px', background: 'rgba(34,211,238,0.15)', borderRadius: '50%', filter: 'blur(80px)', pointerEvents: 'none' }} />
@@ -286,7 +290,7 @@ const UseCases = () => {
 
           <div style={{ position: 'relative', zIndex: 1 }}>
             <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-              <h2 style={{ fontSize: 'clamp(1.6rem, 4vw, 2.2rem)', fontWeight: 900, color: '#0F172A', marginBottom: '12px' }}>
+              <h2 style={{ fontSize: 'clamp(1.6rem, 4vw, 2.2rem)', fontWeight: 900, color: '#fff', marginBottom: '12px' }}>
                 {t('usecases.impact.title')}
               </h2>
               <p style={{ color: '#64748B', fontSize: '1rem', fontWeight: 500 }}>
@@ -307,7 +311,7 @@ const UseCases = () => {
                     fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 900, letterSpacing: '-0.02em',
                     ...(stat.gradient
                       ? { background: 'linear-gradient(135deg, #00B4D8, #10b981)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }
-                      : { color: '#0F172A' })
+                      : { color: '#fff' })
                   }}>
                     {stat.value}
                     {stat.suffix && <span style={{ fontSize: '1.2rem', color: stat.suffixColor, WebkitTextFillColor: stat.gradient ? 'transparent' : stat.suffixColor }}>{stat.suffix}</span>}
@@ -336,17 +340,23 @@ const UseCases = () => {
             </h2>
             <Link
               to={`/${currentLang}/contact`}
-              state={{ interest: 'Other' }}
+              state={{interest: 'Other'}}
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: '12px',
-                background: '#0F172A', color: '#fff',
+                background: 'linear-gradient(135deg, #0891B2, #0D9488)', color: '#fff',
                 padding: '20px 40px', borderRadius: '50px',
                 fontSize: '1.05rem', fontWeight: 700, textDecoration: 'none',
-                boxShadow: '0 20px 40px rgba(15,23,42,0.2)',
+                boxShadow: '0 4px 15px rgba(8, 145, 178, 0.25)',
                 transition: 'all 0.25s'
               }}
-              onMouseEnter={e => { e.currentTarget.style.background = '#1E293B'; e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 28px 50px rgba(15,23,42,0.28)'; }}
-              onMouseLeave={e => { e.currentTarget.style.background = '#0F172A'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '0 20px 40px rgba(15,23,42,0.2)'; }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 10px 25px rgba(8, 145, 178, 0.35)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = '';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(8, 145, 178,0.2)';
+              }}
             >
               {t('usecases.cta.btn')}
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
