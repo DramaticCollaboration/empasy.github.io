@@ -133,6 +133,46 @@
       }
     },
     "syncseries": {
+      "page": {
+        "badge": "インフラ最適化",
+        "heroTitle": "Sync Series",
+        "heroDescPre": "途切れないデータフローのための",
+        "heroDescBold": "リアルタイム同期・レプリケーション",
+        "heroDescPost": "ソリューション",
+        "feature1": {
+          "title": "Cloud Data Sync",
+          "desc": "オンプレミスとマルチクラウド環境間のデータをミリ秒単位で同期し、データギャップを解消します。",
+          "b1": "リアルタイム増分同期 (CDC)",
+          "b2": "自動データマッピング・変換"
+        },
+        "feature2": {
+          "title": "Database Replication",
+          "desc": "異種データベース間の高可用性レプリケーションにより、中断のないサービス環境と災害復旧体制を構築します。",
+          "b1": "Zero-Data-Lossアーキテクチャ",
+          "b2": "双方向アクティブ-アクティブ複製"
+        },
+        "feature3": {
+          "title": "Multi-Region Sync",
+          "desc": "グローバルサービスユーザーのために、地理的に分散したリージョン間でデータを最短経路で同期します。",
+          "b1": "レイテンシ最適化ルーティング",
+          "b2": "リージョン別データ規制準拠フィルタリング"
+        },
+        "techEdge": "Technical Edge",
+        "techTitle": "データ整合性のための\n圧倒的な技術力",
+        "tech1Title": "超低遅延ストリーミング",
+        "tech1Desc": "独自の圧縮アルゴリズムによりネットワーク帯域幅消費を最小化し、データ転送速度を最大化します。",
+        "tech2Title": "競合の自動解決",
+        "tech2Desc": "同時書き込み発生時にポリシーベースのインテリジェントな競合解決メカニズムでデータ整合性を保証します。",
+        "perfTitle": "Sync Performance",
+        "perfSubtitle": "数値で証明されるSync Seriesの信頼性",
+        "perf1Label": "最大スループット",
+        "perf2Label": "平均レイテンシ",
+        "perf3Label": "稼働時間保証",
+        "perf4Label": "対応コネクタ数",
+        "ctaTitle": "データ同期の基準を変えましょう",
+        "ctaDesc": "複雑なデータアーキテクチャをSync Seriesでシンプルかつ強力に管理しましょう。",
+        "ctaBtn": "デモを申し込む"
+      },
       "hero": {
         "title": "Boon to business by agility, ビジネスの俊敏性のための完璧な同期",
         "desc": "開発から運用, 検証, コンテンツ管理まで。断絶されたITインフラを接続し, 最も柔軟で強力なデジタル革新エコシステムを完成させます。"

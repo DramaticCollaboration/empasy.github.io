@@ -132,6 +132,46 @@
       }
     },
     "syncseries": {
+      "page": {
+        "badge": "Infrastructure Optimization",
+        "heroTitle": "Sync Series",
+        "heroDescPre": "For seamless data flow,",
+        "heroDescBold": "real-time synchronization & replication",
+        "heroDescPost": "solution",
+        "feature1": {
+          "title": "Cloud Data Sync",
+          "desc": "Synchronize data between on-premises and multi-cloud environments in milliseconds to eliminate data gaps.",
+          "b1": "Real-time incremental sync (CDC)",
+          "b2": "Automatic data mapping & transformation"
+        },
+        "feature2": {
+          "title": "Database Replication",
+          "desc": "Build uninterrupted service environments and disaster recovery systems through high-availability replication across heterogeneous databases.",
+          "b1": "Zero-Data-Loss architecture",
+          "b2": "Bidirectional active-active replication"
+        },
+        "feature3": {
+          "title": "Multi-Region Sync",
+          "desc": "Synchronize data across geographically distributed regions via the shortest path for global service users.",
+          "b1": "Latency-optimized routing",
+          "b2": "Region-specific data compliance filtering"
+        },
+        "techEdge": "Technical Edge",
+        "techTitle": "Unmatched technology\nfor data consistency",
+        "tech1Title": "Ultra-Low Latency Streaming",
+        "tech1Desc": "Minimize network bandwidth consumption and maximize data transfer speed through our proprietary compression algorithm.",
+        "tech2Title": "Automatic Conflict Resolution",
+        "tech2Desc": "Guarantee data integrity through policy-based intelligent conflict resolution mechanisms when concurrent writes occur.",
+        "perfTitle": "Sync Performance",
+        "perfSubtitle": "The reliability of Sync Series, proven by numbers",
+        "perf1Label": "Max Throughput",
+        "perf2Label": "Avg Latency",
+        "perf3Label": "Uptime SLA",
+        "perf4Label": "Connectors",
+        "ctaTitle": "Change the standard of data synchronization",
+        "ctaDesc": "Manage complex data architectures simply and powerfully with Sync Series.",
+        "ctaBtn": "Request a Demo"
+      },
       "hero": {
         "title": "Boon to business by agility, Perfect Synchronization for Business Agility",
         "desc": "From development to operation, validation, and content management. Connect fragmented IT infrastructure to complete the most flexible and powerful digital innovation ecosystem."

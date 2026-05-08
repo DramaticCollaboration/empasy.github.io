@@ -133,6 +133,46 @@
       }
     },
     "syncseries": {
+      "page": {
+        "badge": "Infrastructure Optimization",
+        "heroTitle": "Sync Series",
+        "heroDescPre": "끊김 없는 데이터 흐름을 위한",
+        "heroDescBold": "실시간 동기화 및 복제",
+        "heroDescPost": "솔루션",
+        "feature1": {
+          "title": "Cloud Data Sync",
+          "desc": "온프레미스와 멀티 클라우드 환경 간의 데이터를 밀리초 단위로 동기화하여 데이터 격차를 해소합니다.",
+          "b1": "실시간 증분 동기화 (CDC)",
+          "b2": "자동 데이터 매핑 및 변환"
+        },
+        "feature2": {
+          "title": "Database Replication",
+          "desc": "이기종 데이터베이스 간 고가용성 복제를 통해 중단 없는 서비스 환경과 재해 복구 체계를 구축합니다.",
+          "b1": "Zero-Data-Loss 아키텍처",
+          "b2": "양방향 액티브-액티브 복제"
+        },
+        "feature3": {
+          "title": "Multi-Region Sync",
+          "desc": "글로벌 서비스 사용자를 위해 지리적으로 분산된 리전 간 데이터를 최단 경로로 동기화합니다.",
+          "b1": "지연 시간 최적화 라우팅",
+          "b2": "리전별 데이터 규제 준수 필터링"
+        },
+        "techEdge": "Technical Edge",
+        "techTitle": "데이터 일관성을 위한\n압도적인 기술력",
+        "tech1Title": "초저지연 스트리밍",
+        "tech1Desc": "독자적인 압축 알고리즘을 통해 네트워크 대역폭 소모를 최소화하고 데이터 전송 속도를 극대화합니다.",
+        "tech2Title": "충돌 자동 해결",
+        "tech2Desc": "동시 쓰기 발생 시 정책 기반의 지능형 충돌 해결 메커니즘을 통해 데이터 무결성을 보장합니다.",
+        "perfTitle": "Sync Performance",
+        "perfSubtitle": "수치로 증명되는 Sync Series의 신뢰성",
+        "perf1Label": "최대 처리량",
+        "perf2Label": "평균 지연 시간",
+        "perf3Label": "가동 시간 보장",
+        "perf4Label": "지원 커넥터 수",
+        "ctaTitle": "데이터 동기화의 기준을 바꾸세요",
+        "ctaDesc": "복잡한 데이터 아키텍처, Sync Series로 단순하고 강력하게 관리하세요.",
+        "ctaBtn": "데모 신청하기"
+      },
       "hero": {
         "title": "Boon to business by agility, 비즈니스 민첩성을 위한 완벽한 동기화",
         "desc": "개발부터 운영, 검증, 콘텐츠 관리까지. 단절된 IT 인프라를 연결하여 가장 유연하고 강력한 디지털 혁신 생태계를 완성합니다."
