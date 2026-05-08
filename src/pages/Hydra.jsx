@@ -33,7 +33,7 @@ const Hydra = () => {
 
             {/* Heading */}
             <h1 style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.15, margin: 0 }}>
-              <span style={{ display: 'block', background: 'linear-gradient(90deg, #00B4D8, #10b981, #00B4D8)', backgroundSize: '200% auto', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              <span style={{ display: 'block', background: 'linear-gradient(135deg, #0891B2 0%, #0D9488 100%)', backgroundSize: '200% auto', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                 {t('hydra.hero.title')}
               </span>
             </h1>
