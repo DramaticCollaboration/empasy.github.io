@@ -375,7 +375,7 @@
 
 .sb-diagram-nodes {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
   padding: 0 1rem;
@@ -427,12 +427,21 @@
   color: #0891b2;
 }
 
+.sb-node-float {
+  animation: sbFloat 6s ease-in-out infinite;
+}
+
+@keyframes sbFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
 .sb-node-line {
   flex-grow: 1;
   height: 2px;
   background: linear-gradient(to right, transparent, #e2e8f0, transparent);
   margin: 0 1rem;
-  margin-bottom: 2.25rem;
+  margin-top: 2.5rem; /* center with 5rem icon: half icon height = 2.5rem */
 }
 
 /* ─── Progress card ─── */
