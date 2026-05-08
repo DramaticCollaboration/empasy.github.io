@@ -77,7 +77,13 @@ const Contact = () => {
         <div className="contact-content">
           {/* Hero */}
           <div className="contact-hero">
-            <span className="contact-badge">Get in touch</span>
+            <span className="contact-badge">
+              <span style={{ position: 'relative', display: 'inline-flex', marginRight: '8px', width: '10px', height: '10px' }}>
+                <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#06B6D4', opacity: 0.75 }} />
+                <span style={{ position: 'relative', display: 'inline-flex', width: '10px', height: '10px', borderRadius: '50%', background: '#0891B2' }} />
+              </span>
+              Get in touch
+            </span>
             <h1 className="contact-title">
               <span className="text-gradient-primary">Contact Us</span>
             </h1>
@@ -215,7 +221,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="contact-info-label">Email</p>
-                      <p className="contact-info-value">contact@empasy.ai</p>
+                      <p className="contact-info-value">poh@empasy.com</p>
                     </div>
                   </div>
                   <div className="contact-info-item">
@@ -227,7 +233,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="contact-info-label">Office</p>
-                      <p className="contact-info-value">서울특별시 강남구 테헤란로 123<br />Empasy 빌딩 12층</p>
+                      <p className="contact-info-value">서울 금천구 가산디지털1로 205-27<br />2층 208호</p>
                     </div>
                   </div>
                 </div>
@@ -244,7 +250,7 @@ const Contact = () => {
                   loading="lazy"
                   title="Empasy Office Location"
                 />
-                <div className="contact-map-badge">강남역 2호선 도보 5분 거리</div>
+                <div className="contact-map-badge">가산디지털단지역 1/7호선 도보 5분 거리</div>
               </div>
             </div>
           </div>

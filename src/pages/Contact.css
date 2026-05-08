@@ -228,7 +228,7 @@
 
 .contact-submit-btn {
   width: 100%;
-  background: linear-gradient(135deg, #00B4D8 0%, #48CAE4 50%, #10b981 100%);
+  background: linear-gradient(135deg, rgb(8, 145, 178), rgb(13, 148, 136));
   color: #fff;
   padding: 1.25rem;
   border: none;
