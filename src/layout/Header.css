@@ -6,7 +6,7 @@
   padding: 1rem 0;
   background-color: var(--header-bg);
   z-index: 1000;
-  border-bottom: 1px solid var(--border-color);
+  /*border-bottom: 1px solid var(--border-color);*/
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
