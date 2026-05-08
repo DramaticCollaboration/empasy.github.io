@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import './Company.css';
 
 import CompanyLogoSynergy from '../components/CompanyLogoSynergy';
@@ -131,11 +132,38 @@ const Company = () => {
       </section>
 
       {/* 6. Location & Contact CTA */}
-      <section className="company-cta-section">
+      <section style={{ padding: '0 0 128px', position: 'relative', zIndex: 10 }}>
         <CompanyDarkMap />
-        <div className="cta-content">
-          <h2>{t('company.cta.title')}</h2>
-          <Link to={`/${currentLang}/contact`} state={{ interest: 'Other' }} className="magnetic-btn">{t('company.cta.btn')}</Link>
+        <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center', padding: '80px 24px 0' }}>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 900, color: '#0F172A', marginBottom: '48px', lineHeight: 1.2 }}>
+              {t('company.cta.title').split('\n').map((line, i, arr) => (
+                <React.Fragment key={i}>{line}{i < arr.length - 1 && <br />}</React.Fragment>
+              ))}
+            </h2>
+            <Link
+              to={`/${currentLang}/contact`}
+              state={{ interest: 'Other' }}
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: '12px',
+                background: '#0F172A', color: '#fff',
+                padding: '20px 40px', borderRadius: '50px',
+                fontSize: '1.05rem', fontWeight: 700, textDecoration: 'none',
+                boxShadow: '0 20px 40px rgba(15,23,42,0.2)',
+                transition: 'all 0.25s'
+              }}
+              onMouseEnter={e => { e.currentTarget.style.background = '#1E293B'; e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 28px 50px rgba(15,23,42,0.28)'; }}
+              onMouseLeave={e => { e.currentTarget.style.background = '#0F172A'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '0 20px 40px rgba(15,23,42,0.2)'; }}
+            >
+              {t('company.cta.btn')}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </Link>
+          </motion.div>
         </div>
       </section>
     </div>
