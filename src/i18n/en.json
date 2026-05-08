@@ -454,12 +454,53 @@
       "title": "Trusted by Global Innovators",
       "desc": "Proven business agility in complex enterprise environments.\nEMPASY's technical prowess completes the digital innovation of global leaders.",
       "portfolioTitle": "Explore innovation cases tailored to your challenges.",
+      "hero": {
+        "badge": "Success Stories",
+        "desc": "Leading companies across industries have achieved digital transformation with Empasy."
+      },
       "filters": {
         "all": "All",
+        "logistics": "Logistics",
+        "manufacturing": "Manufacturing",
+        "tech": "IT/Tech",
+        "finance": "Finance",
         "ai-data": "AI & Data",
         "testops": "AI TestOps",
         "msa-infra": "MSA & Infra",
         "cms": "Global CMS"
+      },
+      "flip": {
+        "keyresults": "Key Results",
+        "lg": {
+          "subtitle": "Global SCM System & Integrated Data Pipeline",
+          "r1l": "Lead Time Reduction", "r2l": "Expected ROI"
+        },
+        "samsung": {
+          "subtitle": "Large-Scale AI Semiconductor Infra Optimization",
+          "r1l": "Infrastructure Uptime", "r2l": "Operational Cost Savings"
+        },
+        "hyosung": {
+          "subtitle": "Intelligent Logistics Automation & Data Integration",
+          "r1l": "Processing Speed", "r2l": "Misdelivery Rate"
+        },
+        "visang": {
+          "subtitle": "Full Migration to Cloud-Based Digital Education Platform",
+          "r1l": "Concurrent Users", "r2l": "User Satisfaction"
+        },
+        "skmagic": {
+          "subtitle": "D2C Store Enhancement & Real-Time OMS",
+          "r1l": "Order Volume Increase", "r2l": "Inventory Accuracy"
+        },
+        "homeplus": {
+          "subtitle": "On-Demand Delivery Logistics Optimization Routing System",
+          "r1l": "Delivery Delay Reduction", "r2l": "Logistics Cost Savings"
+        }
+      },
+      "impact": {
+        "title": "Empasy Impact",
+        "subtitle": "Proven business results backed by data",
+        "s1l": "Avg. Processing Time", "s2l": "Customer Satisfaction",
+        "s3l": "Avg. ROI", "s4l": "Annual Cost Savings", "s4v": "Avg. ₩200M"
       },
       "cases": {
         "lg": {

@@ -455,12 +455,53 @@
       "title": "Trusted by Global Innovators",
       "desc": "복잡한 엔터프라이즈 환경에서 증명된 비즈니스 민첩성.\n엠파시의 기술력이 글로벌 리더들의 디지털 혁신을 완성합니다.",
       "portfolioTitle": "도전 과제별 맞춤형 혁신 사례를 확인해 보세요.",
+      "hero": {
+        "badge": "Success Stories",
+        "desc": "다양한 산업의 선도적 기업들이 Empasy로 디지털 혁신을 이루었습니다."
+      },
       "filters": {
         "all": "전체",
+        "logistics": "물류/유통",
+        "manufacturing": "제조",
+        "tech": "IT/테크",
+        "finance": "금융",
         "ai-data": "AI & Data",
         "testops": "AI TestOps",
         "msa-infra": "MSA & 인프라",
         "cms": "글로벌 CMS"
+      },
+      "flip": {
+        "keyresults": "Key Results",
+        "lg": {
+          "subtitle": "글로벌 SCM 시스템 구축 및 통합 데이터 파이프라인",
+          "r1l": "리드타임 감소", "r2l": "예상 ROI"
+        },
+        "samsung": {
+          "subtitle": "대규모 AI 반도체 인프라 최적화 및 자동화 운영",
+          "r1l": "인프라 가동률", "r2l": "운영 비용 절감"
+        },
+        "hyosung": {
+          "subtitle": "지능형 물류 자동화 솔루션 및 데이터 연동",
+          "r1l": "처리 속도 향상", "r2l": "오배송률"
+        },
+        "visang": {
+          "subtitle": "클라우드 기반 디지털 교육 플랫폼 전면 전환",
+          "r1l": "안정적 동시접속", "r2l": "사용자 만족도"
+        },
+        "skmagic": {
+          "subtitle": "D2C 직영몰 고도화 및 실시간 OMS 구축",
+          "r1l": "주문 처리량 증가", "r2l": "재고 정확도"
+        },
+        "homeplus": {
+          "subtitle": "온디맨드 딜리버리 물류 최적화 라우팅 시스템",
+          "r1l": "배송 지연 감소", "r2l": "물류 비용 절감"
+        }
+      },
+      "impact": {
+        "title": "Empasy Impact",
+        "subtitle": "데이터가 증명하는 확실한 비즈니스 성과",
+        "s1l": "평균 처리 시간", "s2l": "고객 만족도",
+        "s3l": "평균 ROI", "s4l": "연간 비용 절감", "s4v": "평균 2억"
       },
       "cases": {
         "lg": {
