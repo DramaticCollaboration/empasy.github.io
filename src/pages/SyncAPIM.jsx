@@ -70,9 +70,20 @@ const SyncAPIM = () => {
         {/* Hero */}
         <section className="sa-hero-section">
           <div className="sa-network-bg" />
+          {/* Floating dots */}
+          <span className="animate-pulse-slow" style={{ position: 'absolute', top: '80px', left: '20%', width: '12px', height: '12px', borderRadius: '50%', background: '#22d3ee', boxShadow: '0 0 15px rgba(34,211,238,0.6)', display: 'block' }} />
+          <span className="animate-pulse-slow" style={{ position: 'absolute', bottom: '80px', right: '25%', width: '16px', height: '16px', borderRadius: '50%', background: '#34d399', boxShadow: '0 0 20px rgba(52,211,153,0.6)', animationDelay: '1s', display: 'block' }} />
+          <span className="animate-pulse-slow" style={{ position: 'absolute', top: '160px', right: '15%', width: '8px', height: '8px', borderRadius: '50%', background: '#60a5fa', boxShadow: '0 0 10px rgba(96,165,250,0.6)', animationDelay: '2s', display: 'block' }} />
+
           <div className="sa-section-inner sa-hero-inner">
             <div className="sa-hero-text">
-              <span className="sa-badge">{t('syncapim.page.badge')}</span>
+              <span className="sa-badge">
+                <span style={{ position: 'relative', display: 'inline-flex', marginRight: '8px', width: '10px', height: '10px' }}>
+                  <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#06B6D4', opacity: 0.75 }} />
+                  <span style={{ position: 'relative', display: 'inline-flex', width: '10px', height: '10px', borderRadius: '50%', background: '#0891B2' }} />
+                </span>
+                {t('syncapim.page.badge')}
+              </span>
               <h1 className="sa-hero-title">
                 <span className="sa-hero-title-plain">{t('syncapim.page.heroLine1')}</span>
                 <span className="sa-gradient-text">{t('syncapim.page.heroLine2')}</span>
@@ -211,27 +222,24 @@ const SyncAPIM = () => {
               </div>
             ))}
           </div>
+        </section>
 
-          {/* Demo CTA */}
-          <div className="sa-cta-box sa-glass-panel">
-            <h3 className="sa-cta-title">{t('syncapim.page.ctaTitle')}</h3>
+
+        {/* Demo CTA */}
+        <section className="sa-cta">
+          <div className="sa-cta-box">
+            <h2 className="sa-cta-title">{t('syncapim.page.ctaTitle')}</h2>
             <p className="sa-cta-desc">{t('syncapim.page.ctaDesc')}</p>
-            <div className="sa-cta-form">
-              <input
-                type="email"
-                placeholder={t('syncapim.page.emailPlaceholder')}
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                className="sa-email-input"
-              />
-              <Link
-                to={`/${currentLang}/contact`}
-                state={{ interest: 'Other' }}
-                className="sa-cta-btn"
-              >
-                {t('syncapim.page.ctaBtn')}
-              </Link>
-            </div>
+            <Link
+              to={`/${currentLang}/contact`}
+              state={{ interest: 'Other' }}
+              className="sa-cta-btn"
+            >
+              {t('syncapim.page.ctaBtn')}
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+              </svg>
+            </Link>
           </div>
         </section>
       </main>
