@@ -225,6 +225,54 @@
       }
     },
     "syncboot": {
+      "page": {
+        "badge": "Sync Series 01",
+        "heroLine1": "Seamless Migration",
+        "heroLine2": "SyncBoot",
+        "heroDesc": "지능형 데이터 부트 및 마이그레이션 플랫폼으로 복잡한 데이터 이전 환경에 압도적인 안정성과 속도를 제공합니다.",
+        "pill1Label": "Protection",
+        "pill1Value": "Rollback Security",
+        "pill2Label": "Efficiency",
+        "pill2Value": "Incremental Sync",
+        "feat1": {
+          "title": "Pre-check Diagnostics",
+          "desc": "마이그레이션 시작 전 인프라 환경과 데이터 무결성을 실시간으로 진단하여 잠재적 충돌을 사전에 차단합니다.",
+          "b1": "데이터 스키마 자동 매핑",
+          "b2": "네트워크 대역폭 시뮬레이션"
+        },
+        "feat2": {
+          "title": "Incremental Sync",
+          "desc": "변경 및 추가된 데이터만 선택적으로 동기화하는 증분 방식을 채택하여 서비스 중단 시간을 최소화합니다.",
+          "b1": "CDC(Change Data Capture) 지원",
+          "b2": "제로 다운타임 마이그레이션"
+        },
+        "feat3": {
+          "title": "Rollback Protection",
+          "desc": "이전 단계로 즉각 복구가 가능한 자동 스냅샷 기술로 데이터 유실 우려 없는 완벽한 안전 장치를 제공합니다.",
+          "b1": "원클릭 시스템 롤백",
+          "b2": "포인트 인 타임 복구(PITR)"
+        },
+        "howTitle": "How It Works",
+        "step1": {
+          "title": "Configure & Target",
+          "desc": "마이그레이션 대상 소스와 타겟 클라우드를 설정하고 자동 진단 시스템을 가동합니다."
+        },
+        "step2": {
+          "title": "Bootstrapping",
+          "desc": "기존 환경의 구동 환경을 가상화하여 타겟 시스템에 최적화된 형태로 '부팅'합니다."
+        },
+        "step3": {
+          "title": "Live Sync & Finalize",
+          "desc": "실시간 증분 동기화를 통해 데이터를 일치시키고 안전하게 전환을 완료합니다."
+        },
+        "nodeSource": "Legacy Source",
+        "nodeTarget": "Cloud Target",
+        "progressLabel": "Transferring Integrity",
+        "ctaTitle": "지금 바로 인프라 혁신을 시작하세요",
+        "ctaDesc": "SyncBoot 플랫폼은 대규모 엔터프라이즈 환경에서 검증되었습니다.",
+        "ctaBtn1": "솔루션 문의",
+        "ctaBtn2": "기술 백서 다운로드"
+      },
       "hero": {
         "subtitle": "Breaking the Wall",
         "title": "비즈니스 민첩성을 위한 MSA 쾌속 개발 플랫폼, SyncBoot",

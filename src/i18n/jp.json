@@ -225,6 +225,54 @@
       }
     },
     "syncboot": {
+      "page": {
+        "badge": "Sync Series 01",
+        "heroLine1": "Seamless Migration",
+        "heroLine2": "SyncBoot",
+        "heroDesc": "インテリジェントなデータブート・マイグレーションプラットフォームで、複雑なデータ移行環境に圧倒的な安定性とスピードを提供します。",
+        "pill1Label": "Protection",
+        "pill1Value": "Rollback Security",
+        "pill2Label": "Efficiency",
+        "pill2Value": "Incremental Sync",
+        "feat1": {
+          "title": "Pre-check Diagnostics",
+          "desc": "マイグレーション開始前にインフラ環境とデータ整合性をリアルタイムで診断し、潜在的な競合を事前にブロックします。",
+          "b1": "データスキーマ自動マッピング",
+          "b2": "ネットワーク帯域幅シミュレーション"
+        },
+        "feat2": {
+          "title": "Incremental Sync",
+          "desc": "変更・追加されたデータのみを選択的に同期する増分方式を採用し、サービス停止時間を最小化します。",
+          "b1": "CDC（Change Data Capture）対応",
+          "b2": "ゼロダウンタイムマイグレーション"
+        },
+        "feat3": {
+          "title": "Rollback Protection",
+          "desc": "前のステップへ即座に復旧できる自動スナップショット技術で、データ損失の心配のない完璧な安全装置を提供します。",
+          "b1": "ワンクリックシステムロールバック",
+          "b2": "ポイントインタイムリカバリ（PITR）"
+        },
+        "howTitle": "How It Works",
+        "step1": {
+          "title": "Configure & Target",
+          "desc": "マイグレーション対象のソースとターゲットクラウドを設定し、自動診断システムを起動します。"
+        },
+        "step2": {
+          "title": "Bootstrapping",
+          "desc": "既存環境の実行環境を仮想化し、ターゲットシステムに最適化された形で「ブート」します。"
+        },
+        "step3": {
+          "title": "Live Sync & Finalize",
+          "desc": "リアルタイム増分同期によりデータを一致させ、安全に切り替えを完了します。"
+        },
+        "nodeSource": "Legacy Source",
+        "nodeTarget": "Cloud Target",
+        "progressLabel": "Transferring Integrity",
+        "ctaTitle": "今すぐインフラ革新を始めましょう",
+        "ctaDesc": "SyncBootプラットフォームは大規模なエンタープライズ環境で検証済みです。",
+        "ctaBtn1": "ソリューションお問い合わせ",
+        "ctaBtn2": "技術白書ダウンロード"
+      },
       "hero": {
         "subtitle": "Breaking the Wall",
         "title": "ビジネスの俊敏性のためのMSA高速開発プラットフォーム、SyncBoot",

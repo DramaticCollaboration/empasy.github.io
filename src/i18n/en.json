@@ -224,6 +224,54 @@
       }
     },
     "syncboot": {
+      "page": {
+        "badge": "Sync Series 01",
+        "heroLine1": "Seamless Migration",
+        "heroLine2": "SyncBoot",
+        "heroDesc": "The intelligent data boot and migration platform that delivers overwhelming stability and speed to complex data migration environments.",
+        "pill1Label": "Protection",
+        "pill1Value": "Rollback Security",
+        "pill2Label": "Efficiency",
+        "pill2Value": "Incremental Sync",
+        "feat1": {
+          "title": "Pre-check Diagnostics",
+          "desc": "Diagnoses infrastructure environment and data integrity in real-time before migration begins, blocking potential conflicts proactively.",
+          "b1": "Automatic data schema mapping",
+          "b2": "Network bandwidth simulation"
+        },
+        "feat2": {
+          "title": "Incremental Sync",
+          "desc": "Adopts an incremental approach that selectively syncs only changed and added data, minimizing service downtime.",
+          "b1": "CDC (Change Data Capture) support",
+          "b2": "Zero-downtime migration"
+        },
+        "feat3": {
+          "title": "Rollback Protection",
+          "desc": "Automatic snapshot technology for instant rollback to previous states, providing a perfect safety net with no risk of data loss.",
+          "b1": "One-click system rollback",
+          "b2": "Point-in-time recovery (PITR)"
+        },
+        "howTitle": "How It Works",
+        "step1": {
+          "title": "Configure & Target",
+          "desc": "Set up the migration source and target cloud and activate the automated diagnostics system."
+        },
+        "step2": {
+          "title": "Bootstrapping",
+          "desc": "Virtualize the runtime environment of the existing system and 'boot' it in a form optimized for the target."
+        },
+        "step3": {
+          "title": "Live Sync & Finalize",
+          "desc": "Align data through real-time incremental synchronization and safely complete the switchover."
+        },
+        "nodeSource": "Legacy Source",
+        "nodeTarget": "Cloud Target",
+        "progressLabel": "Transferring Integrity",
+        "ctaTitle": "Start Your Infrastructure Innovation Now",
+        "ctaDesc": "The SyncBoot platform has been validated in large-scale enterprise environments.",
+        "ctaBtn1": "Contact Us",
+        "ctaBtn2": "Download Technical Whitepaper"
+      },
       "hero": {
         "subtitle": "Breaking the Wall",
         "title": "Rapid MSA Development Platform for Business Agility, SyncBoot",
