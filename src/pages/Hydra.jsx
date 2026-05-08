@@ -379,6 +379,44 @@ const Hydra = () => {
         </div>
       </section>
 
+      {/* ── 3.5. Effect Section ── */}
+      <section style={{ padding: '96px 24px', position: 'relative', zIndex: 10, overflow: 'hidden' }}>
+        {/* Background decoration */}
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '800px', height: '400px', background: 'radial-gradient(ellipse, rgba(8,145,178,0.06) 0%, transparent 70%)', pointerEvents: 'none' }} />
+
+        <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center', position: 'relative' }}>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            {/* Label */}
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 16px', borderRadius: '50px', background: 'rgba(8,145,178,0.08)', border: '1px solid rgba(8,145,178,0.2)', color: '#0891B2', fontSize: '0.875rem', fontWeight: 700, marginBottom: '32px' }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+              {t('hydra.effect.label')}
+            </div>
+
+            {/* Title */}
+            <h2 style={{ fontSize: 'clamp(2.8rem, 7vw, 5rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.1, marginBottom: '28px', color: '#0F172A' }}>
+              {t('hydra.effect.title').split('\n').map((line, i, arr) => (
+                <React.Fragment key={i}>
+                  {i === 0
+                    ? <span style={{ display: 'block' }}>{line}</span>
+                    : <span style={{ display: 'block', background: 'linear-gradient(90deg, #0891B2, #10b981)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>{line}</span>
+                  }
+                </React.Fragment>
+              ))}
+            </h2>
+
+            {/* Subtitle */}
+            <p style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: '#64748B', fontWeight: 500, lineHeight: 1.8, maxWidth: '600px', margin: '0 auto' }}>
+              {t('hydra.effect.subtitle')}
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ── 4. ROI Section ── */}
       <section style={{ padding: '96px 24px', position: 'relative', zIndex: 10, maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{

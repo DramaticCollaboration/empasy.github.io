@@ -107,6 +107,11 @@
         "syntaxAgent": "Syntax Validation Agent",
         "costAgent": "Cost Audit Agent"
       },
+      "effect": {
+        "label": "Hydra Impact",
+        "title": "Unmatched\nEfficiency Gap",
+        "subtitle": "Speed and reliability beyond comparison with traditional manual methods. Hydra eliminates every bottleneck in infrastructure deployment."
+      },
       "roi": {
         "title": "Hydra Impact",
         "time": {

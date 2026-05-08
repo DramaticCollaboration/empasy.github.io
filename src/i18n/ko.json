@@ -108,6 +108,11 @@
         "syntaxAgent": "구문 검증 에이전트",
         "costAgent": "비용 감사 에이전트"
       },
+      "effect": {
+        "label": "Hydra 도입 효과",
+        "title": "압도적인\n효율성의 차이",
+        "subtitle": "기존 수작업 방식과 비교할 수 없는 속도와 안정성. Hydra가 인프라 구축의 모든 병목을 해소합니다."
+      },
       "roi": {
         "title": "Hydra 도입 효과",
         "time": {

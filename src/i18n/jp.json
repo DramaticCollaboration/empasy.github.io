@@ -108,6 +108,11 @@
         "syntaxAgent": "構文検証エージェント",
         "costAgent": "コスト監査エージェント"
       },
+      "effect": {
+        "label": "Hydra導入効果",
+        "title": "圧倒的な\n効率性の差",
+        "subtitle": "従来の手作業と比べものにならない速度と安定性。Hydraがインフラ構築のあらゆるボトルネックを解消します。"
+      },
       "roi": {
         "title": "Hydra導入効果",
         "time": {
