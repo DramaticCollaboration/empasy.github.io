@@ -84,7 +84,7 @@ const Home = () => {
           >
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(8,145,178,0.08)', border: '1px solid rgba(8,145,178,0.2)', borderRadius: '50px', padding: '6px 16px', marginBottom: '32px' }}>
               <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0891B2', display: 'inline-block' }} />
-              <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#0891B2', letterSpacing: '0.1em' }}>EMPASY PLATFORM</span>
+              <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#0891B2', letterSpacing: '0.1em' }}>The Next Generation AI Platform</span>
             </div>
           </motion.div>
 
