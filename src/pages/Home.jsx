@@ -341,14 +341,12 @@ const Home = () => {
           {t('home.trusted.title', 'TRUSTED BY ENTERPRISE')}
         </div>
         <div style={{ position: 'relative', overflow: 'hidden' }}>
-          <div style={{
-            display: 'flex', gap: '48px', whiteSpace: 'nowrap',
-            animation: 'marquee 20s linear infinite'
-          }}>
-            {['LG전자', '삼성전자 DS', '효성ITX', '비상교육', 'SK매직', '홈플러스', '펜타시큐리티', 'LX하우시스',
-              'LG전자', '삼성전자 DS', '효성ITX', '비상교육', 'SK매직', '홈플러스'].map((name, i) => (
-              <span key={i} style={{ color: '#94A3B8', fontSize: '0.9rem', fontWeight: 600, padding: '0 8px' }}>{name}</span>
-            ))}
+          <div style={{ display: 'flex', animation: 'marquee 24s linear infinite', width: 'max-content' }}>
+            {[...Array(2)].map((_, setIdx) =>
+              ['LG전자', '삼성전자 DS', '효성ITX', '비상교육', 'SK매직', '홈플러스', '펜타시큐리티', 'LX하우시스'].map((name, i) => (
+                <span key={`${setIdx}-${i}`} style={{ color: '#94A3B8', fontSize: '0.9rem', fontWeight: 600, padding: '0 32px', whiteSpace: 'nowrap' }}>{name}</span>
+              ))
+            )}
           </div>
         </div>
       </section>
