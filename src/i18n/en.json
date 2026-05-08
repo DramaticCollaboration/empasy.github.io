@@ -665,6 +665,35 @@
       "cta": {
         "title": "Ready to start innovation with EMPASY?",
         "btn": "Inquire about Project"
+      },
+      "page": {
+        "badge": "Empowering Digital Synergy",
+        "title": "Company",
+        "subtitle": "Empasy creates new connection value in business\nthrough data and AI technology.",
+        "mission": {
+          "title": "Mission",
+          "desc": "We provide infrastructure that synchronizes and optimizes complex enterprise data in real time, enabling companies to make the fastest and most accurate decisions."
+        },
+        "vision": {
+          "title": "Vision",
+          "desc": "We will become a global AI infrastructure partner leading the era of 'autonomous enterprise,' where every business process is organically integrated with artificial intelligence."
+        },
+        "history": {
+          "title": "History",
+          "subtitle": "Empasy's journey toward innovation",
+          "y2024": { "title": "Empasy Sync Series 2.0 Launch", "desc": "10 companies among Global Fortune 500 confirmed adoption" },
+          "y2023": { "title": "Series B Funding ($40M)", "desc": "Korea Innovation Company Award in AI Infrastructure" },
+          "y2022": { "title": "Empasy Founded & Incorporated", "desc": "Successful development of next-gen real-time data sync engine" }
+        },
+        "leadership": {
+          "title": "Leadership",
+          "subtitle": "The best experts are with us"
+        },
+        "recruit": {
+          "title": "We're looking for colleagues to design the future together",
+          "desc": "Empasy grows with people who know the joy of connecting the world through technology.",
+          "btn": "View Job Openings"
+        }
       }
     },
     "contact": {

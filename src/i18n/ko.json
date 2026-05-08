@@ -666,6 +666,35 @@
       "cta": {
         "title": "엠파시와 함께 혁신을 시작하시겠습니까?",
         "btn": "프로젝트 문의하기"
+      },
+      "page": {
+        "badge": "Empowering Digital Synergy",
+        "title": "Company",
+        "subtitle": "Empasy는 데이터와 AI 기술을 통해\n비즈니스의 새로운 연결 가치를 창출합니다.",
+        "mission": {
+          "title": "Mission",
+          "desc": "복잡한 엔터프라이즈 데이터를 실시간으로 동기화하고 최적화하여, 기업이 가장 신속하고 정확한 의사결정을 내릴 수 있는 인프라를 제공합니다."
+        },
+        "vision": {
+          "title": "Vision",
+          "desc": "모든 비즈니스 프로세스가 인공지능과 유기적으로 결합되는 '자율 운영 엔터프라이즈' 시대를 선도하는 글로벌 AI 인프라 파트너가 되겠습니다."
+        },
+        "history": {
+          "title": "History",
+          "subtitle": "혁신을 향한 Empasy의 여정",
+          "y2024": { "title": "Empasy Sync Series 2.0 출시", "desc": "글로벌 500대 기업 10개사 도입 확정" },
+          "y2023": { "title": "시리즈 B 투자 유치 ($40M)", "desc": "AI 인프라 부문 대한민국 혁신기업 대상 수상" },
+          "y2022": { "title": "Empasy 설립 및 법인 전환", "desc": "차세대 실시간 데이터 동기화 엔진 개발 성공" }
+        },
+        "leadership": {
+          "title": "Leadership",
+          "subtitle": "최고의 전문가들이 함께합니다"
+        },
+        "recruit": {
+          "title": "함께 미래를 설계할 동료를 찾습니다",
+          "desc": "Empasy는 기술로 세상을 연결하는 즐거움을 아는 인재들과 함께 성장합니다.",
+          "btn": "채용 공고 보기"
+        }
       }
     },
     "contact": {
