@@ -160,7 +160,6 @@ const Home = () => {
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', color: '#94A3B8', fontSize: '0.75rem', letterSpacing: '0.1em' }}
           >
             <span>{t('hero.scroll', 'SCROLL')}</span>
-            <div style={{ width: '1px', height: '40px', background: 'linear-gradient(to bottom, #94A3B8, transparent)' }} />
             <span style={{ fontSize: '1rem', lineHeight: 1 }}>↓</span>
           </div>
         </div>
@@ -360,7 +359,7 @@ const Home = () => {
 
 const variantStyles = {
   primary: {
-    background: 'linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 50%, #F0FDFA 100%)',
+    // background: 'linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 50%, #F0FDFA 100%)',
     border: '1px solid rgba(8,145,178,0.15)'
   },
   light: {
