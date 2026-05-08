@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import "tailwindcss";
 
 :root {
   color-scheme: light;
@@ -203,5 +204,106 @@ ul, ol {
   .animate-ripple,
   .animate-dash-flow {
     animation: none;
+  }
+}
+
+/* ── Landing page animations ── */
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(30px, -50px) scale(1.1); }
+  66%       { transform: translate(-20px, 20px) scale(0.9); }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+.animate-blob   { animation: blob 7s infinite; }
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
+.animate-blink  { animation: blink 1s step-end infinite; }
+.animate-float  { animation: float 3s ease-in-out infinite; }
+
+/* ── Gradient text utility ── */
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 5rem) !important;
+  line-height: 1.1 !important;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.bento-card-title-lg { font-size: 2rem !important; font-weight: 900 !important; }
+.bento-card-title-md { font-size: 1.4rem !important; font-weight: 900 !important; }
+.bento-card-title-sm { font-size: 1.1rem !important; font-weight: 900 !important; }
+.stat-value { font-size: 2.5rem !important; font-weight: 900 !important; }
+
+.text-gradient-primary {
+  background: linear-gradient(135deg, #0891B2 0%, #0D9488 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glassmorphism panels ── */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.glass-panel-dark {
+  background: linear-gradient(135deg, #0F172A 0%, #0F2942 50%, #0F172A 100%);
+  border: 1px solid rgba(8, 145, 178, 0.3);
+  box-shadow: 0 4px 24px rgba(8, 145, 178, 0.15);
+}
+
+/* ── Background grid ── */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(8,145,178,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(8,145,178,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Bento grid responsive */
+.bento-grid-responsive {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 300px;
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .bento-grid-responsive {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 240px;
+  }
+  .bento-span-2-rows {
+    grid-row: span 1 !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .bento-grid-responsive {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+  }
+  .bento-span-2 {
+    grid-column: span 1 !important;
   }
 }
