@@ -60,15 +60,27 @@ const SyncEta = () => {
     <div className="se-page">
       {/* Background blobs */}
       <div style={{ position: 'fixed', inset: 0, zIndex: 0, overflow: 'hidden', pointerEvents: 'none' }}>
-        <div className="animate-blob" style={{ position: 'absolute', top: '-10%', left: '-5%', width: '40%', height: '50%', borderRadius: '50%', background: 'rgba(34,211,238,0.1)', filter: 'blur(120px)' }} />
-        <div style={{ position: 'absolute', bottom: '-10%', right: '-5%', width: '40%', height: '50%', borderRadius: '50%', background: 'rgba(16,185,129,0.1)', filter: 'blur(120px)' }} />
+        <div className="animate-blob" style={{ position: 'absolute', top: '-10%', left: '-5%', width: '40%', height: '50%', borderRadius: '50%', background: 'rgba(34,211,238,0.12)', filter: 'blur(120px)' }} />
+        <div className="animate-blob animation-delay-2000" style={{ position: 'absolute', top: '20%', right: '-10%', width: '45%', height: '60%', borderRadius: '50%', background: 'rgba(16,185,129,0.1)', filter: 'blur(140px)' }} />
+        <div className="animate-blob animation-delay-4000" style={{ position: 'absolute', bottom: '-20%', left: '20%', width: '50%', height: '50%', borderRadius: '50%', background: 'rgba(59,130,246,0.08)', filter: 'blur(130px)' }} />
       </div>
 
       <main className="se-main">
         {/* Hero */}
         <section className="se-hero-section">
+          {/* Floating dots */}
+          <span className="animate-pulse-slow" style={{ position: 'absolute', top: '80px', left: '20%', width: '12px', height: '12px', borderRadius: '50%', background: '#22d3ee', boxShadow: '0 0 15px rgba(34,211,238,0.6)', display: 'block' }} />
+          <span className="animate-pulse-slow" style={{ position: 'absolute', bottom: '80px', right: '25%', width: '16px', height: '16px', borderRadius: '50%', background: '#34d399', boxShadow: '0 0 20px rgba(52,211,153,0.6)', animationDelay: '1s', display: 'block' }} />
+          <span className="animate-pulse-slow" style={{ position: 'absolute', top: '160px', right: '15%', width: '8px', height: '8px', borderRadius: '50%', background: '#60a5fa', boxShadow: '0 0 10px rgba(96,165,250,0.6)', animationDelay: '2s', display: 'block' }} />
+
           <div className="se-section-inner se-hero-inner">
-            <span className="se-badge">{t('synceta.page.badge')}</span>
+            <span className="se-badge">
+              <span style={{ position: 'relative', display: 'inline-flex', marginRight: '8px', width: '10px', height: '10px' }}>
+                <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#06B6D4', opacity: 0.75 }} />
+                <span style={{ position: 'relative', display: 'inline-flex', width: '10px', height: '10px', borderRadius: '50%', background: '#0891B2' }} />
+              </span>
+              {t('synceta.page.badge')}
+            </span>
             <h1 className="se-hero-title">
               {t('synceta.page.heroLine1')}<br />
               <span className="se-gradient-text">{t('synceta.page.heroLine2')}</span>
@@ -219,14 +231,16 @@ const SyncEta = () => {
         {/* CTA */}
         <section className="se-section-inner se-cta-section">
           <div className="se-cta-box">
+            {/* Deco blobs */}
+            <div style={{ position: 'absolute', right: '-80px', top: '-80px', width: '256px', height: '256px', background: 'rgba(34,211,238,0.15)', borderRadius: '50%', filter: 'blur(80px)', pointerEvents: 'none' }} />
+            <div style={{ position: 'absolute', left: '-80px', bottom: '-80px', width: '256px', height: '256px', background: 'rgba(16,185,129,0.12)', borderRadius: '50%', filter: 'blur(80px)', pointerEvents: 'none' }} />
+
             <div className="se-cta-network-bg" />
             <div className="se-cta-inner">
-              <h2 className="se-cta-title">
-                {t('synceta.page.ctaTitle').split('\n').map((line, i, arr) => (
-                  <React.Fragment key={i}>{line}{i < arr.length - 1 && <br />}</React.Fragment>
-                ))}
-              </h2>
-              <p className="se-cta-desc">{t('synceta.page.ctaDesc')}</p>
+              <h1 className="se-cta-title">
+                {t('synceta.page.ctaTitle')}
+              </h1>
+              <h3 className="se-cta-desc">{t('synceta.page.ctaDesc')}</h3>
               <div className="se-cta-btns">
                 <Link to={`/${currentLang}/contact`} state={{ interest: 'Other' }} className="se-cta-btn-primary">
                   {t('synceta.page.ctaBtn1')}

@@ -42,7 +42,7 @@
 
 /* Gradient */
 .se-gradient-text {
-  background: linear-gradient(135deg, #00B4D8 0%, #48CAE4 50%, #10b981 100%);
+  background: linear-gradient(135deg, #0891B2 0%, #0D9488 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -613,7 +613,7 @@
   color: #94a3b8;
   font-size: 1.125rem;
   line-height: 1.75;
-  max-width: 42rem;
+  max-width: 44rem;
   margin: 0 auto 3rem;
 }
 
@@ -626,18 +626,20 @@
 
 .se-cta-btn-primary {
   background: #fff;
-  color: #0f172a;
-  padding: 1rem 2.5rem;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  padding: 1rem 2rem;
   border-radius: 9999px;
-  font-size: 1.125rem;
   font-weight: 700;
-  text-decoration: none;
-  transition: background 0.2s;
-  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.2s, color 0.2s;
 }
 
 .se-cta-btn-primary:hover {
-  background: #ecfeff;
+  border-color: #67e8f9;
+  color: #0891b2;
 }
 
 .se-cta-btn-secondary {
