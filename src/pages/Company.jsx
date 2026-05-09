@@ -22,7 +22,7 @@ const leadershipMembers = [
   { nameKey: 'company.team.member1.name', roleKey: 'company.team.member1.role', imagePath: '/team/poh.png', desc: 'company.team.member1.desc' },
   { nameKey: 'company.team.member2.name', roleKey: 'company.team.member2.role', imagePath: '/team/Kyle.webp', desc: 'company.team.member2.desc' },
   { nameKey: 'company.team.member3.name', roleKey: 'company.team.member3.role', imagePath: '/team/kenny.png', desc: 'company.team.member3.desc' },
-  { nameKey: 'company.team.member4.name', roleKey: 'company.team.member4.role', imagePath: '/team/jade.webp', desc: 'company.team.member4.desc' },
+  { nameKey: 'company.team.member4.name', roleKey: 'company.team.member4.role', imagePath: '/team/jade.jpg', desc: 'company.team.member4.desc' },
 ];
 
 const Company = () => {
