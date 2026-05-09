@@ -265,10 +265,10 @@ const SyncEta = () => {
 
             <div className="se-cta-network-bg" />
             <div className="se-cta-inner">
-              <h1 className="se-cta-title">
+              <h2 className="se-cta-title">
                 {t('synceta.page.ctaTitle')}
-              </h1>
-              <h3 className="se-cta-desc">{t('synceta.page.ctaDesc')}</h3>
+              </h2>
+              <p className="se-cta-desc">{t('synceta.page.ctaDesc')}</p>
               <div className="se-cta-btns">
                 <Link to={`/${currentLang}/contact`} state={{ interest: 'Other' }} className="se-cta-btn-primary">
                   {t('synceta.page.ctaBtn1')}
