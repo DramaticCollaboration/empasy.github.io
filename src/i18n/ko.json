@@ -169,9 +169,9 @@
         "perf2Label": "평균 지연 시간",
         "perf3Label": "가동 시간 보장",
         "perf4Label": "지원 커넥터 수",
-        "ctaTitle": "데이터 동기화의 기준을 바꾸세요",
+        "ctaTitle": "단일 솔루션의 한계를 넘어, 완벽한 디지털 혁신 생태계로 진입하십시오.",
         "ctaDesc": "복잡한 데이터 아키텍처, Sync Series로 단순하고 강력하게 관리하세요.",
-        "ctaBtn": "데모 신청하기"
+        "ctaBtn": "Sync Series 통합 컨설팅 신청"
       },
       "hero": {
         "title": "Boon to business by agility, 비즈니스 민첩성을 위한 완벽한 동기화",
@@ -227,28 +227,28 @@
     "syncboot": {
       "page": {
         "badge": "Sync Series 01",
-        "heroLine1": "Seamless Migration",
-        "heroLine2": "SyncBoot",
-        "heroDesc": "지능형 데이터 부트 및 마이그레이션 플랫폼으로 복잡한 데이터 이전 환경에 압도적인 안정성과 속도를 제공합니다.",
+        "heroLine1": "비즈니스 민첩성을 위한",
+        "heroLine2": "MSA 쾌속 개발 플랫폼",
+        "heroDesc": "비즈니스 민첩성을 위한 가장 빠른 전환점. 경직된 시스템을 깨고 유연한 미래를 설계하세요.",
         "pill1Label": "Protection",
         "pill1Value": "Rollback Security",
         "pill2Label": "Efficiency",
         "pill2Value": "Incremental Sync",
         "feat1": {
-          "title": "Pre-check Diagnostics",
-          "desc": "마이그레이션 시작 전 인프라 환경과 데이터 무결성을 실시간으로 진단하여 잠재적 충돌을 사전에 차단합니다.",
+          "title": "100% 오픈소스 기반",
+          "desc": "벤더 종속성(Lock-in) 없는 검증된 오픈소스 기술 스택",
           "b1": "데이터 스키마 자동 매핑",
           "b2": "네트워크 대역폭 시뮬레이션"
         },
         "feat2": {
-          "title": "Incremental Sync",
-          "desc": "변경 및 추가된 데이터만 선택적으로 동기화하는 증분 방식을 채택하여 서비스 중단 시간을 최소화합니다.",
+          "title": "End-to-End 통합 환경",
+          "desc": "설계, 개발, 배포, 운영의 파이프라인을 하나의 고리로 연결",
           "b1": "CDC(Change Data Capture) 지원",
           "b2": "제로 다운타임 마이그레이션"
         },
         "feat3": {
-          "title": "Rollback Protection",
-          "desc": "이전 단계로 즉각 복구가 가능한 자동 스냅샷 기술로 데이터 유실 우려 없는 완벽한 안전 장치를 제공합니다.",
+          "title": "Low-Code 개발 생산성",
+          "desc": "블록을 조립하듯 UI 컴포넌트가 맞춰지며 백엔드 API 코드 자동 생성",
           "b1": "원클릭 시스템 롤백",
           "b2": "포인트 인 타임 복구(PITR)"
         },
@@ -268,9 +268,9 @@
         "nodeSource": "Legacy Source",
         "nodeTarget": "Cloud Target",
         "progressLabel": "Transferring Integrity",
-        "ctaTitle": "지금 바로 인프라 혁신을 시작하세요",
+        "ctaTitle": "모놀리식의 한계, 지금 SyncBoot로 넘어서십시오.",
         "ctaDesc": "SyncBoot 플랫폼은 대규모 엔터프라이즈 환경에서 검증되었습니다.",
-        "ctaBtn1": "솔루션 문의",
+        "ctaBtn1": "SyncBoot 도입 문의하기",
         "ctaBtn2": "기술 백서 다운로드"
       },
       "hero": {
@@ -369,48 +369,48 @@
     "synceta": {
       "page": {
         "badge": "AI 파이프라인 예측",
-        "heroLine1": "동기화 완료 시간을",
-        "heroLine2": "미리 예측하세요",
-        "heroDesc": "머신러닝 기반 ETA 엔진이 데이터 파이프라인의 완료 시간을 실시간으로 예측해 팀이 선제적으로 대응할 수 있도록 지원합니다.",
+        "heroLine1": "사람처럼 이해하고,",
+        "heroLine2": "기계처럼 테스트하라",
+        "heroDesc": "코드 작성도, 화면 녹화도 필요 없습니다. 당신의 엑셀 문서가 즉시 실행 가능한 테스트가 되는 Zero-Recording AI 테스트 플랫폼.",
         "activePipeline": "활성 파이프라인",
         "syncStatus": "동기화 상태",
         "minToComplete": "분 완료 예정",
         "reliabilityScore": "신뢰도 점수",
         "reliabilitySub": "최근 30일 예측 정확도",
         "feature1": {
-          "title": "실시간 ETA 예측",
-          "desc": "현재 트래픽 패턴, 리소스 사용률, 과거 데이터를 종합 분석해 파이프라인 완료 시간을 정밀하게 예측합니다."
+          "title": "Zero-Recording Execution (엑셀 직접 실행 기술)",
+          "desc": "기존 Record & Playback 방식의 한계를 넘어, 문서가 곧 실행이 되는 Hyper-Automation 기술을 경험하세요."
         },
         "feature2": {
-          "title": "자동 알림 & 에스컬레이션",
-          "desc": "예측 지연이 임계값을 초과하면 팀에게 즉시 알림을 전송하고 자동으로 에스컬레이션합니다."
+          "title": "UI가 바뀌어도 멈추지 않는 지능형 테스트, 그리고 픽셀 단위의 완벽한 시각 검증.",
+          "desc": "UI가 변경되어도 AI가 스스로 위치를 찾아내어 테스트를 복구하고, 픽셀 단위의 오차까지 잡아냅니다."
         },
         "feature3": {
-          "title": "예측 분석 대시보드",
-          "desc": "파이프라인별 ETA 트렌드, 지연 원인 분석, 성능 벤치마크를 한눈에 확인하는 통합 대시보드."
+          "title": "Real-time Dashboard & TestOps (실시간 관측 및 결함 증빙)",
+          "desc": "수백 개의 브라우저 병렬 실행 현황을 실시간으로 관측하고, 에러 발생 시 타임머신 레코딩으로 즉각적인 원인 분석이 가능합니다."
         },
         "ctrlEyebrow": "예측 제어 센터",
         "ctrlTitle": "파이프라인을\n완벽하게 제어하세요",
         "ctrl1": {
-          "title": "우선순위 기반 스케줄링",
-          "desc": "비즈니스 중요도에 따라 파이프라인 우선순위를 동적으로 조정해 SLA를 보장합니다."
+          "title": "사용할수록 더 똑똑해지는 QA 파트너, Self-Evolving AI",
+          "desc": "QA 엔지니어의 피드백을 학습하여 테스트 정교도를 높이는 Self-Evolving AI 생태계를 구축합니다."
         },
         "ctrl2": {
-          "title": "리소스 자동 최적화",
-          "desc": "예측 모델이 리소스 병목을 사전에 감지하고 자동으로 스케일링하여 최적의 성능을 유지합니다."
+          "title": "CI/CD Pipeline Integration (DevOps 생태계)",
+          "desc": "Jenkins, GitHub Actions 등 기존 도구와 완벽히 결합하여 개발 전 주기에 걸친 Zero-Touch 자동화를 실현합니다."
         },
         "ctrl3": {
-          "title": "다중 파이프라인 조율",
-          "desc": "상호 의존 관계가 있는 여러 파이프라인의 실행 순서와 타이밍을 지능적으로 조율합니다."
+          "title": "Zero-Recording Execution (엑셀 직접 실행 기술)",
+          "desc": "기존 Record & Playback 방식의 한계를 넘어, 문서가 곧 실행이 되는 Hyper-Automation 기술을 경험하세요."
         },
         "statsTitle": "검증된 성능 지표",
         "stat1": "예측 정확도",
         "stat2": "지연 감소율",
         "stat3": "모니터링",
         "stat4": "더 빠른 완료",
-        "ctaTitle": "파이프라인 지연을\n사전에 차단하세요",
+        "ctaTitle": "QA 업무의 병목 현상, 지금 SyncEta의 AI와 함께 해결하십시오.",
         "ctaDesc": "SyncEta의 AI 예측 엔진으로 동기화 완료 시간을 정확히 파악하고 비즈니스 연속성을 보장하세요.",
-        "ctaBtn1": "무료 체험 시작",
+        "ctaBtn1": "SyncEta 도입 문의하기",
         "ctaBtn2": "기술 문서 보기"
       },
       "hero": {
@@ -457,7 +457,7 @@
     "synccms": {
       "page": {
         "badge": "Enterprise Content OS",
-        "heroDesc": "복잡한 기업 콘텐츠를 하나의 플랫폼에서 관리하고 모든 채널에 실시간으로 동기화하는 엔터프라이즈 CMS 솔루션",
+        "heroDesc": "독보적인 템플릿 엔진과 시각적 레이아웃 빌더로 비즈니스 환경 변화에 가장 민첩하게 대응하는 Java 기반 통합 CMS.",
         "pill1Label": "Content",
         "pill1Value": "Headless Architecture",
         "pill2Label": "Distribution",
@@ -466,10 +466,10 @@
         "pill3Value": "Real-time Editorial",
         "syncLabel": "Sync Success Rate",
         "syncSub": "All Nodes Active",
-        "splitTitle1": "사일로화된 콘텐츠를\n",
-        "splitTitleAccent": "단일 원천(Single Source)",
-        "splitTitle2": "으로 통합",
-        "splitDesc": "채널별로 흩어져 있던 동일한 정보를 일일이 수정할 필요가 없습니다. SyncCMS는 강력한 헤드리스 아키텍처를 기반으로 웹, 앱, 키오스크, IoT 등 모든 디지털 접점의 콘텐츠를 중앙에서 통제합니다.",
+        "splitTitle1": "단일 코어로 통제하는\n",
+        "splitTitleAccent": "글로벌 옴니채널",
+        "splitTitle2": ".",
+        "splitDesc": "직관적인 시각적 관리, 클릭 한 번으로 끝나는 빠른 유지보수.",
         "feat1": {
           "title": "Omni-Channel Distribution",
           "desc": "한 번의 업로드로 연동된 모든 플랫폼에 동시 반영되는 강력한 배포 엔진"
@@ -492,9 +492,9 @@
           "title": "Real-time Collab",
           "desc": "웹소켓 기반의 실시간 편집 추적 기능으로 여러 명의 에디터가 충돌 없이 동시에 콘텐츠를 고도화할 수 있습니다."
         },
-        "ctaTitle": "SyncCMS로 비즈니스 속도를 높이세요",
+        "ctaTitle": "낡은 시스템의 한계를 벗고, 변화하는 비즈니스에 올라타십시오.",
         "ctaDesc": "개발 생산성 40% 향상, 콘텐츠 배포 시간 70% 단축. 검증된 CMS 기술력으로 귀사의 디지털 경쟁력을 완성합니다.",
-        "ctaBtn1": "지금 시작하기",
+        "ctaBtn1": "SyncCMS 도입 문의하기",
         "ctaBtn2": "데모 신청"
       },
       "hero": {
@@ -527,21 +527,39 @@
         "badge": "API Management Solution",
         "heroLine1": "Sync",
         "heroLine2": "APIM Platform",
-        "heroDesc": "분산된 모든 API를 하나의 통합 게이트웨이로 관리하세요. 프로토콜 변환부터 보안 인증, 개발자 포털까지 기업용 API 생태계 구축을 위한 완벽한 솔루션을 제공합니다.",
+        "heroDesc": "표준화된 시스템의 한계를 넘어, 기업의 비즈니스 환경에 완벽히 동기화되는 지능형 API 통합 관리 플랫폼입니다.",
         "btnStart": "시작하기",
         "btnDocs": "기술 문서 보기",
         "securityLabel": "Security Standard",
         "securityTitle": "Zero-Trust Auth",
         "capsTitle": "Core Capabilities",
-        "capsSubtitle": "단순한 게이트웨이를 넘어선 차세대 API 운영 시스템",
-        "cap1": { "title": "Unified API Gateway", "desc": "마이크로서비스 아키텍처(MSA)의 복잡성을 제거하고, 모든 API 엔드포인트를 단일 진입점으로 통합 제어합니다." },
-        "cap2": { "title": "Protocol Transformation", "desc": "Legacy SOAP, gRPC, WebSocket 등을 최신 RESTful API로 실시간 변환하여 이종 시스템 간 연결을 극대화합니다." },
-        "cap3": { "title": "Developer Portal", "desc": "자동화된 API 명세(Swagger) 제공 및 Sandbox 환경을 통해 내부 개발자와 파트너사의 개발 생산성을 혁신합니다." },
+        "capsSubtitle": "엔터프라이즈 API 운영에 필요한 모든 기능을 모듈화하여 유연하게 제공합니다.",
+        "cap1": {
+          "title": "Unified API Gateway",
+          "desc": "마이크로서비스 아키텍처(MSA)의 복잡성을 제거하고, 모든 API 엔드포인트를 단일 진입점으로 통합 제어합니다."
+        },
+        "cap2": {
+          "title": "Protocol Transformation",
+          "desc": "Legacy SOAP, gRPC, WebSocket 등을 최신 RESTful API로 실시간 변환하여 이종 시스템 간 연결을 극대화합니다."
+        },
+        "cap3": {
+          "title": "Developer Portal",
+          "desc": "자동화된 API 명세(Swagger) 제공 및 Sandbox 환경을 통해 내부 개발자와 파트너사의 개발 생산성을 혁신합니다."
+        },
         "trafficTitle": "Advanced",
         "trafficTitleAccent": "Traffic Control",
-        "traffic1": { "title": "Rate Limiting & Quotas", "desc": "사용자별, API 그룹별로 유연한 호출 제한 정책을 적용하여 서비스 안정성을 보장합니다." },
-        "traffic2": { "title": "Real-time Monitoring", "desc": "전체 API 트래픽 흐름을 시각화하고, 비정상 징후 발생 시 즉각적인 경보를 발송합니다." },
-        "traffic3": { "title": "Zero-Downtime Updates", "desc": "API 버전 관리 및 카나리 배포를 통해 중단 없는 인프라 업데이트가 가능합니다." },
+        "traffic1": {
+          "title": "Rate Limiting & Quotas",
+          "desc": "사용자별, API 그룹별로 유연한 호출 제한 정책을 적용하여 서비스 안정성을 보장합니다."
+        },
+        "traffic2": {
+          "title": "Real-time Monitoring",
+          "desc": "전체 API 트래픽 흐름을 시각화하고, 비정상 징후 발생 시 즉각적인 경보를 발송합니다."
+        },
+        "traffic3": {
+          "title": "Zero-Downtime Updates",
+          "desc": "API 버전 관리 및 카나리 배포를 통해 중단 없는 인프라 업데이트가 가능합니다."
+        },
         "chartEyebrow": "System Performance",
         "chartTitle": "Gateway Load",
         "chartBadge": "Stable",
@@ -552,10 +570,10 @@
         "stat2": "Daily Requests",
         "stat3": "Dev Efficiency Up",
         "stat4": "Security Certified",
-        "ctaTitle": "SyncAPIM 무료 데모를 신청하세요",
+        "ctaTitle": "불필요한 기능은 덜어내고, 필요한 기능만 도입하십시오.\n지금 맞춤형 API 생태계를 설계해 드립니다.",
         "ctaDesc": "엔터프라이즈급 API 관리가 어떻게 비즈니스를 가속화하는지 직접 확인해 보세요.",
         "emailPlaceholder": "회사 이메일 입력",
-        "ctaBtn": "데모 요청하기"
+        "ctaBtn": "SI 맞춤형 API 도입 문의하기"
       },
       "hero": {
         "title": "API Platform with Customization in its DNA",
@@ -662,13 +680,13 @@
       },
       "page": {
         "badge": "SMART LOGISTICS",
-        "heroLine1": "공간의 한계를 넘는",
-        "heroLine2": "지능형 물류 시스템",
-        "heroDesc": "Empasy의 Commerce & Logi 솔루션은 실시간 데이터 동기화와 AI 예측을 통해 창고 자동화부터 라스트마일 배송까지 전 과정을 혁신합니다.",
+        "heroLine1": "커머스의 한계를 넘고,",
+        "heroLine2": "물류의 흐름을 지배하다",
+        "heroDesc": "프론트/백엔드가 분리된 유연한 SyncShop과 완벽한 동선·재고 최적화를 이끄는 AI Logistics Hub의 결합.",
         "btnDiagnose": "무료 진단 받기",
         "btnDetail": "솔루션 상세 보기",
         "featuresTitle": "차세대 커머스 물류의 3대 핵심 동력",
-        "featuresSubtitle": "복잡한 공급망을 단순하고 투명하게 관리합니다.",
+        "featuresSubtitle": "백엔드와 프론트엔드가 분리되어 모든 채널에 즉시 대응하는 초유연 커머스 아키텍처",
         "feature1": {
           "title": "지능형 창고 자동화",
           "desc": "AGV와 로봇 팔을 연동한 풀필먼트 센터 자동화로 출고 처리량을 200% 향상시키고 인건비를 최적화합니다.",
@@ -720,34 +738,43 @@
         "keyresults": "Key Results",
         "lg": {
           "subtitle": "글로벌 SCM 시스템 구축 및 통합 데이터 파이프라인",
-          "r1l": "리드타임 감소", "r2l": "예상 ROI"
+          "r1l": "리드타임 감소",
+          "r2l": "예상 ROI"
         },
         "samsung": {
           "subtitle": "대규모 AI 반도체 인프라 최적화 및 자동화 운영",
-          "r1l": "인프라 가동률", "r2l": "운영 비용 절감"
+          "r1l": "인프라 가동률",
+          "r2l": "운영 비용 절감"
         },
         "hyosung": {
           "subtitle": "지능형 물류 자동화 솔루션 및 데이터 연동",
-          "r1l": "처리 속도 향상", "r2l": "오배송률"
+          "r1l": "처리 속도 향상",
+          "r2l": "오배송률"
         },
         "visang": {
           "subtitle": "클라우드 기반 디지털 교육 플랫폼 전면 전환",
-          "r1l": "안정적 동시접속", "r2l": "사용자 만족도"
+          "r1l": "안정적 동시접속",
+          "r2l": "사용자 만족도"
         },
         "skmagic": {
           "subtitle": "D2C 직영몰 고도화 및 실시간 OMS 구축",
-          "r1l": "주문 처리량 증가", "r2l": "재고 정확도"
+          "r1l": "주문 처리량 증가",
+          "r2l": "재고 정확도"
         },
         "homeplus": {
           "subtitle": "온디맨드 딜리버리 물류 최적화 라우팅 시스템",
-          "r1l": "배송 지연 감소", "r2l": "물류 비용 절감"
+          "r1l": "배송 지연 감소",
+          "r2l": "물류 비용 절감"
         }
       },
       "impact": {
         "title": "Empasy Impact",
         "subtitle": "데이터가 증명하는 확실한 비즈니스 성과",
-        "s1l": "평균 처리 시간", "s2l": "고객 만족도",
-        "s3l": "평균 ROI", "s4l": "연간 비용 절감", "s4v": "평균 2억"
+        "s1l": "평균 처리 시간",
+        "s2l": "고객 만족도",
+        "s3l": "평균 ROI",
+        "s4l": "연간 비용 절감",
+        "s4v": "평균 2억"
       },
       "cases": {
         "lg": {
@@ -916,7 +943,7 @@
       "page": {
         "badge": "Empowering Digital Synergy",
         "title": "Company",
-        "subtitle": "Empasy는 데이터와 AI 기술을 통해\n비즈니스의 새로운 연결 가치를 창출합니다.",
+        "subtitle": "Empathic Synergy. 깊은 공감과 협업의 힘으로, 비즈니스 민첩성(Agility)을 극대화하는 디지털 혁신을 이끕니다.",
         "mission": {
           "title": "Mission",
           "desc": "복잡한 엔터프라이즈 데이터를 실시간으로 동기화하고 최적화하여, 기업이 가장 신속하고 정확한 의사결정을 내릴 수 있는 인프라를 제공합니다."
@@ -928,18 +955,27 @@
         "history": {
           "title": "History",
           "subtitle": "혁신을 향한 Empasy의 여정",
-          "y2024": { "title": "Empasy Sync Series 2.0 출시", "desc": "글로벌 500대 기업 10개사 도입 확정" },
-          "y2023": { "title": "시리즈 B 투자 유치 ($40M)", "desc": "AI 인프라 부문 대한민국 혁신기업 대상 수상" },
-          "y2022": { "title": "Empasy 설립 및 법인 전환", "desc": "차세대 실시간 데이터 동기화 엔진 개발 성공" }
+          "y2024": {
+            "title": "SyncEta 북미 AWS Marketplace 진출 및 AI First QA 플랫폼 상용화",
+            "desc": ""
+          },
+          "y2023": {
+            "title": "LG전자 글로벌 AI 진단 포털 구축",
+            "desc": ""
+          },
+          "y2022": {
+            "title": "홈플러스 MIS 시스템 재구축 / 엠파시 법인 설립",
+            "desc": ""
+          }
         },
         "leadership": {
-          "title": "Leadership",
-          "subtitle": "최고의 전문가들이 함께합니다"
+          "title": "Leadership & Expert Team",
+          "subtitle": "글로벌 엔터프라이즈의 기준을 넘어서는 최정예 Tech 그룹"
         },
         "recruit": {
-          "title": "함께 미래를 설계할 동료를 찾습니다",
+          "title": "엠파시와 함께 혁신을 시작하시겠습니까?",
           "desc": "Empasy는 기술로 세상을 연결하는 즐거움을 아는 인재들과 함께 성장합니다.",
-          "btn": "채용 공고 보기"
+          "btn": "프로젝트 문의하기"
         }
       }
     },
