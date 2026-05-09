@@ -30,8 +30,8 @@ const Hydra = () => {
             style={{ display: 'flex', flexDirection: 'column', gap: '32px', position: 'relative', zIndex: 20 }}
           >
             {/* Badge */}
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', borderRadius: '50px', background: 'rgba(8,145,178,0.08)', border: '1px solid rgba(8,145,178,0.25)', color: '#0891B2', fontSize: '0.875rem', fontWeight: 700, width: 'fit-content' }}>
-              <span style={{ position: 'relative', display: 'inline-flex', width: '10px', height: '10px' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', padding: '4px 14px', borderRadius: '50px', background: 'rgba(8, 145, 178, 0.07)', border: '1px solid rgba(8, 145, 178, 0.15)', color: 'rgb(8, 145, 178)', fontSize: '0.875rem', fontWeight: 700, width: 'fit-content', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+              <span style={{ position: 'relative', display: 'inline-flex', width: '10px', height: '10px', marginRight: '8px' }}>
                 <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#06B6D4', opacity: 0.75 }} />
                 <span style={{ position: 'relative', display: 'inline-flex', width: '10px', height: '10px', borderRadius: '50%', background: '#0891B2' }} />
               </span>

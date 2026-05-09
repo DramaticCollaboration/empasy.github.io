@@ -133,6 +133,46 @@
       }
     },
     "syncseries": {
+      "page": {
+        "badge": "インフラ最適化",
+        "heroTitle": "Sync Series",
+        "heroDescPre": "途切れないデータフローのための",
+        "heroDescBold": "リアルタイム同期・レプリケーション",
+        "heroDescPost": "ソリューション",
+        "feature1": {
+          "title": "Cloud Data Sync",
+          "desc": "オンプレミスとマルチクラウド環境間のデータをミリ秒単位で同期し、データギャップを解消します。",
+          "b1": "リアルタイム増分同期 (CDC)",
+          "b2": "自動データマッピング・変換"
+        },
+        "feature2": {
+          "title": "Database Replication",
+          "desc": "異種データベース間の高可用性レプリケーションにより、中断のないサービス環境と災害復旧体制を構築します。",
+          "b1": "Zero-Data-Lossアーキテクチャ",
+          "b2": "双方向アクティブ-アクティブ複製"
+        },
+        "feature3": {
+          "title": "Multi-Region Sync",
+          "desc": "グローバルサービスユーザーのために、地理的に分散したリージョン間でデータを最短経路で同期します。",
+          "b1": "レイテンシ最適化ルーティング",
+          "b2": "リージョン別データ規制準拠フィルタリング"
+        },
+        "techEdge": "Technical Edge",
+        "techTitle": "データ整合性のための\n圧倒的な技術力",
+        "tech1Title": "超低遅延ストリーミング",
+        "tech1Desc": "独自の圧縮アルゴリズムによりネットワーク帯域幅消費を最小化し、データ転送速度を最大化します。",
+        "tech2Title": "競合の自動解決",
+        "tech2Desc": "同時書き込み発生時にポリシーベースのインテリジェントな競合解決メカニズムでデータ整合性を保証します。",
+        "perfTitle": "Sync Performance",
+        "perfSubtitle": "数値で証明されるSync Seriesの信頼性",
+        "perf1Label": "最大スループット",
+        "perf2Label": "平均レイテンシ",
+        "perf3Label": "稼働時間保証",
+        "perf4Label": "対応コネクタ数",
+        "ctaTitle": "データ同期の基準を変えましょう",
+        "ctaDesc": "複雑なデータアーキテクチャをSync Seriesでシンプルかつ強力に管理しましょう。",
+        "ctaBtn": "デモを申し込む"
+      },
       "hero": {
         "title": "Boon to business by agility, ビジネスの俊敏性のための完璧な同期",
         "desc": "開発から運用, 検証, コンテンツ管理まで。断絶されたITインフラを接続し, 最も柔軟で強力なデジタル革新エコシステムを完成させます。"
@@ -185,6 +225,54 @@
       }
     },
     "syncboot": {
+      "page": {
+        "badge": "Sync Series 01",
+        "heroLine1": "Seamless Migration",
+        "heroLine2": "SyncBoot",
+        "heroDesc": "インテリジェントなデータブート・マイグレーションプラットフォームで、複雑なデータ移行環境に圧倒的な安定性とスピードを提供します。",
+        "pill1Label": "Protection",
+        "pill1Value": "Rollback Security",
+        "pill2Label": "Efficiency",
+        "pill2Value": "Incremental Sync",
+        "feat1": {
+          "title": "Pre-check Diagnostics",
+          "desc": "マイグレーション開始前にインフラ環境とデータ整合性をリアルタイムで診断し、潜在的な競合を事前にブロックします。",
+          "b1": "データスキーマ自動マッピング",
+          "b2": "ネットワーク帯域幅シミュレーション"
+        },
+        "feat2": {
+          "title": "Incremental Sync",
+          "desc": "変更・追加されたデータのみを選択的に同期する増分方式を採用し、サービス停止時間を最小化します。",
+          "b1": "CDC（Change Data Capture）対応",
+          "b2": "ゼロダウンタイムマイグレーション"
+        },
+        "feat3": {
+          "title": "Rollback Protection",
+          "desc": "前のステップへ即座に復旧できる自動スナップショット技術で、データ損失の心配のない完璧な安全装置を提供します。",
+          "b1": "ワンクリックシステムロールバック",
+          "b2": "ポイントインタイムリカバリ（PITR）"
+        },
+        "howTitle": "How It Works",
+        "step1": {
+          "title": "Configure & Target",
+          "desc": "マイグレーション対象のソースとターゲットクラウドを設定し、自動診断システムを起動します。"
+        },
+        "step2": {
+          "title": "Bootstrapping",
+          "desc": "既存環境の実行環境を仮想化し、ターゲットシステムに最適化された形で「ブート」します。"
+        },
+        "step3": {
+          "title": "Live Sync & Finalize",
+          "desc": "リアルタイム増分同期によりデータを一致させ、安全に切り替えを完了します。"
+        },
+        "nodeSource": "Legacy Source",
+        "nodeTarget": "Cloud Target",
+        "progressLabel": "Transferring Integrity",
+        "ctaTitle": "今すぐインフラ革新を始めましょう",
+        "ctaDesc": "SyncBootプラットフォームは大規模なエンタープライズ環境で検証済みです。",
+        "ctaBtn1": "ソリューションお問い合わせ",
+        "ctaBtn2": "技術白書ダウンロード"
+      },
       "hero": {
         "subtitle": "Breaking the Wall",
         "title": "ビジネスの俊敏性のためのMSA高速開発プラットフォーム、SyncBoot",
@@ -279,6 +367,52 @@
       }
     },
     "synceta": {
+      "page": {
+        "badge": "AI パイプライン予測",
+        "heroLine1": "同期完了時間を",
+        "heroLine2": "事前に予測する",
+        "heroDesc": "MLベースのETAエンジンがデータパイプラインの完了時間をリアルタイムで予測し、チームが先手を打てるよう支援します。",
+        "activePipeline": "アクティブパイプライン",
+        "syncStatus": "同期ステータス",
+        "minToComplete": "分で完了予定",
+        "reliabilityScore": "信頼スコア",
+        "reliabilitySub": "直近30日間の予測精度",
+        "feature1": {
+          "title": "リアルタイムETA予測",
+          "desc": "現在のトラフィックパターン、リソース使用率、過去データを総合分析し、パイプライン完了時間を精密に予測します。"
+        },
+        "feature2": {
+          "title": "自動アラート＆エスカレーション",
+          "desc": "予測遅延がしきい値を超えた際に即座にチームへ通知し、自動でエスカレーションします。"
+        },
+        "feature3": {
+          "title": "予測分析ダッシュボード",
+          "desc": "パイプラインごとのETAトレンド、遅延原因分析、パフォーマンスベンチマークを一目で確認できる統合ダッシュボード。"
+        },
+        "ctrlEyebrow": "予測コントロールセンター",
+        "ctrlTitle": "パイプラインを\n完全にコントロール",
+        "ctrl1": {
+          "title": "優先度ベースのスケジューリング",
+          "desc": "ビジネス重要度に応じてパイプラインの優先度を動的に調整し、SLAを保証します。"
+        },
+        "ctrl2": {
+          "title": "リソース自動最適化",
+          "desc": "予測モデルがリソースボトルネックを事前に検出し、自動スケーリングで最高のパフォーマンスを維持します。"
+        },
+        "ctrl3": {
+          "title": "マルチパイプライン統合管理",
+          "desc": "相互依存関係のある複数パイプラインの実行順序とタイミングをインテリジェントに調整します。"
+        },
+        "statsTitle": "実証済みのパフォーマンス指標",
+        "stat1": "予測精度",
+        "stat2": "遅延削減率",
+        "stat3": "監視対応",
+        "stat4": "高速完了",
+        "ctaTitle": "パイプライン遅延を\n事前にブロック",
+        "ctaDesc": "SyncEtaのAI予測エンジンで同期完了時間を正確に把握し、ビジネス継続性を確保してください。",
+        "ctaBtn1": "無料トライアル開始",
+        "ctaBtn2": "技術ドキュメントを見る"
+      },
       "hero": {
         "title": "人間のように理解し、機械のようにテストする",
         "desc": "コード作成も, 画面録画도 필요ありません。エクセル文書が即座に実行可能なテストになるZero-Recording AIテストプラットフォーム。"
@@ -321,6 +455,48 @@
       }
     },
     "synccms": {
+      "page": {
+        "badge": "Enterprise Content OS",
+        "heroDesc": "複雑な企業コンテンツを一つのプラットフォームで管理し、すべてのチャネルにリアルタイムで同期するエンタープライズCMSソリューション",
+        "pill1Label": "Content",
+        "pill1Value": "Headless Architecture",
+        "pill2Label": "Distribution",
+        "pill2Value": "Multi-Channel Sync",
+        "pill3Label": "Workflow",
+        "pill3Value": "Real-time Editorial",
+        "syncLabel": "Sync Success Rate",
+        "syncSub": "All Nodes Active",
+        "splitTitle1": "サイロ化されたコンテンツを\n",
+        "splitTitleAccent": "単一ソース（Single Source）",
+        "splitTitle2": "に統合",
+        "splitDesc": "チャネルごとに分散した同じ情報を個別に修正する必要はありません。SyncCMSは強力なヘッドレスアーキテクチャをベースに、Web・アプリ・キオスク・IoTなどすべてのデジタル接点のコンテンツを一元管理します。",
+        "feat1": {
+          "title": "Omni-Channel Distribution",
+          "desc": "一度のアップロードで連携したすべてのプラットフォームに同時反映される強力な配信エンジン"
+        },
+        "feat2": {
+          "title": "Structured Content Management",
+          "desc": "データ中心の構造化モデリングで、デバイス環境を問わないコンテンツ互換性を実現"
+        },
+        "capsTitle": "Core Capabilities",
+        "capsSub": "SyncCMSが提供する差別化されたエンタープライズ機能",
+        "cap1": {
+          "title": "Smart Asset Library",
+          "desc": "AIベースのタグ付けと自動リサイズシステムで、数万件のメディアアセットを効率的に分類・管理します。"
+        },
+        "cap2": {
+          "title": "Enterprise Workflow",
+          "desc": "多様な権限階層と承認プロセスをカスタマイズし、複雑な大規模組織のコラボレーション生産性を最大化します。"
+        },
+        "cap3": {
+          "title": "Real-time Collab",
+          "desc": "WebSocketベースのリアルタイム編集追跡機能で、複数のエディターが競合なく同時にコンテンツを向上させられます。"
+        },
+        "ctaTitle": "SyncCMSでビジネスのスピードを上げましょう",
+        "ctaDesc": "開発生産性40%向上、コンテンツ配信時間70%短縮。実証済みCMS技術で貴社のデジタル競争力を完成させます。",
+        "ctaBtn1": "今すぐ始める",
+        "ctaBtn2": "デモを申し込む"
+      },
       "hero": {
         "title": "開発者なしでも、想像するすべてのウェブを組み立てる。",
         "desc": "独歩的なテンプレートエンジンと視覚的なレイアウトビルダーで、ビジネス環境の変化に最も敏捷に対応するJavaベースの統合CMS。"
@@ -347,6 +523,40 @@
       }
     },
     "syncapim": {
+      "page": {
+        "badge": "API管理ソリューション",
+        "heroLine1": "Sync",
+        "heroLine2": "APIM Platform",
+        "heroDesc": "分散されたすべてのAPIを一つの統合ゲートウェイで管理しましょう。プロトコル変換からセキュリティ認証、開発者ポータルまで、エンタープライズAPIエコシステム構築のための完全なソリューションを提供します。",
+        "btnStart": "始める",
+        "btnDocs": "技術ドキュメントを見る",
+        "securityLabel": "Security Standard",
+        "securityTitle": "Zero-Trust Auth",
+        "capsTitle": "Core Capabilities",
+        "capsSubtitle": "シンプルなゲートウェイを超えた次世代API運用システム",
+        "cap1": { "title": "Unified API Gateway", "desc": "マイクロサービスアーキテクチャの複雑さを解消し、すべてのAPIエンドポイントを単一の入口として統合制御します。" },
+        "cap2": { "title": "Protocol Transformation", "desc": "レガシーSOAP、gRPC、WebSocketなどを最新のRESTful APIにリアルタイム変換し、異種システム間の接続を最大化します。" },
+        "cap3": { "title": "Developer Portal", "desc": "自動化されたAPI仕様(Swagger)とSandbox環境を通じて、内部開発者やパートナーの開発生産性を革新します。" },
+        "trafficTitle": "Advanced",
+        "trafficTitleAccent": "Traffic Control",
+        "traffic1": { "title": "Rate Limiting & Quotas", "desc": "ユーザー別、APIグループ別に柔軟な呼び出し制限ポリシーを適用してサービスの安定性を保証します。" },
+        "traffic2": { "title": "Real-time Monitoring", "desc": "全APIトラフィックフローを可視化し、異常の兆候が発生した際に即座にアラートを送信します。" },
+        "traffic3": { "title": "Zero-Downtime Updates", "desc": "APIバージョン管理とカナリアデプロイメントにより、中断のないインフラアップデートが可能です。" },
+        "chartEyebrow": "System Performance",
+        "chartTitle": "Gateway Load",
+        "chartBadge": "Stable",
+        "stat1Label": "平均レイテンシ",
+        "stat2Label": "総スループット",
+        "statsTitle": "Empowering Your API Ecosystem",
+        "stat1": "SLA稼働時間",
+        "stat2": "日次リクエスト",
+        "stat3": "開発効率向上",
+        "stat4": "セキュリティ認証",
+        "ctaTitle": "SyncAPIMの無料デモをお申し込みください",
+        "ctaDesc": "エンタープライズ級API管理がビジネスをどのように加速させるか、直接ご確認ください。",
+        "emailPlaceholder": "会社のメールアドレスを入力",
+        "ctaBtn": "デモを申し込む"
+      },
       "hero": {
         "title": "API Platform with Customization in its DNA",
         "desc": "標準化されたシステムの限界を超え、企業のビジネス環境に完璧に同期する知能型API統合管理プラットフォームです。"
@@ -449,6 +659,42 @@
       "cta": {
         "title": "注文から配送まで、あなたのビジネスを完璧に同期(Sync)させてください。",
         "btn": "Commerce & Logi導入のお問い合わせ"
+      },
+      "page": {
+        "badge": "SMART LOGISTICS",
+        "heroLine1": "空間の限界を超える",
+        "heroLine2": "インテリジェント物流システム",
+        "heroDesc": "EmpasyのCommerce & Logiソリューションは、リアルタイムデータ同期とAI予測により、倉庫自動化からラストマイル配送まで全プロセスを革新します。",
+        "btnDiagnose": "無料診断を受ける",
+        "btnDetail": "ソリューション詳細を見る",
+        "featuresTitle": "次世代コマース物流の3大コアドライバー",
+        "featuresSubtitle": "複雑なサプライチェーンをシンプルかつ透明に管理します。",
+        "feature1": {
+          "title": "インテリジェント倉庫自動化",
+          "desc": "AGVとロボットアームを連携したフルフィルメントセンター自動化により出荷処理量を200%向上し、人件費を最適化します。",
+          "b1": "AIピッキング最適化ルート",
+          "b2": "ロボット統合制御システム (WCS)",
+          "b3": "リアルタイム空間占有率分析"
+        },
+        "feature2": {
+          "title": "リアルタイム在庫管理 (IMS)",
+          "desc": "オン/オフラインチャネルの在庫データを0.1秒単位で同期し、欠品損失を防止して適正在庫水準を維持します。",
+          "b1": "オムニチャネル在庫統合",
+          "b2": "需要予測ベースの自動発注",
+          "b3": "賞味期限・LOT追跡管理"
+        },
+        "feature3": {
+          "title": "スマートルーティング配送",
+          "desc": "交通情報と配送密度をリアルタイム分析して最適ルートを生成し、配送状況を透明に可視化します。",
+          "b1": "AI配車・ルート最適化 (TMS)",
+          "b2": "顧客向けリアルタイム配送追跡ダッシュボード",
+          "b3": "到着予定時刻(ETA)誤差5分以内"
+        },
+        "statsTitle": "データで確認する\n物流革新の成果",
+        "bar1Label": "誤配送率削減",
+        "bar1Value": "-85%",
+        "bar2Label": "平均配送時間短縮",
+        "bar2Value": "-4.2時間"
       }
     },
     "usecases": {
@@ -664,6 +910,35 @@
       "cta": {
         "title": "エムパシと共に革新を始めませんか？",
         "btn": "プロジェクトのお問い合わせ"
+      },
+      "page": {
+        "badge": "Empowering Digital Synergy",
+        "title": "Company",
+        "subtitle": "Empasyはデータとテクノロジーを通じて\nビジネスの新たな接続価値を創出します。",
+        "mission": {
+          "title": "Mission",
+          "desc": "複雑なエンタープライズデータをリアルタイムで同期・最適化し、企業が最も迅速かつ正確な意思決定を行えるインフラを提供します。"
+        },
+        "vision": {
+          "title": "Vision",
+          "desc": "あらゆるビジネスプロセスが人工知能と有機的に結合する「自律運営エンタープライズ」時代を主導するグローバルAIインフラパートナーを目指します。"
+        },
+        "history": {
+          "title": "History",
+          "subtitle": "革新に向けたEmpasyの歩み",
+          "y2024": { "title": "Empasy Sync Series 2.0 リリース", "desc": "グローバル500社のうち10社導入確定" },
+          "y2023": { "title": "シリーズB資金調達 ($40M)", "desc": "AIインフラ部門 韓国革新企業大賞受賞" },
+          "y2022": { "title": "Empasy設立・法人化", "desc": "次世代リアルタイムデータ同期エンジン開発成功" }
+        },
+        "leadership": {
+          "title": "Leadership",
+          "subtitle": "最高の専門家が集まっています"
+        },
+        "recruit": {
+          "title": "共に未来を設計する仲間を求めています",
+          "desc": "Empasyは技術で世界をつなぐ喜びを知る人材と共に成長します。",
+          "btn": "採用情報を見る"
+        }
       }
     },
     "contact": {
@@ -708,11 +983,49 @@
         "manager": "総括担当者: オ・ビョンムン代表 (理事)",
         "email": "メール: poh@empasy.com",
         "phone": "連絡先: +82 10-3420-8169"
+      },
+      "page": {
+        "badge": "お問い合わせ",
+        "title": "Contact Us",
+        "subtitle": "Empasyのソリューションについてご不明な点はございますか？\n専門家チームが貴社のデジタル変革をサポートします。",
+        "form": {
+          "nameLabel": "お名前",
+          "namePlaceholder": "山田 太郎",
+          "companyLabel": "会社名",
+          "companyPlaceholder": "Empasy",
+          "emailLabel": "メールアドレス",
+          "emailPlaceholder": "example@company.com",
+          "inquiryLabel": "お問い合わせ分野",
+          "inquiryPlaceholder": "お問い合わせ種類を選択してください",
+          "inquiryAI": "AIインフラ構築",
+          "inquiryLogistics": "物流・流通自動化",
+          "inquirySync": "Sync Series 導入",
+          "inquiryOther": "その他のお問い合わせ",
+          "messageLabel": "お問い合わせ内容",
+          "messagePlaceholder": "プロジェクトの概要やご質問内容をご記入ください。",
+          "submit": "メッセージを送信",
+          "submitting": "送信中...",
+          "errorSubmit": "送信に失敗しました。後でもう一度お試しください。"
+        },
+        "success": {
+          "title": "メッセージが送信されました！",
+          "desc": "近日中にご返答いたします。",
+          "reset": "新しいお問い合わせ"
+        },
+        "info": {
+          "phoneLabel": "Phone",
+          "phoneValue": "02-1234-5678",
+          "emailLabel": "Email",
+          "emailValue": "contact@empasy.ai",
+          "officeLabel": "Office",
+          "officeValue": "ソウル特別市江南区テヘラン路123\nEmpasyビル 12階",
+          "mapBadge": "江南駅2号線から徒歩5分"
+        }
       }
     },
     "footer": {
       "desc": "ビジネスの俊敏性のための完璧な同期",
-      "address": "東京都...",
+      "address": "ソウル特別市 衿川区 加山デジタル1路 205-27, 2階 208号",
       "contact": "連絡先: poh@empasy.com",
       "rights": "All rights reserved."
     }
