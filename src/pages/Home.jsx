@@ -364,20 +364,18 @@ const Home = () => {
 
 const variantStyles = {
   primary: {
-    // background: 'linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 50%, #F0FDFA 100%)',
-    border: '1px solid rgba(8,145,178,0.15)'
+    background: 'rgba(255, 255, 255, 0.95)',
   },
   light: {
-    background: '#FFFFFF',
-    border: '1px solid #E2E8F0'
+    background: 'rgba(255, 255, 255, 0.95)',
+    border: '1px solid rgba(255, 255, 255, 1)'
   },
   teal: {
     background: 'linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%)',
-    border: '1px solid rgba(13,148,136,0.2)'
+
   },
   dark: {
     background: 'linear-gradient(135deg, #0F172A 0%, #0C2340 50%, #0F172A 100%)',
-    border: '1px solid rgba(8,145,178,0.3)'
   }
 };
 
@@ -397,7 +395,8 @@ const BentoCard = ({ children, style, className, href, delay = 0, variant = 'lig
         overflow: 'hidden',
         cursor: 'pointer',
         transition: 'box-shadow 0.3s',
-        boxShadow: '0 4px 12px rgba(0,0,0,0.06)',
+        boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.05)',
+        backdropFilter: 'blur(20px)',
         ...vs,
         ...style
       }}
