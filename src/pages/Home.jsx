@@ -240,13 +240,17 @@ const Home = () => {
             <div style={{ padding: '32px', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '16px' }}>
-                  {['Boot', 'Eta', 'CMS', 'APIM'].map((s, i) => (
-                    <div key={s} style={{
+                  {[
+                    { color: '#0891B2', icon: <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> },
+                    { color: '#0D9488', icon: <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> },
+                    { color: '#3B82F6', icon: <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> },
+                    { color: '#8B5CF6', icon: <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg> },
+                  ].map((item, i) => (
+                    <div key={i} style={{
                       width: '36px', height: '36px', borderRadius: '8px',
-                      background: ['#0891B2','#0D9488','#3B82F6','#8B5CF6'][i],
+                      background: item.color,
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      fontSize: '0.6rem', fontWeight: 800, color: '#fff'
-                    }}>{s[0]}</div>
+                    }}>{item.icon}</div>
                   ))}
                 </div>
                 <h3 className="bento-card-title-md" style={{ color: '#0F172A', marginBottom: '8px' }}>Sync Series</h3>
@@ -270,8 +274,8 @@ const Home = () => {
           >
             <div style={{ padding: '28px', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <div style={{ width: '44px', height: '44px', borderRadius: '10px', background: 'rgba(13,148,136,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px', fontSize: '1.3rem' }}>
-                  🏪
+                <div style={{ width: '44px', height: '44px', borderRadius: '10px', background: 'linear-gradient(135deg,#0891b2,#06b6d4)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px', boxShadow: '0 4px 12px rgba(6,182,212,0.3)' }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
                 </div>
                 <h3 className="bento-card-title-sm" style={{ color: '#0F172A', marginBottom: '6px', lineHeight: 1.3 }}>
                   Commerce<br/>& Logi
@@ -295,8 +299,8 @@ const Home = () => {
           >
             <div style={{ padding: '28px', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <div style={{ width: '44px', height: '44px', borderRadius: '10px', background: 'rgba(8,145,178,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px', fontSize: '1.3rem' }}>
-                  💬
+                <div style={{ width: '44px', height: '44px', borderRadius: '10px', background: 'linear-gradient(135deg,#0891b2,#10b981)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px', boxShadow: '0 4px 12px rgba(8,145,178,0.3)' }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                 </div>
                 <h3 className="bento-card-title-sm" style={{ color: '#FFFFFF', marginBottom: '6px', lineHeight: 1.3 }}>
                   {t('home.bento.contact.title', "Let's Talk")}
