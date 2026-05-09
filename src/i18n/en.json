@@ -454,6 +454,48 @@
       }
     },
     "synccms": {
+      "page": {
+        "badge": "Enterprise Content OS",
+        "heroDesc": "The enterprise CMS solution that manages complex corporate content on a single platform and synchronizes it to every channel in real time.",
+        "pill1Label": "Content",
+        "pill1Value": "Headless Architecture",
+        "pill2Label": "Distribution",
+        "pill2Value": "Multi-Channel Sync",
+        "pill3Label": "Workflow",
+        "pill3Value": "Real-time Editorial",
+        "syncLabel": "Sync Success Rate",
+        "syncSub": "All Nodes Active",
+        "splitTitle1": "Unify Siloed Content into a\n",
+        "splitTitleAccent": "Single Source of Truth",
+        "splitTitle2": "",
+        "splitDesc": "No more manually updating the same information across different channels. SyncCMS centrally controls content across all digital touchpoints — web, app, kiosk, IoT — powered by a robust headless architecture.",
+        "feat1": {
+          "title": "Omni-Channel Distribution",
+          "desc": "A powerful distribution engine that instantly reflects a single upload across all connected platforms simultaneously."
+        },
+        "feat2": {
+          "title": "Structured Content Management",
+          "desc": "Data-centric structured modeling for device-agnostic content compatibility across all environments."
+        },
+        "capsTitle": "Core Capabilities",
+        "capsSub": "The differentiated enterprise features SyncCMS delivers",
+        "cap1": {
+          "title": "Smart Asset Library",
+          "desc": "Efficiently categorize and manage tens of thousands of media assets with AI-powered tagging and automatic resizing."
+        },
+        "cap2": {
+          "title": "Enterprise Workflow",
+          "desc": "Maximize collaboration productivity in complex large-scale organizations by customizing permission hierarchies and approval processes."
+        },
+        "cap3": {
+          "title": "Real-time Collab",
+          "desc": "WebSocket-based real-time edit tracking lets multiple editors simultaneously enhance content without conflict."
+        },
+        "ctaTitle": "Accelerate Your Business with SyncCMS",
+        "ctaDesc": "40% boost in development productivity, 70% reduction in content deployment time. Complete your digital competitiveness with proven CMS technology.",
+        "ctaBtn1": "Get Started Now",
+        "ctaBtn2": "Request a Demo"
+      },
       "hero": {
         "title": "Assemble Every Web You Imagine, Even Without Developers.",
         "desc": "Java-based integrated CMS that responds most agilely to business environment changes with a unique template engine and visual layout builder."

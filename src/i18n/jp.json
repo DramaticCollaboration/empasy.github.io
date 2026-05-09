@@ -455,6 +455,48 @@
       }
     },
     "synccms": {
+      "page": {
+        "badge": "Enterprise Content OS",
+        "heroDesc": "複雑な企業コンテンツを一つのプラットフォームで管理し、すべてのチャネルにリアルタイムで同期するエンタープライズCMSソリューション",
+        "pill1Label": "Content",
+        "pill1Value": "Headless Architecture",
+        "pill2Label": "Distribution",
+        "pill2Value": "Multi-Channel Sync",
+        "pill3Label": "Workflow",
+        "pill3Value": "Real-time Editorial",
+        "syncLabel": "Sync Success Rate",
+        "syncSub": "All Nodes Active",
+        "splitTitle1": "サイロ化されたコンテンツを\n",
+        "splitTitleAccent": "単一ソース（Single Source）",
+        "splitTitle2": "に統合",
+        "splitDesc": "チャネルごとに分散した同じ情報を個別に修正する必要はありません。SyncCMSは強力なヘッドレスアーキテクチャをベースに、Web・アプリ・キオスク・IoTなどすべてのデジタル接点のコンテンツを一元管理します。",
+        "feat1": {
+          "title": "Omni-Channel Distribution",
+          "desc": "一度のアップロードで連携したすべてのプラットフォームに同時反映される強力な配信エンジン"
+        },
+        "feat2": {
+          "title": "Structured Content Management",
+          "desc": "データ中心の構造化モデリングで、デバイス環境を問わないコンテンツ互換性を実現"
+        },
+        "capsTitle": "Core Capabilities",
+        "capsSub": "SyncCMSが提供する差別化されたエンタープライズ機能",
+        "cap1": {
+          "title": "Smart Asset Library",
+          "desc": "AIベースのタグ付けと自動リサイズシステムで、数万件のメディアアセットを効率的に分類・管理します。"
+        },
+        "cap2": {
+          "title": "Enterprise Workflow",
+          "desc": "多様な権限階層と承認プロセスをカスタマイズし、複雑な大規模組織のコラボレーション生産性を最大化します。"
+        },
+        "cap3": {
+          "title": "Real-time Collab",
+          "desc": "WebSocketベースのリアルタイム編集追跡機能で、複数のエディターが競合なく同時にコンテンツを向上させられます。"
+        },
+        "ctaTitle": "SyncCMSでビジネスのスピードを上げましょう",
+        "ctaDesc": "開発生産性40%向上、コンテンツ配信時間70%短縮。実証済みCMS技術で貴社のデジタル競争力を完成させます。",
+        "ctaBtn1": "今すぐ始める",
+        "ctaBtn2": "デモを申し込む"
+      },
       "hero": {
         "title": "開発者なしでも、想像するすべてのウェブを組み立てる。",
         "desc": "独歩的なテンプレートエンジンと視覚的なレイアウトビルダーで、ビジネス環境の変化に最も敏捷に対応するJavaベースの統合CMS。"
