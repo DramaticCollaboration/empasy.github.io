@@ -891,9 +891,9 @@
           "desc": "25年の特級技術者。データベースおよびバック/フロントエンド統合設計、グローバル eコマース技術リード。"
         },
         "member3": {
-          "name": "Ahn Su-ho",
-          "role": "Global Tech Advisor",
-          "desc": "AWS 米州 AI Product 開発およびグローバルコマースシステム総括。北米市場進出リード。"
+          "name": "Kang-hyeong Lee",
+          "role": "DevOps / PL",
+          "desc": "グローバルAIサービスの高可用性アーキテクチャ設計およびCI/CDパイプライン自動化のエキスパート。"
         },
         "member4": {
           "name": "Lee Ok-su",

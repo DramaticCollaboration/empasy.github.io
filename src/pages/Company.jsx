@@ -19,10 +19,10 @@ const historyItems = [
 const yearLabels = { y2024: '2024', y2023: '2023', y2022: '2022' };
 
 const leadershipMembers = [
-  { nameKey: 'company.team.member1.name', roleKey: 'company.team.member1.role' },
-  { nameKey: 'company.team.member2.name', roleKey: 'company.team.member2.role' },
-  { nameKey: 'company.team.member3.name', roleKey: 'company.team.member3.role' },
-  { nameKey: 'company.team.member4.name', roleKey: 'company.team.member4.role' },
+  { nameKey: 'company.team.member1.name', roleKey: 'company.team.member1.role', imagePath: '/team/poh.webp', desc: 'company.team.member1.desc' },
+  { nameKey: 'company.team.member2.name', roleKey: 'company.team.member2.role', imagePath: '/team/Kyle.webp', desc: 'company.team.member2.desc' },
+  { nameKey: 'company.team.member3.name', roleKey: 'company.team.member3.role', imagePath: '/team/kenny.png', desc: 'company.team.member3.desc' },
+  { nameKey: 'company.team.member4.name', roleKey: 'company.team.member4.role', imagePath: '/team/jade.webp', desc: 'company.team.member4.desc' },
 ];
 
 const Company = () => {
@@ -168,14 +168,11 @@ const Company = () => {
               >
                 <div className="company-leader-photo">
                   <div className="company-leader-overlay" />
-                  {i === 0 && (
-                    <div className="company-leader-socials">
-                      <div className="company-leader-social-btn"><LinkedInIcon /></div>
-                    </div>
-                  )}
+                    <img src={member.imagePath} alt={t(member.nameKey)} className="company-leader-img" />
                 </div>
                 <h4 className="company-leader-name">{t(member.nameKey)}</h4>
                 <p className="company-leader-role">{t(member.roleKey)}</p>
+                <h4>{t(member.desc)}</h4>
               </motion.div>
             ))}
           </div>
