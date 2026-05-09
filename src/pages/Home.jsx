@@ -82,7 +82,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(8,145,178,0.08)', border: '1px solid rgba(8,145,178,0.2)', borderRadius: '50px', padding: '6px 16px', marginBottom: '32px' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(8, 145, 178, 0.07)', border: '1px solid rgba(8, 145, 178, 0.15)', borderRadius: '50px', padding: '4px 14px', marginBottom: '32px', textTransform: 'uppercase' }}>
               <span style={{ position: 'relative', display: 'inline-flex', width: '10px', height: '10px' }}>
                 <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#06B6D4', opacity: 0.75 }} />
                 <span style={{ position: 'relative', display: 'inline-flex', width: '10px', height: '10px', borderRadius: '50%', background: '#0891B2' }} />
