@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import './SyncCMS.css';
 
 const heroPills = [
@@ -90,30 +91,38 @@ const SyncCMS = () => {
         <section className="sc-hero-section">
           <div className="sc-network-bg" />
           <div className="sc-section-inner sc-hero-inner">
-            <span className="sc-badge">{t('synccms.page.badge')}</span>
-            <h1 className="sc-hero-title">
-              <span className="sc-title-plain">Sync</span>
-              <span className="sc-gradient-text">CMS</span>
-            </h1>
-            <p className="sc-hero-desc">{t('synccms.page.heroDesc')}</p>
+            <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+              <span className="sc-badge">{t('synccms.page.badge')}</span>
+              <h1 className="sc-hero-title">
+                <span className="sc-title-plain">Sync</span>
+                <span className="sc-gradient-text">CMS</span>
+              </h1>
+              <p className="sc-hero-desc">{t('synccms.page.heroDesc')}</p>
 
-            <div className="sc-hero-pills">
-              {heroPills.map((pill, i) => (
-                <div key={i} className={`sc-glass-panel sc-pill`}>
-                  <div className={`sc-pill-icon sc-pill-icon--${pill.color}`}>{pill.icon}</div>
-                  <div>
-                    <p className="sc-pill-label">{t(pill.labelKey)}</p>
-                    <p className="sc-pill-value">{t(pill.valueKey)}</p>
+              <div className="sc-hero-pills">
+                {heroPills.map((pill, i) => (
+                  <div key={i} className={`sc-glass-panel sc-pill`}>
+                    <div className={`sc-pill-icon sc-pill-icon--${pill.color}`}>{pill.icon}</div>
+                    <div>
+                      <p className="sc-pill-label">{t(pill.labelKey)}</p>
+                      <p className="sc-pill-value">{t(pill.valueKey)}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </section>
 
         <section className="sc-section-inner sc-content-section">
           {/* Single Source split */}
-          <div className="sc-split-row">
+          <motion.div
+            className="sc-split-row"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             {/* Left — mock UI panel */}
             <div className="sc-split-visual">
               <div className="sc-blur-blob" />
@@ -183,26 +192,45 @@ const SyncCMS = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Core Capabilities */}
-          <div className="sc-caps-header">
+          <motion.div
+            className="sc-caps-header"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             <h2 className="sc-caps-title">{t('synccms.page.capsTitle')}</h2>
             <p className="sc-caps-sub">{t('synccms.page.capsSub')}</p>
-          </div>
+          </motion.div>
 
           <div className="sc-caps-grid">
             {featureCards.map((card, i) => (
-              <div key={i} className={`sc-cap-card sc-glass-panel sc-cap-card--${card.color}`}>
+              <motion.div
+                key={i}
+                className={`sc-cap-card sc-glass-panel sc-cap-card--${card.color}`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.45 }}
+              >
                 <div className={`sc-cap-icon sc-cap-icon--${card.color}`}>{card.icon}</div>
                 <h3 className="sc-cap-title">{t(card.titleKey)}</h3>
                 <p className="sc-cap-desc">{t(card.descKey)}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* CTA */}
-          <div className="sc-glass-panel-solid sc-cta-box">
+          <motion.div
+            className="sc-glass-panel-solid sc-cta-box"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <div className="sc-cta-glow" />
             <div className="sc-cta-inner">
               <h2 className="sc-cta-title">{t('synccms.page.ctaTitle')}</h2>
@@ -214,7 +242,7 @@ const SyncCMS = () => {
                 <button className="sc-cta-btn-secondary">{t('synccms.page.ctaBtn2')}</button>
               </div>
             </div>
-          </div>
+          </motion.div>
         </section>
       </main>
     </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import './SyncAPIM.css';
 
 const capabilityCards = [
@@ -76,7 +77,7 @@ const SyncAPIM = () => {
           <span className="animate-pulse-slow" style={{ position: 'absolute', top: '160px', right: '15%', width: '8px', height: '8px', borderRadius: '50%', background: '#60a5fa', boxShadow: '0 0 10px rgba(96,165,250,0.6)', animationDelay: '2s', display: 'block' }} />
 
           <div className="sa-section-inner sa-hero-inner">
-            <div className="sa-hero-text">
+            <motion.div className="sa-hero-text" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <span className="sa-badge">
                 <span style={{ position: 'relative', display: 'inline-flex', marginRight: '8px', width: '10px', height: '10px' }}>
                   <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#06B6D4', opacity: 0.75 }} />
@@ -95,10 +96,10 @@ const SyncAPIM = () => {
                 </Link>
                 <button className="sa-btn-secondary">{t('syncapim.page.btnDocs')}</button>
               </div>
-            </div>
+            </motion.div>
 
             {/* Code window */}
-            <div className="sa-code-side">
+            <motion.div className="sa-code-side" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.15 }}>
               <div className="sa-code-window">
                 <div className="sa-code-dots">
                   <span className="sa-dot-red" /><span className="sa-dot-amber" /><span className="sa-dot-green" />
@@ -127,30 +128,49 @@ const SyncAPIM = () => {
                   <p className="sa-security-title">{t('syncapim.page.securityTitle')}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* Core Capabilities */}
         <section className="sa-section-inner sa-capabilities-section">
-          <div className="sa-section-header">
+          <motion.div
+            className="sa-section-header"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             <h2 className="sa-section-title">{t('syncapim.page.capsTitle')}</h2>
             <p className="sa-section-subtitle">{t('syncapim.page.capsSubtitle')}</p>
-          </div>
+          </motion.div>
           <div className="sa-caps-grid">
             {capabilityCards.map((card, i) => (
-              <div key={i} className={`sa-api-card sa-glass-panel sa-api-card--${card.hoverColor}`}>
+              <motion.div
+                key={i}
+                className={`sa-api-card sa-glass-panel sa-api-card--${card.hoverColor}`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.45 }}
+              >
                 <div className={`sa-cap-icon sa-cap-icon--${card.color}`}>{card.icon}</div>
                 <h3 className="sa-cap-title">{t(card.titleKey)}</h3>
                 <p className="sa-cap-desc">{t(card.descKey)}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </section>
 
         {/* Traffic Control */}
         <section className="sa-section-inner sa-traffic-section">
-          <div className="sa-glass-panel-solid sa-traffic-box">
+          <motion.div
+            className="sa-glass-panel-solid sa-traffic-box"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             {/* Dark left panel */}
             <div className="sa-traffic-left">
               <h2 className="sa-traffic-title">
@@ -203,11 +223,17 @@ const SyncAPIM = () => {
               <div className="sa-traffic-ring" />
               <div className="sa-traffic-glow" />
             </div>
-          </div>
+          </motion.div>
         </section>
 
         {/* Stats + CTA */}
-        <section className="sa-section-inner sa-stats-section">
+        <motion.section
+          className="sa-section-inner sa-stats-section"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 className="sa-stats-main-title">{t('syncapim.page.statsTitle')}</h2>
           <div className="sa-stats-grid">
             {[
@@ -222,12 +248,17 @@ const SyncAPIM = () => {
               </div>
             ))}
           </div>
-        </section>
-
+        </motion.section>
 
         {/* Demo CTA */}
         <section className="sa-cta">
-          <div className="sa-cta-box">
+          <motion.div
+            className="sa-cta-box"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <h2 className="sa-cta-title">{t('syncapim.page.ctaTitle')}</h2>
             <p className="sa-cta-desc">{t('syncapim.page.ctaDesc')}</p>
             <Link
@@ -240,7 +271,7 @@ const SyncAPIM = () => {
                 <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
               </svg>
             </Link>
-          </div>
+          </motion.div>
         </section>
       </main>
     </div>

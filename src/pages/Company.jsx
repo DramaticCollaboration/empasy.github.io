@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import './Company.css';
 
 const LinkedInIcon = () => (
@@ -49,7 +50,7 @@ const Company = () => {
           <span className="animate-pulse-slow" style={{ position: 'absolute', top: '160px', right: '15%', width: '8px', height: '8px', borderRadius: '50%', background: '#60a5fa', boxShadow: '0 0 10px rgba(96,165,250,0.6)', animationDelay: '2s', display: 'block' }} />
 
           <div className="company-network-bg" />
-          <div className="company-hero-inner">
+          <motion.div className="company-hero-inner" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="company-badge">
               <span style={{ position: 'relative', display: 'inline-flex', marginRight: '8px', width: '10px', height: '10px' }}>
                 <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#06B6D4', opacity: 0.75 }} />
@@ -63,35 +64,50 @@ const Company = () => {
             <p className="company-subtitle">
               {subtitleLines[0]}{subtitleLines[1] && <><br className="company-br-md" />{subtitleLines[1]}</>}
             </p>
-          </div>
+          </motion.div>
         </section>
 
         {/* Mission & Vision */}
         <section className="company-section company-mv-section">
           <div className="company-mv-grid">
-            <div className="company-glass-panel company-mv-card">
-              <div className="company-icon-box company-icon-box--cyan">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="2" />
-                </svg>
-              </div>
-              <h3 className="company-mv-title">{t('company.page.mission.title')}</h3>
-              <p className="company-mv-desc">{t('company.page.mission.desc')}</p>
-            </div>
-            <div className="company-glass-panel company-mv-card">
-              <div className="company-icon-box company-icon-box--emerald">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" /><circle cx="12" cy="12" r="3" />
-                </svg>
-              </div>
-              <h3 className="company-mv-title">{t('company.page.vision.title')}</h3>
-              <p className="company-mv-desc">{t('company.page.vision.desc')}</p>
-            </div>
+            {[
+              {
+                iconColor: 'cyan',
+                icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="2" /></svg>,
+                titleKey: 'company.page.mission.title',
+                descKey: 'company.page.mission.desc',
+              },
+              {
+                iconColor: 'emerald',
+                icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" /><circle cx="12" cy="12" r="3" /></svg>,
+                titleKey: 'company.page.vision.title',
+                descKey: 'company.page.vision.desc',
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                className="company-glass-panel company-mv-card"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+              >
+                <div className={`company-icon-box company-icon-box--${item.iconColor}`}>{item.icon}</div>
+                <h3 className="company-mv-title">{t(item.titleKey)}</h3>
+                <p className="company-mv-desc">{t(item.descKey)}</p>
+              </motion.div>
+            ))}
           </div>
         </section>
 
         {/* History */}
-        <section className="company-section company-history-section">
+        <motion.section
+          className="company-section company-history-section"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="company-section-header">
             <h2 className="company-section-title">{t('company.page.history.title')}</h2>
             <p className="company-section-subtitle">{t('company.page.history.subtitle')}</p>
@@ -126,17 +142,30 @@ const Company = () => {
               ))}
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Leadership */}
         <section className="company-section company-leadership-section">
-          <div className="company-section-header">
+          <motion.div
+            className="company-section-header"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             <h2 className="company-section-title">{t('company.page.leadership.title')}</h2>
             <p className="company-section-subtitle">{t('company.page.leadership.subtitle')}</p>
-          </div>
+          </motion.div>
           <div className="company-leadership-grid">
             {leadershipMembers.map((member, i) => (
-              <div key={i} className="company-leader-card">
+              <motion.div
+                key={i}
+                className="company-leader-card"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.45 }}
+              >
                 <div className="company-leader-photo">
                   <div className="company-leader-overlay" />
                   {i === 0 && (
@@ -147,14 +176,20 @@ const Company = () => {
                 </div>
                 <h4 className="company-leader-name">{t(member.nameKey)}</h4>
                 <p className="company-leader-role">{t(member.roleKey)}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </section>
 
         {/* Recruit CTA */}
         <section className="company-section company-cta-section">
-          <div className="company-cta-box">
+          <motion.div
+            className="company-cta-box"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             {/* Deco blobs */}
             <div style={{ position: 'absolute', right: '-80px', top: '-80px', width: '256px', height: '256px', background: 'rgba(34,211,238,0.15)', borderRadius: '50%', filter: 'blur(80px)', pointerEvents: 'none' }} />
             <div style={{ position: 'absolute', left: '-80px', bottom: '-80px', width: '256px', height: '256px', background: 'rgba(16,185,129,0.12)', borderRadius: '50%', filter: 'blur(80px)', pointerEvents: 'none' }} />
@@ -167,7 +202,7 @@ const Company = () => {
             >
               {t('company.page.recruit.btn')}
             </Link>
-          </div>
+          </motion.div>
         </section>
       </main>
     </div>

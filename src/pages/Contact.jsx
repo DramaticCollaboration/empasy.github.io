@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import './Contact.css';
 
 const Contact = () => {
@@ -77,12 +78,16 @@ const Contact = () => {
 
         <div className="contact-content">
           {/* Hero */}
-          <div className="contact-hero">
+          <motion.div
+            className="contact-hero"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             {/* Floating dots */}
             <span className="animate-pulse-slow" style={{ position: 'absolute', top: '80px', left: '20%', width: '12px', height: '12px', borderRadius: '50%', background: '#22d3ee', boxShadow: '0 0 15px rgba(34,211,238,0.6)', display: 'block' }} />
             <span className="animate-pulse-slow" style={{ position: 'absolute', bottom: '80px', right: '25%', width: '16px', height: '16px', borderRadius: '50%', background: '#34d399', boxShadow: '0 0 20px rgba(52,211,153,0.6)', animationDelay: '1s', display: 'block' }} />
             <span className="animate-pulse-slow" style={{ position: 'absolute', top: '160px', right: '15%', width: '8px', height: '8px', borderRadius: '50%', background: '#60a5fa', boxShadow: '0 0 10px rgba(96,165,250,0.6)', animationDelay: '2s', display: 'block' }} />
-
 
             <span className="contact-badge">
               <span style={{ position: 'relative', display: 'inline-flex', marginRight: '8px', width: '10px', height: '10px' }}>
@@ -98,12 +103,18 @@ const Contact = () => {
               {subtitleLines[0]}<br />
               {subtitleLines[1]}
             </p>
-          </div>
+          </motion.div>
 
           {/* Grid */}
           <div className="contact-grid">
             {/* Form column */}
-            <div className="contact-form-col">
+            <motion.div
+              className="contact-form-col"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
               <div className="glass-panel contact-form-panel">
                 {!isSubmitted ? (
                   <form onSubmit={handleSubmit} className="contact-form">
@@ -205,10 +216,16 @@ const Contact = () => {
                   </div>
                 )}
               </div>
-            </div>
+            </motion.div>
 
             {/* Info column */}
-            <div className="contact-info-col">
+            <motion.div
+              className="contact-info-col"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
               <div className="glass-panel contact-info-panel">
                 <h3 className="contact-info-title">{t('contact.info.title')}</h3>
                 <div className="contact-info-list">
@@ -263,7 +280,7 @@ const Contact = () => {
                 />
                 <div className="contact-map-badge">가산디지털단지역 1/7호선 도보 5분 거리</div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </main>

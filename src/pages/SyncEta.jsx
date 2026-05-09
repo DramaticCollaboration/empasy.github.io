@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import './SyncEta.css';
 
 const featureCards = [
@@ -74,44 +75,46 @@ const SyncEta = () => {
           <span className="animate-pulse-slow" style={{ position: 'absolute', top: '160px', right: '15%', width: '8px', height: '8px', borderRadius: '50%', background: '#60a5fa', boxShadow: '0 0 10px rgba(96,165,250,0.6)', animationDelay: '2s', display: 'block' }} />
 
           <div className="se-section-inner se-hero-inner">
-            <span className="se-badge">
-              <span style={{ position: 'relative', display: 'inline-flex', marginRight: '8px', width: '10px', height: '10px' }}>
-                <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#06B6D4', opacity: 0.75 }} />
-                <span style={{ position: 'relative', display: 'inline-flex', width: '10px', height: '10px', borderRadius: '50%', background: '#0891B2' }} />
+            <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+              <span className="se-badge">
+                <span style={{ position: 'relative', display: 'inline-flex', marginRight: '8px', width: '10px', height: '10px' }}>
+                  <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#06B6D4', opacity: 0.75 }} />
+                  <span style={{ position: 'relative', display: 'inline-flex', width: '10px', height: '10px', borderRadius: '50%', background: '#0891B2' }} />
+                </span>
+                {t('synceta.page.badge')}
               </span>
-              {t('synceta.page.badge')}
-            </span>
-            <h1 className="se-hero-title">
-              {t('synceta.page.heroLine1')}<br />
-              <span className="se-gradient-text">{t('synceta.page.heroLine2')}</span>
-            </h1>
-            <p className="se-hero-desc">{t('synceta.page.heroDesc')}</p>
+              <h1 className="se-hero-title">
+                {t('synceta.page.heroLine1')}<br />
+                <span className="se-gradient-text">{t('synceta.page.heroLine2')}</span>
+              </h1>
+              <p className="se-hero-desc">{t('synceta.page.heroDesc')}</p>
 
-            {/* Status card */}
-            <div className="se-glass-panel-solid se-status-card">
-              <div className="se-status-left">
-                <div className="se-status-live">
-                  <span className="se-live-dot" />
-                  <span className="se-live-label">{t('synceta.page.activePipeline')}</span>
-                </div>
-                <h4 className="se-status-title">{t('synceta.page.syncStatus')}</h4>
-                <div className="se-status-eta">
-                  <span className="se-eta-time">08:42</span>
-                  <span className="se-eta-unit">{t('synceta.page.minToComplete')}</span>
-                </div>
-              </div>
-              <div className="se-status-divider" />
-              <div className="se-status-right">
-                <p className="se-reliability-label">{t('synceta.page.reliabilityScore')}</p>
-                <div className="se-reliability-bar-row">
-                  <div className="se-reliability-track">
-                    <div className="se-reliability-fill" style={{ width: '94%' }} />
+              {/* Status card */}
+              <div className="se-glass-panel-solid se-status-card">
+                <div className="se-status-left">
+                  <div className="se-status-live">
+                    <span className="se-live-dot" />
+                    <span className="se-live-label">{t('synceta.page.activePipeline')}</span>
                   </div>
-                  <span className="se-reliability-pct">94.8%</span>
+                  <h4 className="se-status-title">{t('synceta.page.syncStatus')}</h4>
+                  <div className="se-status-eta">
+                    <span className="se-eta-time">08:42</span>
+                    <span className="se-eta-unit">{t('synceta.page.minToComplete')}</span>
+                  </div>
                 </div>
-                <p className="se-reliability-sub">{t('synceta.page.reliabilitySub')}</p>
+                <div className="se-status-divider" />
+                <div className="se-status-right">
+                  <p className="se-reliability-label">{t('synceta.page.reliabilityScore')}</p>
+                  <div className="se-reliability-bar-row">
+                    <div className="se-reliability-track">
+                      <div className="se-reliability-fill" style={{ width: '94%' }} />
+                    </div>
+                    <span className="se-reliability-pct">94.8%</span>
+                  </div>
+                  <p className="se-reliability-sub">{t('synceta.page.reliabilitySub')}</p>
+                </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -119,18 +122,31 @@ const SyncEta = () => {
         <section className="se-section-inner se-features-section">
           <div className="se-features-grid">
             {featureCards.map((card, i) => (
-              <div key={i} className={`se-feature-card se-glass-panel se-feature-card--${card.color}`}>
+              <motion.div
+                key={i}
+                className={`se-feature-card se-glass-panel se-feature-card--${card.color}`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.45 }}
+              >
                 <div className={`se-feat-icon se-feat-icon--${card.color}`}>{card.icon}</div>
                 <h3 className="se-feat-title">{t(card.titleKey)}</h3>
                 <p className="se-feat-desc">{t(card.descKey)}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </section>
 
         {/* Control Center */}
         <section className="se-section-inner se-control-section">
-          <div className="se-glass-panel-solid se-control-box">
+          <motion.div
+            className="se-glass-panel-solid se-control-box"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <div className="se-control-text">
               <span className="se-ctrl-eyebrow">{t('synceta.page.ctrlEyebrow')}</span>
               <h2 className="se-ctrl-title">
@@ -214,11 +230,17 @@ const SyncEta = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </section>
 
         {/* Stats */}
-        <section className="se-section-inner se-stats-section">
+        <motion.section
+          className="se-section-inner se-stats-section"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 className="se-stats-title">{t('synceta.page.statsTitle')}</h2>
           <div className="se-stats-grid">
             <div><p className="se-stat-val se-gradient-text">99.8%</p><p className="se-stat-label">{t('synceta.page.stat1')}</p></div>
@@ -226,11 +248,17 @@ const SyncEta = () => {
             <div><p className="se-stat-val">24/7</p><p className="se-stat-label">{t('synceta.page.stat3')}</p></div>
             <div><p className="se-stat-val">10x</p><p className="se-stat-label">{t('synceta.page.stat4')}</p></div>
           </div>
-        </section>
+        </motion.section>
 
         {/* CTA */}
         <section className="se-section-inner se-cta-section">
-          <div className="se-cta-box">
+          <motion.div
+            className="se-cta-box"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             {/* Deco blobs */}
             <div style={{ position: 'absolute', right: '-80px', top: '-80px', width: '256px', height: '256px', background: 'rgba(34,211,238,0.15)', borderRadius: '50%', filter: 'blur(80px)', pointerEvents: 'none' }} />
             <div style={{ position: 'absolute', left: '-80px', bottom: '-80px', width: '256px', height: '256px', background: 'rgba(16,185,129,0.12)', borderRadius: '50%', filter: 'blur(80px)', pointerEvents: 'none' }} />
@@ -248,7 +276,7 @@ const SyncEta = () => {
                 <button className="se-cta-btn-secondary">{t('synceta.page.ctaBtn2')}</button>
               </div>
             </div>
-          </div>
+          </motion.div>
         </section>
       </main>
     </div>

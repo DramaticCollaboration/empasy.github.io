@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import './SyncSeries.css';
 
 const featureCards = [
@@ -68,7 +69,7 @@ const SyncSeries = () => {
           <span className="animate-pulse-slow" style={{ position: 'absolute', bottom: '80px', right: '25%', width: '16px', height: '16px', borderRadius: '50%', background: '#34d399', boxShadow: '0 0 20px rgba(52,211,153,0.6)', animationDelay: '1s', display: 'block' }} />
           <span className="animate-pulse-slow" style={{ position: 'absolute', top: '160px', right: '15%', width: '8px', height: '8px', borderRadius: '50%', background: '#60a5fa', boxShadow: '0 0 10px rgba(96,165,250,0.6)', animationDelay: '2s', display: 'block' }} />
 
-          <div className="ss-hero-inner">
+          <motion.div className="ss-hero-inner" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="ss-badge">
               <span style={{ position: 'relative', display: 'inline-flex', marginRight: '8px', width: '10px', height: '10px' }}>
                 <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#06B6D4', opacity: 0.75 }} />
@@ -84,7 +85,7 @@ const SyncSeries = () => {
               <span className="ss-hero-desc-bold">{t('syncseries.page.heroDescBold')}</span>{' '}
               {t('syncseries.page.heroDescPost')}
             </p>
-          </div>
+          </motion.div>
         </section>
 
         {/* Content */}
@@ -92,7 +93,14 @@ const SyncSeries = () => {
           {/* Feature Cards */}
           <div className="ss-features-grid">
             {featureCards.map((card, i) => (
-              <div key={i} className={`ss-feature-card ss-glass-panel ss-feature-card--${card.color}`}>
+              <motion.div
+                key={i}
+                className={`ss-feature-card ss-glass-panel ss-feature-card--${card.color}`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.45 }}
+              >
                 <div className={`ss-feature-icon ss-feature-icon--${card.color}`}>{card.icon}</div>
                 <h3 className="ss-feature-title">{t(card.titleKey)}</h3>
                 <p className="ss-feature-desc">{t(card.descKey)}</p>
@@ -104,12 +112,18 @@ const SyncSeries = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* Technical Edge */}
-          <div className="ss-tech-grid">
+          <motion.div
+            className="ss-tech-grid"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <div className="ss-tech-text">
               <span className="ss-tech-eyebrow">{t('syncseries.page.techEdge')}</span>
               <h2 className="ss-tech-title">
@@ -158,10 +172,16 @@ const SyncSeries = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Performance Stats */}
-          <div className="ss-glass-panel-solid-2 ss-perf-box">
+          <motion.div
+            className="ss-glass-panel-solid-2 ss-perf-box"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <div style={{ position: 'absolute', top: 0, right: 0, width: '600px', height: '600px', background: 'rgba(6,182,212,0.2)', borderRadius: '50%', filter: 'blur(120px)', transform: 'translate(33%, -33%)', pointerEvents: 'none' }} />
             <div style={{ position: 'absolute', bottom: 0, left: 0, width: '500px', height: '500px', background: 'rgba(16,185,129,0.2)', borderRadius: '50%', filter: 'blur(120px)', transform: 'translate(-33%, 33%)', pointerEvents: 'none' }} />
             <div className="ss-perf-inner">
@@ -188,10 +208,16 @@ const SyncSeries = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* CTA */}
-          <div className="ss-cta">
+          <motion.div
+            className="ss-cta"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <h2 className="ss-cta-title">{t('syncseries.page.ctaTitle')}</h2>
             <p className="ss-cta-desc">{t('syncseries.page.ctaDesc')}</p>
             <Link
@@ -204,7 +230,7 @@ const SyncSeries = () => {
                 <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
               </svg>
             </Link>
-          </div>
+          </motion.div>
         </section>
       </main>
     </div>

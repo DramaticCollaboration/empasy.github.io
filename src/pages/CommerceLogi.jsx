@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import './CommerceLogi.css';
 
 const featureCards = [
@@ -59,7 +60,7 @@ const CommerceLogi = () => {
         {/* Hero */}
         <section className="cl-section cl-hero-section">
           <div className="cl-hero-inner">
-            <div className="cl-hero-text">
+            <motion.div className="cl-hero-text" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <span className="cl-badge">
                 <span style={{ position: 'relative', display: 'inline-flex', marginRight: '8px', width: '10px', height: '10px' }}>
                   <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#06B6D4', opacity: 0.75 }} />
@@ -84,10 +85,10 @@ const CommerceLogi = () => {
                 </Link>
                 <button className="cl-btn-secondary">{t('commercelogi.page.btnDetail')}</button>
               </div>
-            </div>
+            </motion.div>
 
             {/* Logistics SVG animation */}
-            <div className="cl-hero-visual">
+            <motion.div className="cl-hero-visual" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.15 }}>
               <div className="cl-glass-panel cl-svg-wrap cl-grid-bg">
                 <svg viewBox="0 0 400 400" className="cl-logi-svg">
                   {/* Hub */}
@@ -119,19 +120,32 @@ const CommerceLogi = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* Feature Cards */}
         <section className="cl-section cl-features-section">
-          <div className="cl-section-header">
+          <motion.div
+            className="cl-section-header"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             <h2 className="cl-section-title">{t('commercelogi.page.featuresTitle')}</h2>
             <p className="cl-section-subtitle">{t('commercelogi.page.featuresSubtitle')}</p>
-          </div>
+          </motion.div>
           <div className="cl-features-grid">
             {featureCards.map((card, i) => (
-              <div key={i} className={`cl-feature-card cl-glass-panel cl-feature-card--${card.color}`}>
+              <motion.div
+                key={i}
+                className={`cl-feature-card cl-glass-panel cl-feature-card--${card.color}`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.45 }}
+              >
                 <div className={`cl-feature-icon cl-feature-icon--${card.color}`}>{card.icon}</div>
                 <h3 className="cl-feature-title">{t(card.titleKey)}</h3>
                 <p className="cl-feature-desc">{t(card.descKey)}</p>
@@ -143,13 +157,19 @@ const CommerceLogi = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             ))}
           </div>
         </section>
 
         {/* Stats section */}
-        <section className="cl-section cl-stats-section">
+        <motion.section
+          className="cl-section cl-stats-section"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="cl-stats-box cl-grid-bg-dark">
             <div className="cl-grid-overlay" />
             <div className="cl-stats-inner">
@@ -200,7 +220,7 @@ const CommerceLogi = () => {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
       </main>
     </div>
   );

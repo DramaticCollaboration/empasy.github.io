@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import './SyncBoot.css';
 
 const featureCards = [
@@ -69,45 +70,47 @@ const SyncBoot = () => {
 
           <div className="sb-network-bg" />
           <div className="sb-section-inner sb-hero-inner">
-            <div className="sb-badge">
-              <span style={{ position: 'relative', display: 'inline-flex', marginRight: '8px', width: '10px', height: '10px' }}>
-                <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#06B6D4', opacity: 0.75 }} />
-                <span style={{ position: 'relative', display: 'inline-flex', width: '10px', height: '10px', borderRadius: '50%', background: '#0891B2' }} />
-              </span>
-              {t('syncboot.page.badge')}
-            </div>
+            <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+              <div className="sb-badge">
+                <span style={{ position: 'relative', display: 'inline-flex', marginRight: '8px', width: '10px', height: '10px' }}>
+                  <span className="animate-ping" style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: '#06B6D4', opacity: 0.75 }} />
+                  <span style={{ position: 'relative', display: 'inline-flex', width: '10px', height: '10px', borderRadius: '50%', background: '#0891B2' }} />
+                </span>
+                {t('syncboot.page.badge')}
+              </div>
 
-            <h1 className="sb-hero-title">
-              {t('syncboot.page.heroLine1')}<br />
-              <span className="sb-gradient-text">{t('syncboot.page.heroLine2')}</span>
-            </h1>
+              <h1 className="sb-hero-title">
+                {t('syncboot.page.heroLine1')}<br />
+                <span className="sb-gradient-text">{t('syncboot.page.heroLine2')}</span>
+              </h1>
 
-            <p className="sb-hero-desc">{t('syncboot.page.heroDesc')}</p>
+              <p className="sb-hero-desc">{t('syncboot.page.heroDesc')}</p>
 
-            <div className="sb-hero-pills">
-              <div className="sb-glass-panel sb-pill">
-                <div className="sb-pill-icon sb-pill-icon--cyan">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  </svg>
+              <div className="sb-hero-pills">
+                <div className="sb-glass-panel sb-pill">
+                  <div className="sb-pill-icon sb-pill-icon--cyan">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="sb-pill-label">{t('syncboot.page.pill1Label')}</p>
+                    <p className="sb-pill-value">{t('syncboot.page.pill1Value')}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="sb-pill-label">{t('syncboot.page.pill1Label')}</p>
-                  <p className="sb-pill-value">{t('syncboot.page.pill1Value')}</p>
+                <div className="sb-glass-panel sb-pill">
+                  <div className="sb-pill-icon sb-pill-icon--emerald">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="23 4 23 10 17 10" /><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="sb-pill-label">{t('syncboot.page.pill2Label')}</p>
+                    <p className="sb-pill-value">{t('syncboot.page.pill2Value')}</p>
+                  </div>
                 </div>
               </div>
-              <div className="sb-glass-panel sb-pill">
-                <div className="sb-pill-icon sb-pill-icon--emerald">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="23 4 23 10 17 10" /><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="sb-pill-label">{t('syncboot.page.pill2Label')}</p>
-                  <p className="sb-pill-value">{t('syncboot.page.pill2Value')}</p>
-                </div>
-              </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -115,7 +118,14 @@ const SyncBoot = () => {
         <section className="sb-section-inner sb-features-section">
           <div className="sb-features-grid">
             {featureCards.map((card, i) => (
-              <div key={i} className={`sb-feat-card sb-glass-panel sb-feat-card--${card.color}`}>
+              <motion.div
+                key={i}
+                className={`sb-feat-card sb-glass-panel sb-feat-card--${card.color}`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.45 }}
+              >
                 <div className={`sb-feat-icon sb-feat-icon--${card.color}`}>{card.icon}</div>
                 <h3 className="sb-feat-title">{t(card.titleKey)}</h3>
                 <p className="sb-feat-desc">{t(card.descKey)}</p>
@@ -127,14 +137,20 @@ const SyncBoot = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             ))}
           </div>
         </section>
 
         {/* How It Works */}
         <section className="sb-section-inner sb-how-section">
-          <div className="sb-glass-panel-solid sb-how-box">
+          <motion.div
+            className="sb-glass-panel-solid sb-how-box"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             {/* Left — steps */}
             <div className="sb-how-left">
               <h2 className="sb-how-title">{t('syncboot.page.howTitle')}</h2>
@@ -194,11 +210,17 @@ const SyncBoot = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </section>
 
         {/* CTA */}
-        <section className="sb-section-inner sb-cta-section">
+        <motion.section
+          className="sb-section-inner sb-cta-section"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="sb-cta-title">{t('syncboot.page.ctaTitle')}</h2>
           <p className="sb-cta-desc">{t('syncboot.page.ctaDesc')}</p>
           <div className="sb-cta-btns">
@@ -207,7 +229,7 @@ const SyncBoot = () => {
             </Link>
             <button className="sb-cta-btn-secondary">{t('syncboot.page.ctaBtn2')}</button>
           </div>
-        </section>
+        </motion.section>
       </main>
     </div>
   );
