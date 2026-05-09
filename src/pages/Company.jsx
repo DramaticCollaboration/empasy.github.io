@@ -19,7 +19,7 @@ const historyItems = [
 const yearLabels = { y2024: '2024', y2023: '2023', y2022: '2022' };
 
 const leadershipMembers = [
-  { nameKey: 'company.team.member1.name', roleKey: 'company.team.member1.role', imagePath: '/team/poh.webp', desc: 'company.team.member1.desc' },
+  { nameKey: 'company.team.member1.name', roleKey: 'company.team.member1.role', imagePath: '/team/poh.png', desc: 'company.team.member1.desc' },
   { nameKey: 'company.team.member2.name', roleKey: 'company.team.member2.role', imagePath: '/team/Kyle.webp', desc: 'company.team.member2.desc' },
   { nameKey: 'company.team.member3.name', roleKey: 'company.team.member3.role', imagePath: '/team/kenny.png', desc: 'company.team.member3.desc' },
   { nameKey: 'company.team.member4.name', roleKey: 'company.team.member4.role', imagePath: '/team/jade.webp', desc: 'company.team.member4.desc' },

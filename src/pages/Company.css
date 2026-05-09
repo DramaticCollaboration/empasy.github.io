@@ -308,7 +308,7 @@
 }
 
 .company-leader-photo {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1.2;
   border-radius: 2rem;
   background-color: #e2e8f0;
   margin-bottom: 1.5rem;
