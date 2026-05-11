@@ -1,7 +1,7 @@
 {
   "translation": {
     "nav": {
-      "aiInfra": "AI Infra",
+      "aiInfra": "Hydra",
       "syncSeries": "Sync Series",
       "intro": "Intro",
       "syncboot": "SyncBoot",
@@ -20,7 +20,7 @@
       "headline2": "by agility",
       "cta": {
         "contact": "Get Started",
-        "explore": "Explore AI Infra"
+        "explore": "Explore Hydra"
       },
       "scroll": "SCROLL"
     },
@@ -708,7 +708,7 @@
         "title": "Contact Info",
         "manager": "General Manager: CEO Byeong-mun Oh",
         "email": "Email: poh@empasy.com",
-        "phone": "Contact: +82 10-3420-8169"
+        "phone": "Contact: +82 0507-1360-8169"
       }
     },
     "footer": {

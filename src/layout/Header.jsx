@@ -57,6 +57,7 @@ const Header = () => {
         <nav className={`nav-menu ${isMobileMenuOpen ? 'open' : ''}`}>
           <ul>
             <li><Link to={`/${currentLang}/hydra`} onClick={closeMobileMenu}>{t('nav.aiInfra')}</Link></li>
+            <li><Link to={`/${currentLang}/synceta`} onClick={closeMobileMenu}>{t('nav.synceta')}</Link></li>
             <li 
               className="dropdown"
               onMouseEnter={() => setIsDropdownOpen(true)}

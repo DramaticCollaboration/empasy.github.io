@@ -1,7 +1,7 @@
 {
   "translation": {
     "nav": {
-      "aiInfra": "AI Infra",
+      "aiInfra": "Hydra",
       "syncSeries": "Sync Series",
       "intro": "소개",
       "syncboot": "SyncBoot",
@@ -21,7 +21,7 @@
       "headline2": "by agility",
       "cta": {
         "contact": "상담 시작하기",
-        "explore": "AI Infra 보기"
+        "explore": "Hydra 보기"
       },
       "scroll": "SCROLL"
     },
