@@ -93,9 +93,9 @@ const ContactGlobalGlobe = () => {
   }, []);
 
   const locations = [
-    { name: 'Seoul HQ', pos: [1.3, 0.8, 1.5], tz: 'Asia/Seoul', phone: '+82 2-1234-5678' },
-    { name: 'California Office', pos: [-1.8, 0.5, 0.8], tz: 'America/Los_Angeles', phone: '+1 415-555-0123' },
-    { name: 'Tokyo Office', pos: [1.6, 0.6, 1.2], tz: 'Asia/Tokyo', phone: '+81 3-5555-6789' },
+    { name: 'Seoul HQ', pos: [1.3, 0.8, 1.5], tz: 'Asia/Seoul', phone: '+82 0507-1360-8169' },
+    { name: 'California Office', pos: [-1.8, 0.5, 0.8], tz: 'America/Los_Angeles', phone: 'Preparing' },
+    { name: 'Tokyo Office', pos: [1.6, 0.6, 1.2], tz: 'Asia/Tokyo', phone: 'Preparing' },
   ];
 
   return (

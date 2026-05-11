@@ -49,11 +49,11 @@ const CompanyDarkMap = () => {
           </div>
           <div style={{ display: 'flex', gap: '12px' }}>
             <Phone size={18} color="#00D1B2" />
-            <div style={{ fontSize: '0.85rem' }}>+82 2-1234-5678</div>
+            <div style={{ fontSize: '0.85rem' }}>+82 0507-1360-8169</div>
           </div>
           <div style={{ display: 'flex', gap: '12px' }}>
             <Mail size={18} color="#00D1B2" />
-            <div style={{ fontSize: '0.85rem' }}>contact@empasy.com</div>
+            <div style={{ fontSize: '0.85rem' }}>poh@empasy.com</div>
           </div>
         </div>
         <motion.button

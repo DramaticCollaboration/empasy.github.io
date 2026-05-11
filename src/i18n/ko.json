@@ -1,5 +1,8 @@
 {
   "translation": {
+    "common": {
+      "loading": "로딩 중..."
+    },
     "nav": {
       "aiInfra": "Hydra",
       "syncSeries": "Sync Series",
