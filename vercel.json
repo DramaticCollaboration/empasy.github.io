@@ -1,8 +1,9 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/(.*)",
-      "destination": "/"
+      "destination": "https://empasy.io/$1",
+      "permanent": true
     }
   ]
 }
