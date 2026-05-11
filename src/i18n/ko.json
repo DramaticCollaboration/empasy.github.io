@@ -1,7 +1,7 @@
 {
   "translation": {
     "nav": {
-      "aiInfra": "AI Infra",
+      "aiInfra": "Hydra",
       "syncSeries": "Sync Series",
       "intro": "소개",
       "syncboot": "SyncBoot",
@@ -21,7 +21,7 @@
       "headline2": "by agility",
       "cta": {
         "contact": "상담 시작하기",
-        "explore": "AI Infra 보기"
+        "explore": "Hydra 보기"
       },
       "scroll": "SCROLL"
     },
@@ -495,7 +495,7 @@
         "ctaTitle": "낡은 시스템의 한계를 벗고, 변화하는 비즈니스에 올라타십시오.",
         "ctaDesc": "개발 생산성 40% 향상, 콘텐츠 배포 시간 70% 단축. 검증된 CMS 기술력으로 귀사의 디지털 경쟁력을 완성합니다.",
         "ctaBtn1": "SyncCMS 도입 문의하기",
-        "ctaBtn2": "데모 신청"
+        "ctaBtn2": "문서 보기"
       },
       "hero": {
         "title": "개발자 없이도, 상상하는 모든 웹을 조립하다.",
@@ -1052,12 +1052,13 @@
         },
         "info": {
           "phoneLabel": "Phone",
-          "phoneValue": "02-1234-5678",
+          "phoneValue": "0507-1360-8169",
           "emailLabel": "Email",
-          "emailValue": "contact@empasy.ai",
+          "emailValue": "poh@empasy.com",
           "officeLabel": "Office",
-          "officeValue": "서울특별시 강남구 테헤란로 123\nEmpasy 빌딩 12층",
-          "mapBadge": "강남역 2호선 도보 5분 거리"
+          "officeValue": "서울 금천구 가산디지털1로 205-27\n2층 208호",
+          "mapBadge": "가산디지털단지역 1/7호선 도보 5분 거리",
+          "mapTitle": "엠파시 오피스 위치"
         }
       }
     },

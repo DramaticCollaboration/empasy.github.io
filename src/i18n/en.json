@@ -1,7 +1,7 @@
 {
   "translation": {
     "nav": {
-      "aiInfra": "AI Infra",
+      "aiInfra": "Hydra",
       "syncSeries": "Sync Series",
       "intro": "Intro",
       "syncboot": "SyncBoot",
@@ -20,7 +20,7 @@
       "headline2": "by agility",
       "cta": {
         "contact": "Get Started",
-        "explore": "Explore AI Infra"
+        "explore": "Explore Hydra"
       },
       "scroll": "SCROLL"
     },
@@ -494,7 +494,7 @@
         "ctaTitle": "Accelerate Your Business with SyncCMS",
         "ctaDesc": "40% boost in development productivity, 70% reduction in content deployment time. Complete your digital competitiveness with proven CMS technology.",
         "ctaBtn1": "Get Started Now",
-        "ctaBtn2": "Request a Demo"
+        "ctaBtn2": "View Documentation"
       },
       "hero": {
         "title": "Assemble Every Web You Imagine, Even Without Developers.",
@@ -983,7 +983,7 @@
         "title": "Contact Info",
         "manager": "General Manager: CEO Byeong-mun Oh",
         "email": "Email: poh@empasy.com",
-        "phone": "Contact: +82 10-3420-8169"
+        "phone": "Contact: +82 0507-1360-8169"
       },
       "page": {
         "badge": "Get in touch",
@@ -1015,12 +1015,13 @@
         },
         "info": {
           "phoneLabel": "Phone",
-          "phoneValue": "02-1234-5678",
+          "phoneValue": "0507-1360-8169",
           "emailLabel": "Email",
-          "emailValue": "contact@empasy.ai",
+          "emailValue": "poh@empasy.com",
           "officeLabel": "Office",
-          "officeValue": "123 Teheran-ro, Gangnam-gu, Seoul\nEmpasy Building, 12F",
-          "mapBadge": "5 min walk from Gangnam Station (Line 2)"
+          "officeValue": "208, 2F, 205-27, Gasan digital 1-ro, Geumcheon-gu, Seoul, Republic of Korea",
+          "mapBadge": "5 min walk from Gasan Digital Complex Station (Line 1/7)",
+          "mapTitle": "Empasy Office Location"
         }
       }
     },

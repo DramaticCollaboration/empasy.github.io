@@ -227,7 +227,14 @@ const SyncBoot = () => {
             <Link to={`/${currentLang}/contact`} state={{ interest: 'Other' }} className="sb-cta-btn-primary">
               {t('syncboot.page.ctaBtn1')}
             </Link>
-            <button className="sb-cta-btn-secondary">{t('syncboot.page.ctaBtn2')}</button>
+            <a 
+              href="https://doc.empasy.com/syncboot/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="sb-cta-btn-secondary"
+            >
+              {t('syncboot.page.ctaBtn2')}
+            </a>
           </div>
         </motion.section>
       </main>

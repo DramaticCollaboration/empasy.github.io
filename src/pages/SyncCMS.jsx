@@ -243,7 +243,12 @@ const SyncCMS = () => {
                 <Link to={`/${currentLang}/contact`} state={{ interest: 'Other' }} className="sc-cta-btn-primary">
                   {t('synccms.page.ctaBtn1')}
                 </Link>
-                <button className="sc-cta-btn-secondary">{t('synccms.page.ctaBtn2')}</button>
+                <button 
+                  className="sc-cta-btn-secondary"
+                  onClick={() => window.open('https://doc.empasy.com/synccms/', '_blank', 'noopener,noreferrer')}
+                >
+                  {t('synccms.page.ctaBtn2')}
+                </button>
               </div>
             </div>
           </motion.div>

@@ -271,7 +271,12 @@ const SyncEta = () => {
                 <Link to={`/${currentLang}/contact`} state={{ interest: 'Other' }} className="se-cta-btn-primary">
                   {t('synceta.page.ctaBtn1')}
                 </Link>
-                <button className="se-cta-btn-secondary">{t('synceta.page.ctaBtn2')}</button>
+                <button 
+                  className="se-cta-btn-secondary"
+                  onClick={() => window.open('https://doc.empasy.com/synceta/', '_blank', 'noopener,noreferrer')}
+                >
+                  {t('synceta.page.ctaBtn2')}
+                </button>
               </div>
             </div>
           </motion.div>

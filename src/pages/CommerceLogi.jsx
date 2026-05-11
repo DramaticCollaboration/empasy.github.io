@@ -88,7 +88,6 @@ const CommerceLogi = () => {
                 >
                   {t('commercelogi.page.btnDiagnose')}
                 </Link>
-                <button className="cl-btn-secondary">{t('commercelogi.page.btnDetail')}</button>
               </div>
             </motion.div>
 

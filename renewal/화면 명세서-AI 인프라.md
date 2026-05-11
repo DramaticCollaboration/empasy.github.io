@@ -1,7 +1,7 @@
-### **[화면 명세서] AI Infra (Hydra 플랫폼)**
+### **[화면 명세서] Hydra (Hydra 플랫폼)**
 
 #### **1. Hero Section (최상단 비주얼 및 컨셉)**
-*   **화면 목적:** 프롬프트 기반 AI 인프라 오케스트레이터(Prompt-Driven AI Infra Orchestrator)로서의 정체성 직관적 전달.
+*   **화면 목적:** 프롬프트 기반 AI 인프라 오케스트레이터(Prompt-Driven Hydra Orchestrator)로서의 정체성 직관적 전달.
 *   **카피라이팅:**
     *   (메인) "말하는 대로 구축되는 클라우드, Hydra"
     *   (서브) "복잡한 설정 없이 자연어 대화만으로 AI-DLC(AI 개발 수명주기) 전 과정을 완벽하게 자동화합니다."
