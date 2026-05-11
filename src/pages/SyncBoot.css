@@ -11,27 +11,13 @@
 .section-header {
   text-align: center;
   margin-bottom: 4rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .section-header h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: var(--primary-color);
-  text-align: center;
-}
-
-.section-header p {
-  font-size: 1.1rem;
-  color: #EDF2F4;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-  text-align: center;
 }
 
 /* 1. Hero Section */
@@ -43,20 +29,11 @@
   text-align: center;
 }
 
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .syncboot-hero-section h1 {
   font-size: 3.5rem;
   font-weight: 900;
   margin-bottom: 1.5rem;
-  background: linear-gradient(90deg, #48CAE4, #90E0EF);
+  background: linear-gradient(135deg, #0891B2, #0D9488);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -64,7 +41,7 @@
 .syncboot-hero-section p {
   font-size: 1.2rem;
   margin-bottom: 3rem;
-  color: #EDF2F4;
+  color: #475569;
 }
 
 .architecture-animation-placeholder {
@@ -84,18 +61,19 @@
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   padding: 3rem;
-  border-radius: 15px;
+  border-radius: 16px;
   width: 80%;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: var(--shadow-card);
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 180, 216, 0.2);
+  box-shadow: var(--shadow-elevated);
 }
 
 .card h3 {
@@ -113,10 +91,11 @@
 
 .tech-logos span {
   padding: 0.5rem 1rem;
-  background: #333;
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
   border-radius: 5px;
   font-size: 0.9rem;
-  color: #fff;
+  color: #334155;
 }
 
 /* 3. Interactive Architecture Map */
@@ -142,29 +121,29 @@
   border: none;
   text-align: left;
   padding: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1.2rem;
+  color: #475569;
+  font-size: 0.8rem;
   cursor: pointer;
   border-left: 2px solid transparent;
   transition: all 0.3s;
 }
 
 .tab-btn.active, .tab-btn:hover {
-  color: #fff;
+  color: #0F172A;
   border-left-color: var(--primary-color);
-  background: rgba(0, 180, 216, 0.1);
+  background: rgba(8, 145, 178, 0.06);
 }
 
 .tab-content {
   flex: 1;
-  background: #0F172A;
+  background: #F8FAFC;
   border-radius: 12px;
   padding: 1rem;
   min-height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #E2E8F0;
 }
 
 .dashboard-placeholder {
@@ -181,18 +160,17 @@
 .syncboot-cta-section {
   text-align: center;
   padding: 8rem 2rem !important;
-  background: radial-gradient(circle, rgba(0,180,216,0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(8,145,178,0.06) 0%, transparent 70%);
 }
 
 .syncboot-cta-section h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   margin-bottom: 3rem;
   line-height: 1.4;
 }
 
-/* SyncBoot Contact Button Style */
 .syncboot-cta-section .contact-btn {
-  background: #00B4D8;
+  background: linear-gradient(135deg, #0891B2, #0D9488);
   color: white;
   border: none;
   padding: 1rem 2.5rem;
@@ -201,33 +179,16 @@
   border-radius: 50px;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
-  position: relative;
-  overflow: hidden;
-}
-
-.syncboot-cta-section .contact-btn::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.5s;
-}
-
-.syncboot-cta-section .contact-btn:hover::after {
-  transform: translate(-50%, -50%) scale(1);
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(8, 145, 178, 0.25);
 }
 
 .syncboot-cta-section .contact-btn:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 180, 216, 0.3);
+  box-shadow: 0 10px 25px rgba(8, 145, 178, 0.35);
 }
 
-/* Responsive Styles */
+/* Responsive */
 @media (max-width: 1024px) {
   .syncboot-hero-section h1 {
     font-size: 2.8rem;
@@ -240,7 +201,7 @@
   }
 
   .section-header h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .syncboot-hero-section h1 {
@@ -253,7 +214,6 @@
 
   .card {
     width: 100%;
-    padding: 2rem 1.5rem;
   }
 
   .tabs-container {
@@ -264,21 +224,7 @@
   .tab-nav {
     width: 100%;
     flex-direction: row;
-    overflow-x: auto;
-    padding-bottom: 0.5rem;
-  }
-
-  .tab-btn {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-    border-left: none;
-    border-bottom: 2px solid transparent;
-    white-space: nowrap;
-  }
-
-  .tab-btn.active, .tab-btn:hover {
-    border-left-color: transparent;
-    border-bottom-color: var(--primary-color);
+    flex-wrap: wrap;
   }
 
   .tab-content {
@@ -286,6 +232,12 @@
   }
 
   .syncboot-cta-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .syncboot-hero-section h1 {
     font-size: 1.8rem;
   }
 }

@@ -2,72 +2,66 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { MapPin, Navigation, Phone, Mail } from 'lucide-react';
-import useMediaQuery from '../hooks/useMediaQuery';
 
 const CompanyDarkMap = () => {
   const { t } = useTranslation();
-  const isMobile = useMediaQuery('(max-width: 768px)');
 
   return (
-    <div style={{ width: '100%', height: isMobile ? '600px' : '500px', borderRadius: '24px', overflow: 'hidden', position: 'relative', border: '1px solid #334155' }}>
-      {/* Google Maps Embed */}
-      <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.44464879201!2d126.8833139766946!3d37.47385637206198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b61f2231925b3%3A0xc6c76a4a49c46481!2z7ISc7Jq47Yq567OE7IucIOq4iOyynOq1rCDqsIDsgrDrlJTripDthLwx66GcIDIwNS0yNw!5e0!3m2!1sko!2skr!4v1714782000000!5m2!1sko!2skr"
-          width="100%"
-          height="100%"
-          style={{ border: 0, filter: 'grayscale(0.8) invert(0.9) contrast(1.2) brightness(0.8)' }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="Empasy Office Location"
+    <div style={{ width: '100%', height: '500px', borderRadius: '24px', overflow: 'hidden', position: 'relative', border: '1px solid #E2E8F0' }}>
+      {/* Mock Map Background (Dark) */}
+      <div style={{ position: 'absolute', inset: 0, background: '#F8FAFC', backgroundImage: 'radial-gradient(#E2E8F0 2px, transparent 2px)', backgroundSize: '40px 40px' }}>
+        {/* Simple Road Lines */}
+        <div style={{ position: 'absolute', top: '50%', left: 0, right: 0, height: '10px', background: '#E2E8F0' }} />
+        <div style={{ position: 'absolute', left: '50%', top: 0, bottom: 0, width: '10px', background: '#E2E8F0' }} />
+      </div>
+
+      {/* Ping Marker */}
+      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+        <motion.div
+          animate={{ scale: [1, 2.5, 1], opacity: [0.6, 0, 0.6] }}
+          transition={{ repeat: Infinity, duration: 2 }}
+          style={{ position: 'absolute', inset: -20, background: 'rgba(0, 209, 178, 0.4)', borderRadius: '50%' }}
         />
+        <div style={{ position: 'relative', background: '#00D1B2', p: '10px', borderRadius: '50%', display: 'flex', padding: '10px', boxShadow: '0 0 20px #00D1B2' }}>
+          <MapPin color="#FFF" size={24} />
+        </div>
       </div>
 
       {/* Location Info Card (Glassmorphism) */}
       <motion.div 
-        initial={isMobile ? { y: 20, opacity: 0 } : { x: 50, opacity: 0 }}
-        whileInView={{ x: 0, y: 0, opacity: 1 }}
-        viewport={{ once: true }}
+        initial={{ x: 50, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
         style={{ 
-          position: 'absolute', 
-          bottom: isMobile ? '20px' : '30px', 
-          right: isMobile ? '10px' : '30px', 
-          left: isMobile ? '10px' : 'auto',
-          background: 'rgba(30, 41, 59, 0.85)', backdropFilter: 'blur(12px)',
-          border: '1px solid rgba(255,255,255,0.1)', borderRadius: '20px', 
-          padding: isMobile ? '20px' : '30px', 
-          width: isMobile ? 'auto' : '380px', 
-          color: '#E2E8F0', zIndex: 10,
-          boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+          position: 'absolute', bottom: '30px', left: '30px', 
+          background: 'rgba(255,255,255,0.92)', backdropFilter: 'blur(12px)',
+          border: '1px solid #E2E8F0', borderRadius: '20px',
+          padding: '30px', width: '350px', color: '#0F172A', zIndex: 10
         }}
       >
-        <h4 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: isMobile ? '15px' : '20px', color: '#FFF' }}>{t('company.location.office', 'Empasy HQ')}</h4>
+        <h4 style={{ fontSize: '1.2rem', fontWeight: 800, marginBottom: '20px', color: '#0F172A' }}>{t('company.location.office', 'Empasy HQ')}</h4>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
           <div style={{ display: 'flex', gap: '12px' }}>
-            <MapPin size={20} color="#00D1B2" style={{ flexShrink: 0, marginTop: '2px' }} />
-            <div style={{ fontSize: '0.9rem', lineHeight: '1.4' }}>
-              {t('company.location.address', '서울특별시 금천구 가산디지털1로 205-27 2층 208호')}
+            <MapPin size={18} color="#00D1B2" />
+            <div style={{ fontSize: '0.85rem' }}>
+              {t('company.location.address', 'Seoul, Republic of Korea')}
+              <div style={{ color: '#94A3B8', fontSize: '0.75rem', marginTop: '4px' }}>Tech Center Tower A, 452</div>
             </div>
           </div>
           <div style={{ display: 'flex', gap: '12px' }}>
-            <Phone size={18} color="#00D1B2" style={{ flexShrink: 0 }} />
-            <div style={{ fontSize: '0.9rem' }}>0507-1360-8169</div>
+            <Phone size={18} color="#00D1B2" />
+            <div style={{ fontSize: '0.85rem' }}>+82 2-1234-5678</div>
           </div>
           <div style={{ display: 'flex', gap: '12px' }}>
-            <Mail size={18} color="#00D1B2" style={{ flexShrink: 0 }} />
-            <div style={{ fontSize: '0.9rem' }}>poh@empasy.com</div>
+            <Mail size={18} color="#00D1B2" />
+            <div style={{ fontSize: '0.85rem' }}>contact@empasy.com</div>
           </div>
         </div>
         <motion.button
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          onClick={() => window.open('https://maps.google.com/maps?daddr=서울특별시+금천구+가산디지털1로+205-27', '_blank')}
+          whileHover={{ scale: 1.05 }}
           style={{ 
             marginTop: '25px', width: '100%', background: '#00D1B2', color: '#0F172A',
-            border: 'none', borderRadius: '8px', padding: '14px', fontWeight: 800,
-            cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
-            fontSize: '1rem'
+            border: 'none', borderRadius: '8px', padding: '12px', fontWeight: 800,
+            cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px'
           }}
         >
           <Navigation size={18} /> {t('company.location.directions', 'Get Directions')}

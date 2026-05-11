@@ -1,49 +1,54 @@
 .home-container {
   width: 100%;
 }
-
+section:first-child {
+  padding-top: 8rem !important;
+}
 section {
-  padding: 6rem 2rem;
+  padding: 6rem 2rem !important;
   max-width: 1200px;
   margin: 0 auto;
+  letter-spacing: -0.3px;
 }
 
 section h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 500;
   margin-bottom: 3rem;
   text-align: center;
 }
 
 /* 1. Hero Section */
-.hero-section {
+section.hero-section {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
-  /* Add background for webgl particle effect later */
+  padding-top: 0 !important;
 }
 
 .hero-content h1 {
   font-size: 4rem;
   font-weight: 900;
   margin-bottom: 1rem;
-  background: linear-gradient(90deg, #00B4D8, #48CAE4);
+  background: linear-gradient(135deg, #0891B2, #0D9488);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .typewriter {
+  display: flex;
+  width: fit-content;
   font-size: 1.5rem;
   color: var(--text-primary);
   overflow: hidden;
-  border-right: .15em solid orange;
+  border-right: .15em solid #0891B2;
   white-space: nowrap;
   margin: 0 auto;
-  letter-spacing: .15em;
-  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  animation: typing 3s steps(60, end), blink-caret .75s step-end infinite;
+  padding-right: 0.4rem;
 }
 
 @keyframes typing {
@@ -53,12 +58,12 @@ section h2 {
 
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: orange; }
+  50% { border-color: #0891B2; }
 }
 
 .scroll-indicator {
   position: absolute;
-  bottom: 2rem;
+  bottom: 8rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -88,6 +93,7 @@ section h2 {
   margin-top: -50px;
   padding: 5rem 3rem;
   border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-card);
 }
 
 .pipeline-container {
@@ -137,12 +143,14 @@ section h2 {
   padding: 2rem;
   transition: all 0.3s;
   cursor: pointer;
+  box-shadow: var(--shadow-card);
 }
 
 .bento-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
   background-color: var(--bg-surface-hover);
   border-color: var(--primary-color);
+  box-shadow: var(--shadow-elevated);
 }
 
 .bento-card h3 {
@@ -164,16 +172,17 @@ section h2 {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-card);
   transition: transform 0.3s ease;
 }
 
 .stat-card:hover {
   transform: translateY(-5px);
+  box-shadow: var(--shadow-elevated);
 }
 
 .stat-card h3 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: var(--primary-color);
   margin-bottom: 1rem;
   font-weight: 900;
@@ -197,7 +206,7 @@ section h2 {
 
 .marquee span {
   display: inline-block;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--text-secondary);
   margin: 0 3rem;
@@ -270,11 +279,11 @@ section h2 {
   .hero-content h1 {
     font-size: 3rem;
   }
-  
+
   .bento-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -346,8 +355,8 @@ section h2 {
   .hero-content h1 {
     font-size: 2rem;
   }
-  
+
   section h2 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
 }

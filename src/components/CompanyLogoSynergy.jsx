@@ -4,7 +4,6 @@ import { Points, PointMaterial, Center, Text3D, Float, Html } from '@react-three
 import * as THREE from 'three';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import useMediaQuery from '../hooks/useMediaQuery';
 
 const ParticleSynergy = () => {
   const count = 5000;
@@ -75,10 +74,9 @@ const ParticleSynergy = () => {
 
 const CompanyLogoSynergy = () => {
   const { t } = useTranslation();
-  const isMobile = useMediaQuery('(max-width: 768px)');
 
   return (
-    <div style={{ width: '100%', height: isMobile ? '400px' : '600px', background: '#0F172A', position: 'relative', overflow: 'hidden' }}>
+    <div style={{ width: '100%', height: '600px', background: '#F8FAFC', position: 'relative', overflow: 'hidden' }}>
       <Canvas camera={{ position: [0, 0, 10], fov: 50 }}>
         <ambientLight intensity={0.5} />
         <ParticleSynergy />
@@ -95,20 +93,12 @@ const CompanyLogoSynergy = () => {
         </Float>
       </Canvas>
 
-      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', pointerEvents: 'none', width: '90%' }}>
+      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', pointerEvents: 'none' }}>
         <motion.h1 
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          style={{ 
-            color: '#FFFFFF', 
-            fontSize: isMobile ? '2.5rem' : '6rem', 
-            fontWeight: 900, 
-            margin: 0, 
-            letterSpacing: isMobile ? '0.1em' : '0.3em', 
-            textShadow: '0 0 30px rgba(0,209,178,0.5)',
-            whiteSpace: 'nowrap'
-          }}
+          style={{ color: '#0F172A', fontSize: '6rem', fontWeight: 900, margin: 0, letterSpacing: '0.3em', textShadow: '0 0 30px rgba(8,145,178,0.3)' }}
         >
           EMPASY
         </motion.h1>
@@ -116,13 +106,7 @@ const CompanyLogoSynergy = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2, duration: 1 }}
-          style={{ 
-            color: '#00D1B2', 
-            fontSize: isMobile ? '0.8rem' : '1.2rem', 
-            fontWeight: 700, 
-            letterSpacing: isMobile ? '0.2em' : '0.5em', 
-            marginTop: '10px' 
-          }}
+          style={{ color: '#00D1B2', fontSize: '1.2rem', fontWeight: 700, letterSpacing: '0.5em', marginTop: '10px' }}
         >
           {t('company.hero.vision', 'LIVING SOFTWARE')}
         </motion.div>

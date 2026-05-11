@@ -73,8 +73,8 @@ const CircuitBreaker = () => {
   return (
     <div className="circuit-breaker-sim" style={{ width: '100%', maxWidth: '800px', padding: '20px' }}>
       <div className="sim-header" style={{ marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <h4 style={{ color: '#fff', margin: 0 }}>{t('syncboot.cb.title', 'Circuit Breaker Simulation')}</h4>
-        <div style={{ padding: '4px 12px', borderRadius: '20px', background: 'rgba(255,255,255,0.1)', fontSize: '0.8rem', color: '#94A3B8' }}>
+        <h4 style={{ color: '#0F172A', margin: 0 }}>{t('syncboot.cb.title', 'Circuit Breaker Simulation')}</h4>
+        <div style={{ padding: '4px 12px', borderRadius: '20px', background: '#F1F5F9', border: '1px solid #E2E8F0', fontSize: '0.8rem', color: '#475569' }}>
           {stage === 0 && "Phase: Stable"}
           {stage === 1 && "Phase: Incident"}
           {stage === 2 && "Phase: Circuit Open"}
@@ -93,7 +93,7 @@ const CircuitBreaker = () => {
             key={node.id}
             layout
             style={{
-              background: '#1E293B',
+              background: '#FFFFFF',
               border: `2px solid ${getStatusColor(node.status)}`,
               borderRadius: '12px',
               padding: '15px',
@@ -107,14 +107,14 @@ const CircuitBreaker = () => {
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-              <span style={{ color: '#fff', fontWeight: 'bold', fontSize: '0.9rem' }}>{node.id}</span>
+              <span style={{ color: '#0F172A', fontWeight: 'bold', fontSize: '0.9rem' }}>{node.id}</span>
               {node.status === 'normal' && <CheckCircle size={16} color="#10B981" />}
               {node.status === 'warning' && <AlertTriangle size={16} color="#F59E0B" className="animate-pulse" />}
               {node.status === 'failed' && <XCircle size={16} color="#EF4444" />}
               {node.status === 'recovering' && <Activity size={16} color="#6366F1" className="animate-spin-slow" />}
             </div>
             
-            <div style={{ height: '4px', background: '#334155', borderRadius: '2px', overflow: 'hidden', marginBottom: '8px' }}>
+            <div style={{ height: '4px', background: '#E2E8F0', borderRadius: '2px', overflow: 'hidden', marginBottom: '8px' }}>
               <motion.div 
                 style={{ height: '100%', background: getStatusColor(node.status) }}
                 initial={{ width: '0%' }}

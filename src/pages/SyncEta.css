@@ -11,27 +11,13 @@
 .section-header {
   text-align: center;
   margin-bottom: 4rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .section-header h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: var(--primary-color);
-  text-align: center;
-}
-
-.section-header p {
-  font-size: 1.1rem;
-  color: #EDF2F4;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-  text-align: center;
 }
 
 /* 1. Hero Section */
@@ -43,20 +29,11 @@
   text-align: center;
 }
 
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .synceta-hero-section h1 {
   font-size: 3.5rem;
   font-weight: 900;
   margin-bottom: 1.5rem;
-  background: linear-gradient(90deg, #39FF14, #00F5D4);
+  background: linear-gradient(135deg, #0891B2, #0D9488);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -64,23 +41,17 @@
 .synceta-hero-section p {
   font-size: 1.2rem;
   margin-bottom: 3rem;
-  color: #EDF2F4;
+  color: #475569;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.hero-visual {
-  width: 100%;
-  max-width: 800px;
-  margin-top: 3rem;
-}
-
 .excel-to-code-placeholder {
   margin-top: 3rem;
   padding: 4rem 2rem;
-  border: 1px dashed rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.5);
+  border: 1px dashed rgba(0, 0, 0, 0.1);
+  color: #94A3B8;
   font-style: italic;
   min-height: 200px;
   display: flex;
@@ -96,44 +67,33 @@
 .feedback-loop-placeholder,
 .pipeline-routing-placeholder {
   height: 350px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #E2E8F0;
+  background: #F8FAFC;
   border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.5);
+  color: #94A3B8;
   font-style: italic;
   margin: 0 auto;
   max-width: 900px;
 }
 
 /* Specific Layouts */
-.dual-visual-grid {
+.healing-visual-container {
   display: flex;
   gap: 2rem;
 }
 
-.visual-card {
+.healing-visual-container > div {
   flex: 1;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  padding: 1.5rem;
-}
-
-.visual-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  color: var(--primary-color);
-  text-align: center;
 }
 
 /* Download and Guide Section */
 .download-guide-section {
-  background: rgba(255, 255, 255, 0.03);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: #F8FAFC;
+  border-top: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E2E8F0;
 }
 
 .download-guide-content {
@@ -155,7 +115,7 @@
 }
 
 .guide-link p {
-  color: rgba(255, 255, 255, 0.7);
+  color: #475569;
   margin-bottom: 2rem;
 }
 
@@ -163,7 +123,7 @@
   display: inline-block;
   padding: 0.8rem 2rem;
   background: var(--primary-color);
-  color: #000;
+  color: #fff;
   border-radius: 5px;
   font-weight: 700;
   transition: background 0.3s;
@@ -206,62 +166,46 @@
 }
 
 .download-btn.linux {
-  background: #333;
-  color: #888;
+  background: #F1F5F9;
+  color: #94A3B8;
   cursor: not-allowed;
-  border-color: #555;
+  border-color: #E2E8F0;
 }
-
 
 /* 7. CTA Section */
 .synceta-cta-section {
   text-align: center;
   padding: 8rem 2rem !important;
-  background: radial-gradient(circle, rgba(57,255,20,0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(8,145,178,0.06) 0%, transparent 70%);
 }
 
 .synceta-cta-section h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   margin-bottom: 3rem;
   line-height: 1.4;
 }
 
-/* SyncEta Contact Button Style */
 .synceta-cta-section .contact-btn {
-  background: #39FF14;
-  color: #000;
+  background: linear-gradient(135deg, #0891B2, #0D9488);
+  color: white;
   border: none;
   padding: 1rem 2.5rem;
   font-size: 1rem;
   font-weight: 700;
   border-radius: 50px;
   cursor: pointer;
+  transition: all 0.3s;
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
   display: inline-block;
-}
-
-.synceta-cta-section .contact-btn::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.5s;
-}
-
-.synceta-cta-section .contact-btn:hover::after {
-  transform: translate(-50%, -50%) scale(1);
+  width: 18rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(8, 145, 178, 0.25);
 }
 
 .synceta-cta-section .contact-btn:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(57, 255, 20, 0.4);
+  box-shadow: 0 10px 25px rgba(8, 145, 178, 0.35);
 }
 
 /* Responsive Styles */
@@ -273,45 +217,23 @@
 
 @media (max-width: 768px) {
   .synceta-container section {
-    padding: 3rem 1.2rem;
-  }
-
-  .section-header {
-    margin-bottom: 2rem;
+    padding: 4rem 1.5rem;
   }
 
   .section-header h2 {
     font-size: 1.8rem;
   }
 
-  .section-header p {
-    font-size: 0.9rem;
-  }
-
-  .synceta-hero-section {
-    min-height: auto;
-    padding-top: 8rem;
-    padding-bottom: 4rem;
-  }
-
   .synceta-hero-section h1 {
     font-size: 2.2rem;
-    line-height: 1.2;
   }
 
   .synceta-hero-section p {
     font-size: 1rem;
-    margin-bottom: 2rem;
   }
 
-  .dual-visual-grid {
+  .healing-visual-container {
     flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .interactive-container {
-    width: 100%;
-    overflow-x: hidden;
   }
 
   .download-guide-content {
@@ -323,12 +245,17 @@
     max-width: 100%;
   }
 
-  .guide-link h3, .download-links h3 {
-    font-size: 1.5rem;
+  .before-after-placeholder,
+  .healing-simulator-placeholder,
+  .visual-qa-placeholder,
+  .dashboard-animation-placeholder,
+  .feedback-loop-placeholder,
+  .pipeline-routing-placeholder {
+    height: 250px;
   }
 
   .synceta-cta-section h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 }
 

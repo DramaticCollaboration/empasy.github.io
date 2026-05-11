@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import SEO from '../components/common/SEO';
+import { motion } from 'framer-motion';
 import './CommerceLogi.css';
 
 import LogiCityNetwork from '../components/LogiCityNetwork';
@@ -16,7 +16,6 @@ const CommerceLogi = () => {
 
   return (
     <div className="commerce-logi-container">
-      <SEO pageKey="commercelogi" />
       {/* 1. Hero Section */}
       <section className="comlogi-hero-section">
         <LogiCityNetwork />
@@ -28,7 +27,7 @@ const CommerceLogi = () => {
           <h2>{t('commercelogi.syncshop.title')}</h2>
           <p>{t('commercelogi.syncshop.subtitle')}</p>
         </div>
-        <div className="headless-simulator-container">
+        <div className="interactive-container">
           <LogiHeadlessSim />
         </div>
       </section>
@@ -39,7 +38,7 @@ const CommerceLogi = () => {
           <h2>{t('commercelogi.logistics.title')}</h2>
           <p>{t('commercelogi.logistics.subtitle')}</p>
         </div>
-        <div className="routing-optimization-container">
+        <div className="interactive-container">
           <LogiRouteOptimization />
         </div>
       </section>
@@ -50,7 +49,7 @@ const CommerceLogi = () => {
           <h2>{t('commercelogi.docai.title')}</h2>
           <p>{t('commercelogi.docai.subtitle')}</p>
         </div>
-        <div className="doc-ai-container">
+        <div className="interactive-container">
           <LogiDocumentAI />
         </div>
       </section>
@@ -86,9 +85,44 @@ const CommerceLogi = () => {
       </section>
 
       {/* 6. Bottom CTA */}
-      <section className="comlogi-cta-section">
-        <h2>{t('commercelogi.cta.title')}</h2>
-        <Link to={`/${currentLang}/contact`} state={{ interest: 'Other' }} className="contact-btn">{t('commercelogi.cta.btn')}</Link>
+      <section style={{ padding: '128px 24px', position: 'relative', zIndex: 10 }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 900, color: '#0F172A', marginBottom: '48px', lineHeight: 1.2 }}>
+              {t('commercelogi.cta.title').split('\n').map((line, i, arr) => (
+                <React.Fragment key={i}>{line}{i < arr.length - 1 && <br />}</React.Fragment>
+              ))}
+            </h2>
+            <Link
+              to={`/${currentLang}/contact`}
+              state={{interest: 'Other'}}
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: '12px',
+                background: 'linear-gradient(135deg, #0891B2, #0D9488)', color: '#fff',
+                padding: '20px 40px', borderRadius: '50px',
+                fontSize: '1.05rem', fontWeight: 700, textDecoration: 'none',
+                boxShadow: '0 4px 15px rgba(8, 145, 178, 0.25)',
+                transition: 'all 0.25s'
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 10px 25px rgba(8, 145, 178, 0.35)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = '';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(8, 145, 178,0.2)';
+              }}
+            >
+              {t('commercelogi.cta.btn')}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </Link>
+          </motion.div>
+        </div>
       </section>
     </div>
   );

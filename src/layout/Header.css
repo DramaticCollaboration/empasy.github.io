@@ -5,9 +5,11 @@
   width: 100%;
   padding: 1rem 0;
   background-color: var(--header-bg);
-  backdrop-filter: blur(10px);
   z-index: 1000;
-  border-bottom: 1px solid var(--border-color);
+  /*border-bottom: 1px solid var(--border-color);*/
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
 }
 
 .header-container {
@@ -20,7 +22,7 @@
 }
 
 .logo-img {
-  height: 40px;
+  height: 1.2rem;
   width: auto;
   display: block;
 }
@@ -39,6 +41,7 @@
 }
 
 .nav-menu a {
+  font-size: 0.8rem;
   font-weight: 500;
   transition: color 0.3s;
   display: block;
@@ -75,7 +78,7 @@
   min-width: 150px;
   flex-direction: column !important;
   gap: 0 !important;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(10px);
 }
 
@@ -89,8 +92,8 @@
 }
 
 .dropdown-menu a {
-  padding: 0.8rem 1.5rem;
-  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.7rem;
   color: var(--text-secondary);
 }
 
@@ -128,7 +131,7 @@
 }
 
 .lang-switcher {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: var(--text-secondary);
   cursor: pointer;
 }
@@ -146,8 +149,8 @@
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 30px;
-  height: 21px;
+  width: 18px;
+  height: 14px;
   background: none;
   border: none;
   cursor: pointer;
@@ -157,14 +160,14 @@
 
 .mobile-menu-toggle span {
   width: 100%;
-  height: 3px;
+  height: 2px;
   background-color: var(--text-primary);
   border-radius: 3px;
   transition: all 0.3s ease;
 }
 
 .mobile-menu-toggle.active span:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
+  transform: translateY(6px) rotate(45deg);
 }
 
 .mobile-menu-toggle.active span:nth-child(2) {
@@ -172,7 +175,7 @@
 }
 
 .mobile-menu-toggle.active span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 .mobile-header-actions {
@@ -236,7 +239,7 @@
   }
 
   .nav-menu a {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     padding: 0.8rem 0;
   }
 

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { useLoading } from '../context/LoadingContext';
-import SEO from '../components/common/SEO';
+import { motion } from 'framer-motion';
 import CubeAnimation from '../components/CubeAnimation';
 import ArchitectureMap from '../components/ArchitectureMap';
 import CircuitBreaker from '../components/CircuitBreaker';
@@ -15,34 +14,16 @@ import './SyncBoot.css';
 const SyncBoot = () => {
   const { t } = useTranslation();
   const { lang } = useParams();
-  const { IsPageLoading, setIsPageLoading, setIsFullPage } = useLoading();
   const currentLang = lang || 'ko';
   const [activeTab, setActiveTab] = useState('circuit');
   const [isShattered, setIsShattered] = useState(false);
 
   useEffect(() => {
-    // Initial entrance for SyncBoot: show mini spinner instead of full page
-    // because we want the Monolith animation to be visible.
-    setIsFullPage(false);
-    setIsPageLoading(true);
-
     const timer = setTimeout(() => {
-      setIsPageLoading(false);
       setIsShattered(true);
-      setIsFullPage(true); // Reset to default for other pages/tabs
     }, 2000); // Shatter after 2 seconds
     return () => clearTimeout(timer);
   }, []);
-
-  const handleTabChange = (tab) => {
-    if (tab === activeTab) return;
-    setIsFullPage(true);
-    setIsPageLoading(true);
-    setTimeout(() => {
-      setActiveTab(tab);
-      setIsPageLoading(false);
-    }, 500);
-  };
 
   const tabContent = {
     circuit: <CircuitBreaker />,
@@ -53,8 +34,6 @@ const SyncBoot = () => {
 
   return (
     <div className="syncboot-container">
-      <SEO pageKey="syncboot" />
-      
       {/* 1. Hero Section */}
       <section className="syncboot-hero-section">
         <div className="hero-content">
@@ -107,25 +86,25 @@ const SyncBoot = () => {
           <div className="tab-nav">
             <button 
               className={`tab-btn ${activeTab === 'circuit' ? 'active' : ''}`}
-              onClick={() => handleTabChange('circuit')}
+              onClick={() => setActiveTab('circuit')}
             >
               {t('syncboot.observability.tabs.circuit')}
             </button>
             <button 
               className={`tab-btn ${activeTab === 'tracing' ? 'active' : ''}`}
-              onClick={() => handleTabChange('tracing')}
+              onClick={() => setActiveTab('tracing')}
             >
               {t('syncboot.observability.tabs.tracing')}
             </button>
             <button 
               className={`tab-btn ${activeTab === 'logs' ? 'active' : ''}`}
-              onClick={() => handleTabChange('logs')}
+              onClick={() => setActiveTab('logs')}
             >
               {t('syncboot.observability.tabs.logs')}
             </button>
             <button 
               className={`tab-btn ${activeTab === 'cicd' ? 'active' : ''}`}
-              onClick={() => handleTabChange('cicd')}
+              onClick={() => setActiveTab('cicd')}
             >
               {t('syncboot.observability.tabs.cicd')}
             </button>
@@ -147,9 +126,44 @@ const SyncBoot = () => {
       </section>
 
       {/* 6. Bottom CTA */}
-      <section className="syncboot-cta-section">
-        <h2>{t('syncboot.cta.title')}</h2>
-        <Link to={`/${currentLang}/contact`} state={{ interest: 'SyncBoot' }} className="contact-btn">{t('syncboot.cta.btn')}</Link>
+      <section style={{ padding: '128px 24px', position: 'relative', zIndex: 10 }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 900, color: '#0F172A', marginBottom: '48px', lineHeight: 1.2 }}>
+              {t('syncboot.cta.title').split('\n').map((line, i, arr) => (
+                <React.Fragment key={i}>{line}{i < arr.length - 1 && <br />}</React.Fragment>
+              ))}
+            </h2>
+            <Link
+              to={`/${currentLang}/contact`}
+              state={{interest: 'Other'}}
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: '12px',
+                background: 'linear-gradient(135deg, #0891B2, #0D9488)', color: '#fff',
+                padding: '20px 40px', borderRadius: '50px',
+                fontSize: '1.05rem', fontWeight: 700, textDecoration: 'none',
+                boxShadow: '0 4px 15px rgba(8, 145, 178, 0.25)',
+                transition: 'all 0.25s'
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 10px 25px rgba(8, 145, 178, 0.35)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = '';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(8, 145, 178,0.2)';
+              }}
+            >
+              {t('syncboot.cta.btn')}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </Link>
+          </motion.div>
+        </div>
       </section>
     </div>
   );

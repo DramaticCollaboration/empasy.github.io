@@ -11,53 +11,29 @@
 .section-header {
   text-align: center;
   margin-bottom: 4rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .section-header h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: var(--primary-color);
-  text-align: center;
-}
-
-.section-header p {
-  font-size: 1.1rem;
-  color: #EDF2F4;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-  text-align: center;
 }
 
 /* 1. Hero Section */
 .syncseries-hero-section {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 10rem 2rem 6rem !important;
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1200px;
-  width: 100%;
 }
 
 .syncseries-hero-section h1 {
   font-size: 3.5rem;
   font-weight: 900;
   margin-bottom: 1.5rem;
-  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -65,7 +41,7 @@
 .syncseries-hero-section p {
   font-size: 1.2rem;
   margin-bottom: 3rem;
-  color: #EDF2F4;
+  color: #475569;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -73,17 +49,14 @@
 
 .core-animation-placeholder {
   margin-top: 3rem;
-  width: 100%;
+  padding: 4rem 2rem;
+  border: 1px dashed rgba(0, 0, 0, 0.1);
+  color: #94A3B8;
+  font-style: italic;
+  min-height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 700px;
-}
-
-@media (max-width: 768px) {
-  .core-animation-placeholder {
-    min-height: 400px;
-  }
 }
 
 /* 4. Customization Section */
@@ -93,32 +66,13 @@
   position: relative;
 }
 
-/* 2. SyncVerse Section */
-.syncverse-section {
-  padding: 6rem 0 !important;
-  max-width: 1200px !important;
-  margin: 0 auto !important;
-  background: transparent;
-}
-
-.syncverse-section .section-header {
-  margin-bottom: 3rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.syncverse-section .section-header h2 {
-  color: #fff;
-}
-
 /* 3. Interactive Product Showcase */
 .rotary-wheel-container {
   display: flex;
   gap: 3rem;
   align-items: center;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid #E2E8F0;
   padding: 3rem;
   border-radius: 20px;
 }
@@ -131,13 +85,13 @@
 
 .wheel-btn {
   background: none;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #E2E8F0;
+  color: #475569;
   padding: 1rem;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .wheel-btn.active, .wheel-btn:hover {
@@ -158,17 +112,19 @@
 }
 
 .wheel-desc {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
+  color: #475569;
 }
 
 .wheel-animation-placeholder {
   height: 200px;
-  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border: 1px dashed rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.5);
+  color: #94A3B8;
+  overflow: hidden;
 }
 
 /* 5. Proven Synergy (ROI) */
@@ -179,16 +135,23 @@
 }
 
 .roi-card {
-  background: linear-gradient(145deg, #151515, #0a0a0a);
+  background: linear-gradient(145deg, #FFFFFF, #F8FAFC);
   padding: 2rem;
-  border-radius: 15px;
+  border-radius: 16px;
   text-align: center;
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid #E2E8F0;
+  box-shadow: var(--shadow-card);
+  transition: all 0.2s ease;
+}
+
+.roi-card:hover {
+  box-shadow: var(--shadow-elevated);
+  transform: translateY(-2px);
 }
 
 .roi-card h3 {
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: #0F172A;
   margin-bottom: 1rem;
 }
 
@@ -199,54 +162,45 @@
   margin-bottom: 1rem;
 }
 
+.roi-card p {
+  color: #475569;
+  font-size: 0.9rem;
+}
+
 /* 6. CTA Section */
 .syncseries-cta-section {
   text-align: center;
   padding: 8rem 2rem !important;
-  background: radial-gradient(circle, rgba(114, 9, 183, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(8,145,178,0.06) 0%, transparent 70%);
 }
 
 .syncseries-cta-section h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   margin-bottom: 3rem;
   line-height: 1.4;
 }
 
 .syncseries-cta-section .contact-btn {
-  background: #7209B7;
-  color: white;
+  background: linear-gradient(135deg, #0891B2, #0D9488);
+  color: #fff;
   border: none;
   padding: 1rem 2.5rem;
   font-size: 1rem;
   font-weight: 700;
   border-radius: 50px;
   cursor: pointer;
+  transition: all 0.3s;
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
   display: inline-block;
-}
-
-.syncseries-cta-section .contact-btn::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.5s;
-}
-
-.syncseries-cta-section .contact-btn:hover::after {
-  transform: translate(-50%, -50%) scale(1);
+  width: 18rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(8, 145, 178, 0.25);
 }
 
 .syncseries-cta-section .contact-btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(114, 9, 183, 0.3);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(8, 145, 178, 0.35);
 }
 
 /* Responsive Styles */
@@ -254,7 +208,7 @@
   .syncseries-hero-section h1 {
     font-size: 2.8rem;
   }
-  
+
   .roi-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -266,7 +220,7 @@
   }
 
   .section-header h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .syncseries-hero-section h1 {
@@ -292,7 +246,7 @@
 
   .wheel-btn {
     padding: 0.6rem 1rem;
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
 
   .wheel-content h3 {

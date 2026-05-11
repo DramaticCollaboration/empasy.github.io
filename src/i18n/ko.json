@@ -1,63 +1,5 @@
 {
   "translation": {
-    "siteTitle": "엠파시",
-    "seo": {
-      "home": {
-        "title": "AI-DLC 중심의 디지털 혁신, 비즈니스 민첩성을 극대화하다",
-        "description": "엠파시는 AI 개발 수명주기(AI-DLC)를 자동화하는 Hydra 플랫폼과 MSA, QA, CMS 등 Sync Series를 통해 비즈니스 민첩성을 제공합니다.",
-        "keywords": "AI-DLC, Hydra, MSA, SyncBoot, SyncEta, SyncCMS, API 관리, 디지털 전환, 비즈니스 민첩성, 엠파시, Empasy"
-      },
-      "hydra": {
-        "title": "Hydra - AI-DLC 기반 인프라 자동화 솔루션",
-        "description": "복잡한 클라우드 설정 없이 자연어 대화만으로 AI 개발 및 운영 환경을 구축하는 Prompt-Driven AI Infra Orchestrator.",
-        "keywords": "Hydra, AI-DLC, 인프라 자동화, 클라우드 오케스트레이션, MLOps, DevOps"
-      },
-      "syncSeries": {
-        "title": "Sync Series - 비즈니스 민첩성을 위한 완벽한 도구",
-        "description": "개발부터 운영, 검증, 콘텐츠 관리까지. 단절된 IT 인프라를 연결하여 가장 유연하고 강력한 디지털 혁신 생태계 SyncVerse를 완성합니다.",
-        "keywords": "Sync Series, SyncVerse, MSA, QA 자동화, CMS, API 관리, 디지털 전환"
-      },
-      "syncboot": {
-        "title": "SyncBoot - Java/Spring Boot 기반 MSA 플랫폼",
-        "description": "모놀리식의 한계를 극복한 독립적 배포 및 스케일 아웃이 가능한 마이크로서비스 쾌속 개발 플랫폼.",
-        "keywords": "SyncBoot, MSA, Microservices, Spring Boot, Cloud Native, Java 플랫폼"
-      },
-      "synceta": {
-        "title": "SyncEta - LLM 기반 AI 테스트 자동화",
-        "description": "사람처럼 이해하고 기계처럼 테스트하는 자연어 기반 테스트 자동화 솔루션. Zero-Recording으로 QA 효율을 극대화합니다.",
-        "keywords": "SyncEta, 테스트 자동화, AI QA, LLM 테스트, Playwright, Zero-Recording"
-      },
-      "synccms": {
-        "title": "SyncCMS - 엔터프라이즈 맞춤형 콘텐츠 관리 시스템",
-        "description": "멀티 사이트 및 다국어를 지원하며 SEO 최적화 도구를 갖춘 Java 기반의 강력한 CMS.",
-        "keywords": "SyncCMS, CMS, 콘텐츠 관리 시스템, 멀티사이트, SEO 최적화"
-      },
-      "syncapim": {
-        "title": "SyncAPIM - 지능형 API 통합 관리 플랫폼",
-        "description": "API 게이트웨이, 개발자 포털, 분석 대시보드를 통합한 전체 라이프사이클 관리 솔루션.",
-        "keywords": "SyncAPIM, API 관리, API Gateway, API 생태계, 지능형 API"
-      },
-      "commercelogi": {
-        "title": "SyncShop & AI Logistics - 이커머스 및 물류 최적화",
-        "description": "헤드리스 커머스 아키텍처와 LLM 기반 물류 자율운영 AI 에이전트의 결합으로 비즈니스 효율을 극대화합니다.",
-        "keywords": "SyncShop, AI Logistics, 이커머스, 물류 최적화, 헤드리스 커머스, RAG"
-      },
-      "useCases": {
-        "title": "성공 사례 - 엔터프라이즈 디지털 혁신 파트너",
-        "description": "LG전자, 비상교육, 펜타시큐리티 등 엠파시와 함께한 다양한 산업군의 성공적인 디지털 전환 사례를 확인하세요.",
-        "keywords": "구축 사례, 엠파시 실적, DX 사례, 엔터프라이즈 솔루션"
-      },
-      "company": {
-        "title": "회사 소개 - 공감과 시너지의 엠파시",
-        "description": "비즈니스 민첩성을 위한 혁신적인 기술을 제공하며, 고객과의 공감을 통해 더 큰 가치를 창출합니다.",
-        "keywords": "엠파시 소개, 회사 비전, 연혁, 기업 문화"
-      },
-      "contact": {
-        "title": "문의하기 - 디지털 혁신의 시작",
-        "description": "엠파시의 솔루션 도입 및 파트너십에 대해 궁금한 점이 있으시면 언제든 문의해 주세요.",
-        "keywords": "문의하기, 도입 문의, 기술 상담, 파트너십"
-      }
-    },
     "nav": {
       "aiInfra": "AI Infra",
       "syncSeries": "Sync Series",
@@ -74,7 +16,14 @@
     "hero": {
       "title": "Boon to business by agility",
       "subtitle": "AI-DLC 기반의 완벽한 디지털 혁신 생태계",
-      "scrollDown": "Scroll Down"
+      "scrollDown": "Scroll Down",
+      "headline": "Boon to business",
+      "headline2": "by agility",
+      "cta": {
+        "contact": "상담 시작하기",
+        "explore": "AI Infra 보기"
+      },
+      "scroll": "SCROLL"
     },
     "home": {
       "pipeline": {
@@ -111,9 +60,25 @@
       "trusted": {
         "title": "Trusted by Enterprise"
       },
-      "cta": {
-        "title": "비즈니스 민첩성을 위한 엠파시의 기술력을 지금 바로 경험해 보세요.",
-        "btn": "도입 문의하기"
+      "ecosystem": {
+        "title": "하나의 플랫폼, 모든 솔루션",
+        "subtitle": "AI 인프라부터 커머스 물류까지 통합된 엔터프라이즈 솔루션"
+      },
+      "bento": {
+        "hydra": {
+          "desc": "AI 기반 품질 엔지니어링 플랫폼으로 TC 생성부터 자동화 실행, 피드백 루프까지 완전 자동화"
+        },
+        "explore": "자세히 보기",
+        "sync": {
+          "desc": "모든 테스트 워크플로우를 하나의 파이프라인으로 통합"
+        },
+        "commerce": {
+          "desc": "AI 커머스 & 스마트 물류"
+        },
+        "contact": {
+          "title": "Let's Talk",
+          "desc": "전문가와 직접 상담"
+        }
       }
     },
     "hydra": {
@@ -143,6 +108,11 @@
         "syntaxAgent": "구문 검증 에이전트",
         "costAgent": "비용 감사 에이전트"
       },
+      "effect": {
+        "label": "Hydra 도입 효과",
+        "title": "압도적인\n효율성의 차이",
+        "subtitle": "기존 수작업 방식과 비교할 수 없는 속도와 안정성. Hydra가 인프라 구축의 모든 병목을 해소합니다."
+      },
       "roi": {
         "title": "Hydra 도입 효과",
         "time": {
@@ -164,23 +134,11 @@
     },
     "syncseries": {
       "hero": {
-        "title": "Boon to business by agility, 비즈니스 민첩성을 위한 완벽한 도구",
+        "title": "Boon to business by agility, 비즈니스 민첩성을 위한 완벽한 동기화",
         "desc": "개발부터 운영, 검증, 콘텐츠 관리까지. 단절된 IT 인프라를 연결하여 가장 유연하고 강력한 디지털 혁신 생태계를 완성합니다."
       },
       "verse": {
-        "title": "단절된 도구가 아닌, 하나로 연결된 지능형 파이프라인",
-        "stages": {
-          "build": "[Build] 서비스 구축",
-          "manage": "[Manage] 콘텐츠 주입",
-          "test": "[Test] AI 자가 치유",
-          "connect": "[Connect] 지능형 배포"
-        },
-        "desc": {
-          "build": "MSA 플랫폼을 통한 신속한 서비스 구축",
-          "manage": "비즈니스 로직 및 콘텐츠 데이터 주입",
-          "test": "AI 기반 품질 검증 및 자가 치유 수행",
-          "connect": "API 게이트웨이를 통한 안전한 글로벌 배포"
-        }
+        "title": "단절된 도구가 아닌, 하나로 연결된 지능형 파이프라인 (SyncVerse)"
       },
       "showcase": {
         "title": "Interactive Product Showcase"
@@ -210,19 +168,19 @@
       "solutions": {
         "syncboot": {
           "title": "SyncBoot (MSA 플랫폼)",
-          "desc": "모놀리식의 한계를 넘어 가볍고 빠른 마이크로서비스로의 전환을 지원합니다."
+          "desc": "거대한 모놀리식 바위가 수십 개의 가볍고 빠른 미니 큐브로 쪼개져 날아다니는 파티클 모션."
         },
         "synceta": {
           "title": "SyncEta (AI 품질 검증)",
-          "desc": "자연어 기반 시나리오로 수십 대의 기기에서 병렬 테스트를 자동 실행합니다."
+          "desc": "엑셀 아이콘이 AI 두뇌를 통과하자 수십 대의 화면에서 자동으로 테스트가 병렬 실행되는 모션."
         },
         "synccms": {
           "title": "SyncCMS (엔터프라이즈 CMS)",
-          "desc": "페이지 조각들을 자유롭게 조립하여 글로벌 웹사이트를 즉시 완성합니다."
+          "desc": "페이지 조각들이 자석처럼 끌려와 하나의 완벽한 글로벌 웹사이트로 조립되는 모션."
         },
         "syncapim": {
           "title": "SyncAPIM (지능형 API 통합 관리)",
-          "desc": "폭주하는 트래픽을 안전하게 제어하고 분산 라우팅하는 통합 관리 플랫폼입니다."
+          "desc": "폭주하는 트래픽 선들이 게이트웨이 방패에 부딪혀 안전하게 분산 라우팅되는 쉴드 이펙트."
         }
       }
     },
@@ -368,20 +326,16 @@
         "desc": "독보적인 템플릿 엔진과 시각적 레이아웃 빌더로 비즈니스 환경 변화에 가장 민첩하게 대응하는 Java 기반 통합 CMS."
       },
       "builder": {
-        "title": "직관적인 시각적 관리, 클릭 한 번으로 끝나는 빠른 유지보수.",
-        "subtitle": "드래그 앤 드롭 빌더로 코딩 없이 전문적인 웹 페이지를 즉시 구성하고 민첩하게 유지보수합니다."
+        "title": "직관적인 시각적 관리, 클릭 한 번으로 끝나는 빠른 유지보수."
       },
       "multisite": {
-        "title": "단일 코어로 통제하는 글로벌 옴니채널.",
-        "subtitle": "단 하나의 코어로 수만 개의 독립 사이트와 전 세계 다국어 콘텐츠를 통합 통제하는 강력한 확장성을 경험하십시오."
+        "title": "단일 코어로 통제하는 글로벌 옴니채널."
       },
       "hybrid": {
-        "title": "동적/정적 하이브리드 아키텍처",
-        "subtitle": "페이지 조각(Fragment)과 추천위 데이터를 결합하여 서버 사이드 렌더링의 속도와 콘텐츠 관리의 유연성을 동시에 확보합니다."
+        "title": "동적/정적 하이브리드 아키텍처"
       },
       "history": {
-        "title": "모든 변경을 기록하는 완벽한 타임머신.",
-        "subtitle": "모든 콘텐츠 변경 이력을 완벽하게 기록하며, 실수 발생 시 언제든 원하는 시점으로 즉시 복구할 수 있는 안전망을 제공합니다."
+        "title": "모든 변경을 기록하는 완벽한 타임머신."
       },
       "seo": {
         "title": "성과를 증명하는 데이터 (SEO & 방문자 통계)",
@@ -493,7 +447,7 @@
         }
       },
       "cta": {
-        "title": "주문에서 배송까지, 당신의 비즈니스를 완벽하게 통합 하세요.",
+        "title": "주문에서 배송까지, 당신의 비즈니스를 완벽하게 동기화(Sync) 하세요.",
         "btn": "Commerce & Logi 도입 문의하기"
       }
     },
@@ -501,12 +455,53 @@
       "title": "Trusted by Global Innovators",
       "desc": "복잡한 엔터프라이즈 환경에서 증명된 비즈니스 민첩성.\n엠파시의 기술력이 글로벌 리더들의 디지털 혁신을 완성합니다.",
       "portfolioTitle": "도전 과제별 맞춤형 혁신 사례를 확인해 보세요.",
+      "hero": {
+        "badge": "Success Stories",
+        "desc": "다양한 산업의 선도적 기업들이 Empasy로 디지털 혁신을 이루었습니다."
+      },
       "filters": {
         "all": "전체",
+        "logistics": "물류/유통",
+        "manufacturing": "제조",
+        "tech": "IT/테크",
+        "finance": "금융",
         "ai-data": "AI & Data",
         "testops": "AI TestOps",
         "msa-infra": "MSA & 인프라",
         "cms": "글로벌 CMS"
+      },
+      "flip": {
+        "keyresults": "Key Results",
+        "lg": {
+          "subtitle": "글로벌 SCM 시스템 구축 및 통합 데이터 파이프라인",
+          "r1l": "리드타임 감소", "r2l": "예상 ROI"
+        },
+        "samsung": {
+          "subtitle": "대규모 AI 반도체 인프라 최적화 및 자동화 운영",
+          "r1l": "인프라 가동률", "r2l": "운영 비용 절감"
+        },
+        "hyosung": {
+          "subtitle": "지능형 물류 자동화 솔루션 및 데이터 연동",
+          "r1l": "처리 속도 향상", "r2l": "오배송률"
+        },
+        "visang": {
+          "subtitle": "클라우드 기반 디지털 교육 플랫폼 전면 전환",
+          "r1l": "안정적 동시접속", "r2l": "사용자 만족도"
+        },
+        "skmagic": {
+          "subtitle": "D2C 직영몰 고도화 및 실시간 OMS 구축",
+          "r1l": "주문 처리량 증가", "r2l": "재고 정확도"
+        },
+        "homeplus": {
+          "subtitle": "온디맨드 딜리버리 물류 최적화 라우팅 시스템",
+          "r1l": "배송 지연 감소", "r2l": "물류 비용 절감"
+        }
+      },
+      "impact": {
+        "title": "Empasy Impact",
+        "subtitle": "데이터가 증명하는 확실한 비즈니스 성과",
+        "s1l": "평균 처리 시간", "s2l": "고객 만족도",
+        "s3l": "평균 ROI", "s4l": "연간 비용 절감", "s4v": "평균 2억"
       },
       "cases": {
         "lg": {
@@ -652,7 +647,7 @@
           "desc": "25년 특급 기술자. 데이터베이스 및 백/프론트엔드 통합 설계, 글로벌 이커머스 기술 리드."
         },
         "member3": {
-          "name": "이강형",
+          "name": "안수호",
           "role": "Global Tech Advisor",
           "desc": "AWS 미주 AI Product 개발 및 글로벌 커머스 시스템 총괄. 북미 시장 진출 리드."
         },
@@ -668,12 +663,6 @@
         "badge2": "벤처기업인증 (혁신성장유형)",
         "badge3": "LLM MCP 원천 기술 특허 출원"
       },
-      "location": {
-        "title": "오시는 길",
-        "office": "엠파시 본사",
-        "address": "서울특별시 금천구 가산디지털1로 205-27 2층 208호",
-        "directions": "길 찾기"
-      },
       "cta": {
         "title": "엠파시와 함께 혁신을 시작하시겠습니까?",
         "btn": "프로젝트 문의하기"
@@ -681,7 +670,7 @@
     },
     "contact": {
       "hero": {
-        "title": "혁신의 시작, 엠파시와 동기화할 준비가 되셨습니까?",
+        "title": "혁신의 시작, 엠파시와 동기화(Sync)할 준비가 되셨습니까?",
         "desc": "비즈니스 민첩성(Agility)을 향한 여정, 엠파시의 최고 전문가들이 가장 빠르고 정확한 해답을 제시합니다."
       },
       "form": {
@@ -724,20 +713,10 @@
       }
     },
     "footer": {
-      "desc": "비즈니스 민첩성을 위한 완벽한 도구",
-      "address": "서울 금천구 가산디지털1로 205-27 2층 208호",
+      "desc": "비즈니스 민첩성을 위한 완벽한 동기화",
+      "address": "서울 금천구 가산디지털1로 205-27 2층 FAC 208호",
       "contact": "연락처: poh@empasy.com",
       "rights": "All rights reserved."
-    },
-    "common": {
-      "loading": "동기화 중..."
-    },
-    "error": {
-      "404": {
-        "title": "404 - 페이지를 찾을 수 없습니다",
-        "message": "죄송합니다. 요청하신 페이지가 존재하지 않거나 이동되었을 수 있습니다.",
-        "goHome": "홈으로 돌아가기"
-      }
     }
   }
 }

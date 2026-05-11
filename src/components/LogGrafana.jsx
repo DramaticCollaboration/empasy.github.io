@@ -69,7 +69,7 @@ const LogGrafana = () => {
     }}>
       {/* Charts Section */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', height: '200px' }}>
-        <div style={{ background: '#1E293B', padding: '10px', borderRadius: '8px' }}>
+        <div style={{ background: '#F8FAFC', padding: '10px', borderRadius: '8px', border: '1px solid #E2E8F0' }}>
           <h5 style={{ fontSize: '0.7rem', color: '#94A3B8', margin: '0 0 10px 0' }}>{t('syncboot.logs.cpu', 'CPU Usage (%)')}</h5>
           <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
             <AreaChart data={metrics}>
@@ -79,22 +79,22 @@ const LogGrafana = () => {
                   <stop offset="95%" stopColor="#38BDF8" stopOpacity={0}/>
                 </linearGradient>
               </defs>
-              <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
+              <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" />
               <XAxis dataKey="time" hide />
               <YAxis domain={[0, 100]} hide />
-              <Tooltip contentStyle={{ background: '#0F172A', border: 'none', fontSize: '0.6rem' }} />
+              <Tooltip contentStyle={{ background: '#FFFFFF', border: '1px solid #E2E8F0', fontSize: '0.6rem' }} />
               <Area type="monotone" dataKey="cpu" stroke="#38BDF8" fillOpacity={1} fill="url(#colorCpu)" isAnimationActive={false} />
             </AreaChart>
           </ResponsiveContainer>
         </div>
-        <div style={{ background: '#1E293B', padding: '10px', borderRadius: '8px' }}>
+        <div style={{ background: '#F8FAFC', padding: '10px', borderRadius: '8px', border: '1px solid #E2E8F0' }}>
           <h5 style={{ fontSize: '0.7rem', color: '#94A3B8', margin: '0 0 10px 0' }}>{t('syncboot.logs.rps', 'Requests Per Second')}</h5>
           <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
             <LineChart data={metrics}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
+              <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" />
               <XAxis dataKey="time" hide />
               <YAxis hide />
-              <Tooltip contentStyle={{ background: '#0F172A', border: 'none', fontSize: '0.6rem' }} />
+              <Tooltip contentStyle={{ background: '#FFFFFF', border: '1px solid #E2E8F0', fontSize: '0.6rem' }} />
               <Line type="monotone" dataKey="rps" stroke="#10B981" strokeWidth={2} dot={false} isAnimationActive={false} />
             </LineChart>
           </ResponsiveContainer>
@@ -102,15 +102,15 @@ const LogGrafana = () => {
       </div>
 
       {/* Terminal Section */}
-      <div style={{ 
-        flex: 1, 
-        background: '#0F172A', 
-        borderRadius: '8px', 
-        padding: '15px', 
-        fontFamily: 'monospace', 
-        fontSize: '0.75rem', 
+      <div style={{
+        flex: 1,
+        background: '#F8FAFC',
+        borderRadius: '8px',
+        padding: '15px',
+        fontFamily: 'monospace',
+        fontSize: '0.75rem',
         overflowY: 'auto',
-        border: '1px solid #334155',
+        border: '1px solid #E2E8F0',
         minHeight: '200px'
       }}>
         <div style={{ color: '#00D1B2', marginBottom: '10px', borderBottom: '1px solid #334155', paddingBottom: '5px' }}>
@@ -124,7 +124,7 @@ const LogGrafana = () => {
               fontWeight: 'bold'
             }}>{log.level}</span>{' '}
             <span style={{ color: '#38BDF8' }}>[{log.service}]</span>{' '}
-            <span style={{ color: '#E2E8F0' }}>{log.message}</span>
+            <span style={{ color: '#0F172A' }}>{log.message}</span>
           </div>
         ))}
         <div ref={logEndRef} />

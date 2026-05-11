@@ -67,17 +67,17 @@ const UIBuilder = () => {
 
   return (
     <div className="ui-builder-sim" style={{ 
-      display: 'flex', 
-      width: '100%', 
-      height: '450px', 
-      background: '#0F172A', 
-      borderRadius: '16px', 
+      display: 'flex',
+      width: '100%',
+      height: '450px',
+      background: '#F8FAFC',
+      borderRadius: '16px',
       overflow: 'hidden',
-      border: '1px solid #334155',
+      border: '1px solid #E2E8F0',
       position: 'relative'
     }}>
       {/* Sidebar - Palette */}
-      <div style={{ width: '200px', background: '#1E293B', padding: '20px', borderRight: '1px solid #334155' }}>
+      <div style={{ width: '200px', background: '#F1F5F9', padding: '20px', borderRight: '1px solid #E2E8F0' }}>
         <h5 style={{ fontSize: '0.8rem', color: '#94A3B8', marginBottom: '20px' }}>{t('syncboot.uibuilder.palette', 'UI Components')}</h5>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
           {components.map((comp) => (
@@ -87,12 +87,12 @@ const UIBuilder = () => {
                 display: 'flex', 
                 alignItems: 'center', 
                 gap: '10px', 
-                padding: '10px', 
-                background: '#0F172A', 
+                padding: '10px',
+                background: '#FFFFFF',
                 borderRadius: '8px',
                 fontSize: '0.75rem',
-                color: '#E2E8F0',
-                border: '1px solid #334155'
+                color: '#0F172A',
+                border: '1px solid #E2E8F0'
               }}
             >
               <comp.icon size={16} color="#00D1B2" />
@@ -175,7 +175,7 @@ const UIBuilder = () => {
       </div>
 
       {/* Property Panel */}
-      <div style={{ width: '200px', background: '#1E293B', padding: '20px', borderLeft: '1px solid #334155' }}>
+      <div style={{ width: '200px', background: '#F1F5F9', padding: '20px', borderLeft: '1px solid #E2E8F0' }}>
         <h5 style={{ fontSize: '0.8rem', color: '#94A3B8', marginBottom: '20px' }}>{t('syncboot.uibuilder.properties', 'Properties')}</h5>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
           <div style={{ fontSize: '0.7rem', color: '#64748B' }}>
@@ -188,7 +188,7 @@ const UIBuilder = () => {
           </div>
           <div style={{ fontSize: '0.7rem', color: '#64748B' }}>
             <label style={{ display: 'block', marginBottom: '5px' }}>Data Source</label>
-            <div style={{ padding: '8px', background: '#0F172A', borderRadius: '4px', color: '#94A3B8' }}>api/v1/sales</div>
+            <div style={{ padding: '8px', background: '#F1F5F9', borderRadius: '4px', color: '#475569', border: '1px solid #E2E8F0' }}>api/v1/sales</div>
           </div>
         </div>
       </div>

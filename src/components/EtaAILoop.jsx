@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { RefreshCw, Database, Cpu, Zap, TrendingUp } from 'lucide-react';
 import { LineChart, Line, ResponsiveContainer, YAxis } from 'recharts';
 
-const EtaAILoop = ({ isMobile }) => {
+const EtaAILoop = () => {
   const { t } = useTranslation();
   const [accuracy, setAccuracy] = useState(65);
   const [chartData, setChartData] = useState([
@@ -37,48 +37,25 @@ const EtaAILoop = ({ isMobile }) => {
   }, [activeStep]);
 
   return (
-    <div style={{ 
-      width: '100%', 
-      height: isMobile ? '350px' : '500px', 
-      background: '#020617', 
-      borderRadius: '24px', 
-      padding: isMobile ? '20px' : '40px', 
-      border: '1px solid #1E293B', 
-      position: 'relative', 
-      overflow: 'hidden', 
-      display: 'flex', 
-      alignItems: 'center', 
-      justifyContent: 'center' 
-    }}>
+    <div style={{ width: '100%', height: '500px', background: '#F8FAFC', borderRadius: '24px', padding: '40px', border: '1px solid #E2E8F0', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       {/* Infinite Loop Track (SVG) */}
-      <svg 
-        style={{ 
-          position: 'absolute', 
-          width: isMobile ? '300px' : '600px', 
-          height: isMobile ? '150px' : '300px' 
-        }} 
-        viewBox="0 0 600 300"
-      >
-        <ellipse cx="300" cy="150" rx="250" ry="120" fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="4" />
+      <svg style={{ position: 'absolute', width: '600px', height: '300px' }} viewBox="0 0 600 300">
+        <ellipse cx="300" cy="150" rx="250" ry="120" fill="none" stroke="#E2E8F0" strokeWidth="4" />
         {/* Active Segment Highlight */}
         <motion.ellipse
           cx="300" cy="150" rx="250" ry="120" fill="none" stroke="#00D1B2" strokeWidth="4"
-          strokeDasharray="200, 1000"
+          strokeDasharray="300, 1200"
           animate={{ strokeDashoffset: -activeStep * 300 }}
           transition={{ duration: 1, ease: 'easeInOut' }}
         />
       </svg>
 
       {/* Steps along the loop */}
-      <div style={{ 
-        position: 'relative', 
-        width: isMobile ? '300px' : '600px', 
-        height: isMobile ? '150px' : '300px' 
-      }}>
+      <div style={{ position: 'relative', width: '600px', height: '300px' }}>
         {steps.map((step, i) => {
           const angle = (i * 90) * (Math.PI / 180);
-          const x = 300 + Math.cos(angle) * 250 - (isMobile ? 25 : 40);
-          const y = 150 + Math.sin(angle) * 120 - (isMobile ? 25 : 40);
+          const x = 300 + Math.cos(angle) * 250 - 40;
+          const y = 150 + Math.sin(angle) * 120 - 40;
           const isActive = activeStep === i;
 
           return (
@@ -86,25 +63,17 @@ const EtaAILoop = ({ isMobile }) => {
               key={i}
               animate={{ 
                 scale: isActive ? 1.2 : 1,
-                boxShadow: isActive ? '0 0 20px #00D1B2' : 'none'
+                boxShadow: isActive ? '0 0 8px rgba(8,145,178,0.3)' : 'none'
               }}
               style={{ 
-                position: 'absolute', left: x, top: y, 
-                width: isMobile ? '50px' : '80px', 
-                height: isMobile ? '50px' : '80px', 
-                background: isActive ? '#00D1B2' : '#1E293B', borderRadius: '50%',
+                position: 'absolute', left: x, top: y, width: '80px', height: '80px', 
+                background: isActive ? '#0891B2' : '#E2E8F0', borderRadius: '50%',
                 display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                zIndex: 10, border: '2px solid rgba(255,255,255,0.1)'
+                zIndex: 10, border: '2px solid #E2E8F0'
               }}
             >
-              <step.icon color={isActive ? '#020617' : '#94A3B8'} size={isMobile ? 16 : 24} />
-              <div style={{ 
-                fontSize: isMobile ? '0.4rem' : '0.6rem', 
-                fontWeight: 800, 
-                color: isActive ? '#020617' : '#94A3B8', 
-                textAlign: 'center', 
-                marginTop: '2px' 
-              }}>
+              <step.icon color={isActive ? '#FFFFFF' : '#94A3B8'} size={24} />
+              <div style={{ fontSize: '0.6rem', fontWeight: 800, color: isActive ? '#FFFFFF' : '#94A3B8', textAlign: 'center', marginTop: '5px' }}>
                 {step.name}
               </div>
             </motion.div>
@@ -112,30 +81,10 @@ const EtaAILoop = ({ isMobile }) => {
         })}
 
         {/* Central Accuracy Chart */}
-        <div style={{ 
-          position: 'absolute', 
-          top: '50%', 
-          left: '50%', 
-          transform: 'translate(-50%, -50%)', 
-          width: isMobile ? '120px' : '200px', 
-          textAlign: 'center' 
-        }}>
-          <div style={{ 
-            fontSize: isMobile ? '0.5rem' : '0.7rem', 
-            color: '#94A3B8', 
-            fontWeight: 600, 
-            letterSpacing: '0.1em' 
-          }}>
-            {t('synceta.loop.metric.accuracy', 'AI ACCURACY')}
-          </div>
-          <div style={{ 
-            fontSize: isMobile ? '1.5rem' : '2.5rem', 
-            fontWeight: 900, 
-            color: '#FFFFFF' 
-          }}>
-            {accuracy}%
-          </div>
-          <div style={{ height: isMobile ? '40px' : '60px', width: '100%' }}>
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '200px', textAlign: 'center' }}>
+          <div style={{ fontSize: '0.7rem', color: '#94A3B8', fontWeight: 600, letterSpacing: '0.1em' }}>{t('synceta.loop.metric.accuracy', 'AI ACCURACY')}</div>
+          <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#0F172A' }}>{accuracy}%</div>
+          <div style={{ height: '60px', width: '100%' }}>
             <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
               <LineChart data={chartData}>
                 <Line type="monotone" dataKey="val" stroke="#10B981" strokeWidth={3} dot={false} isAnimationActive={true} />
@@ -152,22 +101,9 @@ const EtaAILoop = ({ isMobile }) => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
-            style={{ 
-              position: 'absolute', 
-              top: isMobile ? '10px' : '30px', 
-              background: 'rgba(0, 209, 178, 0.2)', 
-              color: '#00D1B2', 
-              padding: isMobile ? '5px 12px' : '10px 20px', 
-              borderRadius: '50px', 
-              fontSize: isMobile ? '0.6rem' : '0.8rem', 
-              fontWeight: 800, 
-              display: 'flex', 
-              alignItems: 'center', 
-              gap: '8px', 
-              border: '1px solid #00D1B2' 
-            }}
+            style={{ position: 'absolute', top: '30px', background: 'rgba(0, 209, 178, 0.2)', color: '#00D1B2', padding: '10px 20px', borderRadius: '50px', fontSize: '0.8rem', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '8px', border: '1px solid #00D1B2' }}
           >
-            <TrendingUp size={isMobile ? 12 : 16} /> {t('synceta.loop.status.learning', 'AI MODEL EVOLVING...')}
+            <TrendingUp size={16} /> {t('synceta.loop.status.learning', 'AI MODEL EVOLVING...')}
           </motion.div>
         )}
       </AnimatePresence>

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import SEO from '../components/common/SEO';
+import { motion } from 'framer-motion';
 import './SyncEta.css';
 
 import EtaSelfHealing from '../components/EtaSelfHealing';
@@ -15,24 +15,15 @@ const SyncEta = () => {
   const { lang } = useParams();
   const currentLang = lang || 'ko';
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 768);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
     <div className="synceta-container">
-      <SEO pageKey="synceta" />
       {/* 1. Hero Section */}
       <section className="synceta-hero-section">
         <div className="hero-content">
           <h1>{t('synceta.hero.title')}</h1>
           <p>{t('synceta.hero.desc')}</p>
           <div className="hero-visual">
-            <EtaAILoop isMobile={isMobile} />
+            <EtaAILoop />
           </div>
         </div>
       </section>
@@ -44,7 +35,7 @@ const SyncEta = () => {
           <p>{t('synceta.recording.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <EtaPipelineDomino isMobile={isMobile} />
+          <EtaPipelineDomino />
         </div>
       </section>
 
@@ -57,11 +48,11 @@ const SyncEta = () => {
         <div className="dual-visual-grid">
           <div className="visual-card">
             <h3>{t('synceta.healing.card1.title', 'AI Self-Healing')}</h3>
-            <EtaSelfHealing isMobile={isMobile} />
+            <EtaSelfHealing />
           </div>
           <div className="visual-card">
             <h3>{t('synceta.healing.card2.title', 'Visual Regression')}</h3>
-            <EtaVisualQA isMobile={isMobile} />
+            <EtaVisualQA />
           </div>
         </div>
       </section>
@@ -73,7 +64,7 @@ const SyncEta = () => {
           <p>{t('synceta.dashboard.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <EtaDashboardForensics isMobile={isMobile} />
+          <EtaDashboardForensics />
         </div>
       </section>
 
@@ -84,7 +75,7 @@ const SyncEta = () => {
           <p>{t('synceta.feedback.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <EtaAILoop isMobile={isMobile} />
+          <EtaAILoop />
         </div>
       </section>
 
@@ -95,7 +86,7 @@ const SyncEta = () => {
           <p>{t('synceta.cicd.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <EtaPipelineDomino isMobile={isMobile} />
+          <EtaPipelineDomino />
         </div>
       </section>
 
@@ -122,9 +113,44 @@ const SyncEta = () => {
       </section>
 
       {/* 7. Bottom CTA */}
-      <section className="synceta-cta-section">
-        <h2>{t('synceta.cta.title')}</h2>
-        <Link to={`/${currentLang}/contact`} state={{ interest: 'SyncEta' }} className="contact-btn">{t('synceta.cta.btn')}</Link>
+      <section style={{ padding: '128px 24px', position: 'relative', zIndex: 10 }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 900, color: '#0F172A', marginBottom: '48px', lineHeight: 1.2 }}>
+              {t('synceta.cta.title').split('\n').map((line, i, arr) => (
+                <React.Fragment key={i}>{line}{i < arr.length - 1 && <br />}</React.Fragment>
+              ))}
+            </h2>
+            <Link
+              to={`/${currentLang}/contact`}
+              state={{interest: 'Other'}}
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: '12px',
+                background: 'linear-gradient(135deg, #0891B2, #0D9488)', color: '#fff',
+                padding: '20px 40px', borderRadius: '50px',
+                fontSize: '1.05rem', fontWeight: 700, textDecoration: 'none',
+                boxShadow: '0 4px 15px rgba(8, 145, 178, 0.25)',
+                transition: 'all 0.25s'
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 10px 25px rgba(8, 145, 178, 0.35)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = '';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(8, 145, 178,0.2)';
+              }}
+            >
+              {t('synceta.cta.btn')}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </Link>
+          </motion.div>
+        </div>
       </section>
     </div>
   );

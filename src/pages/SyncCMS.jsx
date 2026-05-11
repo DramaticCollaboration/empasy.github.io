@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import SEO from '../components/common/SEO';
+import { motion } from 'framer-motion';
 import './SyncCMS.css';
 
 import UIBuilderSim from '../components/UIBuilderSim';
@@ -14,19 +14,9 @@ const SyncCMS = () => {
   const { t } = useTranslation();
   const { lang } = useParams();
   const currentLang = lang || 'ko';
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   return (
     <div className="synccms-container">
-      <SEO pageKey="synccms" />
       {/* 1. Hero Section */}
       <section className="synccms-hero-section">
         <div className="hero-content">
@@ -37,7 +27,7 @@ const SyncCMS = () => {
           {/* Placeholder for 3D block assembly animation - Using UIBuilderSim as a hero visual too if appropriate, 
               or we can keep it simple for now as requested. The request asked to fill the specific placeholders. */}
           <div className="hero-visual-area">
-             <UIBuilderSim isMobile={isMobile} />
+             <UIBuilderSim />
           </div>
         </div>
       </section>
@@ -49,7 +39,7 @@ const SyncCMS = () => {
           <p>{t('synccms.builder.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <UIBuilderSim isMobile={isMobile} />
+          <UIBuilderSim />
         </div>
       </section>
 
@@ -60,7 +50,7 @@ const SyncCMS = () => {
           <p>{t('synccms.multisite.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <GlobalNetworkGlobe isMobile={isMobile} />
+          <GlobalNetworkGlobe />
         </div>
       </section>
 
@@ -71,7 +61,7 @@ const SyncCMS = () => {
           <p>{t('synccms.hybrid.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <HybridPuzzle isMobile={isMobile} />
+          <HybridPuzzle />
         </div>
       </section>
 
@@ -82,7 +72,7 @@ const SyncCMS = () => {
           <p>{t('synccms.history.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <TimeMachineSlider isMobile={isMobile} />
+          <TimeMachineSlider />
         </div>
       </section>
       
@@ -93,14 +83,49 @@ const SyncCMS = () => {
           <p>{t('synccms.seo.subtitle')}</p>
         </div>
         <div className="interactive-container">
-          <AnalyticsChartDraw isMobile={isMobile} />
+          <AnalyticsChartDraw />
         </div>
       </section>
 
       {/* 7. Bottom CTA */}
-      <section className="synccms-cta-section">
-        <h2>{t('synccms.cta.title')}</h2>
-        <Link to={`/${currentLang}/contact`} state={{ interest: 'Other' }} className="contact-btn">{t('synccms.cta.btn')}</Link>
+      <section style={{ padding: '128px 24px', position: 'relative', zIndex: 10 }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 900, color: '#0F172A', marginBottom: '48px', lineHeight: 1.2 }}>
+              {t('synccms.cta.title').split('\n').map((line, i, arr) => (
+                <React.Fragment key={i}>{line}{i < arr.length - 1 && <br />}</React.Fragment>
+              ))}
+            </h2>
+            <Link
+              to={`/${currentLang}/contact`}
+              state={{interest: 'Other'}}
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: '12px',
+                background: 'linear-gradient(135deg, #0891B2, #0D9488)', color: '#fff',
+                padding: '20px 40px', borderRadius: '50px',
+                fontSize: '1.05rem', fontWeight: 700, textDecoration: 'none',
+                boxShadow: '0 4px 15px rgba(8, 145, 178, 0.25)',
+                transition: 'all 0.25s'
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 10px 25px rgba(8, 145, 178, 0.35)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = '';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(8, 145, 178,0.2)';
+              }}
+            >
+              {t('synccms.cta.btn')}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </Link>
+          </motion.div>
+        </div>
       </section>
     </div>
   );

@@ -246,7 +246,7 @@ const UIBuilderSim = ({ isMobile }) => {
             style={{ 
               position: 'absolute', bottom: '30px', left: '50%', 
               transform: 'translateX(-50%)',
-              background: '#0F172A', 
+              background: 'linear-gradient(135deg, #0891B2, #0D9488)',
               color: '#FFFFFF',
               padding: '12px 24px',
               borderRadius: '50px',

@@ -37,7 +37,7 @@ const CICDPipeline = () => {
 
   return (
     <div className="cicd-pipeline-container" style={{ width: '100%', padding: '40px' }}>
-      <h4 style={{ color: '#fff', marginBottom: '40px', textAlign: 'center' }}>
+      <h4 style={{ color: '#0F172A', marginBottom: '40px', textAlign: 'center' }}>
         {t('syncboot.cicd.title', 'Automation Pipeline')}
       </h4>
       
@@ -45,7 +45,7 @@ const CICDPipeline = () => {
         {/* Background line */}
         <div style={{ 
           position: 'absolute', top: '24px', left: '0', right: '0', 
-          height: '4px', background: '#334155', zIndex: 0 
+          height: '4px', background: '#E2E8F0', zIndex: 0
         }} />
         
         {/* Progress line */}
@@ -70,8 +70,8 @@ const CICDPipeline = () => {
                   width: '50px',
                   height: '50px',
                   borderRadius: '50%',
-                  background: isCompleted ? '#00D1B2' : isActive ? '#1E293B' : '#0F172A',
-                  border: `2px solid ${isActive || isCompleted ? '#00D1B2' : '#334155'}`,
+                  background: isCompleted ? '#00D1B2' : isActive ? '#F1F5F9' : '#F8FAFC',
+                  border: `2px solid ${isActive || isCompleted ? '#00D1B2' : '#E2E8F0'}`,
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -104,7 +104,7 @@ const CICDPipeline = () => {
         })}
       </div>
 
-      <div style={{ marginTop: '60px', padding: '20px', background: '#0F172A', borderRadius: '12px', border: '1px solid #334155' }}>
+      <div style={{ marginTop: '60px', padding: '20px', background: '#F8FAFC', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
         <AnimatePresence mode="wait">
           <motion.div
             key={currentStage}

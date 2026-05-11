@@ -150,7 +150,7 @@ const EtaSelfHealing = ({ isMobile }) => {
 
 const CodeIcon = ({ x, y }) => (
   <foreignObject x={x} y={y} width="40" height="40">
-    <div style={{ background: '#1E293B', padding: '8px', borderRadius: '8px', color: '#94A3B8' }}>
+    <div style={{ background: '#F1F5F9', padding: '8px', borderRadius: '8px', color: '#64748B', border: '1px solid #E2E8F0' }}>
       <Code size={24} />
     </div>
   </foreignObject>
