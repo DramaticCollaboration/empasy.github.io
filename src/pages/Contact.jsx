@@ -5,8 +5,14 @@ import { motion } from 'framer-motion';
 import './Contact.css';
 
 const Contact = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const location = useLocation();
+
+  const currentLang = i18n.language || 'ko';
+  const mapLanguage = currentLang === 'jp' ? 'ja' : currentLang;
+
+  const mapQuery = encodeURIComponent(t('footer.address'));
+  const mapUrl = `https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NIWI3Tv9iDPrlnowr_0ZqZWoAQydKJU&q=${mapQuery}&language=${mapLanguage}&maptype=roadmap`;
 
   const [formData, setFormData] = useState({
     name: '',
@@ -236,8 +242,8 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div>
-                      <p className="contact-info-label">Phone</p>
-                      <p className="contact-info-value">010-3420-8169</p>
+                      <p className="contact-info-label">{t('contact.page.info.phoneLabel')}</p>
+                      <p className="contact-info-value">{t('contact.page.info.phoneValue')}</p>
                     </div>
                   </div>
                   <div className="contact-info-item">
@@ -248,8 +254,8 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div>
-                      <p className="contact-info-label">Email</p>
-                      <p className="contact-info-value">poh@empasy.com</p>
+                      <p className="contact-info-label">{t('contact.page.info.emailLabel')}</p>
+                      <p className="contact-info-value">{t('contact.page.info.emailValue')}</p>
                     </div>
                   </div>
                   <div className="contact-info-item">
@@ -260,8 +266,8 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div>
-                      <p className="contact-info-label">Office</p>
-                      <p className="contact-info-value">서울 금천구 가산디지털1로 205-27<br />2층 208호</p>
+                      <p className="contact-info-label">{t('contact.page.info.officeLabel')}</p>
+                      <p className="contact-info-value" dangerouslySetInnerHTML={{ __html: t('contact.page.info.officeValue').replace(/\n/g, '<br />') }} />
                     </div>
                   </div>
                 </div>
@@ -270,15 +276,15 @@ const Contact = () => {
               {/* Map */}
               <div className="glass-panel contact-map-panel">
                 <iframe
-                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NIWI3Tv9iDPrlnowr_0ZqZWoAQydKJU&q=%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%84%9C%EC%9A%B8%20%EA%B8%88%EC%B2%9C%EA%B5%AC%20%EA%B0%80%EC%82%B0%EB%94%94%EC%A7%80%ED%84%B81%EB%A1%9C%20205-27&maptype=roadmap"
+                  src={mapUrl}
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
-                  title="Empasy Office Location"
+                  title={t('contact.page.info.mapTitle')}
                 />
-                <div className="contact-map-badge">가산디지털단지역 1/7호선 도보 5분 거리</div>
+                <div className="contact-map-badge">{t('contact.page.info.mapBadge')}</div>
               </div>
             </motion.div>
           </div>

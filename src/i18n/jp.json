@@ -495,7 +495,7 @@
         "ctaTitle": "SyncCMSでビジネスのスピードを上げましょう",
         "ctaDesc": "開発生産性40%向上、コンテンツ配信時間70%短縮。実証済みCMS技術で貴社のデジタル競争力を完成させます。",
         "ctaBtn1": "今すぐ始める",
-        "ctaBtn2": "デモを申し込む"
+        "ctaBtn2": "ドキュメントを見る"
       },
       "hero": {
         "title": "開発者なしでも、想像するすべてのウェブを組み立てる。",
@@ -982,7 +982,7 @@
         "title": "Contact Info",
         "manager": "総括担当者: オ・ビョンムン代表 (理事)",
         "email": "メール: poh@empasy.com",
-        "phone": "連絡先: +82 10-3420-8169"
+        "phone": "連絡先: +82 0507-1360-8169"
       },
       "page": {
         "badge": "お問い合わせ",
@@ -1014,12 +1014,13 @@
         },
         "info": {
           "phoneLabel": "Phone",
-          "phoneValue": "02-1234-5678",
+          "phoneValue": "0507-1360-8169",
           "emailLabel": "Email",
-          "emailValue": "contact@empasy.ai",
+          "emailValue": "poh@empasy.com",
           "officeLabel": "Office",
-          "officeValue": "ソウル特別市江南区テヘラン路123\nEmpasyビル 12階",
-          "mapBadge": "江南駅2号線から徒歩5分"
+          "officeValue": "ソウル特別市 衿川区 加山デジタル1路 205-27, 2階 208号",
+          "mapBadge": "加山デジタル団地駅1/7号線から徒歩5分",
+          "mapTitle": "Empasy オフィスの場所"
         }
       }
     },

@@ -151,7 +151,7 @@ const Home = () => {
               onMouseEnter={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.borderColor = '#67e8f9'; e.currentTarget.style.color = '#0891b2'; }}
               onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.8)'; e.currentTarget.style.borderColor = '#E2E8F0'; }}
             >
-              {t('hero.cta.explore', 'AI Infra 보기')}
+              {t('hero.cta.explore', 'Hydra 보기')}
             </Link>
           </motion.div>
         </div>
@@ -191,7 +191,7 @@ const Home = () => {
         {/* Bento grid */}
         <div className="bento-grid-responsive">
 
-          {/* AI Infra – 2×2 large */}
+          {/* Hydra – 2×2 large */}
           <BentoCard
             delay={0}
             className="bento-span-2 bento-span-2-rows"
