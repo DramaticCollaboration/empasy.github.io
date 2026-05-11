@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Cpu, Search, CheckCircle2, AlertCircle, LogIn, Code } from 'lucide-react';
 
-const EtaSelfHealing = ({ isMobile }) => {
+const EtaSelfHealing = () => {
   const { t } = useTranslation();
   const [btnPos, setBtnPos] = useState({ x: 0, y: 0 });
   const [status, setStatus] = useState('stable'); // stable, broken, healing, recovered
@@ -30,25 +30,9 @@ const EtaSelfHealing = ({ isMobile }) => {
   };
 
   return (
-    <div ref={containerRef} style={{ 
-      width: '100%', 
-      height: isMobile ? '350px' : '500px', 
-      background: '#F8FAFC', 
-      borderRadius: '24px', 
-      border: '1px solid #E2E8F0', 
-      position: 'relative', 
-      overflow: 'hidden', 
-      padding: isMobile ? '20px' : '40px' 
-    }}>
+    <div ref={containerRef} style={{ width: '100%', height: '500px', background: '#F8FAFC', borderRadius: '24px', border: '1px solid #E2E8F0', position: 'relative', overflow: 'hidden', padding: '40px' }}>
       {/* AI Brain */}
-      <div style={{ 
-        position: 'absolute', 
-        top: isMobile ? '20px' : '40px', 
-        left: '50%', 
-        transform: 'translateX(-50%)', 
-        textAlign: 'center', 
-        zIndex: 30 
-      }}>
+      <div style={{ position: 'absolute', top: '40px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', zIndex: 30 }}>
         <motion.div
           animate={{ 
             scale: status === 'healing' ? [1, 1.2, 1] : 1,
@@ -56,40 +40,22 @@ const EtaSelfHealing = ({ isMobile }) => {
           }}
           transition={{ repeat: status === 'healing' ? Infinity : 0, duration: 0.5 }}
         >
-          <Cpu size={isMobile ? 48 : 64} />
+          <Cpu size={64} />
         </motion.div>
-        <div style={{ 
-          fontSize: isMobile ? '0.6rem' : '0.8rem', 
-          fontWeight: 800, 
-          color: '#64748B', 
-          marginTop: '10px', 
-          letterSpacing: '0.1em' 
-        }}>
+        <div style={{ fontSize: '0.8rem', fontWeight: 800, color: '#64748B', marginTop: '10px', letterSpacing: '0.1em' }}>
           SYNCETA AI ENGINE
         </div>
       </div>
 
       {/* Login Form UI */}
-      <div style={{ 
-        position: 'absolute', 
-        bottom: isMobile ? '30px' : '60px', 
-        left: '50%', 
-        transform: 'translateX(-50%)', 
-        width: isMobile ? '240px' : '300px', 
-        background: '#FFFFFF', 
-        padding: isMobile ? '15px' : '30px', 
-        borderRadius: '16px', 
-        boxShadow: '0 10px 25px rgba(0,0,0,0.05)', 
-        border: '1px solid #E2E8F0', 
-        zIndex: 10 
-      }}>
-        <div style={{ marginBottom: isMobile ? '10px' : '15px' }}>
+      <div style={{ position: 'absolute', bottom: '60px', left: '50%', transform: 'translateX(-50%)', width: '300px', background: '#FFFFFF', padding: '30px', borderRadius: '16px', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', border: '1px solid #E2E8F0', zIndex: 10 }}>
+        <div style={{ marginBottom: '15px' }}>
           <div style={{ width: '40px', height: '6px', background: '#E2E8F0', borderRadius: '3px', marginBottom: '8px' }} />
-          <div style={{ width: '100%', height: isMobile ? '25px' : '35px', background: '#F1F5F9', borderRadius: '6px' }} />
+          <div style={{ width: '100%', height: '35px', background: '#F1F5F9', borderRadius: '6px' }} />
         </div>
-        <div style={{ marginBottom: isMobile ? '15px' : '25px' }}>
+        <div style={{ marginBottom: '25px' }}>
           <div style={{ width: '60px', height: '6px', background: '#E2E8F0', borderRadius: '3px', marginBottom: '8px' }} />
-          <div style={{ width: '100%', height: isMobile ? '25px' : '35px', background: '#F1F5F9', borderRadius: '6px' }} />
+          <div style={{ width: '100%', height: '35px', background: '#F1F5F9', borderRadius: '6px' }} />
         </div>
 
         <motion.div
@@ -100,7 +66,7 @@ const EtaSelfHealing = ({ isMobile }) => {
           style={{ 
             background: status === 'broken' ? '#EF4444' : '#3B82F6',
             color: '#FFFFFF',
-            padding: isMobile ? '8px' : '12px',
+            padding: '12px',
             borderRadius: '8px',
             display: 'flex',
             alignItems: 'center',
@@ -110,38 +76,48 @@ const EtaSelfHealing = ({ isMobile }) => {
             boxShadow: '0 4px 12px rgba(59, 130, 246, 0.3)'
           }}
         >
-          <LogIn size={isMobile ? 14 : 18} />
-          <span style={{ fontWeight: 700, fontSize: isMobile ? '0.75rem' : '0.9rem' }}>{t('synceta.healing.ui.button', 'Login Button')}</span>
+          <LogIn size={18} />
+          <span style={{ fontWeight: 700, fontSize: '0.9rem' }}>{t('synceta.healing.ui.button', 'Login Button')}</span>
         </motion.div>
       </div>
 
+      {/* Connecting Lines */}
+      <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none' }}>
+        <CodeIcon x="10%" y="80%" />
+        <ConnectorLine status={status} />
+      </svg>
+
+      {/* Scanning Laser */}
+      <AnimatePresence>
+        {scanning && (
+          <motion.div
+            initial={{ top: '0%' }}
+            animate={{ top: '100%' }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
+            style={{ position: 'absolute', left: 0, right: 0, height: '2px', background: 'linear-gradient(90deg, transparent, #00D1B2, transparent)', zIndex: 20, boxShadow: '0 0 15px #00D1B2' }}
+          />
+        )}
+      </AnimatePresence>
+
       {/* Messages */}
-      <div style={{ 
-        position: 'absolute', 
-        top: isMobile ? '90px' : '120px', 
-        left: '50%', 
-        transform: 'translateX(-50%)', 
-        zIndex: 40,
-        width: '100%',
-        display: 'flex',
-        justifyContent: 'center'
-      }}>
+      <div style={{ position: 'absolute', top: '120px', left: '50%', transform: 'translateX(-50%)', zIndex: 40 }}>
         <AnimatePresence>
           {status === 'broken' && (
-            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} style={{ background: '#EF4444', color: '#FFF', padding: isMobile ? '4px 12px' : '8px 16px', borderRadius: '20px', fontSize: isMobile ? '0.65rem' : '0.8rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <AlertCircle size={isMobile ? 12 : 14} /> {t('synceta.healing.msg.error', 'UI Change Detected!')}
+            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} style={{ background: '#EF4444', color: '#FFF', padding: '8px 16px', borderRadius: '20px', fontSize: '0.8rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <AlertCircle size={14} /> {t('synceta.healing.msg.error', 'UI Change Detected!')}
             </motion.div>
           )}
           {status === 'recovered' && (
-            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} style={{ background: '#00D1B2', color: '#FFF', padding: isMobile ? '4px 12px' : '8px 16px', borderRadius: '20px', fontSize: isMobile ? '0.65rem' : '0.8rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <CheckCircle2 size={isMobile ? 12 : 14} /> {t('synceta.healing.msg.recover', 'Self-Healing Complete!')}
+            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} style={{ background: '#00D1B2', color: '#FFF', padding: '8px 16px', borderRadius: '20px', fontSize: '0.8rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <CheckCircle2 size={14} /> {t('synceta.healing.msg.recover', 'Self-Healing Complete!')}
             </motion.div>
           )}
         </AnimatePresence>
       </div>
 
       {/* Guide Text */}
-      <div style={{ position: 'absolute', top: '20px', left: 0, right: 0, textAlign: 'center', color: '#94A3B8', fontSize: isMobile ? '0.6rem' : '0.75rem', fontWeight: 600 }}>
+      <div style={{ position: 'absolute', top: '20px', left: '20px', color: '#94A3B8', fontSize: '0.75rem', fontWeight: 600 }}>
         DRAG BUTTON TO BREAK TEST
       </div>
     </div>

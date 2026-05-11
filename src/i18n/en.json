@@ -1,10 +1,7 @@
 {
   "translation": {
-    "common": {
-      "loading": "Loading..."
-    },
     "nav": {
-      "aiInfra": "Hydra",
+      "aiInfra": "AI Infra",
       "syncSeries": "Sync Series",
       "intro": "Intro",
       "syncboot": "SyncBoot",
@@ -23,7 +20,7 @@
       "headline2": "by agility",
       "cta": {
         "contact": "Get Started",
-        "explore": "Explore Hydra"
+        "explore": "Explore AI Infra"
       },
       "scroll": "SCROLL"
     },
@@ -135,6 +132,46 @@
       }
     },
     "syncseries": {
+      "page": {
+        "badge": "Infrastructure Optimization",
+        "heroTitle": "Sync Series",
+        "heroDescPre": "For seamless data flow,",
+        "heroDescBold": "real-time synchronization & replication",
+        "heroDescPost": "solution",
+        "feature1": {
+          "title": "Cloud Data Sync",
+          "desc": "Synchronize data between on-premises and multi-cloud environments in milliseconds to eliminate data gaps.",
+          "b1": "Real-time incremental sync (CDC)",
+          "b2": "Automatic data mapping & transformation"
+        },
+        "feature2": {
+          "title": "Database Replication",
+          "desc": "Build uninterrupted service environments and disaster recovery systems through high-availability replication across heterogeneous databases.",
+          "b1": "Zero-Data-Loss architecture",
+          "b2": "Bidirectional active-active replication"
+        },
+        "feature3": {
+          "title": "Multi-Region Sync",
+          "desc": "Synchronize data across geographically distributed regions via the shortest path for global service users.",
+          "b1": "Latency-optimized routing",
+          "b2": "Region-specific data compliance filtering"
+        },
+        "techEdge": "Technical Edge",
+        "techTitle": "Unmatched technology\nfor data consistency",
+        "tech1Title": "Ultra-Low Latency Streaming",
+        "tech1Desc": "Minimize network bandwidth consumption and maximize data transfer speed through our proprietary compression algorithm.",
+        "tech2Title": "Automatic Conflict Resolution",
+        "tech2Desc": "Guarantee data integrity through policy-based intelligent conflict resolution mechanisms when concurrent writes occur.",
+        "perfTitle": "Sync Performance",
+        "perfSubtitle": "The reliability of Sync Series, proven by numbers",
+        "perf1Label": "Max Throughput",
+        "perf2Label": "Avg Latency",
+        "perf3Label": "Uptime SLA",
+        "perf4Label": "Connectors",
+        "ctaTitle": "Change the standard of data synchronization",
+        "ctaDesc": "Manage complex data architectures simply and powerfully with Sync Series.",
+        "ctaBtn": "Request a Demo"
+      },
       "hero": {
         "title": "Boon to business by agility, Perfect Synchronization for Business Agility",
         "desc": "From development to operation, validation, and content management. Connect fragmented IT infrastructure to complete the most flexible and powerful digital innovation ecosystem."
@@ -187,6 +224,54 @@
       }
     },
     "syncboot": {
+      "page": {
+        "badge": "Sync Series 01",
+        "heroLine1": "Seamless Migration",
+        "heroLine2": "SyncBoot",
+        "heroDesc": "The intelligent data boot and migration platform that delivers overwhelming stability and speed to complex data migration environments.",
+        "pill1Label": "Protection",
+        "pill1Value": "Rollback Security",
+        "pill2Label": "Efficiency",
+        "pill2Value": "Incremental Sync",
+        "feat1": {
+          "title": "Pre-check Diagnostics",
+          "desc": "Diagnoses infrastructure environment and data integrity in real-time before migration begins, blocking potential conflicts proactively.",
+          "b1": "Automatic data schema mapping",
+          "b2": "Network bandwidth simulation"
+        },
+        "feat2": {
+          "title": "Incremental Sync",
+          "desc": "Adopts an incremental approach that selectively syncs only changed and added data, minimizing service downtime.",
+          "b1": "CDC (Change Data Capture) support",
+          "b2": "Zero-downtime migration"
+        },
+        "feat3": {
+          "title": "Rollback Protection",
+          "desc": "Automatic snapshot technology for instant rollback to previous states, providing a perfect safety net with no risk of data loss.",
+          "b1": "One-click system rollback",
+          "b2": "Point-in-time recovery (PITR)"
+        },
+        "howTitle": "How It Works",
+        "step1": {
+          "title": "Configure & Target",
+          "desc": "Set up the migration source and target cloud and activate the automated diagnostics system."
+        },
+        "step2": {
+          "title": "Bootstrapping",
+          "desc": "Virtualize the runtime environment of the existing system and 'boot' it in a form optimized for the target."
+        },
+        "step3": {
+          "title": "Live Sync & Finalize",
+          "desc": "Align data through real-time incremental synchronization and safely complete the switchover."
+        },
+        "nodeSource": "Legacy Source",
+        "nodeTarget": "Cloud Target",
+        "progressLabel": "Transferring Integrity",
+        "ctaTitle": "Start Your Infrastructure Innovation Now",
+        "ctaDesc": "The SyncBoot platform has been validated in large-scale enterprise environments.",
+        "ctaBtn1": "Contact Us",
+        "ctaBtn2": "Download Technical Whitepaper"
+      },
       "hero": {
         "subtitle": "Breaking the Wall",
         "title": "Rapid MSA Development Platform for Business Agility, SyncBoot",
@@ -281,6 +366,52 @@
       }
     },
     "synceta": {
+      "page": {
+        "badge": "AI Pipeline Prediction",
+        "heroLine1": "Know When Your Sync",
+        "heroLine2": "Will Complete",
+        "heroDesc": "Our ML-powered ETA engine predicts pipeline completion times in real-time, enabling teams to respond proactively before delays impact the business.",
+        "activePipeline": "Active Pipeline",
+        "syncStatus": "Sync Status",
+        "minToComplete": "min to complete",
+        "reliabilityScore": "Reliability Score",
+        "reliabilitySub": "Prediction accuracy (last 30 days)",
+        "feature1": {
+          "title": "Real-Time ETA Prediction",
+          "desc": "Combines current traffic patterns, resource utilization, and historical data to precisely predict pipeline completion times."
+        },
+        "feature2": {
+          "title": "Auto Alerts & Escalation",
+          "desc": "Instantly notifies your team and automatically escalates when predicted delays exceed defined thresholds."
+        },
+        "feature3": {
+          "title": "Predictive Analytics Dashboard",
+          "desc": "A unified dashboard to monitor ETA trends, analyze delay root causes, and benchmark pipeline performance."
+        },
+        "ctrlEyebrow": "Predictive Control Center",
+        "ctrlTitle": "Take Full Control\nof Your Pipelines",
+        "ctrl1": {
+          "title": "Priority-Based Scheduling",
+          "desc": "Dynamically adjusts pipeline priorities based on business criticality to guarantee SLA compliance."
+        },
+        "ctrl2": {
+          "title": "Automatic Resource Optimization",
+          "desc": "The prediction model proactively detects resource bottlenecks and auto-scales to maintain peak performance."
+        },
+        "ctrl3": {
+          "title": "Multi-Pipeline Orchestration",
+          "desc": "Intelligently coordinates the execution order and timing of interdependent pipelines."
+        },
+        "statsTitle": "Proven Performance Metrics",
+        "stat1": "Prediction Accuracy",
+        "stat2": "Delay Reduction",
+        "stat3": "Monitoring",
+        "stat4": "Faster Completion",
+        "ctaTitle": "Stop Pipeline Delays\nBefore They Happen",
+        "ctaDesc": "Use SyncEta's AI prediction engine to know exactly when your syncs will finish and guarantee business continuity.",
+        "ctaBtn1": "Start Free Trial",
+        "ctaBtn2": "View Documentation"
+      },
       "hero": {
         "title": "Understand Like a Human, Test Like a Machine",
         "desc": "No code, no screen recording. Zero-Recording AI Test Platform where your Excel documents become executable tests instantly."
@@ -323,6 +454,48 @@
       }
     },
     "synccms": {
+      "page": {
+        "badge": "Enterprise Content OS",
+        "heroDesc": "The enterprise CMS solution that manages complex corporate content on a single platform and synchronizes it to every channel in real time.",
+        "pill1Label": "Content",
+        "pill1Value": "Headless Architecture",
+        "pill2Label": "Distribution",
+        "pill2Value": "Multi-Channel Sync",
+        "pill3Label": "Workflow",
+        "pill3Value": "Real-time Editorial",
+        "syncLabel": "Sync Success Rate",
+        "syncSub": "All Nodes Active",
+        "splitTitle1": "Unify Siloed Content into a\n",
+        "splitTitleAccent": "Single Source of Truth",
+        "splitTitle2": "",
+        "splitDesc": "No more manually updating the same information across different channels. SyncCMS centrally controls content across all digital touchpoints — web, app, kiosk, IoT — powered by a robust headless architecture.",
+        "feat1": {
+          "title": "Omni-Channel Distribution",
+          "desc": "A powerful distribution engine that instantly reflects a single upload across all connected platforms simultaneously."
+        },
+        "feat2": {
+          "title": "Structured Content Management",
+          "desc": "Data-centric structured modeling for device-agnostic content compatibility across all environments."
+        },
+        "capsTitle": "Core Capabilities",
+        "capsSub": "The differentiated enterprise features SyncCMS delivers",
+        "cap1": {
+          "title": "Smart Asset Library",
+          "desc": "Efficiently categorize and manage tens of thousands of media assets with AI-powered tagging and automatic resizing."
+        },
+        "cap2": {
+          "title": "Enterprise Workflow",
+          "desc": "Maximize collaboration productivity in complex large-scale organizations by customizing permission hierarchies and approval processes."
+        },
+        "cap3": {
+          "title": "Real-time Collab",
+          "desc": "WebSocket-based real-time edit tracking lets multiple editors simultaneously enhance content without conflict."
+        },
+        "ctaTitle": "Accelerate Your Business with SyncCMS",
+        "ctaDesc": "40% boost in development productivity, 70% reduction in content deployment time. Complete your digital competitiveness with proven CMS technology.",
+        "ctaBtn1": "Get Started Now",
+        "ctaBtn2": "Request a Demo"
+      },
       "hero": {
         "title": "Assemble Every Web You Imagine, Even Without Developers.",
         "desc": "Java-based integrated CMS that responds most agilely to business environment changes with a unique template engine and visual layout builder."
@@ -349,6 +522,40 @@
       }
     },
     "syncapim": {
+      "page": {
+        "badge": "API Management Solution",
+        "heroLine1": "Sync",
+        "heroLine2": "APIM Platform",
+        "heroDesc": "Manage all your distributed APIs through a single unified gateway. From protocol transformation to security authentication and developer portal — a complete solution for building your enterprise API ecosystem.",
+        "btnStart": "Get Started",
+        "btnDocs": "View Documentation",
+        "securityLabel": "Security Standard",
+        "securityTitle": "Zero-Trust Auth",
+        "capsTitle": "Core Capabilities",
+        "capsSubtitle": "Next-generation API operations beyond a simple gateway",
+        "cap1": { "title": "Unified API Gateway", "desc": "Eliminate MSA complexity and centrally control all API endpoints through a single entry point." },
+        "cap2": { "title": "Protocol Transformation", "desc": "Convert legacy SOAP, gRPC, WebSocket and more to modern RESTful APIs in real time to maximize cross-system connectivity." },
+        "cap3": { "title": "Developer Portal", "desc": "Revolutionize developer productivity with automated Swagger API specs and Sandbox environments for internal teams and partners." },
+        "trafficTitle": "Advanced",
+        "trafficTitleAccent": "Traffic Control",
+        "traffic1": { "title": "Rate Limiting & Quotas", "desc": "Apply flexible call limit policies by user and API group to ensure service stability." },
+        "traffic2": { "title": "Real-time Monitoring", "desc": "Visualize all API traffic flows and send immediate alerts when anomalies are detected." },
+        "traffic3": { "title": "Zero-Downtime Updates", "desc": "Enable uninterrupted infrastructure updates through API versioning and canary deployments." },
+        "chartEyebrow": "System Performance",
+        "chartTitle": "Gateway Load",
+        "chartBadge": "Stable",
+        "stat1Label": "Avg. Latency",
+        "stat2Label": "Total Throughput",
+        "statsTitle": "Empowering Your API Ecosystem",
+        "stat1": "SLA Uptime",
+        "stat2": "Daily Requests",
+        "stat3": "Dev Efficiency Up",
+        "stat4": "Security Certified",
+        "ctaTitle": "Request a Free SyncAPIM Demo",
+        "ctaDesc": "See firsthand how enterprise-grade API management can accelerate your business.",
+        "emailPlaceholder": "Enter company email",
+        "ctaBtn": "Request Demo"
+      },
       "hero": {
         "title": "API Platform with Customization in its DNA",
         "desc": "Beyond the limits of standardized systems, an intelligent API integration management platform perfectly synchronized with the corporate business environment."
@@ -451,6 +658,42 @@
       "cta": {
         "title": "From order to delivery, synchronize your business perfectly.",
         "btn": "Inquire about Commerce & Logi"
+      },
+      "page": {
+        "badge": "SMART LOGISTICS",
+        "heroLine1": "Beyond the limits of space,",
+        "heroLine2": "Intelligent Logistics System",
+        "heroDesc": "Empasy's Commerce & Logi solution revolutionizes the entire process from warehouse automation to last-mile delivery through real-time data synchronization and AI prediction.",
+        "btnDiagnose": "Get Free Assessment",
+        "btnDetail": "View Solution Details",
+        "featuresTitle": "3 Core Drivers of Next-Gen Commerce Logistics",
+        "featuresSubtitle": "Manage complex supply chains simply and transparently.",
+        "feature1": {
+          "title": "Intelligent Warehouse Automation",
+          "desc": "Fulfillment center automation integrated with AGVs and robotic arms boosts throughput by 200% while optimizing labor costs.",
+          "b1": "AI-optimized picking routes",
+          "b2": "Robot integrated control system (WCS)",
+          "b3": "Real-time space occupancy analysis"
+        },
+        "feature2": {
+          "title": "Real-time Inventory Management (IMS)",
+          "desc": "Synchronize inventory data across online/offline channels every 0.1 seconds to prevent stockouts and maintain optimal inventory levels.",
+          "b1": "Omnichannel inventory integration",
+          "b2": "Demand forecast-based auto ordering",
+          "b3": "Expiry & LOT tracking management"
+        },
+        "feature3": {
+          "title": "Smart Routing Delivery",
+          "desc": "Analyze traffic and delivery density in real time to generate optimal routes and transparently visualize delivery status.",
+          "b1": "AI dispatch & route optimization (TMS)",
+          "b2": "Customer real-time delivery tracking dashboard",
+          "b3": "ETA accuracy within 5 minutes"
+        },
+        "statsTitle": "Logistics Innovation Results\nProven by Data",
+        "bar1Label": "Misdelivery rate reduction",
+        "bar1Value": "-85%",
+        "bar2Label": "Average delivery time reduction",
+        "bar2Value": "-4.2 Hours"
       }
     },
     "usecases": {
@@ -649,9 +892,9 @@
           "desc": "25-year top-tier engineer. Integrated database and back/frontend design. Global e-commerce tech lead."
         },
         "member3": {
-          "name": "Su-ho Ahn",
-          "role": "Global Tech Advisor",
-          "desc": "Former AWS US AI Product Developer. Overseeing global commerce systems. Leading North American market entry."
+          "name": "Kang-hyeong Lee",
+          "role": "DevOps / PL",
+          "desc": "Expert in high-availability architecture design and CI/CD pipeline automation for global AI services."
         },
         "member4": {
           "name": "Ok-su Lee",
@@ -668,6 +911,35 @@
       "cta": {
         "title": "Ready to start innovation with EMPASY?",
         "btn": "Inquire about Project"
+      },
+      "page": {
+        "badge": "Empowering Digital Synergy",
+        "title": "Company",
+        "subtitle": "Empasy creates new connection value in business\nthrough data and AI technology.",
+        "mission": {
+          "title": "Mission",
+          "desc": "We provide infrastructure that synchronizes and optimizes complex enterprise data in real time, enabling companies to make the fastest and most accurate decisions."
+        },
+        "vision": {
+          "title": "Vision",
+          "desc": "We will become a global AI infrastructure partner leading the era of 'autonomous enterprise,' where every business process is organically integrated with artificial intelligence."
+        },
+        "history": {
+          "title": "History",
+          "subtitle": "Empasy's journey toward innovation",
+          "y2024": { "title": "Empasy Sync Series 2.0 Launch", "desc": "10 companies among Global Fortune 500 confirmed adoption" },
+          "y2023": { "title": "Series B Funding ($40M)", "desc": "Korea Innovation Company Award in AI Infrastructure" },
+          "y2022": { "title": "Empasy Founded & Incorporated", "desc": "Successful development of next-gen real-time data sync engine" }
+        },
+        "leadership": {
+          "title": "Leadership",
+          "subtitle": "The best experts are with us"
+        },
+        "recruit": {
+          "title": "We're looking for colleagues to design the future together",
+          "desc": "Empasy grows with people who know the joy of connecting the world through technology.",
+          "btn": "View Job Openings"
+        }
       }
     },
     "contact": {
@@ -711,12 +983,50 @@
         "title": "Contact Info",
         "manager": "General Manager: CEO Byeong-mun Oh",
         "email": "Email: poh@empasy.com",
-        "phone": "Contact: +82 0507-1360-8169"
+        "phone": "Contact: +82 10-3420-8169"
+      },
+      "page": {
+        "badge": "Get in touch",
+        "title": "Contact Us",
+        "subtitle": "Have questions about Empasy's solutions?\nOur expert team is ready to help drive your digital transformation.",
+        "form": {
+          "nameLabel": "Name",
+          "namePlaceholder": "John Doe",
+          "companyLabel": "Company",
+          "companyPlaceholder": "Empasy",
+          "emailLabel": "Email",
+          "emailPlaceholder": "example@company.com",
+          "inquiryLabel": "Area of Inquiry",
+          "inquiryPlaceholder": "Please select inquiry type",
+          "inquiryAI": "AI Infrastructure",
+          "inquiryLogistics": "Logistics & Distribution Automation",
+          "inquirySync": "Sync Series Adoption",
+          "inquiryOther": "Other Inquiries",
+          "messageLabel": "Message",
+          "messagePlaceholder": "Please briefly describe your project or what you'd like to know.",
+          "submit": "Send Message",
+          "submitting": "Sending...",
+          "errorSubmit": "Failed to send. Please try again later."
+        },
+        "success": {
+          "title": "Message sent successfully!",
+          "desc": "We will get back to you shortly.",
+          "reset": "New Inquiry"
+        },
+        "info": {
+          "phoneLabel": "Phone",
+          "phoneValue": "02-1234-5678",
+          "emailLabel": "Email",
+          "emailValue": "contact@empasy.ai",
+          "officeLabel": "Office",
+          "officeValue": "123 Teheran-ro, Gangnam-gu, Seoul\nEmpasy Building, 12F",
+          "mapBadge": "5 min walk from Gangnam Station (Line 2)"
+        }
       }
     },
     "footer": {
       "desc": "Perfect synchronization for business agility",
-      "address": "Gangnam-gu, Seoul...",
+      "address": "208, 2F, 205-27, Gasan digital 1-ro, Geumcheon-gu, Seoul, Republic of Korea",
       "contact": "Contact: poh@empasy.com",
       "rights": "All rights reserved."
     }

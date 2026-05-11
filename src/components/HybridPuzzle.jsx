@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Puzzle, Database, Layout as LayoutIcon, Zap } from 'lucide-react';
 
-const HybridPuzzle = ({ isMobile }) => {
+const HybridPuzzle = () => {
   const { t } = useTranslation();
   const [step, setStep] = useState(0);
 
@@ -21,15 +21,7 @@ const HybridPuzzle = ({ isMobile }) => {
   ];
 
   return (
-    <div style={{ 
-      width: '100%', 
-      height: isMobile ? '400px' : '500px', 
-      background: '#F8FAFC', 
-      borderRadius: '20px', 
-      position: 'relative', 
-      overflow: 'hidden', 
-      border: '1px solid #E2E8F0' 
-    }}>
+    <div style={{ width: '100%', height: '500px', background: '#F8FAFC', borderRadius: '20px', position: 'relative', overflow: 'hidden', border: '1px solid #E2E8F0' }}>
       {/* Background Code Streaming */}
       <div style={{ position: 'absolute', inset: 0, opacity: 0.05, overflow: 'hidden', pointerEvents: 'none', fontSize: '0.7rem', fontFamily: 'monospace' }}>
         {Array.from({ length: 20 }).map((_, i) => (
@@ -44,17 +36,9 @@ const HybridPuzzle = ({ isMobile }) => {
         ))}
       </div>
 
-      <div style={{ 
-        position: 'relative', 
-        width: '100%', 
-        height: '100%', 
-        display: 'flex', 
-        alignItems: 'center', 
-        justifyContent: 'center',
-        scale: isMobile ? 0.8 : 1
-      }}>
+      <div style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         {/* Central Assembly Area */}
-        <div style={{ width: '280px', height: '360px', border: '2px dashed #CBD5E1', borderRadius: '12px', position: 'relative' }}>
+        <div style={{ width: '300px', height: '400px', border: '2px dashed #CBD5E1', borderRadius: '12px', position: 'relative' }}>
           <AnimatePresence>
             {step >= 1 && (
               <motion.div

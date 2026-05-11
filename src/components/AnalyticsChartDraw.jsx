@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { TrendingUp, Users, Search, Share2 } from 'lucide-react';
 
-const AnalyticsChartDraw = ({ isMobile }) => {
+const AnalyticsChartDraw = () => {
   const { t } = useTranslation();
   const [pvData, setPvData] = useState([]);
   const [isVisible, setIsVisible] = useState(false);
@@ -41,23 +41,12 @@ const AnalyticsChartDraw = ({ isMobile }) => {
   ];
 
   return (
-    <div style={{ 
-      width: '100%', 
-      display: 'grid', 
-      gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(280px, 1fr))', 
-      gap: isMobile ? '15px' : '20px' 
-    }}>
+    <div style={{ width: '100%', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
       {/* Visitors Chart */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={isVisible ? { opacity: 1, y: 0 } : {}}
-        style={{ 
-          background: '#FFFFFF', 
-          padding: isMobile ? '16px' : '24px', 
-          borderRadius: '20px', 
-          border: '1px solid #E2E8F0', 
-          boxShadow: '0 4px 6px rgba(0,0,0,0.02)' 
-        }}
+        style={{ background: '#FFFFFF', padding: '24px', borderRadius: '20px', border: '1px solid #E2E8F0', boxShadow: '0 4px 6px rgba(0,0,0,0.02)' }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
           <div style={{ p: '8px', background: 'rgba(0, 209, 178, 0.1)', borderRadius: '8px' }}>
@@ -97,13 +86,7 @@ const AnalyticsChartDraw = ({ isMobile }) => {
         initial={{ opacity: 0, y: 20 }}
         animate={isVisible ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: 0.2 }}
-        style={{ 
-          background: '#FFFFFF', 
-          padding: isMobile ? '16px' : '24px', 
-          borderRadius: '20px', 
-          border: '1px solid #E2E8F0', 
-          boxShadow: '0 4px 6px rgba(0,0,0,0.02)' 
-        }}
+        style={{ background: '#FFFFFF', padding: '24px', borderRadius: '20px', border: '1px solid #E2E8F0', boxShadow: '0 4px 6px rgba(0,0,0,0.02)' }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
           <div style={{ p: '8px', background: 'rgba(59, 130, 246, 0.1)', borderRadius: '8px' }}>
@@ -145,13 +128,7 @@ const AnalyticsChartDraw = ({ isMobile }) => {
         initial={{ opacity: 0, y: 20 }}
         animate={isVisible ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: 0.4 }}
-        style={{ 
-          background: '#FFFFFF', 
-          padding: isMobile ? '16px' : '24px', 
-          borderRadius: '20px', 
-          border: '1px solid #E2E8F0', 
-          boxShadow: '0 4px 6px rgba(0,0,0,0.02)' 
-        }}
+        style={{ background: '#FFFFFF', padding: '24px', borderRadius: '20px', border: '1px solid #E2E8F0', boxShadow: '0 4px 6px rgba(0,0,0,0.02)' }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
           <div style={{ p: '8px', background: 'rgba(245, 158, 11, 0.1)', borderRadius: '8px' }}>

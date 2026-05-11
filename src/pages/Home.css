@@ -223,57 +223,6 @@ section.hero-section {
   100% { transform: translateX(-50%); }
 }
 
-/* 6. CTA Section */
-.home-cta-section {
-  text-align: center;
-  padding: 8rem 2rem !important;
-  background: radial-gradient(circle, rgba(67, 97, 238, 0.1) 0%, transparent 70%);
-}
-
-.home-cta-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  line-height: 1.4;
-  color: #fff;
-}
-
-.home-cta-section .contact-btn {
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 1rem 2.5rem;
-  font-size: 1rem;
-  font-weight: 700;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-}
-
-.home-cta-section .contact-btn::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.5s;
-}
-
-.home-cta-section .contact-btn:hover::after {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.home-cta-section .contact-btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(67, 97, 238, 0.3);
-}
-
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .hero-content h1 {
@@ -297,10 +246,6 @@ section.hero-section {
   section h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
-  }
-
-  .home-cta-section h2 {
-    font-size: 1.8rem;
   }
 
   .hero-content h1 {
